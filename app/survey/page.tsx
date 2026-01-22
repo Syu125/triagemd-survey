@@ -31,6 +31,8 @@ export default function Survey() {
     PatientDemographics[]
   >([]);
 
+  const progress = ((currentIndex + 1) / patientSymptoms.length) * 100;
+
   // For Component 2
 
   const getFlowchartOptions = (flowchartName: string): string[] => {
@@ -155,6 +157,7 @@ export default function Survey() {
 
   const handleNext = () => {
     if (!isLast) setCurrentIndex(currentIndex + 1);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const handlePrev = () => {
@@ -175,54 +178,59 @@ export default function Survey() {
   };
 
   return (
-    <div className="flex flex-col items-center  w-full min-h-screen px-8 py-8 gap-8">
-      {/* Progress indicator */}
-      <p className="text-lg font-semibold">
-        Question {currentIndex + 1} of {patientSymptoms.length}
-      </p>
-
-      {/* Component 1 */}
-      <Component1
-        data={{
-          id: patientDemographics[currentIndex].id,
-          sex: patientDemographics[currentIndex].sex,
-          age: patientDemographics[currentIndex].age,
-          flowchart_options: patientDemographics[currentIndex].options,
-          patientDialog: patientSymptoms[currentIndex],
-        }}
-        onResponse={handleComponent1Response}
-        savedResponse={currentResponse.component1}
-        onSubmit={handleSubmit}
-      />
-      {/* Component 2 - Only show after Component1 is answered */}
-      {component1Answered && (
-        <div>
-          <Component2
-            snippets={getConversationSnippets(currentIndex)}
-            onResponse={handleComponent2Response}
-            savedResponse={currentResponse.component2}
-            ref={component2Ref}
+    <div className="flex flex-col items-center w-full min-h-screen px-8">
+      {/* Progress Bar */}
+      <div className="w-full max-w-4xl sticky top-0 bg-white z-50 px-8 py-4 shadow-md">
+        <div className="w-full h-4 bg-gray-200 rounded-full overflow-hidden">
+          <div
+            className="h-4 bg-blue-500 rounded-full transition-all duration-500"
+            style={{
+              width: `${((currentIndex + 1) / patientSymptoms.length) * 100}%`,
+            }}
           />
-
-          {/* Navigation */}
-          <div className="flex gap-4 align-self-center justify-center mt-8">
-            <button
-              onClick={handlePrev}
-              disabled={currentIndex === 0}
-              className="bg-gray-500 hover:bg-gray-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
-            >
-              Previous
-            </button>
-            <button
-              onClick={handleNext}
-              disabled={currentIndex === 9} // Last component
-              className="bg-blue-500 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
-            >
-              {isLast ? "Complete" : "Next"}
-            </button>
-          </div>
         </div>
-      )}
+        <p className="text-sm font-semibold mt-1 text-right">
+          Question {currentIndex + 1} of {patientSymptoms.length}
+        </p>
+      </div>
+
+      <div className="mt-10">
+        {/* Component 1 */}
+        <Component1
+          data={{
+            id: patientDemographics[currentIndex].id,
+            sex: patientDemographics[currentIndex].sex,
+            age: patientDemographics[currentIndex].age,
+            flowchart_options: patientDemographics[currentIndex].options,
+            patientDialog: patientSymptoms[currentIndex],
+          }}
+          onResponse={handleComponent1Response}
+          savedResponse={currentResponse.component1}
+          onSubmit={handleSubmit}
+        />
+        {/* Component 2 - Only show after Component1 is answered */}
+        {component1Answered && (
+          <div>
+            <Component2
+              snippets={getConversationSnippets(currentIndex)}
+              onResponse={handleComponent2Response}
+              savedResponse={currentResponse.component2}
+              ref={component2Ref}
+            />
+
+            {/* Navigation */}
+            <div className="flex gap-4 align-self-center justify-center mt-12 mb-36">
+              <button
+                onClick={handleNext}
+                disabled={currentIndex === 9} // Last component
+                className="bg-blue-500 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
+              >
+                {isLast ? "Complete" : "Next"}
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

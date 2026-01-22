@@ -41,8 +41,8 @@ export default function Component1({
   };
 
   return (
-    <div className="grid grid-cols-2 w-8/12">
-      <div className="flex flex-col place-self-center align-self-center justify-center w-9/12 h-8/12 bg-gray-100 gap-2 p-10">
+    <div className="grid grid-cols-2 gap-8 w-full max-w-4xl mx-auto mb-16">
+      <div className="flex flex-col justify-center align-self-center justify-center w-96 h-96 bg-gray-100 gap-2 p-12 rounded-lg">
         <div className="text-2xl font-bold pb-8"> Patient Demographics: </div>
         <div>
           <span className="font-bold">Sex:</span> {data.sex}
@@ -55,7 +55,7 @@ export default function Component1({
           {data.patientDialog}
         </div>
       </div>
-      <div className="w-full max-w-2xl bg-gray-50 border border-gray-200 rounded-lg p-8">
+      <div className="w-120 max-w-2xl">
         <h2 className="text-1xl font-bold mb-4">
           Select the most appropriate flowchart:
         </h2>
