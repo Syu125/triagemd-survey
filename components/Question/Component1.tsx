@@ -10,7 +10,7 @@ interface Component1Props {
   };
   onResponse: (value: string) => void;
   savedResponse?: string;
-  onSubmit: () => void;
+  onSubmit: (answer?: string | null) => void;
 }
 
 export default function Component1({

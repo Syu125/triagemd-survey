@@ -19,6 +19,45 @@ export default function Survey() {
 
   const component2Ref = useRef<HTMLDivElement>(null);
 
+  // Survey storage
+  type Component2Answer = {
+    question: string;
+    answer: metricQuestions | null | undefined;
+  };
+
+  type TopicAnswers = {
+    component1: string | null | undefined;
+    component2: Component2Answer[];
+  };
+
+  type SurveyState = {
+    code: string;
+    surveyId: number;
+    topics: TopicAnswers[];
+  };
+
+  type metricQuestions = {
+    relevance: string;
+    decisiveness: string;
+    clinicalAccuracy: string;
+    uncertaintyCalibration: string;
+  };
+
+  const [surveyState, setSurveyState] = useState<SurveyState>({
+    code: code || "",
+    surveyId: 1,
+    topics: Array.from({ length: 10 }, () => ({
+      component1: null,
+      component2: [
+        { question: "Q1", answer: null },
+        { question: "Q2", answer: null },
+        { question: "Q3", answer: null },
+      ],
+    })),
+  });
+
+  const [currentTopic, setCurrentTopic] = useState(0); // 0–9
+
   // For Component 1
   const [patientSymptoms, setPatientSymptoms] = useState<string[]>([]);
   interface PatientDemographics {
@@ -45,7 +84,19 @@ export default function Survey() {
     return [];
   };
   const handleSubmit = () => {
-    // Scroll to Component2 smoothly
+    setSurveyState((prev) => {
+      const copy = [...prev.topics];
+      copy[currentTopic].component1 = currentResponse.component1;
+      console.log(
+        "Updating topic ",
+        currentTopic,
+        " with answer: ",
+        currentResponse.component1,
+        " and copy: ",
+        copy,
+      );
+      return { ...prev, topics: copy };
+    });
     setTimeout(() => {
       component2Ref.current?.scrollIntoView({
         behavior: "smooth",
@@ -158,6 +209,8 @@ export default function Survey() {
   const handleNext = () => {
     if (!isLast) setCurrentIndex(currentIndex + 1);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    if (currentTopic < 9) setCurrentTopic((t) => t + 1);
+    console.log("Survey state at ", currentTopic, ": ", surveyState);
   };
 
   const handlePrev = () => {
