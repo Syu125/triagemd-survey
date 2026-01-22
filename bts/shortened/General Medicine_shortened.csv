@@ -1,0 +1,902 @@
+Unnamed: 0,Flowchart,Path label,Path,Accuracy,Conversation,Question_and_response_pair,Shortened_Conversation
+0,Feeling Generally Ill Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'A2']","['N1', 'N2', 'N3', 'N4', 'N5', 'A2']",1,"[""Patient: I've been feeling off lately, just a general sense of not being myself. Can you help figure out what's going on?"", 
+
+""TriageMD: I'm sorry to hear that you're feeling off. To help assess your situation, can you tell me if your temperature is 100Â°F or higher?"", 
+
+'Patient: No.', 
+
+""TriageMD: I understand you're not feeling like yourself. Do you suddenly feel unusually tired, and do you have any discomfort in your chest or arms when you move around?"", 
+
+""Patient: No, I haven't noticed any unusual tiredness or discomfort in my chest or arms when moving around. I just feel a bit off, like I'm not quite myself, but nothing specific like pain or fatigue."", 
+
+'TriageMD: I understand. Do you feel nervous or anxious at all?', 
+
+""Patient: No, I wouldn't say I feel particularly nervous or anxious. It's more of a vague feeling of not being quite myself, but I can't pinpoint any specific worries or stressors that are causing it. It's just a general sense of unease without any clear reason."", 
+
+'TriageMD: I understand that feeling off can be unsettling. Have you been feeling tired for some time?', 
+
+""Patient: Yes, I've been feeling more tired than usual for a while now. It's not overwhelming exhaustion, but I do notice that I don't have the same energy levels as before. Even after a good night's sleep, I still feel a bit drained throughout the day."", 
+
+""TriageMD: It sounds like you've been feeling more tired than usual for a while. Have you been working hard without a break for several weeks?"", 
+
+'Patient: Yes.', 
+
+""TriageMD: It sounds like you may be feeling the effects of stress, especially if you've been working hard without a break. Itâ€™s important to take time for yourself and find ways to relax. If these feelings persist or worsen, consider reaching out to a healthcare professional for further support.""]","[{'Question': ""I'm sorry to hear that you're feeling off. To help assess your situation, can you tell me if your temperature is 100Â°F or higher?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': ""I understand you're not feeling like yourself. Do you suddenly feel unusually tired, and do you have any discomfort in your chest or arms when you move around?"", 
+'Protocol': 'Do you suddenly feel unusually tired, and do you have any discomfort in your chest or arms when you move around?'}, 
+
+{'Question': ""I understand you're not feeling like yourself. Do you suddenly feel unusually tired, and do you have any discomfort in your chest or arms when you move around?"", 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't noticed any unusual tiredness or discomfort in my chest or arms when moving around. I just feel a bit off, like I'm not quite myself, but nothing specific like pain or fatigue."", 
+'Next_question': 'I understand. Do you feel nervous or anxious at all?', 
+'Protocol': 'Do you feel nervous or anxious?'}, 
+
+{'Question': 'I understand. Do you feel nervous or anxious at all?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I wouldn't say I feel particularly nervous or anxious. It's more of a vague feeling of not being quite myself, but I can't pinpoint any specific worries or stressors that are causing it. It's just a general sense of unease without any clear reason."", 'Next_question': 'I understand that feeling off can be unsettling. Have you been feeling tired for some time?', 'Protocol': 'Have you been feeling tired for some time?'}, 
+
+{'Question': 'I understand that feeling off can be unsettling. Have you been feeling tired for some time?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""Yes, I've been feeling more tired than usual for a while now. It's not overwhelming exhaustion, but I do notice that I don't have the same energy levels as before. Even after a good night's sleep, I still feel a bit drained throughout the day."", 
+'Next_question': ""It sounds like you've been feeling more tired than usual for a while. Have you been working hard without a break for several weeks?"", 
+'Protocol': 'Have you been working hard without a break for several weeks?'}, 
+
+{'Question': ""It sounds like you've been feeling more tired than usual for a while. Have you been working hard without a break for several weeks?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': ""It sounds like you may be feeling the effects of stress, especially if you've been working hard without a break. Itâ€™s important to take time for yourself and find ways to relax. If these feelings persist or worsen, consider reaching out to a healthcare professional for further support."", 
+'Protocol': 'You may be feeling the effects of stress.'}]","Patient: I've been feeling off lately, just a general sense of not being myself. Can you help figure out what's going on?
+TriageMD: I'm sorry to hear that you're feeling off. To help assess your situation, can you tell me if your temperature is 100°F or higher?
+Patient: No, I wouldn't say I feel particularly nervous or anxious. It's more of a vague feeling of not being quite myself, but I can't pinpoint any specific worries or stressors that are causing it. It's just a general sense of unease without any clear reason.
+TriageMD: I understand that feeling off can be unsettling. Have you been feeling tired for some time?
+Patient: Yes.
+TriageMD: It sounds like you may be feeling the effects of stress, especially if you've been working hard without a break. It's important to take time for yourself and find ways to relax. If these feelings persist or worsen, consider reaching out to a healthcare professional for further support."
+1,Unexplained Weight Loss Flowchart,"['N1', 'N5', 'N7', 'N8', 'N9', 'A8']","['N1', 'N5', 'N7', 'N8', 'N9', 'A8']",1,"[""Patient: I've lost over 10 pounds in the past two months without changing my diet or exercise. Should I be worried?"", 
+
+""TriageMD: It's understandable to be concerned about unexpected weight loss. Can you tell me if your appetite has remained the same as usual?"", 
+
+'Patient: No.', 
+
+""TriageMD: I'm sorry to hear that you're experiencing this. Do you have diarrhea?"", 
+
+""Patient: No, I haven't had any issues with diarrhea. Everything seems normal in that regard."", 
+
+""TriageMD: It's good to hear that you haven't had issues with diarrhea. Have your bowel habits changed at all, or have you noticed any blood in your stools?"", 
+
+'Patient: No.', 
+
+'TriageMD: Have you been experiencing any recurring attacks of upper abdominal pain?', 
+
+""Patient: No, I haven't been experiencing any upper abdominal pain. Everything feels normal in that area, and I haven't had any discomfort or unusual sensations."", 
+
+""TriageMD: It's good to hear that you're not experiencing pain or discomfort. Do you have two or more of the following symptoms: sweating at night, recurring fever, unexplained fatigue, feeling generally ill, persistent cough, or coughing up blood-tinged mucus?"", 
+
+'Patient: Yes.', 
+
+""TriageMD: It's important that you see a doctor immediately. Your symptoms could indicate a serious chronic infection, such as tuberculosis or HIV, or a type of cancer like Hodgkin's disease. Please seek medical attention as soon as possible.""]","[{'Question': ""It's understandable to be concerned about unexpected weight loss. Can you tell me if your appetite has remained the same as usual?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': ""I'm sorry to hear that you're experiencing this. Do you have diarrhea?"", 
+'Protocol': 'Do you have diarrhea?'}, 
+
+{'Question': ""I'm sorry to hear that you're experiencing this. Do you have diarrhea?"", 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't had any issues with diarrhea. Everything seems normal in that regard."", 
+'Next_question': ""It's good to hear that you haven't had issues with diarrhea. Have your bowel habits changed at all, or have you noticed any blood in your stools?"", 
+'Protocol': 'Have your bowel habits changed, or is there blood in your stools?'}, 
+
+{'Question': ""It's good to hear that you haven't had issues with diarrhea. Have your bowel habits changed at all, or have you noticed any blood in your stools?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Have you been experiencing any recurring attacks of upper abdominal pain?', 
+'Protocol': 'Have you been having recurring attacks of upper abdominal pain?'}, 
+
+{'Question': 'Have you been experiencing any recurring attacks of upper abdominal pain?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't been experiencing any upper abdominal pain. Everything feels normal in that area, and I haven't had any discomfort or unusual sensations."", 
+'Next_question': ""It's good to hear that you're not experiencing pain or discomfort. Do you have two or more of the following symptoms: sweating at night, recurring fever, unexplained fatigue, feeling generally ill, persistent cough, or coughing up blood-tinged mucus?"", 
+'Protocol': 'Do you have two or more of the following symptoms: sweating at night; recurring fever; unexplained fatigue; feeling generally ill; persistent cough; coughing up blood-tinged mucus?'}, 
+
+{'Question': ""It's good to hear that you're not experiencing pain or discomfort. Do you have two or more of the following symptoms: sweating at night, recurring fever, unexplained fatigue, feeling generally ill, persistent cough, or coughing up blood-tinged mucus?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': ""It's important that you see a doctor immediately. Your symptoms could indicate a serious chronic infection, such as tuberculosis or HIV, or a type of cancer like Hodgkin's disease. Please seek medical attention as soon as possible."", 
+'Protocol': ""See a doctor immediately. You may have a serious chronic infection, such as tuberculosis or HIV. Or you could have a type of cancer such as hodgkin's disease.""}]","Patient: I've lost over 10 pounds in the past two months without changing my diet or exercise. Should I be worried?
+TriageMD: It's understandable to be concerned about unexpected weight loss. Can you tell me if your appetite has remained the same as usual?
+Patient: No.
+TriageMD: Have you been experiencing any recurring attacks of upper abdominal pain?
+Patient: Yes.
+TriageMD: It's important that you see a doctor immediately. Your symptoms could indicate a serious chronic infection, such as tuberculosis or HIV, or a type of cancer like Hodgkin's disease. Please seek medical attention as soon as possible."
+2,Overweight Flowchart,"['N1', 'N3', 'N4', 'N5', 'A4']","['N1', 'N3', 'N4', 'N5', 'A4']",1,"[""Patient: I've noticed some weight gain recently and I'm concerned about how it might be affecting my health. Can you advise?"", 
+
+""TriageMD: I understand your concern about weight gain and its impact on your health. Can you tell me if you've been overweight most of your life?"", 
+
+""Patient: No, not really. I've had periods where my weight fluctuated a bit, but I wouldn't say I've been overweight most of my life. It's just been more noticeable recently."", 
+
+'TriageMD: I understand your concern. Did you notice any weight gain after you quit smoking? This can be a common experience for many people.', 
+
+'Patient: No.', 
+
+'TriageMD: Are you a woman?', 
+
+'Patient: Yes.', 
+
+'TriageMD: Did you become overweight after pregnancy?', 
+
+'Patient: Yes.', 
+
+""TriageMD: It's common for many women to gain more weight during pregnancy than intended and then find it challenging to lose afterward. You're not alone in this experience. If you're concerned about your health, consider discussing it with a healthcare professional for personalized advice and support.""]","[{'Question': ""I understand your concern about weight gain and its impact on your health. Can you tell me if you've been overweight most of your life?"", 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, not really. I've had periods where my weight fluctuated a bit, but I wouldn't say I've been overweight most of my life. It's just been more noticeable recently."", 
+'Next_question': 'I understand your concern. Did you notice any weight gain after you quit smoking? This can be a common experience for many people.', 
+'Protocol': 'Did you gain weight after you quit smoking?'}, 
+
+{'Question': 'I understand your concern. Did you notice any weight gain after you quit smoking? This can be a common experience for many people.', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Are you a woman?', 
+'Protocol': 'Are you a woman?'}, 
+
+{'Question': 'Are you a woman?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': 'Did you become overweight after pregnancy?', 
+'Protocol': 'Did you become overweight after pregnancy?'}, 
+
+{'Question': 'Did you become overweight after pregnancy?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': ""It's common for many women to gain more weight during pregnancy than intended and then find it challenging to lose afterward. You're not alone in this experience. If you're concerned about your health, consider discussing it with a healthcare professional for personalized advice and support."", 
+'Protocol': 'Many women gain too much weight during pregnancy and have difficulty losing it afterward.'}]","Patient: I've noticed some weight gain recently and I'm concerned about how it might be affecting my health. Can you advise?
+TriageMD: I understand your concern about weight gain and its impact on your health. Can you tell me if you've been overweight most of your life?
+TriageMD: Are you a woman?
+Patient: Yes.
+Patient: Yes.
+TriageMD: It's common for many women to gain more weight during pregnancy than intended and then find it challenging to lose afterward. You're not alone in this experience. If you're concerned about your health, consider discussing it with a healthcare professional for personalized advice and support."
+3,Fever Flowchart,"['N1', 'N4', 'N5', 'N6', 'N7', 'A5']","['N1', 'N4', 'N5', 'N6', 'N7', 'A5']",1,"Patient: I've had a fever of 100Â°F for the past two days and I'm feeling really run down. What should I do?
+
+TriageMD: I'm sorry to hear that you're feeling unwell. Do you have a cough?
+
+Patient: I'm not really sure. I've been feeling pretty tired and out of it, so I haven't been paying close attention. I might have coughed a few times, but I'm not certain if it's been frequent or not.
+
+TriageMD: I understand that you're feeling tired and out of it. Just to clarify, do you have a cough, even if it's infrequent?
+
+Patient: Oh, I've been thinking about trying out a new recipe for dinner. Maybe something with chicken and vegetables.
+
+TriageMD: I understand you're thinking about dinner, but I want to check in on your health. Do you have a cough?
+
+Patient: No, I don't really have a cough. I've been mostly dealing with the fever and feeling really run down. I might have coughed a little, but it's not been a significant or frequent issue. My main concern right now is the fever and how exhausted I feel.
+
+TriageMD: Iâ€™m sorry to hear youâ€™re feeling this way. Do you have a headache as well?
+
+Patient: Yes.
+
+TriageMD: I'm sorry to hear you're feeling this way. In addition to your fever and headache, do you have any of the following symptoms: pain when bending your head forward, nausea or vomiting, sensitivity of eyes to bright light, or drowsiness or confusion?
+
+Patient: Not really, I don't think I have any of those symptoms. I mean, I've been feeling pretty drowsy because of the fever, but nothing too out of the ordinary, I guess.
+
+TriageMD: Thank you for sharing that. Have you experienced any vomiting or diarrhea?
+
+Patient: No.
+
+TriageMD: Thank you for the information. Do you have any aching in your joints or bones?
+
+Patient: Yes, I've been experiencing some aching in my joints and bones. It feels like a general body ache, which I guess is pretty common with a fever. It's been making it difficult to get comfortable and rest properly.
+
+TriageMD: It sounds like you may have a viral infection, such as influenza. It's important to rest and stay hydrated. If your symptoms last longer than 2 or 3 days, please see your doctor. Take care of yourself!","[{'Question': ""I'm sorry to hear that you're feeling unwell. Do you have a cough?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I've been feeling pretty tired and out of it, so I haven't been paying close attention. I might have coughed a few times, but I'm not certain if it's been frequent or not."", 'Next_question': ""I understand that you're feeling tired and out of it. Just to clarify, do you have a cough, even if it's infrequent?"", 'Protocol': 'Do you have a cough?'}, {'Question': ""I understand that you're feeling tired and out of it. Just to clarify, do you have a cough, even if it's infrequent?"", 'Pattern': 'irrelevant', 'Patient_response': ""Oh, I've been thinking about trying out a new recipe for dinner. Maybe something with chicken and vegetables."", 'Next_question': ""I understand you're thinking about dinner, but I want to check in on your health. Do you have a cough?"", 'Protocol': 'Do you have a cough?'}, {'Question': ""I understand you're thinking about dinner, but I want to check in on your health. Do you have a cough?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't really have a cough. I've been mostly dealing with the fever and feeling really run down. I might have coughed a little, but it's not been a significant or frequent issue. My main concern right now is the fever and how exhausted I feel."", 'Next_question': 'Iâ€™m sorry to hear youâ€™re feeling this way. Do you have a headache as well?', 'Protocol': 'Do you have a headache?'}, {'Question': 'Iâ€™m sorry to hear youâ€™re feeling this way. Do you have a headache as well?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""I'm sorry to hear you're feeling this way. In addition to your fever and headache, do you have any of the following symptoms: pain when bending your head forward, nausea or vomiting, sensitivity of eyes to bright light, or drowsiness or confusion?"", 'Protocol': 'Do you have one or more of the following symptoms: pain when bending your head forward; nausea or vomiting; sensitivity of eyes to bright light; drowsiness or confusion?'}, {'Question': ""I'm sorry to hear you're feeling this way. In addition to your fever and headache, do you have any of the following symptoms: pain when bending your head forward, nausea or vomiting, sensitivity of eyes to bright light, or drowsiness or confusion?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, I don't think I have any of those symptoms. I mean, I've been feeling pretty drowsy because of the fever, but nothing too out of the ordinary, I guess."", 'Next_question': 'Thank you for sharing that. Have you experienced any vomiting or diarrhea?', 'Protocol': 'Have you vomited or had diarrhea?'}, {'Question': 'Thank you for sharing that. Have you experienced any vomiting or diarrhea?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for the information. Do you have any aching in your joints or bones?', 'Protocol': 'Do you have aching joints or bones?'}, {'Question': 'Thank you for the information. Do you have any aching in your joints or bones?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've been experiencing some aching in my joints and bones. It feels like a general body ache, which I guess is pretty common with a fever. It's been making it difficult to get comfortable and rest properly."", 'Next_question': ""It sounds like you may have a viral infection, such as influenza. It's important to rest and stay hydrated. If your symptoms last longer than 2 or 3 days, please see your doctor. Take care of yourself!"", 'Protocol': 'See your doctor if your symptoms last longer than 2 or 3 days. You probably have a viral infection such as influenza. Rest, and drink plenty of fluids.'}]","Patient: I've had a fever of 100°F for the past two days and I'm feeling really run down. What should I do?
+TriageMD: I'm sorry to hear that you're feeling unwell. Do you have a cough?
+Patient: Yes.
+TriageMD: I'm sorry to hear you're feeling this way. In addition to your fever and headache, do you have any of the following symptoms: pain when bending your head forward, nausea or vomiting, sensitivity of eyes to bright light, or drowsiness or confusion?
+Patient: Yes, I've been experiencing some aching in my joints and bones. It feels like a general body ache, which I guess is pretty common with a fever. It's been making it difficult to get comfortable and rest properly.
+TriageMD: It sounds like you may have a viral infection, such as influenza. It's important to rest and stay hydrated. If your symptoms last longer than 2 or 3 days, please see your doctor. Take care of yourself!"
+4,Fever In Young Children Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'A4']","['N1', 'N2', 'N3', 'N4', 'N5', 'A4']",1,"['Patient: My baby girl has a fever; her armpit temperature is over 100ÂºF. Should I be worried?', 
+
+'TriageMD: Is your child 3 months old or younger?', 
+
+'Patient: No.', 
+
+'TriageMD: Does your child have a rash?', 
+
+""Patient: No, I don't think she has a rash."", 
+
+""TriageMD: Just to confirm, you mentioned that you don't think she has a rash. Have you checked her skin closely for any signs of redness or spots?"", 
+
+""Patient: No, I checked her skin closely and didn't notice any redness or spots. Her skin looks normal, just a bit warm."", 
+
+'TriageMD: Is your child crying as if she is in pain?', 
+
+""Patient: No, she doesn't seem to be crying as if she's in pain. She's a bit fussy and more clingy than usual, but it's not like she's in distress or anything. Her crying is more of a whine than a full-on cry."", 
+
+""TriageMD: Is your child's breathing noisy or labored?"",
+
+ 'Patient: No.', 
+
+""TriageMD: Is your child's breathing very rapid or noisy, or is she gasping for air?"", 
+
+""Patient: I'm not really sure. Her breathing seems a bit different, but I can't tell if it's rapid or noisy. It's hard to say if she's gasping for air or just breathing a bit heavier than usual."", 
+
+""TriageMD: I understand that it can be difficult to assess. Can you observe if her breathing seems faster than normal or if you can hear any wheezing or stridor? If you're unsure, it might be best to consult a healthcare professional for further evaluation."", 
+
+""Patient: Yes, her breathing does seem a bit faster than usual, and I can hear a slight wheeze when she breathes out. It's not super loud, but it's noticeable when I'm close to her. I'm starting to get a bit concerned about it."", 
+
+""TriageMD: Given the faster breathing and the wheezing you've described, it's important to seek medical help immediately. Please call 911 or your local emergency number, or take your child to the nearest hospital emergency department. She could have a serious lung infection, and prompt evaluation is crucial.""]","[{'Question': 'Is your child 3 months old or younger?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Does your child have a rash?', 
+'Protocol': 'Does your child have a rash?'}, 
+
+{'Question': 'Does your child have a rash?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I don't think she has a rash."", 
+'Next_question': ""Just to confirm, you mentioned that you don't think she has a rash. Have you checked her skin closely for any signs of redness or spots?"", 
+'Protocol': 'Does your child have a rash?'}, 
+
+{'Question': ""Just to confirm, you mentioned that you don't think she has a rash. Have you checked her skin closely for any signs of redness or spots?"", 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I checked her skin closely and didn't notice any redness or spots. Her skin looks normal, just a bit warm."", 
+'Next_question': 'Is your child crying as if she is in pain?', 
+'Protocol': 'Is your child crying as if in pain?'}, 
+
+{'Question': 'Is your child crying as if she is in pain?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, she doesn't seem to be crying as if she's in pain. She's a bit fussy and more clingy than usual, but it's not like she's in distress or anything. Her crying is more of a whine than a full-on cry."", 
+'Next_question': ""Is your child's breathing noisy or labored?"", 
+'Protocol': ""Is your child's breathing noisy?""}, 
+
+{'Question': ""Is your child's breathing noisy or labored?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': ""Is your child's breathing very rapid or noisy, or is she gasping for air?"", 
+'Protocol': ""Is your child's breathing very rapid or noisy, or is he or she gasping for air?""}, 
+
+{'Question': ""Is your child's breathing very rapid or noisy, or is she gasping for air?"", 
+'Pattern': 'inconclusive', 
+'Patient_response': ""I'm not really sure. Her breathing seems a bit different, but I can't tell if it's rapid or noisy. It's hard to say if she's gasping for air or just breathing a bit heavier than usual."", 
+'Next_question': ""I understand that it can be difficult to assess. Can you observe if her breathing seems faster than normal or if you can hear any wheezing or stridor? If you're unsure, it might be best to consult a healthcare professional for further evaluation."", 
+'Protocol': ""Is your child's breathing very rapid or noisy, or is he or she gasping for air?""}, 
+
+{'Question': ""I understand that it can be difficult to assess. Can you observe if her breathing seems faster than normal or if you can hear any wheezing or stridor? If you're unsure, it might be best to consult a healthcare professional for further evaluation."", 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""Yes, her breathing does seem a bit faster than usual, and I can hear a slight wheeze when she breathes out. It's not super loud, but it's noticeable when I'm close to her. I'm starting to get a bit concerned about it."", 
+'Next_question': ""Given the faster breathing and the wheezing you've described, it's important to seek medical help immediately. Please call 911 or your local emergency number, or take your child to the nearest hospital emergency department. She could have a serious lung infection, and prompt evaluation is crucial."", 
+'Protocol': 'EMERGENCY: Get medical help now! Call 911 or your local emergency number or take your child to the nearest hospital emergency department. He or she could have a serious lung infection such as acute bronchitis, bronchiolitis, or pneumonia.'}]","Patient: My baby girl has a fever; her armpit temperature is over 100ºF. Should I be worried?
+TriageMD: Is your child 3 months old or younger?
+Patient: No, she doesn't seem to be crying as if she's in pain. She's a bit fussy and more clingy than usual, but it's not like she's in distress or anything. Her crying is more of a whine than a full-on cry.
+TriageMD: Is your child's breathing noisy or labored?
+Patient: Yes, her breathing does seem a bit faster than usual, and I can hear a slight wheeze when she breathes out. It's not super loud, but it's noticeable when I'm close to her. I'm starting to get a bit concerned about it.
+TriageMD: Given the faster breathing and the wheezing you've described, it's important to seek medical help immediately. Please call 911 or your local emergency number, or take your child to the nearest hospital emergency department. She could have a serious lung infection, and prompt evaluation is crucial."
+5,Fever In Children Flowchart,"['N1', 'N2', 'N3', 'N4', 'A2']","['N1', 'N2', 'N3', 'N4', 'A2']",1,"[""Patient: My daughter has had a fever for two days, and I'm worried it's not going down. What should I do?"", 
+
+""TriageMD: I'm sorry to hear that your daughter is unwell. Does she have a rash?"", 
+
+'Patient: No.', 
+
+'TriageMD: I understand your concern. Does your daughter have any abdominal pain?', 
+
+""Patient: I'm not really sure. She hasn't specifically mentioned any pain, but it's hard to tell with kids sometimes."", 
+
+'TriageMD: I understand that it can be difficult to gauge how kids are feeling. Can you check if she seems uncomfortable in her abdomen or if she is reluctant to move or play? Any signs of discomfort could be important.', 
+
+'Patient: No.', 
+'TriageMD: I understand it can be hard to tell. Just to confirm, does your daughter have any signs of abdominal pain, like holding her stomach or being less active than usual?', 
+
+""Patient: No, she hasn't been holding her stomach or anything like that. She's a bit less active than usual, but I think that's just because she's not feeling well overall. She hasn't mentioned any specific pain in her abdomen."", 
+
+""TriageMD: I understand. Just to clarify, has she shown any signs of abdominal pain, like discomfort when moving or any unusual behavior that might suggest she's in pain?"", 
+
+""Patient: No, she hasn't shown any signs of abdominal pain. She moves around without any apparent discomfort and hasn't been holding her stomach or anything like that. She seems a bit less active than usual, but I think that's just because she's not feeling well overall."", 
+
+'TriageMD: Thank you for the information. Does your daughter have an earache or any signs of discomfort in her ears?', 
+
+""Patient: No, she hasn't mentioned anything about her ears hurting, and I haven't noticed her pulling at them or anything. But it's always hard to be completely sure, you know?"", 
+
+'TriageMD: I understand that it can be hard to tell. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+
+""Patient: No, I haven't noticed her pulling at her ears or showing any discomfort when I touch her head. But, you know, it can be tricky to catch everything, especially if she's not really saying much about it."", 
+
+'TriageMD: I understand it can be tricky to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+
+""Patient: No, she hasn't shown any signs of an earache. She hasn't been pulling at her ears or acting uncomfortable when I touch her head. I try to keep an eye out for those things, but she seems okay in that regard."", 
+
+'TriageMD: I understand that it can be difficult to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+
+""Patient: No, she hasn't shown any signs of an earache. She hasn't been pulling at her ears or acting uncomfortable when I touch her head. I try to keep an eye out for those things, but she seems okay in that regard."", 
+
+'TriageMD: I understand that it can be hard to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+
+""Patient: No, she hasn't shown any signs of an earache. She hasn't been pulling at her ears or acting uncomfortable when I touch her head. I try to keep an eye out for those things, but she seems okay in that regard."", 
+
+'TriageMD: I understand that it can be difficult to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+
+'Patient: No.', 
+
+'TriageMD: Has your daughter had three or four watery bowel movements within the last 24 hours?', 
+
+'Patient: Yes.', 
+
+""TriageMD: It's important to call your child's doctor immediately. The diarrhea, especially with the fever, could indicate an infection of the digestive tract, such as gastroenteritis. Please seek medical advice as soon as possible.""]","[{'Question': ""I'm sorry to hear that your daughter is unwell. Does she have a rash?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'I understand your concern. Does your daughter have any abdominal pain?', 
+'Protocol': 'Does your child have abdominal pain?'}, 
+
+{'Question': 'I understand your concern. Does your daughter have any abdominal pain?', 
+'Pattern': 'inconclusive', 
+'Patient_response': ""I'm not really sure. She hasn't specifically mentioned any pain, but it's hard to tell with kids sometimes."", 
+'Next_question': 'I understand that it can be difficult to gauge how kids are feeling. Can you check if she seems uncomfortable in her abdomen or if she is reluctant to move or play? Any signs of discomfort could be important.', 
+'Protocol': 'Does your child have abdominal pain?'}, 
+
+{'Question': 'I understand that it can be difficult to gauge how kids are feeling. Can you check if she seems uncomfortable in her abdomen or if she is reluctant to move or play? Any signs of discomfort could be important.', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'I understand it can be hard to tell. Just to confirm, does your daughter have any signs of abdominal pain, like holding her stomach or being less active than usual?', 'Protocol': 'Does your child have abdominal pain?'}, 
+
+{'Question': 'I understand it can be hard to tell. Just to confirm, does your daughter have any signs of abdominal pain, like holding her stomach or being less active than usual?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, she hasn't been holding her stomach or anything like that. She's a bit less active than usual, but I think that's just because she's not feeling well overall. She hasn't mentioned any specific pain in her abdomen."", 
+'Next_question': ""I understand. Just to clarify, has she shown any signs of abdominal pain, like discomfort when moving or any unusual behavior that might suggest she's in pain?"", 
+'Protocol': 'Does your child have abdominal pain?'}, 
+
+{'Question': ""I understand. Just to clarify, has she shown any signs of abdominal pain, like discomfort when moving or any unusual behavior that might suggest she's in pain?"", 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, she hasn't shown any signs of abdominal pain. She moves around without any apparent discomfort and hasn't been holding her stomach or anything like that. She seems a bit less active than usual, but I think that's just because she's not feeling well overall."", 
+'Next_question': 'Thank you for the information. Does your daughter have an earache or any signs of discomfort in her ears?', 'Protocol': 'Does your child have an earache?'}, 
+
+{'Question': 'Thank you for the information. Does your daughter have an earache or any signs of discomfort in her ears?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, she hasn't mentioned anything about her ears hurting, and I haven't noticed her pulling at them or anything. But it's always hard to be completely sure, you know?"", 
+'Next_question': 'I understand that it can be hard to tell. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Protocol': 'Does your child have an earache?'}, 
+
+{'Question': 'I understand that it can be hard to tell. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I haven't noticed her pulling at her ears or showing any discomfort when I touch her head. But, you know, it can be tricky to catch everything, especially if she's not really saying much about it."", 
+'Next_question': 'I understand it can be tricky to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Protocol': 'Does your child have an earache?'}, 
+
+{'Question': 'I understand it can be tricky to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, she hasn't shown any signs of an earache. She hasn't been pulling at her ears or acting uncomfortable when I touch her head. I try to keep an eye out for those things, but she seems okay in that regard."", 
+'Next_question': 'I understand that it can be difficult to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Protocol': 'Does your child have an earache?'}, 
+
+{'Question': 'I understand that it can be difficult to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, she hasn't shown any signs of an earache. She hasn't been pulling at her ears or acting uncomfortable when I touch her head. I try to keep an eye out for those things, but she seems okay in that regard."", 
+'Next_question': 'I understand that it can be hard to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Protocol': 'Does your child have an earache?'}, 
+
+{'Question': 'I understand that it can be hard to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, she hasn't shown any signs of an earache. She hasn't been pulling at her ears or acting uncomfortable when I touch her head. I try to keep an eye out for those things, but she seems okay in that regard."", 
+'Next_question': 'I understand that it can be difficult to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Protocol': 'Does your child have an earache?'}, 
+
+{'Question': 'I understand that it can be difficult to assess everything. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Has your daughter had three or four watery bowel movements within the last 24 hours?', 
+'Protocol': 'Has your child had three or four watery bowel movements within 24 hours?'}, 
+
+{'Question': 'Has your daughter had three or four watery bowel movements within the last 24 hours?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': ""It's important to call your child's doctor immediately. The diarrhea, especially with the fever, could indicate an infection of the digestive tract, such as gastroenteritis. Please seek medical advice as soon as possible."", 
+'Protocol': ""Call your child's doctor immediately. Your child has diarrhea, possibly caused by an infection of the digestive tract such as gastroenteritis.""}]","Patient: My daughter has had a fever for two days, and I'm worried it's not going down. What should I do?
+TriageMD: I'm sorry to hear that your daughter is unwell. Does she have a rash?
+TriageMD: I understand that it can be hard to tell. Just to confirm, does your daughter have any signs of an earache, like pulling at her ears or seeming uncomfortable when you touch her head?
+Patient: No, I haven't noticed her pulling at her ears or showing any discomfort when I touch her head. But, you know, it can be tricky to catch everything, especially if she's not really saying much about it.
+Patient: Yes.
+TriageMD: It's important to call your child's doctor immediately. The diarrhea, especially with the fever, could indicate an infection of the digestive tract, such as gastroenteritis. Please seek medical advice as soon as possible."
+6,Excessive Sweating Flowchart,"['N1', 'N2', 'N3', 'N4', 'N6', 'N7', 'N10', 'A6']","['N1', 'N2', 'N3', 'N4', 'N6', 'N7', 'N10', 'A6']",1,"[""Patient: I've been experiencing excessive sweating even when I'm not hot or active. What could be causing this?"", 
+
+'TriageMD: I understand that excessive sweating can be concerning. Do you find that you sweat a lot on most days?', 
+
+""Patient: Yeah, I think so. It feels like I'm sweating more than usual on most days, even when I'm not doing much."", 
+
+'TriageMD: I understand how uncomfortable this can be. Are you currently overweight according to the body mass index (BMI)? This information can help in understanding your situation better.', 
+
+'Patient: I love going for walks in the park and enjoying nature. It really helps me relax and clear my mind.', 
+
+'TriageMD: Iâ€™m glad to hear you enjoy walks in nature; thatâ€™s wonderful for relaxation. However, could you let me know if you are currently overweight according to the body mass index (BMI)?', 
+
+'Patient: I really enjoy trying new recipes in the kitchen. Cooking is such a fun way to experiment with different flavors and techniques.', 
+
+'TriageMD: Iâ€™m glad you enjoy cooking! However, could you let me know if you are currently overweight according to the body mass index (BMI)?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for sharing that. To better understand your situation, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I don't think I have those symptoms, at least not that I've noticed. Maybe sometimes I feel a bit shaky, but it's hard to say if it's related."", 
+
+'TriageMD: I understand that it can be difficult to assess symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't noticed having two or more of those symptoms. Sometimes I feel a bit shaky, but I haven't experienced any unexplained weight loss, increased appetite, or rapid heartbeat. I also haven't noticed any changes with my eyes."", 
+
+'TriageMD: I appreciate your clarification. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't noticed having two or more of those symptoms. Sometimes I feel a bit shaky, but I haven't experienced any unexplained weight loss, increased appetite, or rapid heartbeat. I also haven't noticed any changes with my eyes."", 
+
+'TriageMD: I understand, and I appreciate your clarification. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 'Patient: I really enjoy spending time with my pets. They always manage to brighten my day!', 
+
+'TriageMD: Iâ€™m glad to hear that your pets bring you joy! Just to clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't really noticed having two or more of those symptoms. I feel a bit shaky sometimes, but nothing else stands out."", 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced any significant weight loss, increased appetite, or changes with my eyes. My heartbeat seems normal too."", 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced any significant weight loss, increased appetite, or changes with my eyes. My heartbeat seems normal too."", 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't really noticed any of those symptoms happening together. I sometimes feel a bit shaky, but I wouldn't say I have two or more of those other symptoms."", 
+
+'TriageMD: I understand. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I'm not sure if it's related to anything else."", 
+
+'TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main concern has really just been the excessive sweating."", 
+
+'TriageMD: I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue really is the excessive sweating, which seems to happen even when I'm not active or hot."", 
+
+'TriageMD: Thank you for clarifying. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: I'm not really sure. I sometimes feel shaky, but I haven't really paid much attention to the other symptoms. I don't think I've had unexplained weight loss or a rapid heartbeat, but I'm not entirely sure."", 
+
+'TriageMD: I understand that it can be difficult to assess symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your response. To clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: Thank you for your patience. To clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+'Patient: No.', 
+
+'TriageMD: I understand your concern. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: I'm not really sure. I sometimes feel shaky, but I haven't really paid much attention to the other symptoms. I don't think I've had unexplained weight loss or a rapid heartbeat, but I'm not entirely sure."", 
+
+'TriageMD: I understand that it can be difficult to keep track of symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I haven't really noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue is the excessive sweating, which seems to happen even when I'm not active or hot."", 
+
+'TriageMD: I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I don't really think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't really noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue is just the excessive sweating."", 
+
+'TriageMD: I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't really noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue is just the excessive sweating."", 
+
+'TriageMD: I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+
+""Patient: No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main concern is really just the excessive sweating, which happens even when I'm not active or hot."", 
+
+'TriageMD: I understand your concern about excessive sweating. Does the sweating occur mainly at night, even though you are not using heavy blankets?', 
+
+""Patient: No, the sweating doesn't really occur mainly at night. It's more of an issue during the day, even when I'm just sitting around or not doing anything strenuous. It seems to happen regardless of the temperature or my activity level."", 
+
+'TriageMD: I understand how concerning this can be. Is your temperature 100Â°F or higher?', 
+
+'Patient: No.', 
+
+'TriageMD: Are you a woman over 40?', 
+
+""Patient: No, I'm not a woman over 40. I'm actually in my early 30s. The excessive sweating is just something that's been happening recently, and I'm trying to understand why."", 
+
+'TriageMD: Did you begin sweating after taking large doses of aspirin or drinking alcohol?', 
+
+'Patient: Yes.', 
+
+'TriageMD: It sounds like the excessive sweating may be related to aspirin or alcohol. I recommend seeing your doctor to discuss this further, especially if aspirin seems to be the cause. Alcohol can also increase perspiration. Take care!']","[{'Question': 'I understand that excessive sweating can be concerning. Do you find that you sweat a lot on most days?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""Yeah, I think so. It feels like I'm sweating more than usual on most days, even when I'm not doing much."", 
+'Next_question': 'I understand how uncomfortable this can be. Are you currently overweight according to the body mass index (BMI)? This information can help in understanding your situation better.', 
+'Protocol': 'Are you overweight according to the body mass index?'}, 
+
+{'Question': 'I understand how uncomfortable this can be. Are you currently overweight according to the body mass index (BMI)? This information can help in understanding your situation better.', 
+'Pattern': 'irrelevant', 
+'Patient_response': 'I love going for walks in the park and enjoying nature. It really helps me relax and clear my mind.', 
+'Next_question': 'Iâ€™m glad to hear you enjoy walks in nature; thatâ€™s wonderful for relaxation. However, could you let me know if you are currently overweight according to the body mass index (BMI)?', 
+'Protocol': 'Are you overweight according to the body mass index?'}, 
+
+{'Question': 'Iâ€™m glad to hear you enjoy walks in nature; thatâ€™s wonderful for relaxation. However, could you let me know if you are currently overweight according to the body mass index (BMI)?', 
+'Pattern': 'irrelevant', 
+'Patient_response': 'I really enjoy trying new recipes in the kitchen. Cooking is such a fun way to experiment with different flavors and techniques.', 
+'Next_question': 'Iâ€™m glad you enjoy cooking! However, could you let me know if you are currently overweight according to the body mass index (BMI)?', 
+'Protocol': 'Are you overweight according to the body mass index?'}, 
+
+{'Question': 'Iâ€™m glad you enjoy cooking! However, could you let me know if you are currently overweight according to the body mass index (BMI)?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for sharing that. To better understand your situation, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for sharing that. To better understand your situation, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I don't think I have those symptoms, at least not that I've noticed. Maybe sometimes I feel a bit shaky, but it's hard to say if it's related."", 
+'Next_question': 'I understand that it can be difficult to assess symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand that it can be difficult to assess symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't noticed having two or more of those symptoms. Sometimes I feel a bit shaky, but I haven't experienced any unexplained weight loss, increased appetite, or rapid heartbeat. I also haven't noticed any changes with my eyes."", 
+'Next_question': 'I appreciate your clarification. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I appreciate your clarification. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't noticed having two or more of those symptoms. Sometimes I feel a bit shaky, but I haven't experienced any unexplained weight loss, increased appetite, or rapid heartbeat. I also haven't noticed any changes with my eyes."", 
+'Next_question': 'I understand, and I appreciate your clarification. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand, and I appreciate your clarification. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'irrelevant', 
+'Patient_response': 'I really enjoy spending time with my pets. They always manage to brighten my day!', 
+'Next_question': 'Iâ€™m glad to hear that your pets bring you joy! Just to clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Iâ€™m glad to hear that your pets bring you joy! Just to clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I haven't really noticed having two or more of those symptoms. I feel a bit shaky sometimes, but nothing else stands out."", 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced any significant weight loss, increased appetite, or changes with my eyes. My heartbeat seems normal too."", 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your patience. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced any significant weight loss, increased appetite, or changes with my eyes. My heartbeat seems normal too."", 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I haven't really noticed any of those symptoms happening together. I sometimes feel a bit shaky, but I wouldn't say I have two or more of those other symptoms."", 
+'Next_question': 'I understand. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I'm not sure if it's related to anything else."", 
+'Next_question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main concern has really just been the excessive sweating."", 
+'Next_question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue really is the excessive sweating, which seems to happen even when I'm not active or hot."", 
+'Next_question': 'Thank you for clarifying. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for clarifying. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'inconclusive', 
+'Patient_response': ""I'm not really sure. I sometimes feel shaky, but I haven't really paid much attention to the other symptoms. I don't think I've had unexplained weight loss or a rapid heartbeat, but I'm not entirely sure."", 
+'Next_question': 'I understand that it can be difficult to assess symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand that it can be difficult to assess symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your response. To clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your response. To clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Thank you for your patience. To clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'Thank you for your patience. To clarify, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'I understand your concern. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand your concern. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'inconclusive', 
+'Patient_response': ""I'm not really sure. I sometimes feel shaky, but I haven't really paid much attention to the other symptoms. I don't think I've had unexplained weight loss or a rapid heartbeat, but I'm not entirely sure."", 
+'Next_question': 'I understand that it can be difficult to keep track of symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand that it can be difficult to keep track of symptoms. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I haven't really noticed having two or more of those symptoms. I sometimes feel a bit shaky, but I haven't experienced unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue is the excessive sweating, which seems to happen even when I'm not active or hot."", 
+'Next_question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I don't really think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't really noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue is just the excessive sweating."", 
+'Next_question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't really noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main issue is just the excessive sweating."", 
+'Next_question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Protocol': 'Do you have two or more of the following symptoms: unexplained weight loss; increased appetite; weakness or trembling; bulging eyes; rapid heartbeat?'}, 
+
+{'Question': 'I understand your concern about excessive sweating. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I don't think I have two or more of those symptoms. I sometimes feel a bit shaky, but I haven't noticed unexplained weight loss, increased appetite, bulging eyes, or a rapid heartbeat. My main concern is really just the excessive sweating, which happens even when I'm not active or hot."", 
+'Next_question': 'I understand your concern about excessive sweating. Does the sweating occur mainly at night, even though you are not using heavy blankets?', 
+'Protocol': 'Does the sweating occur mainly at night, even though you are not using heavy blankets?'}, 
+
+{'Question': 'I understand your concern about excessive sweating. Does the sweating occur mainly at night, even though you are not using heavy blankets?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, the sweating doesn't really occur mainly at night. It's more of an issue during the day, even when I'm just sitting around or not doing anything strenuous. It seems to happen regardless of the temperature or my activity level."", 
+'Next_question': 'I understand how concerning this can be. Is your temperature 100Â°F or higher?', 
+'Protocol': 'Is your temperature 100Â°F or higher?'}, 
+
+{'Question': 'I understand how concerning this can be. Is your temperature 100Â°F or higher?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Are you a woman over 40?', 
+'Protocol': 'Are you a woman over 40?'}, 
+
+{'Question': 'Are you a woman over 40?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I'm not a woman over 40. I'm actually in my early 30s. The excessive sweating is just something that's been happening recently, and I'm trying to understand why."", 
+'Next_question': 'Did you begin sweating after taking large doses of aspirin or drinking alcohol?', 
+'Protocol': 'Did you begin sweating after taking large doses of aspirin or drinking alcohol?'}, 
+
+{'Question': 'Did you begin sweating after taking large doses of aspirin or drinking alcohol?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': 'It sounds like the excessive sweating may be related to aspirin or alcohol. I recommend seeing your doctor to discuss this further, especially if aspirin seems to be the cause. Alcohol can also increase perspiration. Take care!', 
+'Protocol': 'See your doctor if aspirin seems to be the cause. Alcohol can increase perspiration.'}]
+","Patient: I've been experiencing excessive sweating even when I'm not hot or active. What could be causing this?
+TriageMD: I understand that excessive sweating can be concerning. Do you find that you sweat a lot on most days?
+Patient: No.
+TriageMD: Thank you for your response. Just to confirm, do you have two or more of the following symptoms: unexplained weight loss, increased appetite, weakness or trembling, bulging eyes, or a rapid heartbeat?
+Patient: Yes.
+TriageMD: It sounds like the excessive sweating may be related to aspirin or alcohol. I recommend seeing your doctor to discuss this further, especially if aspirin seems to be the cause. Alcohol can also increase perspiration. Take care!"
+7,Slow Weight Gain In Young Children Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'N8', 'N9', 'N10', 'N11', 'N12', 'A8']","['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'N8', 'N9', 'N10', 'N11', 'N12', 'A8']",1,"[""Patient: I'm worried my daughter isn't gaining weight as she should. What could be causing this slow growth?"", 
+
+""TriageMD: I understand your concern about your daughter's weight gain. It's important to consider whether she seems generally healthy despite the slow growth. Is she active, alert, and meeting other developmental milestones?"", 
+
+'Patient: Yes.', 
+
+""TriageMD: I'm glad to hear your daughter is active and meeting developmental milestones. To better understand her growth, could you let me know if she was less than 5Â½ pounds at birth?"", 
+
+'Patient: No.', 
+
+""TriageMD: Thank you for the information. Is either parent smaller than average? This can sometimes influence a child's growth patterns."", 
+
+""Patient: Not really, we're both pretty average-sized, I think."", 
+
+""TriageMD: I understand. It's good to know that both parents are average-sized. Sometimes, genetics can play a role in growth patterns. Have there been any changes in her diet or appetite recently?"", 
+
+""Patient: No, there haven't been any changes in her diet or appetite. She seems to eat well and enjoys her meals, so I don't think that's the issue."", 
+
+'TriageMD: Is your child younger than a year?', 
+
+'Patient: Yes.', 
+
+'TriageMD: Are you breastfeeding?', 
+
+""Patient: No, I'm not currently breastfeeding. We've been using formula."", 
+
+'TriageMD: Are you bottle-feeding her formula?', 
+
+'Patient: Yes.', 
+
+""TriageMD: It's possible that adding too much water to the formula or diluting ready-to-serve formula could affect her weight gain. Make sure to follow the instructions on the formula packaging for the correct mixing ratio. If you're concerned, it might be a good idea to consult your pediatrician for further guidance."", 
+
+""Patient: No, I always make sure to follow the instructions on the formula packaging and use the correct mixing ratio. I'm quite careful about that, so I don't think that's the issue."", '
+
+TriageMD: Does your baby always finish all the formula?', 
+
+'Patient: No, not always. Sometimes she leaves a bit in the bottle, but other times she finishes it all. It kind of varies from day to day.', 
+
+""TriageMD: It's normal for babies to sometimes leave a little formula in the bottle. As long as she seems content and is gaining some weight, it may not be a concern. However, if you're worried about her growth, itâ€™s best to discuss this with your pediatrician for personalized advice."", 
+
+'Patient: No.', 
+
+'TriageMD: Does your baby often vomit after feedings?', 
+
+'Patient: Sometimes I just love going for a walk in the park. The weather has been really nice lately!', 
+
+'TriageMD: I understand that you enjoy walks in the park! However, could you let me know if your baby often vomits after feedings?', 
+
+""Patient: Oh, I love the park too! It's such a great way to unwind and enjoy the fresh air. The flowers have been beautiful this season, haven't they?"", 
+
+'TriageMD: Iâ€™m glad to hear you enjoy the park! Just to check, does your baby often vomit after feedings?', 
+
+'Patient: No.', 
+
+'TriageMD: Does your child have loose, pale, bulky, and bad-smelling bowel movements?', 
+
+""Patient: No, my child's bowel movements seem normal. They're not loose, pale, or bulky, and they don't have a particularly bad smell. Everything seems pretty typical in that area."", 
+
+'TriageMD: Is your child taking a corticosteroid medication for a disorder such as asthma?', 
+
+""Patient: Yes, my child is currently taking a corticosteroid medication for asthma. We started the medication a few months ago, and I've been following the prescribed dosage. I wonder if this could be affecting her weight gain."", 
+
+""TriageMD: It's possible that the corticosteroid medication could be affecting your child's weight gain. I recommend calling your child's doctor to discuss your concerns and see if any adjustments are needed.""]","[{'Question': ""I understand your concern about your daughter's weight gain. It's important to consider whether she seems generally healthy despite the slow growth. Is she active, alert, and meeting other developmental milestones?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': ""I'm glad to hear your daughter is active and meeting developmental milestones. To better understand her growth, could you let me know if she was less than 5Â½ pounds at birth?"", 
+'Protocol': 'Was your child less than 5Â½ pounds at birth?'}, 
+
+{'Question': ""I'm glad to hear your daughter is active and meeting developmental milestones. To better understand her growth, could you let me know if she was less than 5Â½ pounds at birth?"", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': ""Thank you for the information. Is either parent smaller than average? This can sometimes influence a child's growth patterns."", 
+'Protocol': 'Is either parent smaller than average?'}, 
+
+{'Question': ""Thank you for the information. Is either parent smaller than average? This can sometimes influence a child's growth patterns."", 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""Not really, we're both pretty average-sized, I think."", 
+'Next_question': ""I understand. It's good to know that both parents are average-sized. Sometimes, genetics can play a role in growth patterns. Have there been any changes in her diet or appetite recently?"", 
+'Protocol': 'Is either parent smaller than average?'}, 
+
+{'Question': ""I understand. It's good to know that both parents are average-sized. Sometimes, genetics can play a role in growth patterns. Have there been any changes in her diet or appetite recently?"", 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, there haven't been any changes in her diet or appetite. She seems to eat well and enjoys her meals, so I don't think that's the issue."", 
+'Next_question': 'Is your child younger than a year?', 
+'Protocol': 'Is your child younger than a year?'}, 
+
+{'Question': 'Is your child younger than a year?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': 'Are you breastfeeding?', 
+'Protocol': 'Are you breastfeeding?'}, 
+
+{'Question': 'Are you breastfeeding?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': ""No, I'm not currently breastfeeding. We've been using formula."", 
+'Next_question': 'Are you bottle-feeding her formula?', 
+'Protocol': 'Are you bottle-feeding?'}, 
+
+{'Question': 'Are you bottle-feeding her formula?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'Yes.', 
+'Next_question': ""It's possible that adding too much water to the formula or diluting ready-to-serve formula could affect her weight gain. Make sure to follow the instructions on the formula packaging for the correct mixing ratio. If you're concerned, it might be a good idea to consult your pediatrician for further guidance."", 
+'Protocol': 'Could you be adding too much water to the formula, or diluting formula that is ready-to-serve?'}, 
+
+{'Question': ""It's possible that adding too much water to the formula or diluting ready-to-serve formula could affect her weight gain. Make sure to follow the instructions on the formula packaging for the correct mixing ratio. If you're concerned, it might be a good idea to consult your pediatrician for further guidance."", 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, I always make sure to follow the instructions on the formula packaging and use the correct mixing ratio. I'm quite careful about that, so I don't think that's the issue."", 
+'Next_question': 'Does your baby always finish all the formula?', 
+'Protocol': 'Does your baby always finish all the formula?'}, 
+
+{'Question': 'Does your baby always finish all the formula?', 
+'Pattern': 'vague or partially conclusive', 
+'Patient_response': 'No, not always. Sometimes she leaves a bit in the bottle, but other times she finishes it all. It kind of varies from day to day.', 
+'Next_question': ""It's normal for babies to sometimes leave a little formula in the bottle. As long as she seems content and is gaining some weight, it may not be a concern. However, if you're worried about her growth, itâ€™s best to discuss this with your pediatrician for personalized advice."", 
+'Protocol': 'Does your baby always finish all the formula?'}, 
+
+{'Question': ""It's normal for babies to sometimes leave a little formula in the bottle. As long as she seems content and is gaining some weight, it may not be a concern. However, if you're worried about her growth, itâ€™s best to discuss this with your pediatrician for personalized advice."", 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Does your baby often vomit after feedings?', 
+'Protocol': 'Does your baby often vomit after feedings?'}, 
+
+{'Question': 'Does your baby often vomit after feedings?', 
+'Pattern': 'irrelevant', 
+'Patient_response': 'Sometimes I just love going for a walk in the park. The weather has been really nice lately!', 
+'Next_question': 'I understand that you enjoy walks in the park! However, could you let me know if your baby often vomits after feedings?', 
+'Protocol': 'Does your baby often vomit after feedings?'}, 
+
+{'Question': 'I understand that you enjoy walks in the park! However, could you let me know if your baby often vomits after feedings?', 
+'Pattern': 'irrelevant', 
+'Patient_response': ""Oh, I love the park too! It's such a great way to unwind and enjoy the fresh air. The flowers have been beautiful this season, haven't they?"", 
+'Next_question': 'Iâ€™m glad to hear you enjoy the park! Just to check, does your baby often vomit after feedings?', 
+'Protocol': 'Does your baby often vomit after feedings?'}, 
+
+{'Question': 'Iâ€™m glad to hear you enjoy the park! Just to check, does your baby often vomit after feedings?', 
+'Pattern': 'conclusive and minimalistic', 
+'Patient_response': 'No.', 
+'Next_question': 'Does your child have loose, pale, bulky, and bad-smelling bowel movements?', 
+'Protocol': 'Does your child have loose, pale, bulky, and bad-smelling bowel movements?'}, 
+
+{'Question': 'Does your child have loose, pale, bulky, and bad-smelling bowel movements?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""No, my child's bowel movements seem normal. They're not loose, pale, or bulky, and they don't have a particularly bad smell. Everything seems pretty typical in that area."", 
+'Next_question': 'Is your child taking a corticosteroid medication for a disorder such as asthma?', 
+'Protocol': 'Is your child taking a corticosteroid medication for a disorder such as asthma?'}, 
+
+{'Question': 'Is your child taking a corticosteroid medication for a disorder such as asthma?', 
+'Pattern': 'conclusive and descriptive', 
+'Patient_response': ""Yes, my child is currently taking a corticosteroid medication for asthma. We started the medication a few months ago, and I've been following the prescribed dosage. I wonder if this could be affecting her weight gain."", 
+'Next_question': ""It's possible that the corticosteroid medication could be affecting your child's weight gain. I recommend calling your child's doctor to discuss your concerns and see if any adjustments are needed."", 
+'Protocol': ""Call your child's doctor. Corticosteroid medications can sometimes affect growth.""}]","Patient: I'm worried my daughter isn't gaining weight as she should. What could be causing this slow growth?
+TriageMD: I understand your concern about your daughter's weight gain. It's important to consider whether she seems generally healthy despite the slow growth. Is she active, alert, and meeting other developmental milestones?
+Patient: No, I always make sure to follow the instructions on the formula packaging and use the correct mixing ratio. I'm quite careful about that, so I don't think that's the issue.
+TriageMD: Does your baby always finish all the formula?
+Patient: Yes, my child is currently taking a corticosteroid medication for asthma. We started the medication a few months ago, and I've been following the prescribed dosage. I wonder if this could be affecting her weight gain.
+TriageMD: It's possible that the corticosteroid medication could be affecting your child's weight gain. I recommend calling your child's doctor to discuss your concerns and see if any adjustments are needed."

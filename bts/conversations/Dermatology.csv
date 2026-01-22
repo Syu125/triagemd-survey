@@ -1,0 +1,445 @@
+,Flowchart,Path label,Path,Accuracy,Conversation,Question_and_response_pair
+0,Hair Loss Flowchart,"['N1', 'N2', 'A1']","['N1', 'N2', 'A1']",1,"Patient: I've noticed my hair thinning significantly over the past few months. What could be causing this, and how can I treat it?
+
+TriageMD: I'm sorry to hear that you're experiencing significant hair thinning. Has your hair become generally thin? This information can help in understanding your situation better.
+
+Patient: Yes, it seems like my hair has become generally thin all over, but I'm not entirely sure if it's just in certain areas.
+
+TriageMD: I understand that it can be concerning to notice changes in your hair. To clarify, has your hair become generally thin all over, or are you noticing thinning in specific areas?
+
+Patient: I'm not entirely sure if it's all over or just in certain areas. It feels like it's generally thinner, but I haven't really noticed if there are specific spots that are worse. It's hard to tell.
+
+TriageMD: I understand that it can be difficult to assess. Just to confirm, do you feel that your hair has become generally thin, or are you unsure if it's just in certain areas?
+
+Patient: I'm really not sure. It feels like it's generally thinner, but I haven't noticed if there are specific areas that are worse. It's hard to tell without a closer look.
+
+TriageMD: I understand that it can be difficult to assess. Just to clarify, do you feel that your hair has become generally thin overall?
+
+Patient: Yes, I think it might be generally thinner overall, but I'm not completely sure. It just feels different than it used to.
+
+TriageMD: I understand that it can be hard to determine. Just to confirm, do you feel that your hair has become generally thin overall?
+
+Patient: I'm not really sure. It feels like my hair is generally thinner, but I can't say for certain if it's all over or just in certain spots. It's hard to tell without a closer look.
+
+TriageMD: I understand that it can be difficult to assess. Just to confirm, do you feel that your hair has become generally thin overall?
+
+Patient: Yes.
+
+TriageMD: Thank you for sharing that. Did you notice the thinning occurring about 2 to 3 months after experiencing a fever?
+
+Patient: I'm not really sure if it was related to a fever. I can't remember having one recently, but I guess it's possible. It's hard to keep track of everything.
+
+TriageMD: I understand that it can be hard to keep track of everything. Just to clarify, did you notice the thinning occurring about 2 to 3 months after experiencing a fever?
+
+Patient: Yes.
+
+TriageMD: It's understandable to be concerned about your hair loss. Temporary hair loss can sometimes occur a few months after a fever, and in many cases, hair growth returns to normal within a few months. If you're worried about your hair loss, I recommend calling your doctor for further evaluation and guidance.","[{'Question': ""I'm sorry to hear that you're experiencing significant hair thinning. Has your hair become generally thin? This information can help in understanding your situation better."", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, it seems like my hair has become generally thin all over, but I'm not entirely sure if it's just in certain areas."", 'Next_question': 'I understand that it can be concerning to notice changes in your hair. To clarify, has your hair become generally thin all over, or are you noticing thinning in specific areas?', 'Protocol': 'Has your hair become generally thin?'}, {'Question': 'I understand that it can be concerning to notice changes in your hair. To clarify, has your hair become generally thin all over, or are you noticing thinning in specific areas?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure if it's all over or just in certain areas. It feels like it's generally thinner, but I haven't really noticed if there are specific spots that are worse. It's hard to tell."", 'Next_question': ""I understand that it can be difficult to assess. Just to confirm, do you feel that your hair has become generally thin, or are you unsure if it's just in certain areas?"", 'Protocol': 'Has your hair become generally thin?'}, {'Question': ""I understand that it can be difficult to assess. Just to confirm, do you feel that your hair has become generally thin, or are you unsure if it's just in certain areas?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm really not sure. It feels like it's generally thinner, but I haven't noticed if there are specific areas that are worse. It's hard to tell without a closer look."", 'Next_question': 'I understand that it can be difficult to assess. Just to clarify, do you feel that your hair has become generally thin overall?', 'Protocol': 'Has your hair become generally thin?'}, {'Question': 'I understand that it can be difficult to assess. Just to clarify, do you feel that your hair has become generally thin overall?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I think it might be generally thinner overall, but I'm not completely sure. It just feels different than it used to."", 'Next_question': 'I understand that it can be hard to determine. Just to confirm, do you feel that your hair has become generally thin overall?', 'Protocol': 'Has your hair become generally thin?'}, {'Question': 'I understand that it can be hard to determine. Just to confirm, do you feel that your hair has become generally thin overall?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. It feels like my hair is generally thinner, but I can't say for certain if it's all over or just in certain spots. It's hard to tell without a closer look."", 'Next_question': 'I understand that it can be difficult to assess. Just to confirm, do you feel that your hair has become generally thin overall?', 'Protocol': 'Has your hair become generally thin?'}, {'Question': 'I understand that it can be difficult to assess. Just to confirm, do you feel that your hair has become generally thin overall?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Thank you for sharing that. Did you notice the thinning occurring about 2 to 3 months after experiencing a fever?', 'Protocol': 'Did the thinning occur 2 to 3 months after a fever?'}, {'Question': 'Thank you for sharing that. Did you notice the thinning occurring about 2 to 3 months after experiencing a fever?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure if it was related to a fever. I can't remember having one recently, but I guess it's possible. It's hard to keep track of everything."", 'Next_question': 'I understand that it can be hard to keep track of everything. Just to clarify, did you notice the thinning occurring about 2 to 3 months after experiencing a fever?', 'Protocol': 'Did the thinning occur 2 to 3 months after a fever?'}, {'Question': 'I understand that it can be hard to keep track of everything. Just to clarify, did you notice the thinning occurring about 2 to 3 months after experiencing a fever?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's understandable to be concerned about your hair loss. Temporary hair loss can sometimes occur a few months after a fever, and in many cases, hair growth returns to normal within a few months. If you're worried about your hair loss, I recommend calling your doctor for further evaluation and guidance."", 'Protocol': 'Call your doctor if you are concerned about your hair loss. Temporary hair loss sometimes occurs a few months after a fever. Your hair should return to normal within a few months.'}]"
+1,General Skin Problems Flowchart,"['N1', 'N2', 'N5', 'F4']","['N1', 'N2', 'N5', 'F4']",1,"Patient: I've noticed some unusual spots and rashes on my skin recently. Could you help me understand what might be causing this?
+
+TriageMD: Iâ€™m sorry to hear that youâ€™re experiencing unusual spots and rashes on your skin. To better understand your situation, could you let me know if the skin problem mainly affects the skin on your face?
+
+Patient: No.
+
+TriageMD: Do you have a red rash?
+
+Patient: No, the rash isn't really red. It's more like a series of small, raised bumps that are skin-colored or slightly pink. They don't seem to be inflamed or have any redness around them. Is there anything else I should look out for or consider?
+
+TriageMD: Does the problem affect only the skin on your feet?
+
+Patient: Yes.
+
+TriageMD: Have you injured your foot within the past 24 hours?","[{'Question': 'Iâ€™m sorry to hear that youâ€™re experiencing unusual spots and rashes on your skin. To better understand your situation, could you let me know if the skin problem mainly affects the skin on your face?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have a red rash?', 'Protocol': 'Do you have a red rash?'}, {'Question': 'Do you have a red rash?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, the rash isn't really red. It's more like a series of small, raised bumps that are skin-colored or slightly pink. They don't seem to be inflamed or have any redness around them. Is there anything else I should look out for or consider?"", 'Next_question': 'Does the problem affect only the skin on your feet?', 'Protocol': 'Does the problem affect only the skin on your feet?'}, {'Question': 'Does the problem affect only the skin on your feet?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Have you injured your foot within the past 24 hours?', 'Protocol': 'Have you injured your foot within the past 24 hours?'}]"
+2,Facial Skin Problems Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'A7']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'A7']",1,"Patient: I've noticed some unusual spots on my face recently and I'm worried they might be something serious.
+
+TriageMD: I understand your concern about the unusual spots on your face. Do you have an itchy, red, flaky rash?
+
+Patient: No.
+
+TriageMD: I understand your concern. Do you have one or more of the following symptoms: blackheads, raised spots on the skin with white or yellow centers, or painful red lumps under the skin?
+
+Patient: No.
+
+TriageMD: I understand your concern. Does your face become flushed when you're under stress or after you drink alcohol or eat spicy foods?
+
+Patient: I actually love spicy foods, and I just got a new recipe book full of them!
+
+TriageMD: I appreciate your enthusiasm for spicy foods! However, can you tell me if your face becomes flushed when you're under stress or after you drink alcohol or eat spicy foods?
+
+Patient: No.
+
+TriageMD: I understand your concern. Do you have sore areas around your mouth that are red and rough or blistered?
+
+Patient: I'm not really sure. Sometimes I notice some irritation, but it's hard to tell if it's what you're describing.
+
+TriageMD: I understand that it can be difficult to assess. Just to clarify, do you have any sore areas around your mouth that are red and rough or blistered?
+
+Patient: I don't really have any sore areas around my mouth, but I did try a new moisturizer recently. Maybe that's why my skin feels a bit different.
+
+TriageMD: I understand. Just to confirm, do you have any sore areas around your mouth that are red and rough or blistered?
+
+Patient: No, I don't have any sore areas around my mouth that are red, rough, or blistered. My skin just feels a bit different, possibly due to the new moisturizer I started using. It's more of a general irritation rather than specific sore spots.
+
+TriageMD: Thank you for clarifying. Do you have a blistering rash on one side of your face in an area that has been painful over the past 2 to 4 days?
+
+Patient: No, I don't have a blistering rash or any pain on one side of my face. It's more of a general change in my skin's appearance that I've noticed recently, without any specific painful areas.
+
+TriageMD: Do you have blisters that burst and form a crust that looks like brown sugar?
+
+Patient: No, I don't think I have anything like that. There aren't any blisters or crusts that look like brown sugar, at least not that I've noticed so far.
+
+TriageMD: Are you over 35 years old?
+
+Patient: Yes.
+
+TriageMD: Do you have rough red patches on your forehead or cheeks?
+
+Patient: Yes, I do have some rough red patches on my cheeks. They've been there for a little while, and they seem to be getting more noticeable. They aren't painful, but they do feel a bit rough to the touch.
+
+TriageMD: It sounds like you may have actinic keratoses, which can develop from repeated sun exposure. I recommend seeing your doctor for an evaluation and appropriate treatment. Take care!","[{'Question': 'I understand your concern about the unusual spots on your face. Do you have an itchy, red, flaky rash?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Do you have one or more of the following symptoms: blackheads, raised spots on the skin with white or yellow centers, or painful red lumps under the skin?', 'Protocol': 'Do you have one or more of the following symptoms: blackheads; raised spots on the skin with white or yellow centers; painful red lumps under the skin?'}, {'Question': 'I understand your concern. Do you have one or more of the following symptoms: blackheads, raised spots on the skin with white or yellow centers, or painful red lumps under the skin?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I understand your concern. Does your face become flushed when you're under stress or after you drink alcohol or eat spicy foods?"", 'Protocol': ""Does your face become flushed when you're under stress or after you drink alcohol or eat spicy foods?""}, {'Question': ""I understand your concern. Does your face become flushed when you're under stress or after you drink alcohol or eat spicy foods?"", 'Pattern': 'irrelevant', 'Patient_response': 'I actually love spicy foods, and I just got a new recipe book full of them!', 'Next_question': ""I appreciate your enthusiasm for spicy foods! However, can you tell me if your face becomes flushed when you're under stress or after you drink alcohol or eat spicy foods?"", 'Protocol': ""Does your face become flushed when you're under stress or after you drink alcohol or eat spicy foods?""}, {'Question': ""I appreciate your enthusiasm for spicy foods! However, can you tell me if your face becomes flushed when you're under stress or after you drink alcohol or eat spicy foods?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Do you have sore areas around your mouth that are red and rough or blistered?', 'Protocol': 'Do you have sore areas around your mouth that are red and rough or blistered?'}, {'Question': 'I understand your concern. Do you have sore areas around your mouth that are red and rough or blistered?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. Sometimes I notice some irritation, but it's hard to tell if it's what you're describing."", 'Next_question': 'I understand that it can be difficult to assess. Just to clarify, do you have any sore areas around your mouth that are red and rough or blistered?', 'Protocol': 'Do you have sore areas around your mouth that are red and rough or blistered?'}, {'Question': 'I understand that it can be difficult to assess. Just to clarify, do you have any sore areas around your mouth that are red and rough or blistered?', 'Pattern': 'irrelevant', 'Patient_response': ""I don't really have any sore areas around my mouth, but I did try a new moisturizer recently. Maybe that's why my skin feels a bit different."", 'Next_question': 'I understand. Just to confirm, do you have any sore areas around your mouth that are red and rough or blistered?', 'Protocol': 'Do you have sore areas around your mouth that are red and rough or blistered?'}, {'Question': 'I understand. Just to confirm, do you have any sore areas around your mouth that are red and rough or blistered?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't have any sore areas around my mouth that are red, rough, or blistered. My skin just feels a bit different, possibly due to the new moisturizer I started using. It's more of a general irritation rather than specific sore spots."", 'Next_question': 'Thank you for clarifying. Do you have a blistering rash on one side of your face in an area that has been painful over the past 2 to 4 days?', 'Protocol': 'Do you have a blistering rash on one side of your face in an area that was painful over the past 2 to 4 days?'}, {'Question': 'Thank you for clarifying. Do you have a blistering rash on one side of your face in an area that has been painful over the past 2 to 4 days?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't have a blistering rash or any pain on one side of my face. It's more of a general change in my skin's appearance that I've noticed recently, without any specific painful areas."", 'Next_question': 'Do you have blisters that burst and form a crust that looks like brown sugar?', 'Protocol': 'Do you have blisters that burst and form a crust that looks like brown sugar?'}, {'Question': 'Do you have blisters that burst and form a crust that looks like brown sugar?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think I have anything like that. There aren't any blisters or crusts that look like brown sugar, at least not that I've noticed so far."", 'Next_question': 'Are you over 35 years old?', 'Protocol': 'Are you over 35?'}, {'Question': 'Are you over 35 years old?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you have rough red patches on your forehead or cheeks?', 'Protocol': 'Do you have rough red patches on your forehead or cheeks?'}, {'Question': 'Do you have rough red patches on your forehead or cheeks?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I do have some rough red patches on my cheeks. They've been there for a little while, and they seem to be getting more noticeable. They aren't painful, but they do feel a bit rough to the touch."", 'Next_question': 'It sounds like you may have actinic keratoses, which can develop from repeated sun exposure. I recommend seeing your doctor for an evaluation and appropriate treatment. Take care!', 'Protocol': 'See your doctor. You may have actinic keratoses, which can form from repeated exposure to sunlight.'}]"
+3,Itchy Spots And Rashes Flowchart,"['N1', 'N2', 'N3', 'N7', 'N8', 'N9', 'N10', 'N11', 'A9']","['N1', 'N2', 'N3', 'N7', 'N8', 'N9', 'N10', 'N11', 'A9']",1,"Patient: My daughter has developed some itchy spots and rashes that seem discolored and slightly raised. What could be causing this?
+
+TriageMD: I'm sorry to hear that your daughter is experiencing these symptoms. To help assess her condition, could you please let me know if her temperature is 100Â°F or higher?
+
+Patient: No.
+
+TriageMD: Thank you for the information. Does the rash appear red, flaky, or moist, and does it fade into the surrounding skin?
+
+Patient: No.
+
+TriageMD: Do you have a smooth, raised, light-red rash with clearly defined edges?
+
+Patient: No.
+
+TriageMD: Have you recently started taking any medication?
+
+Patient: No.
+
+TriageMD: Do you have one or more red, scaly patches that spread out in a ring?
+
+Patient: Well, I did notice the leaves changing color in the park today. It's really starting to feel like fall!
+
+TriageMD: I understand that the changing seasons can be beautiful! However, could you please let me know if your daughter has one or more red, scaly patches that spread out in a ring?
+
+Patient: Not exactly. They don't really look like rings, but they are a bit scaly.
+
+TriageMD: I understand. Just to clarify, do you have one or more red, scaly patches that spread out in a ring?
+
+Patient: No, they don't really spread out in a ring shape. Theyâ€™re just scattered around and are a bit scaly, but not in a circular pattern. They seem more like small patches.
+
+TriageMD: Do you have a widespread red rash that itches a lot, particularly at night?
+
+Patient: Yes.
+
+TriageMD: Do you have tiny gray lines or red, infected-looking spots between your fingers or on your wrists?
+
+Patient: No, I haven't noticed any tiny gray lines or red spots between my fingers or on my wrists. The rash is mostly on her arms and legs, and it doesn't seem to have those specific features.
+
+TriageMD: Do you have one or more raised red spots on a small area?
+
+Patient: Yes.
+
+TriageMD: It sounds like your daughter may have been bitten or stung by an insect. I recommend seeing your doctor for a proper evaluation and treatment.","[{'Question': ""I'm sorry to hear that your daughter is experiencing these symptoms. To help assess her condition, could you please let me know if her temperature is 100Â°F or higher?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for the information. Does the rash appear red, flaky, or moist, and does it fade into the surrounding skin?', 'Protocol': 'Do you have a red, flaky, or moist rash that fades into the surrounding skin?'}, {'Question': 'Thank you for the information. Does the rash appear red, flaky, or moist, and does it fade into the surrounding skin?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have a smooth, raised, light-red rash with clearly defined edges?', 'Protocol': 'Do you have a smooth, raised, light-red rash with clearly defined edges?'}, {'Question': 'Do you have a smooth, raised, light-red rash with clearly defined edges?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you recently started taking any medication?', 'Protocol': 'Have you recently started taking any medication?'}, {'Question': 'Have you recently started taking any medication?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have one or more red, scaly patches that spread out in a ring?', 'Protocol': 'Do you have one or more red, scaly patches that spread out in a ring?'}, {'Question': 'Do you have one or more red, scaly patches that spread out in a ring?', 'Pattern': 'irrelevant', 'Patient_response': ""Well, I did notice the leaves changing color in the park today. It's really starting to feel like fall!"", 'Next_question': 'I understand that the changing seasons can be beautiful! However, could you please let me know if your daughter has one or more red, scaly patches that spread out in a ring?', 'Protocol': 'Do you have one or more red, scaly patches that spread out in a ring?'}, {'Question': 'I understand that the changing seasons can be beautiful! However, could you please let me know if your daughter has one or more red, scaly patches that spread out in a ring?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not exactly. They don't really look like rings, but they are a bit scaly."", 'Next_question': 'I understand. Just to clarify, do you have one or more red, scaly patches that spread out in a ring?', 'Protocol': 'Do you have one or more red, scaly patches that spread out in a ring?'}, {'Question': 'I understand. Just to clarify, do you have one or more red, scaly patches that spread out in a ring?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, they don't really spread out in a ring shape. Theyâ€™re just scattered around and are a bit scaly, but not in a circular pattern. They seem more like small patches."", 'Next_question': 'Do you have a widespread red rash that itches a lot, particularly at night?', 'Protocol': 'Do you have a widespread red rash that itches a lot, particularly at night?'}, {'Question': 'Do you have a widespread red rash that itches a lot, particularly at night?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you have tiny gray lines or red, infected-looking spots between your fingers or on your wrists?', 'Protocol': 'Do you have tiny gray lines or red, infected-looking spots between your fingers or on your wrists?'}, {'Question': 'Do you have tiny gray lines or red, infected-looking spots between your fingers or on your wrists?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any tiny gray lines or red spots between my fingers or on my wrists. The rash is mostly on her arms and legs, and it doesn't seem to have those specific features."", 'Next_question': 'Do you have one or more raised red spots on a small area?', 'Protocol': 'Do you have one or more raised red spots on a small area?'}, {'Question': 'Do you have one or more raised red spots on a small area?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like your daughter may have been bitten or stung by an insect. I recommend seeing your doctor for a proper evaluation and treatment.', 'Protocol': 'See your doctor. You may have been bitten or stung by an insect.'}]"
+4,Itching Without A Rash Flowchart,"['N1', 'N5', 'N6', 'A4']","['N1', 'N5', 'N6', 'A4']",1,"Patient: I've been experiencing persistent itching all over my body, but there's no visible rash or change in my skin. What could it be?
+
+TriageMD: I understand that persistent itching can be very uncomfortable. To help narrow down the cause, could you please let me know if the itching is primarily around the anus, or is it all over your body?
+
+Patient: No, the itching isn't primarily around the anus. It's actually all over my body. It feels like a constant itch, but there's no rash or visible changes to my skin. It's been going on for a while now, and I can't seem to find any relief.
+
+TriageMD: I understand how uncomfortable this must be for you. Are you a woman, and is the itching confined to the genital area?
+
+Patient: No.
+
+TriageMD: Iâ€™m sorry to hear about your discomfort. Do the whites of your eyes look yellow?
+
+Patient: Yes, I've noticed that the whites of my eyes have a yellowish tint. I've been wondering if it might be related to the itching, but I'm not sure what it means. It's been worrying me a bit, and I'm not sure what to do about it.
+
+TriageMD: It's important to clarify: do the whites of your eyes look yellow? This could be significant in understanding your symptoms.
+
+Patient: Yes.
+
+TriageMD: Given that you have persistent itching all over your body and a yellowish tint in the whites of your eyes, it's important that you see a doctor immediately. These symptoms could indicate jaundice, which may be related to a liver disorder. Please seek medical attention as soon as possible.","[{'Question': 'I understand that persistent itching can be very uncomfortable. To help narrow down the cause, could you please let me know if the itching is primarily around the anus, or is it all over your body?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, the itching isn't primarily around the anus. It's actually all over my body. It feels like a constant itch, but there's no rash or visible changes to my skin. It's been going on for a while now, and I can't seem to find any relief."", 'Next_question': 'I understand how uncomfortable this must be for you. Are you a woman, and is the itching confined to the genital area?', 'Protocol': 'Are you a woman, and is the itching confined to the genital area?'}, {'Question': 'I understand how uncomfortable this must be for you. Are you a woman, and is the itching confined to the genital area?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Iâ€™m sorry to hear about your discomfort. Do the whites of your eyes look yellow?', 'Protocol': 'Do the whites of your eyes look yellow?'}, {'Question': 'Iâ€™m sorry to hear about your discomfort. Do the whites of your eyes look yellow?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've noticed that the whites of my eyes have a yellowish tint. I've been wondering if it might be related to the itching, but I'm not sure what it means. It's been worrying me a bit, and I'm not sure what to do about it."", 'Next_question': ""It's important to clarify: do the whites of your eyes look yellow? This could be significant in understanding your symptoms."", 'Protocol': 'Do the whites of your eyes look yellow?'}, {'Question': ""It's important to clarify: do the whites of your eyes look yellow? This could be significant in understanding your symptoms."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Given that you have persistent itching all over your body and a yellowish tint in the whites of your eyes, it's important that you see a doctor immediately. These symptoms could indicate jaundice, which may be related to a liver disorder. Please seek medical attention as soon as possible."", 'Protocol': 'See a doctor immediately. You may have jaundice caused by a liver disorder.'}]"
+5,Rash With Fever Flowchart,"['N1', 'N2', 'N3', 'A2']","['N1', 'N2', 'N3', 'A2']",1,"Patient: I've developed a rash with a fever over 100Â°F. The spots are worrying me. What should I do?
+
+TriageMD: I'm sorry to hear that you're feeling unwell. Do you have red spots or blotches on your skin?
+
+Patient: Yes, I do have red spots on my skin. They're quite noticeable and seem to be spreading. They're not just small dots, but more like larger blotches and they're making me quite anxious, especially since they appeared along with this fever.
+
+TriageMD: I understand your concern; it sounds quite distressing. Do you have two or more of the following symptoms: a runny nose, sore or red eyes, or a dry cough?
+
+Patient: No.
+
+TriageMD: Do you have any swelling down the sides of the back of your neck or at the base of your skull?
+
+Patient: Yes.
+
+TriageMD: It's important that you see your doctor as soon as possible. Your symptoms, including the rash and fever, may indicate rubella. Please seek medical attention promptly.","[{'Question': ""I'm sorry to hear that you're feeling unwell. Do you have red spots or blotches on your skin?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I do have red spots on my skin. They're quite noticeable and seem to be spreading. They're not just small dots, but more like larger blotches and they're making me quite anxious, especially since they appeared along with this fever."", 'Next_question': 'I understand your concern; it sounds quite distressing. Do you have two or more of the following symptoms: a runny nose, sore or red eyes, or a dry cough?', 'Protocol': 'Do you have two or more of the following symptoms: runny nose; sore, red eyes; dry cough?'}, {'Question': 'I understand your concern; it sounds quite distressing. Do you have two or more of the following symptoms: a runny nose, sore or red eyes, or a dry cough?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have any swelling down the sides of the back of your neck or at the base of your skull?', 'Protocol': 'Do you have swelling down the sides of the back of your neck or at the base of your skull?'}, {'Question': 'Do you have any swelling down the sides of the back of your neck or at the base of your skull?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important that you see your doctor as soon as possible. Your symptoms, including the rash and fever, may indicate rubella. Please seek medical attention promptly."", 'Protocol': 'See your doctor. You may have rubella.'}]"
+6,Raised Spots And Lumps Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'A5']","['N1', 'N2', 'N3', 'N4', 'N5', 'A5']",1,"Patient: I've noticed some raised, dark spots on my skin that feel rough. Should I be concerned about these changes?
+
+TriageMD: It's important to have any new or changing skin spots evaluated by a healthcare professional. In the meantime, do you have a painful, raised red spot with a pale center?
+
+Patient: Well, I've been thinking about trying a new recipe for dinner tonight. Something with chicken, maybe? I always enjoy experimenting with different spices and flavors.
+
+TriageMD: I understand you're thinking about dinner, but I want to make sure we address your skin concerns. Do you have a painful, raised red spot with a pale center?
+
+Patient: No.
+
+TriageMD: I understand. Have you noticed a slow-growing, dark-colored lump, or any changes in a mole? It's important to monitor these changes.
+
+Patient: I'm not entirely sure. I haven't really paid close attention to any of my moles recently, but I guess I could check them out more carefully to see if there's anything unusual.
+
+TriageMD: It's good to check your moles for any changes. Have you noticed a slow-growing, dark-colored lump, or any specific changes in a mole?
+
+Patient: No.
+
+TriageMD: Do you have a single lump that has been growing? It's important to monitor any changes in your skin.
+
+Patient: No, I don't think so. I haven't really noticed any single lump growing, but I guess I haven't been paying super close attention. Maybe I should start keeping an eye on things just to be sure.
+
+TriageMD: It's good to be vigilant about your skin. Just to confirm, do you have a single lump that has been growing?
+
+Patient: I'm not really sure. I haven't been paying too much attention, so I can't say for certain if there's a single lump that's been growing. I guess I'll need to start keeping a closer look to see if there's anything like that happening.
+
+TriageMD: I understand. Just to clarify, do you have a single lump that has been growing? It's important to monitor any changes.
+
+Patient: No.
+
+TriageMD: Do you have one or more patches of thickened skin on your toes?
+
+Patient: No.
+
+TriageMD: Do you have several rough-surfaced, hard lumps on your hands or feet?
+
+Patient: No, I actually just got a new pair of shoes that I'm really excited about. They're super comfortable and stylish!
+
+TriageMD: Iâ€™m glad to hear you got new shoes! Just to check, do you have several rough-surfaced, hard lumps on your hands or feet?
+
+Patient: Well, I might have something like that, but I'm not entirely sure. I guess there could be a few rough patches on my feet, but I haven't really paid much attention to them.
+
+TriageMD: Just to clarify, do you have several rough-surfaced, hard lumps on your hands or feet? It's important to be sure about any changes you might have noticed.
+
+Patient: Yes.
+
+TriageMD: It sounds like you may have warts, especially if you have rough-surfaced, hard lumps on your hands or feet. I recommend seeing a healthcare professional for an accurate diagnosis and appropriate treatment options.","[{'Question': ""It's important to have any new or changing skin spots evaluated by a healthcare professional. In the meantime, do you have a painful, raised red spot with a pale center?"", 'Pattern': 'irrelevant', 'Patient_response': ""Well, I've been thinking about trying a new recipe for dinner tonight. Something with chicken, maybe? I always enjoy experimenting with different spices and flavors."", 'Next_question': ""I understand you're thinking about dinner, but I want to make sure we address your skin concerns. Do you have a painful, raised red spot with a pale center?"", 'Protocol': 'Do you have a painful, raised red spot with a pale center?'}, {'Question': ""I understand you're thinking about dinner, but I want to make sure we address your skin concerns. Do you have a painful, raised red spot with a pale center?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I understand. Have you noticed a slow-growing, dark-colored lump, or any changes in a mole? It's important to monitor these changes."", 'Protocol': 'Do you have a slow-growing, dark-colored lump, or have you noticed a change in a mole?'}, {'Question': ""I understand. Have you noticed a slow-growing, dark-colored lump, or any changes in a mole? It's important to monitor these changes."", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. I haven't really paid close attention to any of my moles recently, but I guess I could check them out more carefully to see if there's anything unusual."", 'Next_question': ""It's good to check your moles for any changes. Have you noticed a slow-growing, dark-colored lump, or any specific changes in a mole?"", 'Protocol': 'Do you have a slow-growing, dark-colored lump, or have you noticed a change in a mole?'}, {'Question': ""It's good to check your moles for any changes. Have you noticed a slow-growing, dark-colored lump, or any specific changes in a mole?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""Do you have a single lump that has been growing? It's important to monitor any changes in your skin."", 'Protocol': 'Do you have a single lump that has been growing?'}, {'Question': ""Do you have a single lump that has been growing? It's important to monitor any changes in your skin."", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think so. I haven't really noticed any single lump growing, but I guess I haven't been paying super close attention. Maybe I should start keeping an eye on things just to be sure."", 'Next_question': ""It's good to be vigilant about your skin. Just to confirm, do you have a single lump that has been growing?"", 'Protocol': 'Do you have a single lump that has been growing?'}, {'Question': ""It's good to be vigilant about your skin. Just to confirm, do you have a single lump that has been growing?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I haven't been paying too much attention, so I can't say for certain if there's a single lump that's been growing. I guess I'll need to start keeping a closer look to see if there's anything like that happening."", 'Next_question': ""I understand. Just to clarify, do you have a single lump that has been growing? It's important to monitor any changes."", 'Protocol': 'Do you have a single lump that has been growing?'}, {'Question': ""I understand. Just to clarify, do you have a single lump that has been growing? It's important to monitor any changes."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have one or more patches of thickened skin on your toes?', 'Protocol': 'Do you have one or more patches of thickened skin on your toes?'}, {'Question': 'Do you have one or more patches of thickened skin on your toes?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have several rough-surfaced, hard lumps on your hands or feet?', 'Protocol': 'Do you have several rough-surfaced, hard lumps on your hands or feet?'}, {'Question': 'Do you have several rough-surfaced, hard lumps on your hands or feet?', 'Pattern': 'irrelevant', 'Patient_response': ""No, I actually just got a new pair of shoes that I'm really excited about. They're super comfortable and stylish!"", 'Next_question': 'Iâ€™m glad to hear you got new shoes! Just to check, do you have several rough-surfaced, hard lumps on your hands or feet?', 'Protocol': 'Do you have several rough-surfaced, hard lumps on your hands or feet?'}, {'Question': 'Iâ€™m glad to hear you got new shoes! Just to check, do you have several rough-surfaced, hard lumps on your hands or feet?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Well, I might have something like that, but I'm not entirely sure. I guess there could be a few rough patches on my feet, but I haven't really paid much attention to them."", 'Next_question': ""Just to clarify, do you have several rough-surfaced, hard lumps on your hands or feet? It's important to be sure about any changes you might have noticed."", 'Protocol': 'Do you have several rough-surfaced, hard lumps on your hands or feet?'}, {'Question': ""Just to clarify, do you have several rough-surfaced, hard lumps on your hands or feet? It's important to be sure about any changes you might have noticed."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like you may have warts, especially if you have rough-surfaced, hard lumps on your hands or feet. I recommend seeing a healthcare professional for an accurate diagnosis and appropriate treatment options.', 'Protocol': 'You probably have warts.'}]"
+7,Abnormal Hair Growth In Women Flowchart,"['N1', 'N2', 'N4', 'N3', 'N6', 'A5']","['N1', 'N2', 'N4', 'N3', 'N6', 'A5']",1,"Patient: I've noticed unusual hair growth on my chin and chest, and I'm concerned about what might be causing this.
+
+TriageMD: I understand your concern about the unusual hair growth on your chin and chest. Has this excess hair growth occurred in less than a few months?
+
+Patient: Yes.
+
+TriageMD: I understand your concern. Do you have two or more of the following symptoms: unexplained weight gain, a deepening voice, or absence of periods?
+
+Patient: No.
+
+TriageMD: Did the excess hair appear after you began taking medication for a condition such as a threatened miscarriage, bleeding between periods, or epilepsy?
+
+Patient: No, I haven't started any new medications for those conditions. In fact, I haven't changed any medications recently, so I'm not sure what might be causing this sudden hair growth.
+
+TriageMD: I understand your concern. Just to confirm, did the excess hair growth appear after starting any new medications, including those for conditions like a threatened miscarriage, bleeding between periods, or epilepsy?
+
+Patient: No, I haven't started any new medications for those conditions or any other conditions recently. The hair growth seems to have started on its own without any changes in my medication or lifestyle. That's why I'm a bit puzzled about what's causing it.
+
+TriageMD: I understand your confusion. Just to clarify, did the excess hair growth appear after you began taking any new medications, including those for conditions like a threatened miscarriage, bleeding between periods, or epilepsy?
+
+Patient: No, I haven't started any new medications recently, including those for a threatened miscarriage, bleeding between periods, or epilepsy. The hair growth just seemed to start on its own, and there haven't been any changes in my medication or lifestyle that could explain it. That's why I'm trying to figure out what might be causing it.
+
+TriageMD: I understand your concern. Did the excess hair growth occur before you turned 20 years old?
+
+Patient: No, I don't think the hair growth started before I turned 20. It seems like it's been more of a recent development, but it's hard to say exactly when it began.
+
+TriageMD: I understand. Just to confirm, did the excess hair growth occur before you turned 20 years old?
+
+Patient: I'm not really sure if it started before I turned 20. It's hard to pinpoint exactly when it began, but it feels like it's been more of a recent change.
+
+TriageMD: I understand that it can be difficult to pinpoint the exact timing. Just to clarify, do you recall if the excess hair growth started before you turned 20 years old?
+
+Patient: No.
+
+TriageMD: Thank you for your responses. Are you over the age of 45?
+
+Patient: No, I'm not over the age of 45. I'm actually in my 30s. Since this hair growth started recently, it's been a bit concerning, and I'm trying to figure out what might be causing it.
+
+TriageMD: I understand your concern about the recent hair growth. It's important to talk to your doctor about this issue, as they can help determine the cause and discuss any necessary steps.","[{'Question': 'I understand your concern about the unusual hair growth on your chin and chest. Has this excess hair growth occurred in less than a few months?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'I understand your concern. Do you have two or more of the following symptoms: unexplained weight gain, a deepening voice, or absence of periods?', 'Protocol': 'Do you have two or more of the following symptoms: unexplained weight gain; deepening voice; absence of periods?'}, {'Question': 'I understand your concern. Do you have two or more of the following symptoms: unexplained weight gain, a deepening voice, or absence of periods?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Did the excess hair appear after you began taking medication for a condition such as a threatened miscarriage, bleeding between periods, or epilepsy?', 'Protocol': 'Did the excess hair appear after you began taking medication for a condition such as a threatened miscarriage, bleeding between periods, or epilepsy?'}, {'Question': 'Did the excess hair appear after you began taking medication for a condition such as a threatened miscarriage, bleeding between periods, or epilepsy?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't started any new medications for those conditions. In fact, I haven't changed any medications recently, so I'm not sure what might be causing this sudden hair growth."", 'Next_question': 'I understand your concern. Just to confirm, did the excess hair growth appear after starting any new medications, including those for conditions like a threatened miscarriage, bleeding between periods, or epilepsy?', 'Protocol': 'Did the excess hair appear after you began taking medication for a condition such as a threatened miscarriage, bleeding between periods, or epilepsy?'}, {'Question': 'I understand your concern. Just to confirm, did the excess hair growth appear after starting any new medications, including those for conditions like a threatened miscarriage, bleeding between periods, or epilepsy?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't started any new medications for those conditions or any other conditions recently. The hair growth seems to have started on its own without any changes in my medication or lifestyle. That's why I'm a bit puzzled about what's causing it."", 'Next_question': 'I understand your confusion. Just to clarify, did the excess hair growth appear after you began taking any new medications, including those for conditions like a threatened miscarriage, bleeding between periods, or epilepsy?', 'Protocol': 'Did the excess hair appear after you began taking medication for a condition such as a threatened miscarriage, bleeding between periods, or epilepsy?'}, {'Question': 'I understand your confusion. Just to clarify, did the excess hair growth appear after you began taking any new medications, including those for conditions like a threatened miscarriage, bleeding between periods, or epilepsy?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't started any new medications recently, including those for a threatened miscarriage, bleeding between periods, or epilepsy. The hair growth just seemed to start on its own, and there haven't been any changes in my medication or lifestyle that could explain it. That's why I'm trying to figure out what might be causing it."", 'Next_question': 'I understand your concern. Did the excess hair growth occur before you turned 20 years old?', 'Protocol': 'Did the excess hair growth occur before age 20?'}, {'Question': 'I understand your concern. Did the excess hair growth occur before you turned 20 years old?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think the hair growth started before I turned 20. It seems like it's been more of a recent development, but it's hard to say exactly when it began."", 'Next_question': 'I understand. Just to confirm, did the excess hair growth occur before you turned 20 years old?', 'Protocol': 'Did the excess hair growth occur before age 20?'}, {'Question': 'I understand. Just to confirm, did the excess hair growth occur before you turned 20 years old?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure if it started before I turned 20. It's hard to pinpoint exactly when it began, but it feels like it's been more of a recent change."", 'Next_question': 'I understand that it can be difficult to pinpoint the exact timing. Just to clarify, do you recall if the excess hair growth started before you turned 20 years old?', 'Protocol': 'Did the excess hair growth occur before age 20?'}, {'Question': 'I understand that it can be difficult to pinpoint the exact timing. Just to clarify, do you recall if the excess hair growth started before you turned 20 years old?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for your responses. Are you over the age of 45?', 'Protocol': 'Are you over age 45?'}, {'Question': 'Thank you for your responses. Are you over the age of 45?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I'm not over the age of 45. I'm actually in my 30s. Since this hair growth started recently, it's been a bit concerning, and I'm trying to figure out what might be causing it."", 'Next_question': ""I understand your concern about the recent hair growth. It's important to talk to your doctor about this issue, as they can help determine the cause and discuss any necessary steps."", 'Protocol': 'Talk to your doctor if your hair growth concerns you.'}]"
+8,Skin Problems In Young Children Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'N9', 'A5']","['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'N9', 'A5']",1,"Patient: I've noticed some skin discoloration on my daughter's arm and I'm concerned. Should I be worried about this?
+
+TriageMD: I understand your concern about your daughter's skin discoloration. Is she younger than 3 months?
+
+Patient: No.
+
+TriageMD: I understand your concern. Does your daughter have red spots or patches of red skin?
+
+Patient: Yes.
+
+TriageMD: I understand your concern. Is your child's temperature over 100Â°F?
+
+Patient: No, her temperature is normal. She doesn't seem to have a fever, but the red spots are still there. I'm just worried about what could be causing the discoloration.
+
+TriageMD: I understand your concern. Is the rash mainly on a skin area usually covered by a diaper?
+
+Patient: No.
+
+TriageMD: I understand your concern. Does your child have one or more flaky patches of itchy, inflamed skin?
+
+Patient: Not really, they don't seem flaky or inflamed, but I guess it's hard to tell. They don't seem to be itching her, though.
+
+TriageMD: I understand your concern. Just to clarify, does your child have any flaky patches of skin that seem itchy or inflamed?
+
+Patient: No.
+
+TriageMD: I understand your concern. Is the rash red with raised, pimply blemishes?
+
+Patient: No.
+
+TriageMD: I understand your concern. Does your child have a rash of dark red spots that do not disappear when you press on them?
+
+Patient: I'm not entirely sure. I haven't really tried pressing on them to see if they disappear. Maybe I should give that a try to be certain.
+
+TriageMD: It's a good idea to check if the spots disappear when you press on them. If they don't fade, it could be important information. Please let me know what you find.
+
+Patient: Yes, I tried pressing on the spots, and they don't fade when I do. They stay the same color, which has me a bit more concerned now.
+
+TriageMD: Given that the spots do not fade when pressed, it's important to take your daughter to a doctor immediately. This could be a sign of a serious allergic reaction or another condition that needs prompt attention. Please seek medical help right away.","[{'Question': ""I understand your concern about your daughter's skin discoloration. Is she younger than 3 months?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Does your daughter have red spots or patches of red skin?', 'Protocol': 'Does your child have red spots or patches of red skin?'}, {'Question': 'I understand your concern. Does your daughter have red spots or patches of red skin?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""I understand your concern. Is your child's temperature over 100Â°F?"", 'Protocol': ""Is your child's temperature over 100Â°F?""}, {'Question': ""I understand your concern. Is your child's temperature over 100Â°F?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, her temperature is normal. She doesn't seem to have a fever, but the red spots are still there. I'm just worried about what could be causing the discoloration."", 'Next_question': 'I understand your concern. Is the rash mainly on a skin area usually covered by a diaper?', 'Protocol': 'Is the rash mainly on a skin area usually covered by a diaper?'}, {'Question': 'I understand your concern. Is the rash mainly on a skin area usually covered by a diaper?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Does your child have one or more flaky patches of itchy, inflamed skin?', 'Protocol': 'Does your child have one or more flaky patches of itchy, inflamed skin?'}, {'Question': 'I understand your concern. Does your child have one or more flaky patches of itchy, inflamed skin?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, they don't seem flaky or inflamed, but I guess it's hard to tell. They don't seem to be itching her, though."", 'Next_question': 'I understand your concern. Just to clarify, does your child have any flaky patches of skin that seem itchy or inflamed?', 'Protocol': 'Does your child have one or more flaky patches of itchy, inflamed skin?'}, {'Question': 'I understand your concern. Just to clarify, does your child have any flaky patches of skin that seem itchy or inflamed?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Is the rash red with raised, pimply blemishes?', 'Protocol': 'Is the rash red with raised, pimply blemishes?'}, {'Question': 'I understand your concern. Is the rash red with raised, pimply blemishes?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Does your child have a rash of dark red spots that do not disappear when you press on them?', 'Protocol': 'Does your child have a rash of dark red spots that do not disappear when you press on them?'}, {'Question': 'I understand your concern. Does your child have a rash of dark red spots that do not disappear when you press on them?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. I haven't really tried pressing on them to see if they disappear. Maybe I should give that a try to be certain."", 'Next_question': ""It's a good idea to check if the spots disappear when you press on them. If they don't fade, it could be important information. Please let me know what you find."", 'Protocol': 'Does your child have a rash of dark red spots that do not disappear when you press on them?'}, {'Question': ""It's a good idea to check if the spots disappear when you press on them. If they don't fade, it could be important information. Please let me know what you find."", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I tried pressing on the spots, and they don't fade when I do. They stay the same color, which has me a bit more concerned now."", 'Next_question': ""Given that the spots do not fade when pressed, it's important to take your daughter to a doctor immediately. This could be a sign of a serious allergic reaction or another condition that needs prompt attention. Please seek medical help right away."", 'Protocol': 'Take the child to the doctor immediately. Your child may be having a serious allergic reaction.'}]"
+9,Itching In Children Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A4']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A4']",1,"Patient: My daughter has been scratching her arms a lot lately, and I'm worried it might be something more than just dry skin.
+
+TriageMD: I understand your concern. Does your daughter have any spots, blisters, or discolored areas on her body?
+
+Patient: No, I don't think so. I haven't noticed any spots or blisters, but it's hard to be sure. Her skin looks a bit red from all the scratching, though.
+
+TriageMD: I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?
+
+Patient: No, I haven't noticed any spots, blisters, or discolored areas on her skin. Her arms just look red from all the scratching. It looks like she might have dry skin, but I'm worried it could be something else since she's been scratching so much.
+
+TriageMD: I understand your concern. Just to clarify, does your daughter have any spots, blisters, or discolored areas on any part of her body?
+
+Patient: No.
+
+TriageMD: Thank you for clarifying. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?
+
+Patient: I'm sorry for the confusion earlier. Based on what you've described, the itching could be due to dry skin, but there are also other possibilities such as eczema, allergies, or a mild skin irritation. Here are a few steps you can take:
+
+1. **Moisturize:** Use a gentle, fragrance-free moisturizer on her skin, especially after bathing, to help lock in moisture.
+
+2. **Bathing Habits:** Ensure she's not taking baths or showers that are too hot, as this can dry out the skin further. Using a mild, fragrance-free soap can also help.
+
+3. **Clothing:** Dress her in soft, breathable fabrics like cotton, and avoid wool or synthetic materials that might irritate her skin.
+
+4. **Observe for Other Symptoms:** Keep an eye out for any new symptoms or changes in her skin condition.
+
+If the itching persists or worsens, or if you notice any other symptoms, it would be a good idea to consult a healthcare professional for a more thorough evaluation. They can provide a more specific diagnosis and treatment plan.
+
+TriageMD: I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?
+
+Patient: I'm not entirely sure. I haven't noticed anything obvious like spots or blisters, but it's been hard to really examine her skin closely. The redness from scratching makes it a bit difficult to tell if there's anything else going on.
+
+TriageMD: I understand that it can be difficult to examine her skin closely. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?
+
+Patient: No, I haven't noticed any spots, blisters, or discolored areas on her skin. Her arms just look red from all the scratching, which makes it a bit hard to tell if there's anything else going on. It's mostly the itching that's concerning me because it seems to bother her quite a bit.    
+
+TriageMD: I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?
+
+Patient: I'm sorry for the confusion earlier. Based on what you've described, the itching could be due to dry skin, but there are also other possibilities such as eczema, allergies, or a mild skin irritation. Here are a few steps you can take:
+
+1. **Moisturize:** Use a gentle, fragrance-free moisturizer on her skin, especially after bathing, to help lock in moisture.
+
+2. **Bathing Habits:** Ensure she's not taking baths or showers that are too hot, as this can dry out the skin further. Using a mild, fragrance-free soap can also help.
+
+3. **Clothing:** Dress her in soft, breathable fabrics like cotton, and avoid wool or synthetic materials that might irritate her skin.
+
+4. **Observe for Other Symptoms:** Keep an eye out for any new symptoms or changes in her skin condition.
+
+If the itching persists or worsens, or if you notice any other symptoms, it would be a good idea to consult a healthcare professional for a more thorough evaluation. They can provide a more specific diagnosis and treatment plan.
+
+TriageMD: I understand your concern. Just to clarify, does your daughter have any spots, blisters, or discolored areas on any part of her body?
+
+Patient: No.
+
+TriageMD: Is the itching only around the anus or genitals?
+
+Patient: No, the itching isn't just around the anus or genitals. It's mainly on her arms where she's been scratching a lot. I haven't noticed her scratching in other areas, so it seems to be focused on her arms.
+
+TriageMD: Is the itching confined to your child's arms, or does it also involve her head?
+
+Patient: Yes.
+
+TriageMD: Do you see tiny white spots clinging to your child's hair that cannot easily be rubbed off?
+
+Patient: No, I haven't noticed any tiny white spots in her hair that can't be rubbed off. Her hair looks normal, and the itching seems to be mainly on her arms. I haven't seen her scratching her head or any other areas.
+
+TriageMD: Does your child have small bald patches on her scalp?
+
+Patient: No.
+
+TriageMD: Is the itching mainly in an area covered by clothing?
+
+Patient: Yes.
+
+TriageMD: It sounds like your child may be experiencing dermatitis, possibly due to an allergic reaction from contact with a substance like wool clothing, laundry detergent, or fabric softener. I recommend taking her to the doctor for a proper evaluation and treatment. They can help determine the cause of the itching and provide appropriate care.","[{'Question': 'I understand your concern. Does your daughter have any spots, blisters, or discolored areas on her body?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think so. I haven't noticed any spots or blisters, but it's hard to be sure. Her skin looks a bit red from all the scratching, though."", 'Next_question': 'I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Protocol': 'Does your child have spots, blisters, or discolored areas on any part of his or her body?'}, {'Question': 'I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any spots, blisters, or discolored areas on her skin. Her arms just look red from all the scratching. It looks like she might have dry skin, but I'm worried it could be something else since she's been scratching so much."", 'Next_question': 'I understand your concern. Just to clarify, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Protocol': 'Does your child have spots, blisters, or discolored areas on any part of his or her body?'}, {'Question': 'I understand your concern. Just to clarify, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for clarifying. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Protocol': 'Does your child have spots, blisters, or discolored areas on any part of his or her body?'}, {'Question': 'Thank you for clarifying. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': ""I'm sorry for the confusion earlier. Based on what you've described, the itching could be due to dry skin, but there are also other possibilities such as eczema, allergies, or a mild skin irritation. Here are a few steps you can take:\n\n1. **Moisturize:** Use a gentle, fragrance-free moisturizer on her skin, especially after bathing, to help lock in moisture.\n\n2. **Bathing Habits:** Ensure she's not taking baths or showers that are too hot, as this can dry out the skin further. Using a mild, fragrance-free soap can also help.\n\n3. **Clothing:** Dress her in soft, breathable fabrics like cotton, and avoid wool or synthetic materials that might irritate her skin.\n\n4. **Observe for Other Symptoms:** Keep an eye out for any new symptoms or changes in her skin condition.\n\nIf the itching persists or worsens, or if you notice any other symptoms, it would be a good idea to consult a healthcare professional for a more thorough evaluation. They can provide a more specific diagnosis and treatment plan."", 'Next_question': 'I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Protocol': 'Does your child have spots, blisters, or discolored areas on any part of his or her body?'}, {'Question': 'I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. I haven't noticed anything obvious like spots or blisters, but it's been hard to really examine her skin closely. The redness from scratching makes it a bit difficult to tell if there's anything else going on."", 'Next_question': 'I understand that it can be difficult to examine her skin closely. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Protocol': 'Does your child have spots, blisters, or discolored areas on any part of his or her body?'}, {'Question': 'I understand that it can be difficult to examine her skin closely. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any spots, blisters, or discolored areas on her skin. Her arms just look red from all the scratching, which makes it a bit hard to tell if there's anything else going on. It's mostly the itching that's concerning me because it seems to bother her quite a bit."", 'Next_question': 'I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Protocol': 'Does your child have spots, blisters, or discolored areas on any part of his or her body?'}, {'Question': 'I understand your concern. Just to confirm, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""I'm sorry for the confusion earlier. Based on what you've described, the itching could be due to dry skin, but there are also other possibilities such as eczema, allergies, or a mild skin irritation. Here are a few steps you can take:\n\n1. **Moisturize:** Use a gentle, fragrance-free moisturizer on her skin, especially after bathing, to help lock in moisture.\n\n2. **Bathing Habits:** Ensure she's not taking baths or showers that are too hot, as this can dry out the skin further. Using a mild, fragrance-free soap can also help.\n\n3. **Clothing:** Dress her in soft, breathable fabrics like cotton, and avoid wool or synthetic materials that might irritate her skin.\n\n4. **Observe for Other Symptoms:** Keep an eye out for any new symptoms or changes in her skin condition.\n\nIf the itching persists or worsens, or if you notice any other symptoms, it would be a good idea to consult a healthcare professional for a more thorough evaluation. They can provide a more specific diagnosis and treatment plan."", 'Next_question': 'I understand your concern. Just to clarify, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Protocol': 'Does your child have spots, blisters, or discolored areas on any part of his or her body?'}, {'Question': 'I understand your concern. Just to clarify, does your daughter have any spots, blisters, or discolored areas on any part of her body?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is the itching only around the anus or genitals?', 'Protocol': 'Is the itching only around the anus or genitals?'}, {'Question': 'Is the itching only around the anus or genitals?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, the itching isn't just around the anus or genitals. It's mainly on her arms where she's been scratching a lot. I haven't noticed her scratching in other areas, so it seems to be focused on her arms."", 'Next_question': ""Is the itching confined to your child's arms, or does it also involve her head?"", 'Protocol': ""Is the itching confined to your child's head?""}, {'Question': ""Is the itching confined to your child's arms, or does it also involve her head?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Do you see tiny white spots clinging to your child's hair that cannot easily be rubbed off?"", 'Protocol': ""Do you see tiny white spots clinging to your child's hair that cannot easily be rubbed off?""}, {'Question': ""Do you see tiny white spots clinging to your child's hair that cannot easily be rubbed off?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any tiny white spots in her hair that can't be rubbed off. Her hair looks normal, and the itching seems to be mainly on her arms. I haven't seen her scratching her head or any other areas."", 'Next_question': 'Does your child have small bald patches on her scalp?', 'Protocol': 'Does your child have small bald patches on his or her scalp?'}, {'Question': 'Does your child have small bald patches on her scalp?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is the itching mainly in an area covered by clothing?', 'Protocol': 'Is the itching mainly in an area covered by clothing?'}, {'Question': 'Is the itching mainly in an area covered by clothing?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like your child may be experiencing dermatitis, possibly due to an allergic reaction from contact with a substance like wool clothing, laundry detergent, or fabric softener. I recommend taking her to the doctor for a proper evaluation and treatment. They can help determine the cause of the itching and provide appropriate care.', 'Protocol': 'Take your child to the doctor. Your child may have dermatitis caused by an allergic reaction from contact with a substance such as wool clothing, laundry detergent, or fabric softener.'}]"
+10,Swellings In Children Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A5']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A5']",1,"Patient: I've noticed a small lump in my daughter's neck, and I'm worried. Should I be concerned?
+
+TriageMD: I understand your concern. Is your child 3 months old or younger?
+
+Patient: I'm not exactly sure if that's relevant, but she's definitely older than a newborn. I'm just trying to figure out if this lump is something I should be really worried about or if it could be something harmless.
+
+TriageMD: I understand your concern. Can you confirm if your child is 3 months old or younger? This information can help assess the situation better.
+
+Patient: No, my daughter is older than 3 months. She's actually 5 years old. I'm just worried because I noticed this small lump on her neck, and I'm not sure if it's something that needs immediate attention or if it could be something harmless like a swollen lymph node.
+
+TriageMD: I understand your concern. Is the area between your daughter's ear and the angle of her jaw swollen, painful, or tender? This information can help determine the next steps.
+
+Patient: No.
+
+TriageMD: Is there any swelling at the back of your daughter's neck at the base of her skull?
+
+Patient: I'm not entirely sure. It's hard to tell if there's any swelling at the base of her skull.
+
+TriageMD: I understand it can be difficult to assess. Can you check again for any swelling at the back of her neck, particularly at the base of her skull? This information can help determine if further evaluation is needed.
+
+Patient: I'm not sure if there's any swelling at the base of her skull. It's a bit hard to tell just by looking and feeling it myself.
+
+TriageMD: I understand it can be challenging to assess. Can you try to feel for any swelling at the back of her neck, specifically at the base of her skull? This detail can help determine if she needs to be seen by a healthcare professional.
+
+Patient: No, I don't feel any swelling at the base of her skull. The lump seems to be more on the side of her neck. It doesn't seem to be causing her any pain or discomfort, and she hasn't had any other symptoms like fever or changes in behavior. I just want to make sure I'm not overlooking something that might need medical attention.
+
+TriageMD: I understand your concern. Are the sides of your child's neck swollen? This information can help determine if further evaluation is needed.
+
+Patient: Yes.
+
+TriageMD: Is your child's temperature over 100Â°F?
+
+Patient: No, her temperature is normal. She hasnâ€™t had a fever or any other symptoms like coughing or feeling unwell. It's just this lump on her neck that I noticed, and I'm trying to figure out if it's something that needs to be checked out by a doctor.
+
+TriageMD: Does your child have a sore, cut, or insect bite on her head or neck? This information can help determine if the lump is related to an injury or infection.
+
+Patient: I'm not really sure if there's anything like that. I haven't noticed any sores or bites, but I suppose it's possible I might have missed something.
+
+TriageMD: I understand. Can you confirm if your child has any sores, cuts, or insect bites on her head or neck? This detail can help in assessing the situation.
+
+Patient: Yes, I did notice a small insect bite on her neck a few days ago. It seemed minor at the time, and I didn't think much of it, but maybe it could be related to the lump. There's no redness or signs of infection that I can see, and she hasn't complained about it.
+
+TriageMD: Given the insect bite and the lump youâ€™ve noticed, itâ€™s a good idea to call your child's doctor. The glands in her neck may be swollen due to an infection related to the bite. It's best to have a healthcare professional evaluate it to ensure everything is okay.","[{'Question': 'I understand your concern. Is your child 3 months old or younger?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not exactly sure if that's relevant, but she's definitely older than a newborn. I'm just trying to figure out if this lump is something I should be really worried about or if it could be something harmless."", 'Next_question': 'I understand your concern. Can you confirm if your child is 3 months old or younger? This information can help assess the situation better.', 'Protocol': 'Is your child 3 months old or younger?'}, {'Question': 'I understand your concern. Can you confirm if your child is 3 months old or younger? This information can help assess the situation better.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, my daughter is older than 3 months. She's actually 5 years old. I'm just worried because I noticed this small lump on her neck, and I'm not sure if it's something that needs immediate attention or if it could be something harmless like a swollen lymph node."", 'Next_question': ""I understand your concern. Is the area between your daughter's ear and the angle of her jaw swollen, painful, or tender? This information can help determine the next steps."", 'Protocol': ""Is the area between your child's ear and the angle of his or her jaw swollen, painful, or tender?""}, {'Question': ""I understand your concern. Is the area between your daughter's ear and the angle of her jaw swollen, painful, or tender? This information can help determine the next steps."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""Is there any swelling at the back of your daughter's neck at the base of her skull?"", 'Protocol': ""Is there swelling at the back of your child's neck at the base of the skull?""}, {'Question': ""Is there any swelling at the back of your daughter's neck at the base of her skull?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. It's hard to tell if there's any swelling at the base of her skull."", 'Next_question': 'I understand it can be difficult to assess. Can you check again for any swelling at the back of her neck, particularly at the base of her skull? This information can help determine if further evaluation is needed.', 'Protocol': ""Is there swelling at the back of your child's neck at the base of the skull?""}, {'Question': 'I understand it can be difficult to assess. Can you check again for any swelling at the back of her neck, particularly at the base of her skull? This information can help determine if further evaluation is needed.', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not sure if there's any swelling at the base of her skull. It's a bit hard to tell just by looking and feeling it myself."", 'Next_question': 'I understand it can be challenging to assess. Can you try to feel for any swelling at the back of her neck, specifically at the base of her skull? This detail can help determine if she needs to be seen by a healthcare professional.', 'Protocol': ""Is there swelling at the back of your child's neck at the base of the skull?""}, {'Question': 'I understand it can be challenging to assess. Can you try to feel for any swelling at the back of her neck, specifically at the base of her skull? This detail can help determine if she needs to be seen by a healthcare professional.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't feel any swelling at the base of her skull. The lump seems to be more on the side of her neck. It doesn't seem to be causing her any pain or discomfort, and she hasn't had any other symptoms like fever or changes in behavior. I just want to make sure I'm not overlooking something that might need medical attention."", 'Next_question': ""I understand your concern. Are the sides of your child's neck swollen? This information can help determine if further evaluation is needed."", 'Protocol': ""Are the sides of your child's neck swollen?""}, {'Question': ""I understand your concern. Are the sides of your child's neck swollen? This information can help determine if further evaluation is needed."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Is your child's temperature over 100Â°F?"", 'Protocol': ""Is your child's temperature over 100Â°F?""}, {'Question': ""Is your child's temperature over 100Â°F?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, her temperature is normal. She hasnâ€™t had a fever or any other symptoms like coughing or feeling unwell. It's just this lump on her neck that I noticed, and I'm trying to figure out if it's something that needs to be checked out by a doctor."", 'Next_question': 'Does your child have a sore, cut, or insect bite on her head or neck? This information can help determine if the lump is related to an injury or infection.', 'Protocol': 'Does your child have a sore, cut, or insect bite on his or her head or neck?'}, {'Question': 'Does your child have a sore, cut, or insect bite on her head or neck? This information can help determine if the lump is related to an injury or infection.', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure if there's anything like that. I haven't noticed any sores or bites, but I suppose it's possible I might have missed something."", 'Next_question': 'I understand. Can you confirm if your child has any sores, cuts, or insect bites on her head or neck? This detail can help in assessing the situation.', 'Protocol': 'Does your child have a sore, cut, or insect bite on his or her head or neck?'}, {'Question': 'I understand. Can you confirm if your child has any sores, cuts, or insect bites on her head or neck? This detail can help in assessing the situation.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I did notice a small insect bite on her neck a few days ago. It seemed minor at the time, and I didn't think much of it, but maybe it could be related to the lump. There's no redness or signs of infection that I can see, and she hasn't complained about it."", 'Next_question': ""Given the insect bite and the lump youâ€™ve noticed, itâ€™s a good idea to call your child's doctor. The glands in her neck may be swollen due to an infection related to the bite. It's best to have a healthcare professional evaluate it to ensure everything is okay."", 'Protocol': ""Call your child's doctor. The glands in your child's neck may be swollen because the wound is infected.""}]"
+11,Swellings Under The Skin Flowchart,"['N1', 'N2', 'N3', 'A2']","['N1', 'N2', 'N3', 'A2']",1,"Patient: I've noticed a small lump under my skin that seems to be getting bigger. Should I be worried about this?
+
+TriageMD: I understand your concern about the lump under your skin. Can you tell me if it is painful, red, or warm to the touch? This information will help assess the situation better.
+
+Patient: No.
+
+TriageMD: It's good to hear that the lump isn't painful or showing signs of infection. Do you have any lumps or swellings in any of the lymph nodes in your neck, armpit, or groin?
+
+Patient: Yes.
+
+TriageMD: Thank you for sharing that. Is your temperature 100Â°F or higher?
+
+Patient: I haven't actually checked my temperature, but I don't think I have a fever.
+
+TriageMD: I understand. It might be helpful to check your temperature to be sure. Is there anything else you've noticed about the lump or your overall health?
+
+Patient: Yes, I've also been feeling more tired than usual lately, and I've noticed that the lump has been growing over the past few weeks. I'm not sure if it's related, but I thought it was worth mentioning.
+
+TriageMD: Thank you for sharing that information. Itâ€™s important to consider all your symptoms. Can you check your temperature to see if itâ€™s 100Â°F or higher? This could help in understanding your situation better.
+
+Patient: I haven't checked my temperature just yet, but I don't think it's that high. I'll try to check it soon to be sure.
+
+TriageMD: I understand. It's important to check your temperature when you can. Just to confirm, do you think it might be 100Â°F or higher, or do you feel it's likely lower?
+
+Patient: Yes.
+
+TriageMD: Given your symptoms, including the growing lump, fatigue, and the possibility of a fever, I recommend that you see your doctor. You could have an infection, such as infectious mononucleosis. It's important to get a proper evaluation. Take care.","[{'Question': 'I understand your concern about the lump under your skin. Can you tell me if it is painful, red, or warm to the touch? This information will help assess the situation better.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It's good to hear that the lump isn't painful or showing signs of infection. Do you have any lumps or swellings in any of the lymph nodes in your neck, armpit, or groin?"", 'Protocol': 'Do you have any lumps or swellings in any of the lymph nodes in your neck, armpit, or groin?'}, {'Question': ""It's good to hear that the lump isn't painful or showing signs of infection. Do you have any lumps or swellings in any of the lymph nodes in your neck, armpit, or groin?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Thank you for sharing that. Is your temperature 100Â°F or higher?', 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': 'Thank you for sharing that. Is your temperature 100Â°F or higher?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I haven't actually checked my temperature, but I don't think I have a fever."", 'Next_question': ""I understand. It might be helpful to check your temperature to be sure. Is there anything else you've noticed about the lump or your overall health?"", 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': ""I understand. It might be helpful to check your temperature to be sure. Is there anything else you've noticed about the lump or your overall health?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've also been feeling more tired than usual lately, and I've noticed that the lump has been growing over the past few weeks. I'm not sure if it's related, but I thought it was worth mentioning."", 'Next_question': 'Thank you for sharing that information. Itâ€™s important to consider all your symptoms. Can you check your temperature to see if itâ€™s 100Â°F or higher? This could help in understanding your situation better.', 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': 'Thank you for sharing that information. Itâ€™s important to consider all your symptoms. Can you check your temperature to see if itâ€™s 100Â°F or higher? This could help in understanding your situation better.', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I haven't checked my temperature just yet, but I don't think it's that high. I'll try to check it soon to be sure."", 'Next_question': ""I understand. It's important to check your temperature when you can. Just to confirm, do you think it might be 100Â°F or higher, or do you feel it's likely lower?"", 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': ""I understand. It's important to check your temperature when you can. Just to confirm, do you think it might be 100Â°F or higher, or do you feel it's likely lower?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Given your symptoms, including the growing lump, fatigue, and the possibility of a fever, I recommend that you see your doctor. You could have an infection, such as infectious mononucleosis. It's important to get a proper evaluation. Take care."", 'Protocol': 'See your doctor. You could have an infection such as infectious mononucleosis.'}]"

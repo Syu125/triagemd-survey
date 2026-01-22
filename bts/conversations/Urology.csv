@@ -1,0 +1,168 @@
+,Flowchart,Path label,Path,Accuracy,Conversation,Question_and_response_pair
+0,Abnormally Frequent Urination Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A4']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A4']",1,"Patient: I've been needing to pee much more often than usual. Could this be something I should worry about?
+
+TriageMD: I understand that needing to pee more often can be concerning. Is urination painful for you?
+
+Patient: No, it's not really painful, but it's definitely more frequent than usual.
+
+TriageMD: I understand your concern. Are you noticing that you're urinating more frequently during the day, or do you also have to get up at night to urinate?
+
+Patient: Yes.
+
+TriageMD: I understand this can be concerning. Have you noticed two or more of the following symptoms: increased thirst, weight loss, unexplained tiredness, or blurred vision?
+
+Patient: No.
+
+TriageMD: Have you been drinking more beverages that contain caffeine, like coffee or colas, or more alcohol than usual?
+
+Patient: Not really, I don't think I've been drinking more caffeine or alcohol than usual, but I guess it's possible that I've had a bit more without really noticing.
+
+TriageMD: It's understandable to be uncertain. Just to clarify, have you noticed any increase in your caffeine or alcohol intake, even if it feels minor?
+
+Patient: No.
+
+TriageMD: Are you currently taking any medication for heart disease or high blood pressure?
+
+Patient: No, I don't think I'm on any medication for those issues.
+
+TriageMD: It sounds like you're experiencing some changes that could be concerning. Are you feeling nervous or excited about this situation?
+
+Patient: Yes.
+
+TriageMD: It's understandable to feel nervous or excited, and those emotions can sometimes trigger more frequent urination. If this continues or worsens, it might be a good idea to consult a healthcare professional for further evaluation.","[{'Question': 'I understand that needing to pee more often can be concerning. Is urination painful for you?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, it's not really painful, but it's definitely more frequent than usual."", 'Next_question': ""I understand your concern. Are you noticing that you're urinating more frequently during the day, or do you also have to get up at night to urinate?"", 'Protocol': 'Do you seem to be urinating more than usual, or do you have to get up at night to urinate?'}, {'Question': ""I understand your concern. Are you noticing that you're urinating more frequently during the day, or do you also have to get up at night to urinate?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'I understand this can be concerning. Have you noticed two or more of the following symptoms: increased thirst, weight loss, unexplained tiredness, or blurred vision?', 'Protocol': 'Have you noticed two or more of the following symptoms: increased thirst; weight loss; unexplained tiredness; blurred vision?'}, {'Question': 'I understand this can be concerning. Have you noticed two or more of the following symptoms: increased thirst, weight loss, unexplained tiredness, or blurred vision?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you been drinking more beverages that contain caffeine, like coffee or colas, or more alcohol than usual?', 'Protocol': 'Have you been drinking more beverages that contain caffeine (such as coffee or colas) or more alcohol than usual?'}, {'Question': 'Have you been drinking more beverages that contain caffeine, like coffee or colas, or more alcohol than usual?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, I don't think I've been drinking more caffeine or alcohol than usual, but I guess it's possible that I've had a bit more without really noticing."", 'Next_question': ""It's understandable to be uncertain. Just to clarify, have you noticed any increase in your caffeine or alcohol intake, even if it feels minor?"", 'Protocol': 'Have you been drinking more beverages that contain caffeine (such as coffee or colas) or more alcohol than usual?'}, {'Question': ""It's understandable to be uncertain. Just to clarify, have you noticed any increase in your caffeine or alcohol intake, even if it feels minor?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you currently taking any medication for heart disease or high blood pressure?', 'Protocol': 'Are you currently taking medication for heart disease or high blood pressure?'}, {'Question': 'Are you currently taking any medication for heart disease or high blood pressure?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think I'm on any medication for those issues."", 'Next_question': ""It sounds like you're experiencing some changes that could be concerning. Are you feeling nervous or excited about this situation?"", 'Protocol': 'Are you nervous or excited?'}, {'Question': ""It sounds like you're experiencing some changes that could be concerning. Are you feeling nervous or excited about this situation?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's understandable to feel nervous or excited, and those emotions can sometimes trigger more frequent urination. If this continues or worsens, it might be a good idea to consult a healthcare professional for further evaluation."", 'Protocol': 'Excitement can trigger urination.'}]"
+1,Abnormal Looking Urine Flowchart,"['N1', 'N2', 'N3', 'A2']","['N1', 'N2', 'N3', 'A2']",1,"Patient: I've noticed my urine looks cloudy and has a pinkish tint. Should I be worried about this change?
+
+TriageMD: I understand your concern. Can you tell me if your urine is dark yellow or orange?
+
+Patient: Yes, I've noticed that my urine is darker than usual, more of an orange color. It also seems cloudier and has a pinkish tint, which is why I'm concerned. I haven't changed my diet or started any new medications recently that I'm aware of.
+
+TriageMD: I understand your concern about the changes in your urine. To better assess your situation, could you let me know if you have a temperature of 100Â°F or higher, if the weather has been very hot, or if you've been exercising recently?
+
+Patient: I'm not really sure if I have a fever, but I don't feel particularly hot or anything. The weather's been kind of warm lately, and I have been doing some light exercise, but nothing too intense. I'm not sure if that could be affecting things.
+
+TriageMD: It's understandable to feel uncertain. Just to clarify, have you checked your temperature to see if it's 100Â°F or higher? Also, do you think the warm weather or your light exercise could be contributing to your symptoms?
+
+Patient: No.
+
+TriageMD: I understand your concern. Have you been experiencing any vomiting or diarrhea recently?
+
+Patient: Yes.
+
+TriageMD: Loss of fluid through vomiting or diarrhea can concentrate your urine, making it darker and possibly cloudier. It's important to drink more fluids, especially water or a rehydration solution or sports drink, to help with hydration. If your symptoms persist or worsen, please seek medical attention.","[{'Question': 'I understand your concern. Can you tell me if your urine is dark yellow or orange?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've noticed that my urine is darker than usual, more of an orange color. It also seems cloudier and has a pinkish tint, which is why I'm concerned. I haven't changed my diet or started any new medications recently that I'm aware of."", 'Next_question': ""I understand your concern about the changes in your urine. To better assess your situation, could you let me know if you have a temperature of 100Â°F or higher, if the weather has been very hot, or if you've been exercising recently?"", 'Protocol': 'Is your temperature 100Â°F or higher, is the weather very hot, or have you been exercising?'}, {'Question': ""I understand your concern about the changes in your urine. To better assess your situation, could you let me know if you have a temperature of 100Â°F or higher, if the weather has been very hot, or if you've been exercising recently?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure if I have a fever, but I don't feel particularly hot or anything. The weather's been kind of warm lately, and I have been doing some light exercise, but nothing too intense. I'm not sure if that could be affecting things."", 'Next_question': ""It's understandable to feel uncertain. Just to clarify, have you checked your temperature to see if it's 100Â°F or higher? Also, do you think the warm weather or your light exercise could be contributing to your symptoms?"", 'Protocol': 'Is your temperature 100Â°F or higher, is the weather very hot, or have you been exercising?'}, {'Question': ""It's understandable to feel uncertain. Just to clarify, have you checked your temperature to see if it's 100Â°F or higher? Also, do you think the warm weather or your light exercise could be contributing to your symptoms?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Have you been experiencing any vomiting or diarrhea recently?', 'Protocol': 'Have you been vomiting or have you had diarrhea?'}, {'Question': 'I understand your concern. Have you been experiencing any vomiting or diarrhea recently?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Loss of fluid through vomiting or diarrhea can concentrate your urine, making it darker and possibly cloudier. It's important to drink more fluids, especially water or a rehydration solution or sports drink, to help with hydration. If your symptoms persist or worsen, please seek medical attention."", 'Protocol': 'Loss of fluid through vomiting or diarrhea can concentrate the urine, making it darker. Drink more fluids, especially water or a rehydration solution or sports drink.'}]"
+2,Painful Urination Flowchart,"['N1', 'N2', 'N3', 'A2']","['N1', 'N2', 'N3', 'A2']",1,"Patient: I've been experiencing discomfort and pain when I urinate, along with some pain in my lower abdomen. What could this be?
+
+TriageMD: I'm sorry to hear that you're experiencing discomfort. To better understand your situation, do you have any pain in your side (toward the back and just above the waist), along with fever and chills?
+
+Patient: No.
+
+TriageMD: Are you a man?
+
+Patient: Yes.
+
+TriageMD: Do you have any discharge from your penis?
+
+Patient: I'm not really sure. I haven't noticed anything obvious, but I guess it's possible there's something that I just haven't paid much attention to.
+
+TriageMD: It's important to clarify this. Have you noticed any unusual discharge from your penis, even if it seems minor or not obvious?
+
+Patient: Yes.
+
+TriageMD: It's important that you see your doctor as soon as possible. You may have a sexually transmitted disease, such as chlamydia, nongonococcal urethritis, or gonorrhea. Getting a proper evaluation and treatment is essential. Take care.","[{'Question': ""I'm sorry to hear that you're experiencing discomfort. To better understand your situation, do you have any pain in your side (toward the back and just above the waist), along with fever and chills?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you a man?', 'Protocol': 'Are you a man?'}, {'Question': 'Are you a man?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you have any discharge from your penis?', 'Protocol': 'Do you have a discharge from your penis?'}, {'Question': 'Do you have any discharge from your penis?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I haven't noticed anything obvious, but I guess it's possible there's something that I just haven't paid much attention to."", 'Next_question': ""It's important to clarify this. Have you noticed any unusual discharge from your penis, even if it seems minor or not obvious?"", 'Protocol': 'Do you have a discharge from your penis?'}, {'Question': ""It's important to clarify this. Have you noticed any unusual discharge from your penis, even if it seems minor or not obvious?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important that you see your doctor as soon as possible. You may have a sexually transmitted disease, such as chlamydia, nongonococcal urethritis, or gonorrhea. Getting a proper evaluation and treatment is essential. Take care."", 'Protocol': 'See your doctor. You may have a sexually transmitted disease such as chlamydia, nongonococcal urethritis, or gonorrhea.'}]"
+3,Lack Of Bladder Control Flowchart,"['N1', 'N2', 'N3', 'N5', 'N7', 'A3']","['N1', 'N2', 'N3', 'N5', 'N7', 'A3']",1,"Patient: I've been experiencing unexpected bladder leaks and it's becoming more frequent. What could be causing this and how can it be managed?
+
+TriageMD: I understand that experiencing unexpected bladder leaks can be concerning. To better assist you, could you please clarify if this issue is occurring in a child?
+
+Patient: No.
+
+TriageMD: I'm sorry to hear that you're experiencing this. Do you have any pain when you urinate?
+
+Patient: I'm not really sure. I don't think there's any pain when I urinate, but it's hard to tell.
+
+TriageMD: I understand that it can be difficult to assess. Just to clarify, do you feel any discomfort or pain when you urinate, even if it's mild?
+
+Patient: No, I don't think there's any pain when I urinate, but I can't be completely sure.
+
+TriageMD: I understand that it can be hard to tell. Just to confirm, do you have any pain or discomfort at all when you urinate?
+
+Patient: No, I don't feel any pain or discomfort when I urinate. It's just the unexpected leaks that are concerning me. I haven't noticed any burning sensation or anything like that, just the frequency of the leaks increasing.
+
+TriageMD: Thank you for clarifying. Just to confirm, you do not have any pain or discomfort when you urinate, correct?
+
+Patient: No.
+
+TriageMD: Are you a woman?
+
+Patient: No.
+
+TriageMD: Are you over age 60?
+
+Patient: Well, I'm kind of in that range, I guess you could say. I'm not exactly 60, but I'm getting there.
+
+TriageMD: Just to confirm, are you over the age of 60?
+
+Patient: I'm not quite there yet, but I do enjoy a good cup of coffee in the morning.
+
+TriageMD: I understand. Just to clarify, are you currently over the age of 60?
+
+Patient: Yes, I'm over 60. I've noticed these leaks happening more frequently, and I'm trying to figure out what's going on. It's a bit embarrassing, and I want to know what might be causing it and how I can manage it better.
+
+TriageMD: Do you leak a small amount of urine after you have finished urinating?
+
+Patient: Yes, I think so. Sometimes it feels like I haven't completely finished, but it's hard to say for sure.
+
+TriageMD: It sounds like you might be experiencing some post-void dribbling, where a small amount of urine leaks after you think you've finished urinating. Is that correct?
+
+Patient: Yes, that seems to be the case. After I think I'm done urinating, there are times when a little bit more leaks out unexpectedly. It's frustrating because I feel like I have to be extra cautious and make sure I'm completely finished, but it still happens. It's becoming more frequent, and I'm worried about managing it better.
+
+TriageMD: It sounds like you are experiencing some post-void dribbling, where a small amount of urine leaks after you think you've finished urinating. Is that correct?
+
+Patient: Yes.
+
+TriageMD: It's important to see your doctor about this issue. You may have an enlarged prostate gland, a urethral stricture, or even a bladder tumor. They can provide a proper evaluation and recommend the best course of action. Take care.","[{'Question': 'I understand that experiencing unexpected bladder leaks can be concerning. To better assist you, could you please clarify if this issue is occurring in a child?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I'm sorry to hear that you're experiencing this. Do you have any pain when you urinate?"", 'Protocol': 'Do you have pain when you urinate?'}, {'Question': ""I'm sorry to hear that you're experiencing this. Do you have any pain when you urinate?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I don't think there's any pain when I urinate, but it's hard to tell. "", 'Next_question': ""I understand that it can be difficult to assess. Just to clarify, do you feel any discomfort or pain when you urinate, even if it's mild?"", 'Protocol': 'Do you have pain when you urinate?'}, {'Question': ""I understand that it can be difficult to assess. Just to clarify, do you feel any discomfort or pain when you urinate, even if it's mild?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think there's any pain when I urinate, but I can't be completely sure."", 'Next_question': 'I understand that it can be hard to tell. Just to confirm, do you have any pain or discomfort at all when you urinate?', 'Protocol': 'Do you have pain when you urinate?'}, {'Question': 'I understand that it can be hard to tell. Just to confirm, do you have any pain or discomfort at all when you urinate?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't feel any pain or discomfort when I urinate. It's just the unexpected leaks that are concerning me. I haven't noticed any burning sensation or anything like that, just the frequency of the leaks increasing."", 'Next_question': 'Thank you for clarifying. Just to confirm, you do not have any pain or discomfort when you urinate, correct?', 'Protocol': 'Do you have pain when you urinate?'}, {'Question': 'Thank you for clarifying. Just to confirm, you do not have any pain or discomfort when you urinate, correct?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you a woman?', 'Protocol': 'Are you a woman?'}, {'Question': 'Are you a woman?', 'Pattern': 'vague or partially conclusive', 'Patient_response': 'No.', 'Next_question': 'Are you over age 60?', 'Protocol': 'Are you over age 60?'}, {'Question': 'Are you over age 60?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Well, I'm kind of in that range, I guess you could say. I'm not exactly 60, but I'm getting there."", 'Next_question': 'Just to confirm, are you over the age of 60?', 'Protocol': 'Are you over age 60?'}, {'Question': 'Just to confirm, are you over the age of 60?', 'Pattern': 'irrelevant', 'Patient_response': ""I'm not quite there yet, but I do enjoy a good cup of coffee in the morning."", 'Next_question': 'I understand. Just to clarify, are you currently over the age of 60?', 'Protocol': 'Are you over age 60?'}, {'Question': 'I understand. Just to clarify, are you currently over the age of 60?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I'm over 60. I've noticed these leaks happening more frequently, and I'm trying to figure out what's going on. It's a bit embarrassing, and I want to know what might be causing it and how I can manage it better."", 'Next_question': 'Do you leak a small amount of urine after you have finished urinating?', 'Protocol': 'Do you leak a small amount of urine after you have finished urinating?'}, {'Question': 'Do you leak a small amount of urine after you have finished urinating?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I think so. Sometimes it feels like I haven't completely finished, but it's hard to say for sure."", 'Next_question': ""It sounds like you might be experiencing some post-void dribbling, where a small amount of urine leaks after you think you've finished urinating. Is that correct?"", 'Protocol': 'Do you leak a small amount of urine after you have finished urinating?'}, {'Question': ""It sounds like you might be experiencing some post-void dribbling, where a small amount of urine leaks after you think you've finished urinating. Is that correct?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, that seems to be the case. After I think I'm done urinating, there are times when a little bit more leaks out unexpectedly. It's frustrating because I feel like I have to be extra cautious and make sure I'm completely finished, but it still happens. It's becoming more frequent, and I'm worried about managing it better."", 'Next_question': ""It sounds like you are experiencing some post-void dribbling, where a small amount of urine leaks after you think you've finished urinating. Is that correct?"", 'Protocol': 'Do you leak a small amount of urine after you have finished urinating?'}, {'Question': ""It sounds like you are experiencing some post-void dribbling, where a small amount of urine leaks after you think you've finished urinating. Is that correct?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important to see your doctor about this issue. You may have an enlarged prostate gland, a urethral stricture, or even a bladder tumor. They can provide a proper evaluation and recommend the best course of action. Take care."", 'Protocol': 'See your doctor. You may have an enlarged prostate gland. Or you may have a urethral stricture or a bladder tumor.'}]"
+4,Lack Of Bladder Control In Older People Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N8', 'N9', 'A9']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N8', 'N9', 'A9']",1,"Patient: I'm experiencing frequent episodes of involuntary urination and it's becoming quite distressing. What can I do to manage this?
+
+TriageMD: I'm sorry to hear that you're experiencing this distressing issue. To better understand your situation, could you let me know if your urine is cloudy or has an unusually strong smell?
+
+Patient: No.
+
+TriageMD: I understand how distressing this can be. Have you been constipated for more than a week?
+
+Patient: No.
+
+TriageMD: Iâ€™m sorry to hear that youâ€™re going through this. Are you currently taking any prescription medication?
+
+Patient: No.
+
+TriageMD: Are you a woman?
+
+Patient: Yes.
+
+TriageMD: Do you leak small amounts of urine when you cough, sneeze, laugh, or run?
+
+Patient: Not really, or at least not that I've noticed.
+
+TriageMD: I understand. Just to clarify, have you noticed any leakage of urine during activities like coughing, sneezing, laughing, or running?
+
+Patient: No, I haven't really noticed any leakage during those activities. My issue seems to be more about having sudden urges to urinate and sometimes not making it to the bathroom in time. It's quite frustrating and Iâ€™m not sure whatâ€™s causing it.
+
+TriageMD: Thank you for clarifying. Just to confirm, do you experience any leakage of urine when you cough, sneeze, laugh, or run?
+
+Patient: No.
+
+TriageMD: I understand how concerning this can be. Does your genital area itch?
+
+Patient: No, there isn't any itching in the genital area. It's more about the sudden urge to urinate and sometimes not making it to the bathroom in time. There's no discomfort like itching or burning, just the urgency and occasional accidents.
+
+TriageMD: Thank you for sharing that. When you feel the urge to urinate, do you usually make it to the bathroom in time?
+
+Patient: No.
+
+TriageMD: I understand how distressing this situation can be. Have you noticed two or more of the following symptoms: a change in personality, a decline in personal appearance or cleanliness, or an impaired ability to remember recent events?
+
+Patient: I haven't really noticed any changes in that area, but I did try a new recipe for dinner last night and it turned out quite well! It's always nice to try something new in the kitchen.
+
+TriageMD: Iâ€™m glad to hear you enjoyed trying a new recipe! However, Iâ€™d like to ask again: have you noticed two or more of the following symptoms: a change in personality, a decline in personal appearance or cleanliness, or an impaired ability to remember recent events?
+
+Patient: No.
+
+TriageMD: It sounds like you're experiencing significant urgency with urination, which can be distressing. I recommend seeing your doctor to discuss your symptoms further and explore potential causes and management options. They can provide you with the best guidance tailored to your situation. Take care.","[{'Question': ""I'm sorry to hear that you're experiencing this distressing issue. To better understand your situation, could you let me know if your urine is cloudy or has an unusually strong smell?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand how distressing this can be. Have you been constipated for more than a week?', 'Protocol': 'Have you been constipated for more than a week?'}, {'Question': 'I understand how distressing this can be. Have you been constipated for more than a week?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Iâ€™m sorry to hear that youâ€™re going through this. Are you currently taking any prescription medication?', 'Protocol': 'Are you currently taking any prescription medication?'}, {'Question': 'Iâ€™m sorry to hear that youâ€™re going through this. Are you currently taking any prescription medication?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you a woman?', 'Protocol': 'Are you a woman?'}, {'Question': 'Are you a woman?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you leak small amounts of urine when you cough, sneeze, laugh, or run?', 'Protocol': 'Do you leak small amounts of urine when you cough, sneeze, laugh, or run?'}, {'Question': 'Do you leak small amounts of urine when you cough, sneeze, laugh, or run?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, or at least not that I've noticed."", 'Next_question': 'I understand. Just to clarify, have you noticed any leakage of urine during activities like coughing, sneezing, laughing, or running?', 'Protocol': 'Do you leak small amounts of urine when you cough, sneeze, laugh, or run?'}, {'Question': 'I understand. Just to clarify, have you noticed any leakage of urine during activities like coughing, sneezing, laughing, or running?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't really noticed any leakage during those activities. My issue seems to be more about having sudden urges to urinate and sometimes not making it to the bathroom in time. It's quite frustrating and Iâ€™m not sure whatâ€™s causing it."", 'Next_question': 'Thank you for clarifying. Just to confirm, do you experience any leakage of urine when you cough, sneeze, laugh, or run?', 'Protocol': 'Do you leak small amounts of urine when you cough, sneeze, laugh, or run?'}, {'Question': 'Thank you for clarifying. Just to confirm, do you experience any leakage of urine when you cough, sneeze, laugh, or run?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand how concerning this can be. Does your genital area itch?', 'Protocol': 'Does your genital area itch?'}, {'Question': 'I understand how concerning this can be. Does your genital area itch?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, there isn't any itching in the genital area. It's more about the sudden urge to urinate and sometimes not making it to the bathroom in time. There's no discomfort like itching or burning, just the urgency and occasional accidents."", 'Next_question': 'Thank you for sharing that. When you feel the urge to urinate, do you usually make it to the bathroom in time?', 'Protocol': 'Do you get to the bathroom in time once you feel the urge to urinate?'}, {'Question': 'Thank you for sharing that. When you feel the urge to urinate, do you usually make it to the bathroom in time?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand how distressing this situation can be. Have you noticed two or more of the following symptoms: a change in personality, a decline in personal appearance or cleanliness, or an impaired ability to remember recent events?', 'Protocol': 'Have you noticed two or more of the following symptoms: change in personality; decline in personal appearance or cleanliness; impaired ability to remember recent events?'}, {'Question': 'I understand how distressing this situation can be. Have you noticed two or more of the following symptoms: a change in personality, a decline in personal appearance or cleanliness, or an impaired ability to remember recent events?', 'Pattern': 'irrelevant', 'Patient_response': ""I haven't really noticed any changes in that area, but I did try a new recipe for dinner last night and it turned out quite well! It's always nice to try something new in the kitchen."", 'Next_question': 'Iâ€™m glad to hear you enjoyed trying a new recipe! However, Iâ€™d like to ask again: have you noticed two or more of the following symptoms: a change in personality, a decline in personal appearance or cleanliness, or an impaired ability to remember recent events?', 'Protocol': 'Have you noticed two or more of the following symptoms: change in personality; decline in personal appearance or cleanliness; impaired ability to remember recent events?'}, {'Question': 'Iâ€™m glad to hear you enjoyed trying a new recipe! However, Iâ€™d like to ask again: have you noticed two or more of the following symptoms: a change in personality, a decline in personal appearance or cleanliness, or an impaired ability to remember recent events?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It sounds like you're experiencing significant urgency with urination, which can be distressing. I recommend seeing your doctor to discuss your symptoms further and explore potential causes and management options. They can provide you with the best guidance tailored to your situation. Take care."", 'Protocol': 'See your doctor if you are unable to make a decision from self-triage.'}]"

@@ -1,0 +1,449 @@
+Unnamed: 0,Flowchart,Path label,Path,Accuracy,Conversation,Question_and_response_pair,Shortened_Conversation
+0,Painful Eye Flowchart,"['N1', 'N3', 'N5', 'N11', 'N12', 'N13', 'N14', 'A12']","['N1', 'N3', 'N5', 'N11', 'N12', 'N13', 'N14', 'A12']",1,"Patient: I've been experiencing sharp, intermittent pain around my left eye for the past two days. It's becoming quite bothersome.
+
+TriageMD: I'm sorry to hear you're experiencing pain around your left eye. Did you injure your eye in any way?
+
+Patient: No, I don't think I injured it or anything like that, at least not that I can remember.
+
+TriageMD: I understand. Just to confirm, you don't recall any injury to your eye, correct?
+
+Patient: No, I don't recall any injury to my eye. The pain just started out of nowhere, and it's been coming and going for the past couple of days. It's really sharp and mainly around my left eye, which makes it hard to focus on anything else when it happens.
+
+TriageMD: I understand that the pain is quite bothersome. Just to clarify, you haven't experienced any injury to your eye, correct?
+
+Patient: No.
+
+TriageMD: Iâ€™m sorry to hear youâ€™re in pain. Can you tell me if your vision is blurred or if light hurts your eyes?
+
+Patient: No, my vision isn't blurred, and light doesn't seem to bother my eyes either. The pain is sharp and just around my left eye, but my vision seems fine otherwise. It's more of a discomfort that makes it hard to concentrate when it happens.
+
+TriageMD: I understand how uncomfortable that must be. Is your eyeball or eyelid red?
+
+Patient: No.
+
+TriageMD: Does the pain seem to come from behind your eye?
+
+Patient: Yes.
+
+TriageMD: Thank you for the information. Do you have two or more of the following symptoms: a severe headache, sensitivity to bright light, pain when you bend your head forward, or feelings of drowsiness or confusion?
+
+Patient: No.
+
+TriageMD: Is there an area of tenderness in your temple above the affected eye?
+
+Patient: No.
+
+TriageMD: Is there an area of tenderness over your nose or in your cheekbones?
+
+Patient: No.
+
+TriageMD: Given your symptoms, it's important to consult with your doctor for a proper evaluation. They can help determine the cause of your pain and recommend appropriate treatment. Take care.","[{'Question': ""I'm sorry to hear you're experiencing pain around your left eye. Did you injure your eye in any way?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think I injured it or anything like that, at least not that I can remember."", 'Next_question': ""I understand. Just to confirm, you don't recall any injury to your eye, correct?"", 'Protocol': 'Did you injure your eye?'}, {'Question': ""I understand. Just to confirm, you don't recall any injury to your eye, correct?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't recall any injury to my eye. The pain just started out of nowhere, and it's been coming and going for the past couple of days. It's really sharp and mainly around my left eye, which makes it hard to focus on anything else when it happens."", 'Next_question': ""I understand that the pain is quite bothersome. Just to clarify, you haven't experienced any injury to your eye, correct?"", 'Protocol': 'Did you injure your eye?'}, {'Question': ""I understand that the pain is quite bothersome. Just to clarify, you haven't experienced any injury to your eye, correct?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Iâ€™m sorry to hear youâ€™re in pain. Can you tell me if your vision is blurred or if light hurts your eyes?', 'Protocol': 'Is your vision blurred, or does light hurt your eyes?'}, {'Question': 'Iâ€™m sorry to hear youâ€™re in pain. Can you tell me if your vision is blurred or if light hurts your eyes?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, my vision isn't blurred, and light doesn't seem to bother my eyes either. The pain is sharp and just around my left eye, but my vision seems fine otherwise. It's more of a discomfort that makes it hard to concentrate when it happens."", 'Next_question': 'I understand how uncomfortable that must be. Is your eyeball or eyelid red?', 'Protocol': 'Is your eyeball or eyelid red?'}, {'Question': 'I understand how uncomfortable that must be. Is your eyeball or eyelid red?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Does the pain seem to come from behind your eye?', 'Protocol': 'Does the pain seem to come from behind your eye?'}, {'Question': 'Does the pain seem to come from behind your eye?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Thank you for the information. Do you have two or more of the following symptoms: a severe headache, sensitivity to bright light, pain when you bend your head forward, or feelings of drowsiness or confusion?', 'Protocol': 'Do you have two or more of the following symptoms: severe headache; sensitivity of eyes to bright light; pain when you bend your head forward; drowsiness or confusion?'}, {'Question': 'Thank you for the information. Do you have two or more of the following symptoms: a severe headache, sensitivity to bright light, pain when you bend your head forward, or feelings of drowsiness or confusion?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is there an area of tenderness in your temple above the affected eye?', 'Protocol': 'Is there an area of tenderness in the temple above the affected eye?'}, {'Question': 'Is there an area of tenderness in your temple above the affected eye?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is there an area of tenderness over your nose or in your cheekbones?', 'Protocol': 'Is there an area of tenderness over your nose or in your cheekbones?'}, {'Question': 'Is there an area of tenderness over your nose or in your cheekbones?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""Given your symptoms, it's important to consult with your doctor for a proper evaluation. They can help determine the cause of your pain and recommend appropriate treatment. Take care."", 'Protocol': 'See your doctor if you are unable to make a decision from self-triage.'}]","Patient: I've been experiencing sharp, intermittent pain around my left eye for the past two days. It's becoming quite bothersome.
+TriageMD: I'm sorry to hear you're experiencing pain around your left eye. Did you injure your eye in any way?
+Patient: No.
+TriageMD: Does the pain seem to come from behind your eye?
+Patient: No.
+TriageMD: Given your symptoms, it's important to consult with your doctor for a proper evaluation. They can help determine the cause of your pain and recommend appropriate treatment. Take care."
+1,Disturbed Or Impaired Vision Flowchart,"['N1', 'N2', 'N4', 'N5', 'N6', 'A6']","['N1', 'N2', 'N4', 'N5', 'N6', 'A6']",1,"Patient: I've been experiencing some blurring in my vision and occasionally see floating spots. Should I be worried about this?
+
+TriageMD: I'm sorry to hear that you're experiencing these symptoms. Did you injure your head recently?
+
+Patient: I don't think I've had any recent head injuries, but it's hard to say for sure. I can't remember anything specific happening.
+
+TriageMD: It's understandable to be uncertain. Just to clarify, have you experienced any head injuries, even minor ones, recently?
+
+Patient: No, I don't think I've had any head injuries recently, at least nothing that I can remember.
+
+TriageMD: I understand. Just to confirm, are you certain you haven't had any head injuries recently, even minor ones?
+
+Patient: No, I'm pretty certain I haven't had any head injuries recently. I haven't hit my head or had any accidents that I can recall. The blurring and floaters just started happening, and I can't think of anything that might have caused them.
+
+TriageMD: I understand your concern. Have you suddenly lost some or all of the field of vision in one or both eyes?
+
+Patient: No.
+
+TriageMD: I understand that you're experiencing blurring in your vision. It's important to take these symptoms seriously. I recommend that you seek medical attention as soon as possible to get a proper evaluation.
+
+Patient: Yes.
+
+TriageMD: Is only one eye affected, or are both eyes experiencing the blurring and floaters?
+
+Patient: Yes.
+
+TriageMD: Do you feel any pain in the affected eye?
+
+Patient: No.
+
+TriageMD: It's important that you see a doctor immediately. Your symptoms could indicate a detached retina, which requires prompt attention. Please seek medical help as soon as possible.","[{'Question': ""I'm sorry to hear that you're experiencing these symptoms. Did you injure your head recently?"", 'Pattern': 'inconclusive', 'Patient_response': ""I don't think I've had any recent head injuries, but it's hard to say for sure. I can't remember anything specific happening."", 'Next_question': ""It's understandable to be uncertain. Just to clarify, have you experienced any head injuries, even minor ones, recently?"", 'Protocol': 'Did you injure your head recently?'}, {'Question': ""It's understandable to be uncertain. Just to clarify, have you experienced any head injuries, even minor ones, recently?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think I've had any head injuries recently, at least nothing that I can remember."", 'Next_question': ""I understand. Just to confirm, are you certain you haven't had any head injuries recently, even minor ones?"", 'Protocol': 'Did you injure your head recently?'}, {'Question': ""I understand. Just to confirm, are you certain you haven't had any head injuries recently, even minor ones?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I'm pretty certain I haven't had any head injuries recently. I haven't hit my head or had any accidents that I can recall. The blurring and floaters just started happening, and I can't think of anything that might have caused them."", 'Next_question': 'I understand your concern. Have you suddenly lost some or all of the field of vision in one or both eyes?', 'Protocol': 'Did you suddenly lose some or all of the field of vision in one or both eyes?'}, {'Question': 'I understand your concern. Have you suddenly lost some or all of the field of vision in one or both eyes?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I understand that you're experiencing blurring in your vision. It's important to take these symptoms seriously. I recommend that you seek medical attention as soon as possible to get a proper evaluation."", 'Protocol': 'Is your vision blurred?'}, {'Question': ""I understand that you're experiencing blurring in your vision. It's important to take these symptoms seriously. I recommend that you seek medical attention as soon as possible to get a proper evaluation."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Is only one eye affected, or are both eyes experiencing the blurring and floaters?', 'Protocol': 'Is only one eye affected?'}, {'Question': 'Is only one eye affected, or are both eyes experiencing the blurring and floaters?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you feel any pain in the affected eye?', 'Protocol': 'Do you feel pain in the affected eye?'}, {'Question': 'Do you feel any pain in the affected eye?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It's important that you see a doctor immediately. Your symptoms could indicate a detached retina, which requires prompt attention. Please seek medical help as soon as possible."", 'Protocol': 'See a doctor immediately. You may have a detached retina.'}]","Patient: I've been experiencing some blurring in my vision and occasionally see floating spots. Should I be worried about this?
+TriageMD: I'm sorry to hear that you're experiencing these symptoms. Did you injure your head recently?
+Patient: No.
+TriageMD: I understand that you're experiencing blurring in your vision. It's important to take these symptoms seriously. I recommend that you seek medical attention as soon as possible to get a proper evaluation.
+Patient: No.
+TriageMD: It's important that you see a doctor immediately. Your symptoms could indicate a detached retina, which requires prompt attention. Please seek medical help as soon as possible."
+2,Earache Flowchart,"['N1', 'A1']","['N1', 'A1']",1,"Patient: My daughter has been complaining of pain in her right ear since last night. Could this be an ear infection?
+
+TriageMD: I'm sorry to hear that your daughter is in pain. To help assess her condition, does the pain get worse when you pull down on her earlobe?
+
+Patient: Yes, she did say it hurts more when I tried pulling down on her earlobe, but I'm not entirely sure if that's the main issue.
+
+TriageMD: I understand your concern. Just to clarify, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to the ear itself.
+
+Patient: Yes, it does seem to hurt more when I pull down on her earlobe. She winces and says it feels more painful. She's also been a bit fussy and has had trouble sleeping, which makes me think it might be an ear infection.
+
+TriageMD: It sounds like she may be experiencing an ear infection, especially since the pain worsens when you pull down on her earlobe. It's also common for children to be fussy and have trouble sleeping when they're in pain. It would be a good idea to consult a healthcare professional for a proper evaluation and treatment.
+
+Patient: Yes, I think so. It seems like it could be an ear infection, but I'm not entirely sure.
+
+TriageMD: I understand your uncertainty. Just to confirm, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to an ear infection.
+
+Patient: Yes, the pain does seem to get worse when I pull down on her earlobe. She winces and says it hurts more. Along with the ear pain, she's been quite fussy and hasn't been sleeping well, which makes me suspect it could be an ear infection. I'm planning to call her doctor to get it checked out.
+
+TriageMD: It sounds like you're doing the right thing by planning to call her doctor. Just to confirm, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to an ear infection.
+
+Patient: I'm not entirely sure, but it does seem like the pain might get worse when I pull down on her earlobe. She's been pretty uncomfortable and fussy, so it's hard to tell exactly what's going on. I think it's best to have her checked by a doctor to be sure.
+
+TriageMD: I understand that it can be difficult to assess her pain. Just to clarify, does the pain get worse when you pull down on her earlobe? This can help determine if it might be related to an ear infection.
+
+Patient: Yes.
+
+TriageMD: It sounds like your daughter may have an infection of the ear canal, especially since the pain worsens when you pull on her earlobe. I recommend seeing her doctor for a proper evaluation and treatment. I hope she feels better soon.","[{'Question': ""I'm sorry to hear that your daughter is in pain. To help assess her condition, does the pain get worse when you pull down on her earlobe?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, she did say it hurts more when I tried pulling down on her earlobe, but I'm not entirely sure if that's the main issue."", 'Next_question': 'I understand your concern. Just to clarify, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to the ear itself.', 'Protocol': 'Does the pain get worse when you pull down on your earlobe?'}, {'Question': 'I understand your concern. Just to clarify, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to the ear itself.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, it does seem to hurt more when I pull down on her earlobe. She winces and says it feels more painful. She's also been a bit fussy and has had trouble sleeping, which makes me think it might be an ear infection."", 'Next_question': ""It sounds like she may be experiencing an ear infection, especially since the pain worsens when you pull down on her earlobe. It's also common for children to be fussy and have trouble sleeping when they're in pain. It would be a good idea to consult a healthcare professional for a proper evaluation and treatment."", 'Protocol': 'Does the pain get worse when you pull down on your earlobe?'}, {'Question': ""It sounds like she may be experiencing an ear infection, especially since the pain worsens when you pull down on her earlobe. It's also common for children to be fussy and have trouble sleeping when they're in pain. It would be a good idea to consult a healthcare professional for a proper evaluation and treatment."", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I think so. It seems like it could be an ear infection, but I'm not entirely sure."", 'Next_question': 'I understand your uncertainty. Just to confirm, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to an ear infection.', 'Protocol': 'Does the pain get worse when you pull down on your earlobe?'}, {'Question': 'I understand your uncertainty. Just to confirm, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to an ear infection.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, the pain does seem to get worse when I pull down on her earlobe. She winces and says it hurts more. Along with the ear pain, she's been quite fussy and hasn't been sleeping well, which makes me suspect it could be an ear infection. I'm planning to call her doctor to get it checked out."", 'Next_question': ""It sounds like you're doing the right thing by planning to call her doctor. Just to confirm, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to an ear infection."", 'Protocol': 'Does the pain get worse when you pull down on your earlobe?'}, {'Question': ""It sounds like you're doing the right thing by planning to call her doctor. Just to confirm, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to an ear infection."", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure, but it does seem like the pain might get worse when I pull down on her earlobe. She's been pretty uncomfortable and fussy, so it's hard to tell exactly what's going on. I think it's best to have her checked by a doctor to be sure."", 'Next_question': 'I understand that it can be difficult to assess her pain. Just to clarify, does the pain get worse when you pull down on her earlobe? This can help determine if it might be related to an ear infection.', 'Protocol': 'Does the pain get worse when you pull down on your earlobe?'}, {'Question': 'I understand that it can be difficult to assess her pain. Just to clarify, does the pain get worse when you pull down on her earlobe? This can help determine if it might be related to an ear infection.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like your daughter may have an infection of the ear canal, especially since the pain worsens when you pull on her earlobe. I recommend seeing her doctor for a proper evaluation and treatment. I hope she feels better soon.', 'Protocol': 'See your doctor. You probably have an infection of the ear canal.'}]","Patient: My daughter has been complaining of pain in her right ear since last night. Could this be an ear infection?
+TriageMD: I'm sorry to hear that your daughter is in pain. To help assess her condition, does the pain get worse when you pull down on her earlobe?
+TriageMD: I understand your uncertainty. Just to confirm, does the pain indeed get worse when you pull down on her earlobe? This can help indicate if it might be related to an ear infection.
+Patient: Yes, the pain does seem to get worse when I pull down on her earlobe. She winces and says it hurts more. Along with the ear pain, she's been quite fussy and hasn't been sleeping well, which makes me suspect it could be an ear infection. I'm planning to call her doctor to get it checked out.
+Patient: Yes.
+TriageMD: It sounds like your daughter may have an infection of the ear canal, especially since the pain worsens when you pull on her earlobe. I recommend seeing her doctor for a proper evaluation and treatment. I hope she feels better soon."
+3,Noises In The Ear Flowchart,"['N1', 'N2', 'N3', 'A2']","['N1', 'N2', 'N3', 'A2']",1,"Patient: I've been experiencing a constant ringing in my ears for the past week, and it's becoming quite bothersome. What should I do?
+
+TriageMD: I'm sorry to hear that you're experiencing this. Do you have any hearing loss along with the ringing in your ears?
+
+Patient: No, I haven't noticed any hearing loss. It's just the ringing that's been constant. It started about a week ago, and it's more noticeable when I'm in a quiet room or trying to sleep. It's really starting to affect my concentration and sleep quality.
+
+TriageMD: I understand how bothersome that can be. Did you begin hearing the ringing during or after an airplane flight?
+
+Patient: No, it didn't start after a flight. It just began out of the blue about a week ago. I haven't been on a plane or anything like that recently.
+
+TriageMD: I understand how concerning this can be. Have you taken or are you currently taking any prescription or over-the-counter medications?
+
+Patient: I'm not really sure if any medications I'm taking might be causing it. I do take some over-the-counter stuff occasionally, but I haven't connected it to the ringing.
+
+TriageMD: I understand. Just to clarify, are you currently taking or have you recently taken any prescription or over-the-counter medications that you might not have considered?
+
+Patient: Yes, I think so. I take some over-the-counter stuff for allergies sometimes, and maybe some pain relievers here and there, but I haven't really thought about whether they could be related to the ringing.
+
+TriageMD: It's good to know what you're taking. Just to confirm, are you currently taking or have you recently taken any prescription or over-the-counter medications that might be relevant?
+
+Patient: Yes.
+
+TriageMD: It's important to talk to your doctor about the ringing in your ears. Some over-the-counter medications, including certain allergy medications and pain relievers like aspirin, can cause tinnitus as a side effect. Your doctor can help determine the cause and suggest appropriate steps to manage it.","[{'Question': ""I'm sorry to hear that you're experiencing this. Do you have any hearing loss along with the ringing in your ears?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any hearing loss. It's just the ringing that's been constant. It started about a week ago, and it's more noticeable when I'm in a quiet room or trying to sleep. It's really starting to affect my concentration and sleep quality."", 'Next_question': 'I understand how bothersome that can be. Did you begin hearing the ringing during or after an airplane flight?', 'Protocol': 'Did you begin hearing the noises during or after an airplane flight?'}, {'Question': 'I understand how bothersome that can be. Did you begin hearing the ringing during or after an airplane flight?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, it didn't start after a flight. It just began out of the blue about a week ago. I haven't been on a plane or anything like that recently."", 'Next_question': 'I understand how concerning this can be. Have you taken or are you currently taking any prescription or over-the-counter medications?', 'Protocol': 'Are you taking or have you recently taken any prescription or over-the-counter medications?'}, {'Question': 'I understand how concerning this can be. Have you taken or are you currently taking any prescription or over-the-counter medications?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure if any medications I'm taking might be causing it. I do take some over-the-counter stuff occasionally, but I haven't connected it to the ringing."", 'Next_question': 'I understand. Just to clarify, are you currently taking or have you recently taken any prescription or over-the-counter medications that you might not have considered?', 'Protocol': 'Are you taking or have you recently taken any prescription or over-the-counter medications?'}, {'Question': 'I understand. Just to clarify, are you currently taking or have you recently taken any prescription or over-the-counter medications that you might not have considered?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I think so. I take some over-the-counter stuff for allergies sometimes, and maybe some pain relievers here and there, but I haven't really thought about whether they could be related to the ringing."", 'Next_question': ""It's good to know what you're taking. Just to confirm, are you currently taking or have you recently taken any prescription or over-the-counter medications that might be relevant?"", 'Protocol': 'Are you taking or have you recently taken any prescription or over-the-counter medications?'}, {'Question': ""It's good to know what you're taking. Just to confirm, are you currently taking or have you recently taken any prescription or over-the-counter medications that might be relevant?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important to talk to your doctor about the ringing in your ears. Some over-the-counter medications, including certain allergy medications and pain relievers like aspirin, can cause tinnitus as a side effect. Your doctor can help determine the cause and suggest appropriate steps to manage it."", 'Protocol': 'Talk to your doctor. Noises in the ear are a common side effect of some drugs, including aspirin.'}]","Patient: I've been experiencing a constant ringing in my ears for the past week, and it's becoming quite bothersome. What should I do?
+TriageMD: I'm sorry to hear that you're experiencing this. Do you have any hearing loss along with the ringing in your ears?
+Patient: I'm not really sure if any medications I'm taking might be causing it. I do take some over-the-counter stuff occasionally, but I haven't connected it to the ringing.
+TriageMD: I understand. Just to clarify, are you currently taking or have you recently taken any prescription or over-the-counter medications that you might not have considered?
+Patient: Yes.
+TriageMD: It's important to talk to your doctor about the ringing in your ears. Some over-the-counter medications, including certain allergy medications and pain relievers like aspirin, can cause tinnitus as a side effect. Your doctor can help determine the cause and suggest appropriate steps to manage it."
+4,Hearing Loss Flowchart,"['N1', 'N2', 'N3', 'N4', 'N6', 'N7', 'N8', 'N9', 'N10', 'A8']","['N1', 'N2', 'N3', 'N4', 'N6', 'N7', 'N8', 'N9', 'N10', 'A8']",1,"Patient: I've been having trouble hearing conversations clearly, especially when there's background noise. Can you help me understand what's going on?
+
+TriageMD: I understand that having trouble hearing conversations, especially with background noise, can be frustrating. Do you have an earache?
+
+Patient: No.
+
+TriageMD: I understand your concern. Does your ear have a sticky yellow discharge?
+
+Patient: No.
+
+TriageMD: Have you had a cold or a sore throat in the past week?
+
+Patient: No, I haven't really had a cold or sore throat recently, at least not that I've noticed.
+
+TriageMD: I understand. Just to confirm, have you had any symptoms like a cold or sore throat in the past week?
+
+Patient: No.
+
+TriageMD: Can you hear low-pitched sounds, like a knock on the door, better than high-pitched sounds, like a doorbell?
+
+Patient: Not really, I think I hear both about the same, but it's hard to say for sure.
+
+TriageMD: I understand. Just to clarify, can you hear low-pitched sounds, like a knock on the door, better than high-pitched sounds, like a doorbell?
+
+Patient: No.
+
+TriageMD: Thank you for your responses. Are you currently taking or have you recently taken any nonprescription or prescription medications?
+
+Patient: No.
+
+TriageMD: Do you experience occasional episodes of dizziness that make the room seem to spin?
+
+Patient: Not really, but I do enjoy a good spin class at the gym!
+
+TriageMD: I appreciate your response! Just to clarify, do you have occasional episodes of dizziness that make the room seem to spin?
+
+Patient: I can't say for sure. I haven't noticed anything like that, but sometimes it's hard to tell if it's just being tired or something else.
+
+TriageMD: I understand that it can be hard to distinguish. Just to confirm, do you have occasional episodes of dizziness that make the room seem to spin?
+
+Patient: No, I haven't experienced any episodes where the room seems to spin. I sometimes feel a bit off when I'm tired, but nothing that feels like true dizziness or vertigo.
+
+TriageMD: Thank you for sharing that. Are you over 60 years old?
+
+Patient: No, I'm not over 60. I'm still a bit away from that milestone!
+
+TriageMD: Has your hearing worsened over a period of several weeks or longer?
+
+Patient: Yes, I think my hearing has gradually worsened over the past few months. It wasn't very noticeable at first, but now I find myself asking people to repeat themselves more often, especially in noisy environments. It's been a slow change, but it's definitely become more of an issue recently.
+
+TriageMD: Thank you for sharing that. Have other members of your family experienced a gradual loss of hearing as well?
+
+Patient: Well, my family does love to gather for big dinners, and we often end up talking over each other. It can get pretty loud, but it's always a good time!
+
+TriageMD: Iâ€™m glad to hear you enjoy those family gatherings! Just to clarify, have other members of your family experienced a gradual loss of hearing as well?
+
+Patient: No.
+
+TriageMD: It sounds like you may be experiencing hearing loss that could be related to an earwax blockage. I recommend seeing your doctor for a proper evaluation and treatment. They can help determine the cause and provide the appropriate care.","[{'Question': 'I understand that having trouble hearing conversations, especially with background noise, can be frustrating. Do you have an earache?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Does your ear have a sticky yellow discharge?', 'Protocol': 'Does your ear have a sticky yellow discharge?'}, {'Question': 'I understand your concern. Does your ear have a sticky yellow discharge?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you had a cold or a sore throat in the past week?', 'Protocol': 'Have you had a cold or a sore throat in the past week?'}, {'Question': 'Have you had a cold or a sore throat in the past week?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I haven't really had a cold or sore throat recently, at least not that I've noticed."", 'Next_question': 'I understand. Just to confirm, have you had any symptoms like a cold or sore throat in the past week?', 'Protocol': 'Have you had a cold or a sore throat in the past week?'}, {'Question': 'I understand. Just to confirm, have you had any symptoms like a cold or sore throat in the past week?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Can you hear low-pitched sounds, like a knock on the door, better than high-pitched sounds, like a doorbell?', 'Protocol': 'Can you hear low-pitched sounds (such as a knock on the door) better than you hear high-pitched sounds (such as a doorbell)?'}, {'Question': 'Can you hear low-pitched sounds, like a knock on the door, better than high-pitched sounds, like a doorbell?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, I think I hear both about the same, but it's hard to say for sure."", 'Next_question': 'I understand. Just to clarify, can you hear low-pitched sounds, like a knock on the door, better than high-pitched sounds, like a doorbell?', 'Protocol': 'Can you hear low-pitched sounds (such as a knock on the door) better than you hear high-pitched sounds (such as a doorbell)?'}, {'Question': 'I understand. Just to clarify, can you hear low-pitched sounds, like a knock on the door, better than high-pitched sounds, like a doorbell?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for your responses. Are you currently taking or have you recently taken any nonprescription or prescription medications?', 'Protocol': 'Are you taking or have you recently taken any nonprescription or prescription medications?'}, {'Question': 'Thank you for your responses. Are you currently taking or have you recently taken any nonprescription or prescription medications?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you experience occasional episodes of dizziness that make the room seem to spin?', 'Protocol': 'Do you have occasional episodes of dizziness that make the room seem to spin?'}, {'Question': 'Do you experience occasional episodes of dizziness that make the room seem to spin?', 'Pattern': 'irrelevant', 'Patient_response': 'Not really, but I do enjoy a good spin class at the gym!', 'Next_question': 'I appreciate your response! Just to clarify, do you have occasional episodes of dizziness that make the room seem to spin?', 'Protocol': 'Do you have occasional episodes of dizziness that make the room seem to spin?'}, {'Question': 'I appreciate your response! Just to clarify, do you have occasional episodes of dizziness that make the room seem to spin?', 'Pattern': 'inconclusive', 'Patient_response': ""I can't say for sure. I haven't noticed anything like that, but sometimes it's hard to tell if it's just being tired or something else."", 'Next_question': 'I understand that it can be hard to distinguish. Just to confirm, do you have occasional episodes of dizziness that make the room seem to spin?', 'Protocol': 'Do you have occasional episodes of dizziness that make the room seem to spin?'}, {'Question': 'I understand that it can be hard to distinguish. Just to confirm, do you have occasional episodes of dizziness that make the room seem to spin?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't experienced any episodes where the room seems to spin. I sometimes feel a bit off when I'm tired, but nothing that feels like true dizziness or vertigo."", 'Next_question': 'Thank you for sharing that. Are you over 60 years old?', 'Protocol': 'Are you over 60?'}, {'Question': 'Thank you for sharing that. Are you over 60 years old?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I'm not over 60. I'm still a bit away from that milestone!"", 'Next_question': 'Has your hearing worsened over a period of several weeks or longer?', 'Protocol': 'Has your hearing worsened over a period of several weeks or longer?'}, {'Question': 'Has your hearing worsened over a period of several weeks or longer?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I think my hearing has gradually worsened over the past few months. It wasn't very noticeable at first, but now I find myself asking people to repeat themselves more often, especially in noisy environments. It's been a slow change, but it's definitely become more of an issue recently."", 'Next_question': 'Thank you for sharing that. Have other members of your family experienced a gradual loss of hearing as well?', 'Protocol': 'Have other members of your family had a gradual loss of hearing?'}, {'Question': 'Thank you for sharing that. Have other members of your family experienced a gradual loss of hearing as well?', 'Pattern': 'irrelevant', 'Patient_response': ""Well, my family does love to gather for big dinners, and we often end up talking over each other. It can get pretty loud, but it's always a good time!"", 'Next_question': 'Iâ€™m glad to hear you enjoy those family gatherings! Just to clarify, have other members of your family experienced a gradual loss of hearing as well?', 'Protocol': 'Have other members of your family had a gradual loss of hearing?'}, {'Question': 'Iâ€™m glad to hear you enjoy those family gatherings! Just to clarify, have other members of your family experienced a gradual loss of hearing as well?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'It sounds like you may be experiencing hearing loss that could be related to an earwax blockage. I recommend seeing your doctor for a proper evaluation and treatment. They can help determine the cause and provide the appropriate care.', 'Protocol': 'See your doctor. An earwax blockage may be causing your hearing loss.'}]","Patient: I've been having trouble hearing conversations clearly, especially when there's background noise. Can you help me understand what's going on?
+TriageMD: I understand that having trouble hearing conversations, especially with background noise, can be frustrating. Do you have an earache?
+TriageMD: Do you experience occasional episodes of dizziness that make the room seem to spin?
+Patient: Not really, but I do enjoy a good spin class at the gym!
+Patient: No.
+TriageMD: It sounds like you may be experiencing hearing loss that could be related to an earwax blockage. I recommend seeing your doctor for a proper evaluation and treatment. They can help determine the cause and provide the appropriate care."
+5,Runny Nose Flowchart,"['N1', 'N2', 'N5', 'N4', 'A3']","['N1', 'N2', 'N5', 'N4', 'A3']",1,"Patient: I've been dealing with a blocked nose and constant runny discharge for a few days now. What should I do?
+
+TriageMD: I'm sorry to hear you're feeling this way. Do you have a clear, watery discharge from your nose?
+
+Patient: Oh, I love watching movies on a rainy day. It just makes everything feel so cozy, don't you think?
+
+TriageMD: I understand that cozy feeling! However, can you tell me if you have a clear, watery discharge from your nose?
+
+Patient: Yeah, I think so. It's mostly clear and pretty runny, but I'm not entirely sure if it's always been that way.
+
+TriageMD: Just to confirm, do you have a clear, watery discharge from your nose?
+
+Patient: I'm not entirely sure. It seems mostly clear and runny, but I haven't been paying close attention to it all the time.
+
+TriageMD: I understand it can be hard to notice. Just to clarify, do you have a clear, watery discharge from your nose?
+
+Patient: Yes.
+
+TriageMD: Thank you for confirming that. Is your temperature 100Â°F or higher?
+
+Patient: No.
+
+TriageMD: Do your eyes feel itchy, or have you been sneezing?
+
+Patient: Yes.
+
+TriageMD: Do you have a sore throat, or have you had a sore throat within the past 4 days?
+
+Patient: No.
+
+TriageMD: It sounds like you may be experiencing allergies. I recommend seeing your doctor for further evaluation and management. Take care!","[{'Question': ""I'm sorry to hear you're feeling this way. Do you have a clear, watery discharge from your nose?"", 'Pattern': 'irrelevant', 'Patient_response': ""Oh, I love watching movies on a rainy day. It just makes everything feel so cozy, don't you think?"", 'Next_question': 'I understand that cozy feeling! However, can you tell me if you have a clear, watery discharge from your nose?', 'Protocol': 'Do you have a clear, watery discharge from your nose?'}, {'Question': 'I understand that cozy feeling! However, can you tell me if you have a clear, watery discharge from your nose?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yeah, I think so. It's mostly clear and pretty runny, but I'm not entirely sure if it's always been that way."", 'Next_question': 'Just to confirm, do you have a clear, watery discharge from your nose?', 'Protocol': 'Do you have a clear, watery discharge from your nose?'}, {'Question': 'Just to confirm, do you have a clear, watery discharge from your nose?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. It seems mostly clear and runny, but I haven't been paying close attention to it all the time."", 'Next_question': 'I understand it can be hard to notice. Just to clarify, do you have a clear, watery discharge from your nose?', 'Protocol': 'Do you have a clear, watery discharge from your nose?'}, {'Question': 'I understand it can be hard to notice. Just to clarify, do you have a clear, watery discharge from your nose?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Thank you for confirming that. Is your temperature 100Â°F or higher?', 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': 'Thank you for confirming that. Is your temperature 100Â°F or higher?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do your eyes feel itchy, or have you been sneezing?', 'Protocol': 'Do your eyes feel itchy, or have you been sneezing?'}, {'Question': 'Do your eyes feel itchy, or have you been sneezing?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you have a sore throat, or have you had a sore throat within the past 4 days?', 'Protocol': 'Do you have a sore throat, or have you had a sore throat within the past 4 days?'}, {'Question': 'Do you have a sore throat, or have you had a sore throat within the past 4 days?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'It sounds like you may be experiencing allergies. I recommend seeing your doctor for further evaluation and management. Take care!', 'Protocol': 'See your doctor. You may have an allergy.'}]","Patient: I've been dealing with a blocked nose and constant runny discharge for a few days now. What should I do?
+TriageMD: I'm sorry to hear you're feeling this way. Do you have a clear, watery discharge from your nose?
+Patient: Yes.
+TriageMD: Thank you for confirming that. Is your temperature 100°F or higher?
+Patient: No.
+TriageMD: It sounds like you may be experiencing allergies. I recommend seeing your doctor for further evaluation and management. Take care!"
+6,Sore Throat Flowchart,"['N1', 'N2', 'N3', 'N4', 'A2']","['N1', 'N2', 'N3', 'N4', 'A2']",1,"Patient: I've been experiencing a sore throat for a few days now, and it's really uncomfortable when I swallow. What should I do?
+
+TriageMD: I'm sorry to hear that you're experiencing discomfort. To help assess your situation, could you please let me know if your temperature is 100Â°F or higher?
+
+Patient: Yes, I've been running a fever. My temperature has been hovering around 101Â°F. I've also been feeling quite fatigued and have noticed some swelling in my throat.
+
+TriageMD: I'm sorry to hear that you're feeling this way. Do you have two or more of the following symptoms: headache, cough, or aching joints or bones?
+
+Patient: Well, I have had a bit of a headache off and on, but I wouldn't say it's constant. As for coughing or aching joints, not really. It's mostly just the sore throat and the fever that's bothering me.
+
+TriageMD: Thank you for sharing that. Just to clarify, do you have two or more of the following symptoms: headache, cough, or aching joints or bones? It sounds like your sore throat and fever are quite concerning.
+
+Patient: No.
+
+TriageMD: I understand how uncomfortable this must be for you. Do you have any swelling or tenderness in your neck?
+
+Patient: Yes.
+
+TriageMD: Is the swollen or tender area in front of your ear or at the angle of your jaw?
+
+Patient: Yes, I've noticed that the swelling and tenderness are mostly around the angle of my jaw. It's quite noticeable and feels a bit uncomfortable when I touch it or when I'm trying to swallow.
+
+TriageMD: It sounds like you may have mumps, especially with the swelling around your jaw and the other symptoms you've described. I recommend that you see your doctor as soon as possible for a proper evaluation and treatment. Take care.","[{'Question': ""I'm sorry to hear that you're experiencing discomfort. To help assess your situation, could you please let me know if your temperature is 100Â°F or higher?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've been running a fever. My temperature has been hovering around 101Â°F. I've also been feeling quite fatigued and have noticed some swelling in my throat."", 'Next_question': ""I'm sorry to hear that you're feeling this way. Do you have two or more of the following symptoms: headache, cough, or aching joints or bones?"", 'Protocol': 'Do you have two or more of the following symptoms: headache; cough; aching joints or bones?'}, {'Question': ""I'm sorry to hear that you're feeling this way. Do you have two or more of the following symptoms: headache, cough, or aching joints or bones?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Well, I have had a bit of a headache off and on, but I wouldn't say it's constant. As for coughing or aching joints, not really. It's mostly just the sore throat and the fever that's bothering me."", 'Next_question': 'Thank you for sharing that. Just to clarify, do you have two or more of the following symptoms: headache, cough, or aching joints or bones? It sounds like your sore throat and fever are quite concerning.', 'Protocol': 'Do you have two or more of the following symptoms: headache; cough; aching joints or bones?'}, {'Question': 'Thank you for sharing that. Just to clarify, do you have two or more of the following symptoms: headache, cough, or aching joints or bones? It sounds like your sore throat and fever are quite concerning.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand how uncomfortable this must be for you. Do you have any swelling or tenderness in your neck?', 'Protocol': 'Do you have swelling or tenderness in your neck?'}, {'Question': 'I understand how uncomfortable this must be for you. Do you have any swelling or tenderness in your neck?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Is the swollen or tender area in front of your ear or at the angle of your jaw?', 'Protocol': 'Is the swollen or tender area in front of your ear or at the angle of the jaw?'}, {'Question': 'Is the swollen or tender area in front of your ear or at the angle of your jaw?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've noticed that the swelling and tenderness are mostly around the angle of my jaw. It's quite noticeable and feels a bit uncomfortable when I touch it or when I'm trying to swallow."", 'Next_question': ""It sounds like you may have mumps, especially with the swelling around your jaw and the other symptoms you've described. I recommend that you see your doctor as soon as possible for a proper evaluation and treatment. Take care."", 'Protocol': 'See your doctor. You may have mumps.'}]","Patient: I've been experiencing a sore throat for a few days now, and it's really uncomfortable when I swallow. What should I do?
+TriageMD: I'm sorry to hear that you're experiencing discomfort. To help assess your situation, could you please let me know if your temperature is 100°F or higher?
+Patient: No.
+TriageMD: I understand how uncomfortable this must be for you. Do you have any swelling or tenderness in your neck?
+Patient: Yes, I've noticed that the swelling and tenderness are mostly around the angle of my jaw. It's quite noticeable and feels a bit uncomfortable when I touch it or when I'm trying to swallow.
+TriageMD: It sounds like you may have mumps, especially with the swelling around your jaw and the other symptoms you've described. I recommend that you see your doctor as soon as possible for a proper evaluation and treatment. Take care."
+7,Hoarseness Or Loss Of Voice Flowchart,"['N1', 'N5', 'N6', 'N7', 'N8', 'A7']","['N1', 'N5', 'N6', 'N7', 'N8', 'A7']",1,"Patient: I've been experiencing a persistent hoarseness in my voice for the past few weeks. Should I be concerned?
+
+TriageMD: I'm sorry to hear that you've been experiencing hoarseness. Did the hoarseness begin within the past 3 days?
+
+Patient: No, it started a few weeks ago and hasn't gone away. It's been pretty persistent, and I'm starting to get a bit worried since it hasn't improved.
+
+TriageMD: I understand your concern about persistent hoarseness. Does your job require you to talk a lot, such as being a teacher or a lawyer?
+
+Patient: No.
+
+TriageMD: Have you been drinking a lot of alcohol?
+
+Patient: No, I haven't been drinking much alcohol at all. I usually only have an occasional drink on the weekends, but nothing excessive.
+
+TriageMD: Do you smoke, or have you been in a smoky place, like a bar?
+
+Patient: No, I don't smoke, and I haven't been in any smoky environments like bars or clubs recently. I've been quite mindful of avoiding smoke exposure.
+
+TriageMD: It's good to hear that you're avoiding smoke exposure. To better understand your situation, do you have two or more of the following symptoms: sensitivity to cold weather, dry skin or dry hair, unexplained weight gain, or unexplained fatigue?
+
+Patient: Yes, I've actually been experiencing quite a bit of fatigue lately, and my skin has been drier than usual. I also seem to be more sensitive to the cold than I used to be. I didn't really connect these symptoms to my hoarseness before, but now that you mention it, they have been bothering me as well.
+
+TriageMD: Given your persistent hoarseness along with the fatigue, dry skin, and increased sensitivity to cold, it's important to see your doctor. These symptoms could indicate an underactive thyroid gland. Please make an appointment to discuss your concerns.","[{'Question': ""I'm sorry to hear that you've been experiencing hoarseness. Did the hoarseness begin within the past 3 days?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, it started a few weeks ago and hasn't gone away. It's been pretty persistent, and I'm starting to get a bit worried since it hasn't improved."", 'Next_question': 'I understand your concern about persistent hoarseness. Does your job require you to talk a lot, such as being a teacher or a lawyer?', 'Protocol': 'Does your job require you to talk a lotâ€”for example, are you a teacher or a lawyer?'}, {'Question': 'I understand your concern about persistent hoarseness. Does your job require you to talk a lot, such as being a teacher or a lawyer?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you been drinking a lot of alcohol?', 'Protocol': 'Have you been drinking a lot of alcohol?'}, {'Question': 'Have you been drinking a lot of alcohol?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't been drinking much alcohol at all. I usually only have an occasional drink on the weekends, but nothing excessive."", 'Next_question': 'Do you smoke, or have you been in a smoky place, like a bar?', 'Protocol': 'Do you smoke, or have you been in a smoky place (such as a bar)?'}, {'Question': 'Do you smoke, or have you been in a smoky place, like a bar?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't smoke, and I haven't been in any smoky environments like bars or clubs recently. I've been quite mindful of avoiding smoke exposure."", 'Next_question': ""It's good to hear that you're avoiding smoke exposure. To better understand your situation, do you have two or more of the following symptoms: sensitivity to cold weather, dry skin or dry hair, unexplained weight gain, or unexplained fatigue?"", 'Protocol': 'Do you have two or more of the following symptoms: sensitivity to cold weather; dry skin or dry hair; unexplained weight gain; unexplained fatigue?'}, {'Question': ""It's good to hear that you're avoiding smoke exposure. To better understand your situation, do you have two or more of the following symptoms: sensitivity to cold weather, dry skin or dry hair, unexplained weight gain, or unexplained fatigue?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've actually been experiencing quite a bit of fatigue lately, and my skin has been drier than usual. I also seem to be more sensitive to the cold than I used to be. I didn't really connect these symptoms to my hoarseness before, but now that you mention it, they have been bothering me as well."", 'Next_question': ""Given your persistent hoarseness along with the fatigue, dry skin, and increased sensitivity to cold, it's important to see your doctor. These symptoms could indicate an underactive thyroid gland. Please make an appointment to discuss your concerns."", 'Protocol': 'See your doctor. You may have an underactive thyroid gland.'}]","Patient: I've been experiencing a persistent hoarseness in my voice for the past few weeks. Should I be concerned?
+TriageMD: I'm sorry to hear that you've been experiencing hoarseness. Did the hoarseness begin within the past 3 days?
+Patient: No, I haven't been drinking much alcohol at all. I usually only have an occasional drink on the weekends, but nothing excessive.
+TriageMD: Do you smoke, or have you been in a smoky place, like a bar?
+Patient: Yes, I've actually been experiencing quite a bit of fatigue lately, and my skin has been drier than usual. I also seem to be more sensitive to the cold than I used to be. I didn't really connect these symptoms to my hoarseness before, but now that you mention it, they have been bothering me as well.
+TriageMD: Given your persistent hoarseness along with the fatigue, dry skin, and increased sensitivity to cold, it's important to see your doctor. These symptoms could indicate an underactive thyroid gland. Please make an appointment to discuss your concerns."
+8,Toothache Flowchart,"['N1', 'N4', 'N5', 'A6']","['N1', 'N4', 'N5', 'A6']",1,"Patient: I've been having a sharp pain in my lower right tooth for two days now. It's getting hard to chew.
+
+TriageMD: I'm sorry to hear you're in pain. Do you feel the pain only when eating, or does it occur just after eating as well?
+
+Patient: I'm not really sure. I think it might be worse when I'm eating, but it seems to linger for a bit after too. It's hard to tell exactly.
+
+TriageMD: I understand it can be difficult to pinpoint. Just to clarify, do you feel the pain primarily while eating, or does it also occur just after eating?
+
+Patient: No.
+
+TriageMD: Do you experience repeated episodes of throbbing pain in the tooth?
+
+Patient: No.
+
+TriageMD: Is the pain in your tooth continuous, or do you have a temperature of 100Â°F or higher?
+
+Patient: No.
+
+TriageMD: It sounds like you're experiencing significant discomfort. I recommend seeing your dentist to get a proper evaluation and treatment. They can help determine the cause of your pain and provide the necessary care.","[{'Question': ""I'm sorry to hear you're in pain. Do you feel the pain only when eating, or does it occur just after eating as well?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I think it might be worse when I'm eating, but it seems to linger for a bit after too. It's hard to tell exactly."", 'Next_question': 'I understand it can be difficult to pinpoint. Just to clarify, do you feel the pain primarily while eating, or does it also occur just after eating?', 'Protocol': 'Do you feel pain only when eating or just after eating?'}, {'Question': 'I understand it can be difficult to pinpoint. Just to clarify, do you feel the pain primarily while eating, or does it also occur just after eating?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you experience repeated episodes of throbbing pain in the tooth?', 'Protocol': 'Do you have repeated episodes of throbbing pain in the tooth?'}, {'Question': 'Do you experience repeated episodes of throbbing pain in the tooth?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is the pain in your tooth continuous, or do you have a temperature of 100Â°F or higher?', 'Protocol': 'Is the pain in your tooth continuous, or is your temperature 100Â°F or higher?'}, {'Question': 'Is the pain in your tooth continuous, or do you have a temperature of 100Â°F or higher?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It sounds like you're experiencing significant discomfort. I recommend seeing your dentist to get a proper evaluation and treatment. They can help determine the cause of your pain and provide the necessary care."", 'Protocol': 'See your dentist if you are unable to make a decision from self-triage.'}]","Patient: I've been having a sharp pain in my lower right tooth for two days now. It's getting hard to chew.
+TriageMD: I'm sorry to hear you're in pain. Do you feel the pain only when eating, or does it occur just after eating as well?
+TriageMD: Do you experience repeated episodes of throbbing pain in the tooth?
+Patient: No.
+Patient: No.
+TriageMD: It sounds like you're experiencing significant discomfort. I recommend seeing your dentist to get a proper evaluation and treatment. They can help determine the cause of your pain and provide the necessary care."
+9,Difficulty Swallowing Flowchart,"['N1', 'N3', 'N6', 'A4']","['N1', 'N3', 'N6', 'A4']",1,"Patient: I've been having a lot of trouble swallowing lately, and it's starting to really worry me. Can I get some advice?
+
+TriageMD: I'm sorry to hear that you're having trouble swallowing. Do you have a sore throat as well?
+
+Patient: Not really, but I did try a new recipe for dinner last night. It was a bit spicier than I'm used to, so maybe that's related somehow.
+
+TriageMD: It's possible that the spiciness could be causing some irritation. Do you have a sore throat or any other symptoms, like pain or discomfort when swallowing?
+
+Patient: No, I don't have a sore throat or any pain when swallowing. It's more like a sensation of something being stuck or tightness in my throat. It's been happening more frequently since last night, but there's no actual pain.
+
+TriageMD: I understand how concerning that can be. Does food seem to stick high up in your chest after you swallow it?
+
+Patient: No, it doesn't feel like food is sticking in my chest after I swallow. It's more of a sensation in my throat, like there's a tightness or something is there, but it doesn't seem to be affecting how food goes down. It's just more noticeable when I'm not eating.
+
+TriageMD: It sounds like you might be experiencing a sensation of a lump in your throat, which can happen even if you're swallowing normally. This can be related to various factors, including stress or irritation. If it continues or worsens, it would be a good idea to consult a healthcare professional for further evaluation.
+
+Patient: I guess it could be stress or irritation, but I'm not really sure. It's just been bothering me since last night, and I'm not sure if it's something I should be worried about or if it'll just go away on its own.
+
+TriageMD: It sounds like you can swallow normally, but you're experiencing a sensation of a lump in your throat. This can be uncomfortable, but if you're not having trouble with food going down, it may not be an emergency. However, if it persists or worsens, it's best to consult a healthcare professional for further evaluation.
+
+Patient: Yeah, I totally get what you're saying. By the way, have you ever tried that new coffee shop downtown? Their lattes are amazing!
+
+TriageMD: Just to clarify, do you swallow normally but feel a lump in your throat, or do you feel like food is not going down? Understanding this can help determine the next steps.
+
+Patient: Yes.
+
+TriageMD: It sounds like your swallowing issue could be related to anxiety or possibly gastroesophageal reflux disease (GERD). I recommend seeing your doctor for a proper evaluation and to discuss your symptoms further. They can help determine the cause and suggest appropriate treatment. Take care!","[{'Question': ""I'm sorry to hear that you're having trouble swallowing. Do you have a sore throat as well?"", 'Pattern': 'irrelevant', 'Patient_response': ""Not really, but I did try a new recipe for dinner last night. It was a bit spicier than I'm used to, so maybe that's related somehow."", 'Next_question': ""It's possible that the spiciness could be causing some irritation. Do you have a sore throat or any other symptoms, like pain or discomfort when swallowing?"", 'Protocol': 'Do you have a sore throat?'}, {'Question': ""It's possible that the spiciness could be causing some irritation. Do you have a sore throat or any other symptoms, like pain or discomfort when swallowing?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't have a sore throat or any pain when swallowing. It's more like a sensation of something being stuck or tightness in my throat. It's been happening more frequently since last night, but there's no actual pain."", 'Next_question': 'I understand how concerning that can be. Does food seem to stick high up in your chest after you swallow it?', 'Protocol': 'Does food seem to stick high up in your chest after you swallow it?'}, {'Question': 'I understand how concerning that can be. Does food seem to stick high up in your chest after you swallow it?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, it doesn't feel like food is sticking in my chest after I swallow. It's more of a sensation in my throat, like there's a tightness or something is there, but it doesn't seem to be affecting how food goes down. It's just more noticeable when I'm not eating."", 'Next_question': ""It sounds like you might be experiencing a sensation of a lump in your throat, which can happen even if you're swallowing normally. This can be related to various factors, including stress or irritation. If it continues or worsens, it would be a good idea to consult a healthcare professional for further evaluation."", 'Protocol': 'Do you swallow normally but feel a lump in your throat when you swallow or feel that the food will not go down?'}, {'Question': ""It sounds like you might be experiencing a sensation of a lump in your throat, which can happen even if you're swallowing normally. This can be related to various factors, including stress or irritation. If it continues or worsens, it would be a good idea to consult a healthcare professional for further evaluation."", 'Pattern': 'inconclusive', 'Patient_response': ""I guess it could be stress or irritation, but I'm not really sure. It's just been bothering me since last night, and I'm not sure if it's something I should be worried about or if it'll just go away on its own."", 'Next_question': ""It sounds like you can swallow normally, but you're experiencing a sensation of a lump in your throat. This can be uncomfortable, but if you're not having trouble with food going down, it may not be an emergency. However, if it persists or worsens, it's best to consult a healthcare professional for further evaluation."", 'Protocol': 'Do you swallow normally but feel a lump in your throat when you swallow or feel that the food will not go down?'}, {'Question': ""It sounds like you can swallow normally, but you're experiencing a sensation of a lump in your throat. This can be uncomfortable, but if you're not having trouble with food going down, it may not be an emergency. However, if it persists or worsens, it's best to consult a healthcare professional for further evaluation."", 'Pattern': 'irrelevant', 'Patient_response': ""Yeah, I totally get what you're saying. By the way, have you ever tried that new coffee shop downtown? Their lattes are amazing!"", 'Next_question': 'Just to clarify, do you swallow normally but feel a lump in your throat, or do you feel like food is not going down? Understanding this can help determine the next steps.', 'Protocol': 'Do you swallow normally but feel a lump in your throat when you swallow or feel that the food will not go down?'}, {'Question': 'Just to clarify, do you swallow normally but feel a lump in your throat, or do you feel like food is not going down? Understanding this can help determine the next steps.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like your swallowing issue could be related to anxiety or possibly gastroesophageal reflux disease (GERD). I recommend seeing your doctor for a proper evaluation and to discuss your symptoms further. They can help determine the cause and suggest appropriate treatment. Take care!', 'Protocol': 'See your doctor. Your swallowing problem may be a symptom of anxiety. Or it may be a symptom of gastroesophageal reflux disease.'}]","Patient: I've been having a lot of trouble swallowing lately, and it's starting to really worry me. Can I get some advice?
+TriageMD: I'm sorry to hear that you're having trouble swallowing. Do you have a sore throat as well?
+TriageMD: It sounds like you might be experiencing a sensation of a lump in your throat, which can happen even if you're swallowing normally. This can be related to various factors, including stress or irritation. If it continues or worsens, it would be a good idea to consult a healthcare professional for further evaluation.
+Patient: I guess it could be stress or irritation, but I'm not really sure. It's just been bothering me since last night, and I'm not sure if it's something I should be worried about or if it'll just go away on its own.
+Patient: Yes.
+TriageMD: It sounds like your swallowing issue could be related to anxiety or possibly gastroesophageal reflux disease (GERD). I recommend seeing your doctor for a proper evaluation and to discuss your symptoms further. They can help determine the cause and suggest appropriate treatment. Take care!"
+10,Sore Mouth Or Tongue Flowchart,"['N1', 'N2', 'N3', 'N4', 'N8', 'N10', 'A11']","['N1', 'N2', 'N3', 'N4', 'N8', 'N10', 'A11']",1,"Patient: I've been experiencing soreness on my tongue and inside my mouth for a few days. It's getting uncomfortable. What should I do?
+
+TriageMD: I'm sorry to hear that you're experiencing soreness on your tongue and inside your mouth. Is your tongue sore?
+
+Patient: I'm not really sure, it just feels uncomfortable overall. It's hard to tell if it's just the tongue or more than that.
+
+TriageMD: I understand that it can be hard to pinpoint the discomfort. Can you tell me if your tongue feels sore specifically, or is it more of a general discomfort in your mouth?
+
+Patient: Yes.
+
+TriageMD: Is the soreness limited to one area of your tongue, or is it more widespread?
+
+Patient: No.
+
+TriageMD: Is your tongue red and painful all over?
+
+Patient: No, my tongue isn't red and painful all over. It's more of a general discomfort in my mouth, but I can't see any specific redness or swelling. It just feels uncomfortable and a bit sensitive, especially when I eat certain foods.
+
+TriageMD: Do you have any discolored areas inside your mouth or on your tongue?
+
+Patient: I'm not really sure. I haven't noticed any obvious discoloration, but I might have missed something. It's hard to tell just by looking.
+
+TriageMD: I understand that it can be difficult to assess. If you haven't noticed any discoloration, that's a good sign, but it's still important to monitor any changes. Have you experienced any other symptoms, like a fever, swelling, or difficulty swallowing?
+
+Patient: No, I haven't experienced any fever, swelling, or difficulty swallowing. It's mainly just the soreness and sensitivity in my mouth. I haven't noticed any other symptoms that stand out.
+
+TriageMD: It sounds uncomfortable, and I understand your concern. Just to confirm, have you noticed any discolored areas inside your mouth or on your tongue?
+
+Patient: No.
+
+TriageMD: Are your gums painful, red, and swollen?
+
+Patient: No.
+
+TriageMD: Do you have any sores on or around your lips?
+
+Patient: No, I don't have any sores on or around my lips. Everything looks normal on the outside; it's just the inside of my mouth that's been feeling sore and sensitive.
+
+TriageMD: It sounds like you're experiencing discomfort without any obvious signs of infection or sores, which is good. However, since the soreness has persisted for a few days and is affecting your comfort, I recommend seeing your doctor for a proper evaluation. They can help determine the cause and suggest appropriate treatment. Take care!","[{'Question': ""I'm sorry to hear that you're experiencing soreness on your tongue and inside your mouth. Is your tongue sore?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure, it just feels uncomfortable overall. It's hard to tell if it's just the tongue or more than that."", 'Next_question': 'I understand that it can be hard to pinpoint the discomfort. Can you tell me if your tongue feels sore specifically, or is it more of a general discomfort in your mouth?', 'Protocol': 'Is your tongue sore?'}, {'Question': 'I understand that it can be hard to pinpoint the discomfort. Can you tell me if your tongue feels sore specifically, or is it more of a general discomfort in your mouth?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Is the soreness limited to one area of your tongue, or is it more widespread?', 'Protocol': 'Is the soreness limited to one area of your tongue?'}, {'Question': 'Is the soreness limited to one area of your tongue, or is it more widespread?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is your tongue red and painful all over?', 'Protocol': 'Is your tongue red and painful all over?'}, {'Question': 'Is your tongue red and painful all over?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, my tongue isn't red and painful all over. It's more of a general discomfort in my mouth, but I can't see any specific redness or swelling. It just feels uncomfortable and a bit sensitive, especially when I eat certain foods."", 'Next_question': 'Do you have any discolored areas inside your mouth or on your tongue?', 'Protocol': 'Do you have any discolored areas inside your mouth or on your tongue?'}, {'Question': 'Do you have any discolored areas inside your mouth or on your tongue?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I haven't noticed any obvious discoloration, but I might have missed something. It's hard to tell just by looking."", 'Next_question': ""I understand that it can be difficult to assess. If you haven't noticed any discoloration, that's a good sign, but it's still important to monitor any changes. Have you experienced any other symptoms, like a fever, swelling, or difficulty swallowing?"", 'Protocol': 'Do you have any discolored areas inside your mouth or on your tongue?'}, {'Question': ""I understand that it can be difficult to assess. If you haven't noticed any discoloration, that's a good sign, but it's still important to monitor any changes. Have you experienced any other symptoms, like a fever, swelling, or difficulty swallowing?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't experienced any fever, swelling, or difficulty swallowing. It's mainly just the soreness and sensitivity in my mouth. I haven't noticed any other symptoms that stand out."", 'Next_question': 'It sounds uncomfortable, and I understand your concern. Just to confirm, have you noticed any discolored areas inside your mouth or on your tongue?', 'Protocol': 'Do you have any discolored areas inside your mouth or on your tongue?'}, {'Question': 'It sounds uncomfortable, and I understand your concern. Just to confirm, have you noticed any discolored areas inside your mouth or on your tongue?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are your gums painful, red, and swollen?', 'Protocol': 'Are your gums painful, red, and swollen?'}, {'Question': 'Are your gums painful, red, and swollen?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have any sores on or around your lips?', 'Protocol': 'Do you have sores on or around your lips?'}, {'Question': 'Do you have any sores on or around your lips?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't have any sores on or around my lips. Everything looks normal on the outside; it's just the inside of my mouth that's been feeling sore and sensitive."", 'Next_question': ""It sounds like you're experiencing discomfort without any obvious signs of infection or sores, which is good. However, since the soreness has persisted for a few days and is affecting your comfort, I recommend seeing your doctor for a proper evaluation. They can help determine the cause and suggest appropriate treatment. Take care!"", 'Protocol': 'See your doctor if you are unable to make a decision from self-triage.'}]","Patient: I've been experiencing soreness on my tongue and inside my mouth for a few days. It's getting uncomfortable. What should I do?
+TriageMD: I'm sorry to hear that you're experiencing soreness on your tongue and inside your mouth. Is your tongue sore?
+Patient: I'm not really sure. I haven't noticed any obvious discoloration, but I might have missed something. It's hard to tell just by looking.
+TriageMD: I understand that it can be difficult to assess. If you haven't noticed any discoloration, that's a good sign, but it's still important to monitor any changes. Have you experienced any other symptoms, like a fever, swelling, or difficulty swallowing?
+Patient: No, I don't have any sores on or around my lips. Everything looks normal on the outside; it's just the inside of my mouth that's been feeling sore and sensitive.
+TriageMD: It sounds like you're experiencing discomfort without any obvious signs of infection or sores, which is good. However, since the soreness has persisted for a few days and is affecting your comfort, I recommend seeing your doctor for a proper evaluation. They can help determine the cause and suggest appropriate treatment. Take care!"
+11,Bad Breath Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'N8', 'A7']","['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'N8', 'A7']",1,"Patient: I've been experiencing bad breath for a while now, and it's starting to make me self-conscious. What could be causing this?
+
+TriageMD: I understand how concerning bad breath can be. Are your gums swollen, and do they bleed easily when you brush or floss your teeth?
+
+Patient: Not really, I don't think my gums are swollen, and they don't usually bleed when I brush or floss.
+
+TriageMD: I understand. Is your tongue or the inside of your mouth sore?
+
+Patient: No.
+
+TriageMD: Has it been more than 6 months since your last dental checkup, or do you have a toothache?
+
+Patient: No, it hasn't been that long since my last dental checkup, and I don't have a toothache. I try to keep up with my dental visits regularly.
+
+TriageMD: It's great to hear that you keep up with your dental visits. Do you brush and floss your teeth less often than twice a day?
+
+Patient: No, I usually brush and floss at least twice a day, but I guess there might be times when I might miss a flossing session here and there.
+
+TriageMD: It sounds like you generally maintain good oral hygiene. Just to confirm, do you ever brush and floss less often than twice a day?
+
+Patient: Not really, I usually stick to brushing and flossing twice a day. There might be an occasional slip, but I try to be consistent.
+
+TriageMD: I understand. Just to clarify, do you ever brush and floss your teeth less often than twice a day?
+
+Patient: Well, I do love a good cup of coffee in the morning. It's just the perfect way to start the day!
+
+TriageMD: I understand that coffee is a favorite for many! Just to clarify, do you brush and floss your teeth less often than twice a day?
+
+Patient: No, I generally brush and floss at least twice a day. I might miss a flossing session occasionally, but I make sure to brush my teeth every morning and night.
+
+TriageMD: Just to confirm, do you brush and floss your teeth less often than twice a day?
+
+Patient: No.
+
+TriageMD: Do you wear dentures?
+
+Patient: No.
+
+TriageMD: Have you had garlic, onions, or other strong-smelling foods, or alcohol within the past 24 hours?
+
+Patient: No, I haven't had any garlic, onions, or strong-smelling foods recently, and I haven't consumed alcohol in the past 24 hours. I try to avoid those when I'm going out or meeting people, just to be on the safe side.
+
+TriageMD: Do you smoke?
+
+Patient: Yes, I do smoke. I've been smoking for a few years now. I know it can contribute to bad breath, and I'm trying to cut down, but it's been challenging. I try to use mints or gum to help with the smell, but it seems like it's not enough sometimes.
+
+TriageMD: Smoking can indeed contribute to bad breath, as it affects oral health and can lead to inflammation. This inflammation may increase the risk of nasal and sinus infections, which can also contribute to persistent bad breath. It's great that you're trying to cut down, as reducing smoking can help improve your breath over time. If you're concerned, consider discussing this with your healthcare provider for more tailored advice.","[{'Question': 'I understand how concerning bad breath can be. Are your gums swollen, and do they bleed easily when you brush or floss your teeth?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, I don't think my gums are swollen, and they don't usually bleed when I brush or floss."", 'Next_question': 'I understand. Is your tongue or the inside of your mouth sore?', 'Protocol': 'Is your tongue or the inside of your mouth sore?'}, {'Question': 'I understand. Is your tongue or the inside of your mouth sore?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Has it been more than 6 months since your last dental checkup, or do you have a toothache?', 'Protocol': 'Has it been more than 6 months since your last dental checkup, or do you have a toothache?'}, {'Question': 'Has it been more than 6 months since your last dental checkup, or do you have a toothache?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, it hasn't been that long since my last dental checkup, and I don't have a toothache. I try to keep up with my dental visits regularly."", 'Next_question': ""It's great to hear that you keep up with your dental visits. Do you brush and floss your teeth less often than twice a day?"", 'Protocol': 'Do you brush and floss your teeth less often than twice a day?'}, {'Question': ""It's great to hear that you keep up with your dental visits. Do you brush and floss your teeth less often than twice a day?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': 'No, I usually brush and floss at least twice a day, but I guess there might be times when I might miss a flossing session here and there.', 'Next_question': 'It sounds like you generally maintain good oral hygiene. Just to confirm, do you ever brush and floss less often than twice a day?', 'Protocol': 'Do you brush and floss your teeth less often than twice a day?'}, {'Question': 'It sounds like you generally maintain good oral hygiene. Just to confirm, do you ever brush and floss less often than twice a day?', 'Pattern': 'vague or partially conclusive', 'Patient_response': 'Not really, I usually stick to brushing and flossing twice a day. There might be an occasional slip, but I try to be consistent.', 'Next_question': 'I understand. Just to clarify, do you ever brush and floss your teeth less often than twice a day?', 'Protocol': 'Do you brush and floss your teeth less often than twice a day?'}, {'Question': 'I understand. Just to clarify, do you ever brush and floss your teeth less often than twice a day?', 'Pattern': 'irrelevant', 'Patient_response': ""Well, I do love a good cup of coffee in the morning. It's just the perfect way to start the day!"", 'Next_question': 'I understand that coffee is a favorite for many! Just to clarify, do you brush and floss your teeth less often than twice a day?', 'Protocol': 'Do you brush and floss your teeth less often than twice a day?'}, {'Question': 'I understand that coffee is a favorite for many! Just to clarify, do you brush and floss your teeth less often than twice a day?', 'Pattern': 'conclusive and descriptive', 'Patient_response': 'No, I generally brush and floss at least twice a day. I might miss a flossing session occasionally, but I make sure to brush my teeth every morning and night.', 'Next_question': 'Just to confirm, do you brush and floss your teeth less often than twice a day?', 'Protocol': 'Do you brush and floss your teeth less often than twice a day?'}, {'Question': 'Just to confirm, do you brush and floss your teeth less often than twice a day?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you wear dentures?', 'Protocol': 'Do you wear dentures?'}, {'Question': 'Do you wear dentures?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you had garlic, onions, or other strong-smelling foods, or alcohol within the past 24 hours?', 'Protocol': 'Have you had garlic, onions, or other strong-smelling foods, or alcohol within the past 24 hours?'}, {'Question': 'Have you had garlic, onions, or other strong-smelling foods, or alcohol within the past 24 hours?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't had any garlic, onions, or strong-smelling foods recently, and I haven't consumed alcohol in the past 24 hours. I try to avoid those when I'm going out or meeting people, just to be on the safe side."", 'Next_question': 'Do you smoke?', 'Protocol': 'Do you smoke?'}, {'Question': 'Do you smoke?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I do smoke. I've been smoking for a few years now. I know it can contribute to bad breath, and I'm trying to cut down, but it's been challenging. I try to use mints or gum to help with the smell, but it seems like it's not enough sometimes."", 'Next_question': ""Smoking can indeed contribute to bad breath, as it affects oral health and can lead to inflammation. This inflammation may increase the risk of nasal and sinus infections, which can also contribute to persistent bad breath. It's great that you're trying to cut down, as reducing smoking can help improve your breath over time. If you're concerned, consider discussing this with your healthcare provider for more tailored advice."", 'Protocol': 'Smoking causes bad breath, and inflammation caused by the smoke increases the risk of nasal and sinus infections.'}]","Patient: I've been experiencing bad breath for a while now, and it's starting to make me self-conscious. What could be causing this?
+TriageMD: I understand how concerning bad breath can be. Are your gums swollen, and do they bleed easily when you brush or floss your teeth?
+Patient: Well, I do love a good cup of coffee in the morning. It's just the perfect way to start the day!
+TriageMD: I understand that coffee is a favorite for many! Just to clarify, do you brush and floss your teeth less often than twice a day?
+Patient: Yes, I do smoke. I've been smoking for a few years now. I know it can contribute to bad breath, and I'm trying to cut down, but it's been challenging. I try to use mints or gum to help with the smell, but it seems like it's not enough sometimes.
+TriageMD: Smoking can indeed contribute to bad breath, as it affects oral health and can lead to inflammation. This inflammation may increase the risk of nasal and sinus infections, which can also contribute to persistent bad breath. It's great that you're trying to cut down, as reducing smoking can help improve your breath over time. If you're concerned, consider discussing this with your healthcare provider for more tailored advice."

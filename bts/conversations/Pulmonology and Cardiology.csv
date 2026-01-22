@@ -1,0 +1,258 @@
+,Flowchart,Path label,Path,Accuracy,Conversation,Question_and_response_pair
+0,Coughing Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A3']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A3']",1,"Patient: I've had this persistent dry cough for a week, and it's really irritating my throat. Should I be concerned?
+
+TriageMD: I understand how irritating a persistent dry cough can be. To help assess your situation better, could you confirm if your cough is indeed dry?
+
+Patient: Yes, my cough is definitely dry. It feels like a tickle in my throat that just won't go away, and it's not producing any mucus. It's been like this for about a week now, and it's really starting to irritate my throat.
+
+TriageMD: Iâ€™m sorry to hear that youâ€™re dealing with this. Are you experiencing any hoarseness or have you lost your voice?
+
+Patient: No.
+
+TriageMD: It's good to hear you haven't lost your voice. Have you possibly inhaled a small object or piece of food, like a peanut? This could contribute to a persistent dry cough.
+
+Patient: No.
+
+TriageMD: Have you inhaled the fumes of an irritating chemical, such as a cleaning fluid that contains ammonia?
+
+Patient: No.
+
+TriageMD: It sounds like you have a dry cough with no other symptoms. While it can be irritating, if it persists or worsens, or if you develop new symptoms, it would be a good idea to consult a healthcare professional for further evaluation.
+
+Patient: Yes.
+
+TriageMD: Is your cough deep, raspy, and persistent?
+
+Patient: Yes.
+
+TriageMD: Given your symptoms, it's important to see your doctor. You may have a form of asthma that needs to be evaluated. Take care.","[{'Question': 'I understand how irritating a persistent dry cough can be. To help assess your situation better, could you confirm if your cough is indeed dry?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, my cough is definitely dry. It feels like a tickle in my throat that just won't go away, and it's not producing any mucus. It's been like this for about a week now, and it's really starting to irritate my throat."", 'Next_question': 'Iâ€™m sorry to hear that youâ€™re dealing with this. Are you experiencing any hoarseness or have you lost your voice?', 'Protocol': 'Are you hoarse, or have you lost your voice?'}, {'Question': 'Iâ€™m sorry to hear that youâ€™re dealing with this. Are you experiencing any hoarseness or have you lost your voice?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It's good to hear you haven't lost your voice. Have you possibly inhaled a small object or piece of food, like a peanut? This could contribute to a persistent dry cough."", 'Protocol': 'Could you have inhaled a small object or piece of food (such as a peanut)?'}, {'Question': ""It's good to hear you haven't lost your voice. Have you possibly inhaled a small object or piece of food, like a peanut? This could contribute to a persistent dry cough."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you inhaled the fumes of an irritating chemical, such as a cleaning fluid that contains ammonia?', 'Protocol': 'Have you inhaled the fumes of an irritating chemical such as a cleaning fluid that contains ammonia?'}, {'Question': 'Have you inhaled the fumes of an irritating chemical, such as a cleaning fluid that contains ammonia?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'It sounds like you have a dry cough with no other symptoms. While it can be irritating, if it persists or worsens, or if you develop new symptoms, it would be a good idea to consult a healthcare professional for further evaluation.', 'Protocol': 'Do you have a dry cough with no other symptoms?'}, {'Question': 'It sounds like you have a dry cough with no other symptoms. While it can be irritating, if it persists or worsens, or if you develop new symptoms, it would be a good idea to consult a healthcare professional for further evaluation.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Is your cough deep, raspy, and persistent?', 'Protocol': 'Is your cough deep, raspy, and persistent?'}, {'Question': 'Is your cough deep, raspy, and persistent?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Given your symptoms, it's important to see your doctor. You may have a form of asthma that needs to be evaluated. Take care."", 'Protocol': 'See your doctor. You may have a form of asthma.'}]"
+1,Coughing Up Blood Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A6']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A6']",1,"Patient: I've been coughing up bright red blood streaks, and I'm really worried about what could be causing this.
+
+TriageMD: I'm sorry to hear that you're experiencing this. Can you please let me know if your temperature is 102Â°F or higher?
+
+Patient: No.
+
+TriageMD: Are you short of breath and unable to lie flat on your back, even though you have not been exercising?
+
+Patient: Not really, but I've been watching a lot of movies lately, so I've been sitting up a lot.
+
+TriageMD: I understand. Just to clarify, are you short of breath and unable to lie flat on your back, even though you have not been exercising?
+
+Patient: Yes.
+
+TriageMD: Iâ€™m sorry to hear that youâ€™re feeling this way. Are you coughing up mucus that is pink and frothy?
+
+Patient: I don't think so. It seems more like bright red streaks rather than pink and frothy, but I'm not entirely sure.
+
+TriageMD: I understand. Just to confirm, are you coughing up mucus that is pink and frothy?
+
+Patient: No.
+
+TriageMD: I understand your concern. Just to clarify, are you coughing up mucus that is pink and frothy?
+
+Patient: I'm not really sure. It doesn't seem pink and frothy to me, but I guess it's hard to tell for certain.
+
+TriageMD: I understand that it can be difficult to tell. Just to confirm, are you coughing up mucus that is pink and frothy?
+
+Patient: I think my cat might be hiding my socks again. It's so frustrating when I can't find them in the morning!
+
+TriageMD: I understand that can be frustrating! However, can you please clarify if you are coughing up mucus that is pink and frothy?
+
+Patient: No.
+
+TriageMD: Have you recently had surgery, been confined to bed, or sat for prolonged periods during a trip?
+
+Patient: No.
+
+TriageMD: Have you had a cold or the flu within the past month that has left you with a persistent cough?
+
+Patient: No.
+
+TriageMD: Have you had a cough for many weeks or months?
+
+Patient: No.
+
+TriageMD: It's important to see a doctor immediately if you're coughing up blood, even if it's just streaks. Please seek medical attention as soon as possible. Your health is a priority.","[{'Question': ""I'm sorry to hear that you're experiencing this. Can you please let me know if your temperature is 102Â°F or higher?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you short of breath and unable to lie flat on your back, even though you have not been exercising?', 'Protocol': 'Are you short of breath and unable to lie flat on your back, even though you have not been exercising?'}, {'Question': 'Are you short of breath and unable to lie flat on your back, even though you have not been exercising?', 'Pattern': 'irrelevant', 'Patient_response': ""Not really, but I've been watching a lot of movies lately, so I've been sitting up a lot."", 'Next_question': 'I understand. Just to clarify, are you short of breath and unable to lie flat on your back, even though you have not been exercising?', 'Protocol': 'Are you short of breath and unable to lie flat on your back, even though you have not been exercising?'}, {'Question': 'I understand. Just to clarify, are you short of breath and unable to lie flat on your back, even though you have not been exercising?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Iâ€™m sorry to hear that youâ€™re feeling this way. Are you coughing up mucus that is pink and frothy?', 'Protocol': 'Are you coughing up mucus that is pink and frothy?'}, {'Question': 'Iâ€™m sorry to hear that youâ€™re feeling this way. Are you coughing up mucus that is pink and frothy?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I don't think so. It seems more like bright red streaks rather than pink and frothy, but I'm not entirely sure."", 'Next_question': 'I understand. Just to confirm, are you coughing up mucus that is pink and frothy?', 'Protocol': 'Are you coughing up mucus that is pink and frothy?'}, {'Question': 'I understand. Just to confirm, are you coughing up mucus that is pink and frothy?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Just to clarify, are you coughing up mucus that is pink and frothy?', 'Protocol': 'Are you coughing up mucus that is pink and frothy?'}, {'Question': 'I understand your concern. Just to clarify, are you coughing up mucus that is pink and frothy?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. It doesn't seem pink and frothy to me, but I guess it's hard to tell for certain."", 'Next_question': 'I understand that it can be difficult to tell. Just to confirm, are you coughing up mucus that is pink and frothy?', 'Protocol': 'Are you coughing up mucus that is pink and frothy?'}, {'Question': 'I understand that it can be difficult to tell. Just to confirm, are you coughing up mucus that is pink and frothy?', 'Pattern': 'irrelevant', 'Patient_response': ""I think my cat might be hiding my socks again. It's so frustrating when I can't find them in the morning!"", 'Next_question': 'I understand that can be frustrating! However, can you please clarify if you are coughing up mucus that is pink and frothy?', 'Protocol': 'Are you coughing up mucus that is pink and frothy?'}, {'Question': 'I understand that can be frustrating! However, can you please clarify if you are coughing up mucus that is pink and frothy?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you recently had surgery, been confined to bed, or sat for prolonged periods during a trip?', 'Protocol': 'Have you recently had surgery, been confined to bed, or sat for prolonged periods during a trip?'}, {'Question': 'Have you recently had surgery, been confined to bed, or sat for prolonged periods during a trip?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you had a cold or the flu within the past month that has left you with a persistent cough?', 'Protocol': 'Have you had a cold or the flu within the past month that has left you with a persistent cough?'}, {'Question': 'Have you had a cold or the flu within the past month that has left you with a persistent cough?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you had a cough for many weeks or months?', 'Protocol': 'Have you had a cough for many weeks or months?'}, {'Question': 'Have you had a cough for many weeks or months?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It's important to see a doctor immediately if you're coughing up blood, even if it's just streaks. Please seek medical attention as soon as possible. Your health is a priority."", 'Protocol': 'See a doctor immediately if you are unable to make a decision from self-triage.'}]"
+2,Wheezing Flowchart,"['N1', 'N4', 'N5', 'N6', 'A5']","['N1', 'N4', 'N5', 'N6', 'A5']",1,"Patient: My daughter has been making a whistling sound when she breathes and seems to be struggling a bit. Should I be concerned?
+
+TriageMD: I'm sorry to hear that your daughter is having difficulty breathing. Did she begin wheezing within the past few hours?
+
+Patient: No.
+
+TriageMD: I understand your concern. Is your daughter's temperature 100Â°F or higher?
+
+Patient: No, she doesn't have a fever. Her temperature has been normal, but the whistling sound in her breathing is noticeable, and she seems to be working harder than usual to breathe.
+
+TriageMD: It's concerning that your daughter is making a whistling sound and seems to be struggling to breathe. Does she wheeze on most days?
+
+Patient: Yes.
+
+TriageMD: I understand your concern. Does she cough up gray or greenish-yellow phlegm on most days?
+
+Patient: I'm not really sure about the color of her phlegm. I haven't noticed anything specific, but I'll pay closer attention.
+
+TriageMD: It's important to monitor her symptoms closely. Just to clarify, does she cough up gray or greenish-yellow phlegm on most days?
+
+Patient: Yes.
+
+TriageMD: Given your daughter's symptoms, including the whistling sound and the presence of phlegm, it's important to see a doctor. She may have a lung condition such as chronic bronchitis or emphysema. Please seek medical attention as soon as possible.","[{'Question': ""I'm sorry to hear that your daughter is having difficulty breathing. Did she begin wheezing within the past few hours?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I understand your concern. Is your daughter's temperature 100Â°F or higher?"", 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': ""I understand your concern. Is your daughter's temperature 100Â°F or higher?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, she doesn't have a fever. Her temperature has been normal, but the whistling sound in her breathing is noticeable, and she seems to be working harder than usual to breathe."", 'Next_question': ""It's concerning that your daughter is making a whistling sound and seems to be struggling to breathe. Does she wheeze on most days?"", 'Protocol': 'Do you wheeze on most days?'}, {'Question': ""It's concerning that your daughter is making a whistling sound and seems to be struggling to breathe. Does she wheeze on most days?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'I understand your concern. Does she cough up gray or greenish-yellow phlegm on most days?', 'Protocol': 'Do you cough up gray or greenish yellow phlegm on most days?'}, {'Question': 'I understand your concern. Does she cough up gray or greenish-yellow phlegm on most days?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure about the color of her phlegm. I haven't noticed anything specific, but I'll pay closer attention."", 'Next_question': ""It's important to monitor her symptoms closely. Just to clarify, does she cough up gray or greenish-yellow phlegm on most days?"", 'Protocol': 'Do you cough up gray or greenish yellow phlegm on most days?'}, {'Question': ""It's important to monitor her symptoms closely. Just to clarify, does she cough up gray or greenish-yellow phlegm on most days?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Given your daughter's symptoms, including the whistling sound and the presence of phlegm, it's important to see a doctor. She may have a lung condition such as chronic bronchitis or emphysema. Please seek medical attention as soon as possible."", 'Protocol': 'See your doctor. You may have a lung disease such as chronic bronchitis or emphysema.'}]"
+3,Difficulty Breathing Flowchart,"['N1', 'N2', 'N3', 'A1']","['N1', 'N2', 'N3', 'A1']",1,"Patient: I've been experiencing a tightness in my chest lately, and it feels like I'm constantly aware of my breathing. What should I do?
+
+TriageMD: I'm sorry to hear that you're experiencing tightness in your chest and awareness of your breathing. Did your breathing difficulty begin within the past few days?
+
+Patient: Yes, I think it started a few days ago, but I'm not entirely sure. It just seems like I've been more aware of it recently.
+
+TriageMD: I understand that it can be concerning. Just to clarify, did the tightness in your chest and awareness of your breathing start within the past few days?
+
+Patient: Yes.
+
+TriageMD: Iâ€™m sorry to hear that youâ€™re feeling this way. Do you have any chest pain along with the tightness?
+
+Patient: Yes.
+
+TriageMD: I'm sorry to hear that you're experiencing this. Is the pain crushing, or does it radiate from your breastbone or upper abdomen to your jaw, neck, or arms?
+
+Patient: Yes, the pain does feel kind of crushing at times, and it seems to radiate from my chest to my left arm and sometimes up to my jaw. It's been worrying me quite a bit.
+
+TriageMD: Itâ€™s very important that you seek medical help immediately. Please call 911 or your local emergency number, or have someone take you to the nearest hospital emergency department. You could be experiencing a heart attack, and it's crucial to get help right away.","[{'Question': ""I'm sorry to hear that you're experiencing tightness in your chest and awareness of your breathing. Did your breathing difficulty begin within the past few days?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I think it started a few days ago, but I'm not entirely sure. It just seems like I've been more aware of it recently."", 'Next_question': 'I understand that it can be concerning. Just to clarify, did the tightness in your chest and awareness of your breathing start within the past few days?', 'Protocol': 'Did your breathing difficulty begin within the past few days?'}, {'Question': 'I understand that it can be concerning. Just to clarify, did the tightness in your chest and awareness of your breathing start within the past few days?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Iâ€™m sorry to hear that youâ€™re feeling this way. Do you have any chest pain along with the tightness?', 'Protocol': 'Do you have chest pain?'}, {'Question': 'Iâ€™m sorry to hear that youâ€™re feeling this way. Do you have any chest pain along with the tightness?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""I'm sorry to hear that you're experiencing this. Is the pain crushing, or does it radiate from your breastbone or upper abdomen to your jaw, neck, or arms?"", 'Protocol': 'Is the pain crushing, or does it radiate from the breastbone or upper abdomen to your jaw, neck, or arms?'}, {'Question': ""I'm sorry to hear that you're experiencing this. Is the pain crushing, or does it radiate from your breastbone or upper abdomen to your jaw, neck, or arms?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, the pain does feel kind of crushing at times, and it seems to radiate from my chest to my left arm and sometimes up to my jaw. It's been worrying me quite a bit."", 'Next_question': ""Itâ€™s very important that you seek medical help immediately. Please call 911 or your local emergency number, or have someone take you to the nearest hospital emergency department. You could be experiencing a heart attack, and it's crucial to get help right away."", 'Protocol': 'EMERGENCY: Get medical help now! Call 911 or your local emergency number or have someone take you to the nearest hospital emergency department. You could be having a heart attact.'}]"
+4,Palpitations Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'A5']","['N1', 'N2', 'N3', 'N4', 'N5', 'A5']",1,"Patient: I've been experiencing episodes where my heart feels like it's pounding or racing, and it's starting to worry me.
+
+TriageMD: I understand that you're feeling worried about your heart racing. Have you been drinking more caffeine-containing beverages like coffee or cola, or have you been smoking more than usual?
+
+Patient: No.
+
+TriageMD: I understand this can be concerning. Are you currently experiencing any stress or anxiety in your life?
+
+Patient: No, I haven't been particularly stressed or anxious recently. My routine has been pretty normal, and nothing significant has changed in my life. That's why I'm a bit puzzled about why my heart has been acting this way.
+
+TriageMD: I understand how puzzling this can be. Have you recently lost weight even though you are eating no less than usual?
+
+Patient: No.
+
+TriageMD: I understand your concern. Can you let me know if your temperature is 100Â°F or higher?
+
+Patient: I'm not entirely sure about my exact temperature right now. I haven't taken it recently, so I can't say for certain if it's 100Â°F or higher.
+
+TriageMD: I understand. It's important to know if you have a fever. If you have a thermometer available, it might be a good idea to check your temperature. Is there any other symptom you're experiencing, like shortness of breath or dizziness?
+
+Patient: I'm not really sure. I haven't noticed any major issues with breathing or feeling dizzy, but I guess it's possible I've just been brushing it off. It's hard to say without really paying close attention to it.
+
+TriageMD: I understand that it can be hard to notice subtle symptoms. Just to clarify, do you think your temperature might be 100Â°F or higher? If you're unsure, it might be helpful to check it when you can.
+
+Patient: No.
+
+TriageMD: I understand your concern. Do you feel ill, have any chest discomfort, or have you experienced irregular heartbeats or other heart problems?
+
+Patient: No.
+
+TriageMD: I understand your concerns. Since you're experiencing episodes of a racing heart without any clear cause, I recommend seeing your doctor for further evaluation. They can help determine the underlying issue and provide guidance. Take care.","[{'Question': ""I understand that you're feeling worried about your heart racing. Have you been drinking more caffeine-containing beverages like coffee or cola, or have you been smoking more than usual?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand this can be concerning. Are you currently experiencing any stress or anxiety in your life?', 'Protocol': 'Are you under stress?'}, {'Question': 'I understand this can be concerning. Are you currently experiencing any stress or anxiety in your life?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't been particularly stressed or anxious recently. My routine has been pretty normal, and nothing significant has changed in my life. That's why I'm a bit puzzled about why my heart has been acting this way."", 'Next_question': 'I understand how puzzling this can be. Have you recently lost weight even though you are eating no less than usual?', 'Protocol': 'Have you recently lost weight even though you are eating no less than usual?'}, {'Question': 'I understand how puzzling this can be. Have you recently lost weight even though you are eating no less than usual?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Can you let me know if your temperature is 100Â°F or higher?', 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': 'I understand your concern. Can you let me know if your temperature is 100Â°F or higher?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure about my exact temperature right now. I haven't taken it recently, so I can't say for certain if it's 100Â°F or higher."", 'Next_question': ""I understand. It's important to know if you have a fever. If you have a thermometer available, it might be a good idea to check your temperature. Is there any other symptom you're experiencing, like shortness of breath or dizziness?"", 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': ""I understand. It's important to know if you have a fever. If you have a thermometer available, it might be a good idea to check your temperature. Is there any other symptom you're experiencing, like shortness of breath or dizziness?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I haven't noticed any major issues with breathing or feeling dizzy, but I guess it's possible I've just been brushing it off. It's hard to say without really paying close attention to it."", 'Next_question': ""I understand that it can be hard to notice subtle symptoms. Just to clarify, do you think your temperature might be 100Â°F or higher? If you're unsure, it might be helpful to check it when you can."", 'Protocol': 'Is your temperature 100Â°F or higher?'}, {'Question': ""I understand that it can be hard to notice subtle symptoms. Just to clarify, do you think your temperature might be 100Â°F or higher? If you're unsure, it might be helpful to check it when you can."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Do you feel ill, have any chest discomfort, or have you experienced irregular heartbeats or other heart problems?', 'Protocol': 'Do you feel ill, do you have any chest discomfort, or have you had irregular heartbeats or other heart problems?'}, {'Question': 'I understand your concern. Do you feel ill, have any chest discomfort, or have you experienced irregular heartbeats or other heart problems?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I understand your concerns. Since you're experiencing episodes of a racing heart without any clear cause, I recommend seeing your doctor for further evaluation. They can help determine the underlying issue and provide guidance. Take care."", 'Protocol': 'See your doctor if you are unable to make a decision from self-triage.'}]"
+5,Coughing In Children Flowchart,"['N1', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9', 'N10', 'A10']","['N1', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9', 'N10', 'A10']",1,"Patient: My daughter has been coughing for a few days now, and I'm worried it might be more than just a cold.
+
+TriageMD: I understand your concern. Is your daughter's temperature over 100Â°F?
+
+Patient: We actually just got a new thermometer, and it's one of those fancy digital ones. It's kind of fun to use!
+
+TriageMD: That sounds like a nice thermometer! Just to clarify, is your daughter's temperature over 100Â°F?
+
+Patient: I'm not entirely sure. I'll have to check her temperature again to be certain.
+
+TriageMD: I understand. When you check her temperature, please let me know if it's over 100Â°F. That information will help assess her condition better.
+
+Patient: No.
+
+TriageMD: Thank you for the update. Is your daughter having difficulty breathing, or is her face blue?
+
+Patient: No.
+
+TriageMD: Does your child have episodes of uncontrollable coughing followed by noisy gasping for air?
+
+Patient: I don't think so. She coughs a lot, but I haven't noticed anything like that, at least not yet.
+
+TriageMD: I understand. Just to confirm, has your daughter experienced any episodes of uncontrollable coughing followed by noisy gasping for air?
+
+Patient: I don't think so, at least not that I've noticed. She does cough a lot, but it doesn't seem uncontrollable or followed by gasping.
+
+TriageMD: I understand. Just to clarify, has your daughter had any episodes of uncontrollable coughing followed by noisy gasping for air?
+
+Patient: I'm not really sure. I haven't noticed any obvious gasping after her coughing, but I can't say for certain that it hasn't happened. I'll keep a closer eye on her to see if anything like that occurs.
+
+TriageMD: I understand your uncertainty. Just to confirm, does your child have episodes of uncontrollable coughing followed by noisy gasping for air?
+
+Patient: No, I haven't seen any episodes like that. Her coughing is frequent, but it doesn't seem uncontrollable or followed by gasping for air. I'll keep monitoring her closely to see if anything changes.
+
+TriageMD: Thank you for the information. Is your child's breathing harsh or wheezy?
+
+Patient: I'm not entirely sure, but I think I might have noticed some wheezing when she breathes. It's a bit hard to tell, though.
+
+TriageMD: I understand. Just to clarify, have you noticed any harshness or wheezing in your child's breathing?
+
+Patient: I think there might be some wheezing, but it's hard to be sure. It seems like there could be a bit of harshness when she breathes.
+
+TriageMD: I understand that it can be difficult to tell. Just to confirm, have you noticed any harshness or wheezing in your child's breathing?
+
+Patient: I'm not entirely sure. It seems like there might be some wheezing or harshness, but it's hard for me to tell for certain. I'll keep listening closely to see if I notice anything more definitive.
+
+TriageMD: I understand that it can be difficult to assess. Just to confirm, have you noticed any harshness or wheezing in your child's breathing?
+
+Patient: Yes.
+
+TriageMD: Thank you for sharing that. Could your child have inhaled a small object or piece of food within the past few days?
+
+Patient: No.
+
+TriageMD: Has your child been exposed to any new cleaning products, or do you have a new pet?
+
+Patient: I'm not really sure. We haven't changed any cleaning products recently that I can think of, and we don't have a new pet, but I guess it's possible that something could have changed without me realizing it. I'll have to check around the house to be sure.
+
+TriageMD: I understand. Just to confirm, has your child been exposed to any new cleaning products, or do you have a new pet?
+
+Patient: No, I don't think so. We haven't introduced any new cleaning products that I know of, and we haven't gotten a new pet. But I'll double-check just to be sure.
+
+TriageMD: Thank you for the information. Does your child have a runny or stuffy nose?
+
+Patient: I don't think so. Her nose doesn't seem runny or stuffy, but I'll keep an eye on it in case anything changes.
+
+TriageMD: Thank you for the update. Just to confirm, does your child have a runny or stuffy nose?
+
+Patient: No, I don't think her nose is runny or stuffy, at least not that I've noticed. But I'll keep monitoring her in case anything changes.
+
+TriageMD: Has your child had whooping cough within the past 3 months?
+
+Patient: No, my child hasn't had whooping cough in the past three months. She's up to date on her vaccinations, so I don't think it's likely to be that. I'll keep monitoring her symptoms and see if anything changes.
+
+TriageMD: Does anyone in the house smoke, or could your child be smoking?
+
+Patient: No, no one in our house smokes, and my child definitely isn't smoking either. We're a non-smoking household, and we try to keep the environment as healthy as possible for her. I'll continue to keep an eye on her symptoms and see if anything develops.
+
+TriageMD: It's good to hear that you're monitoring her symptoms closely. If her cough persists for more than 2 weeks or if you have any concerns, please take her to the doctor for further evaluation. Your child's health is important, and it's always best to err on the side of caution.","[{'Question': ""I understand your concern. Is your daughter's temperature over 100Â°F?"", 'Pattern': 'irrelevant', 'Patient_response': ""We actually just got a new thermometer, and it's one of those fancy digital ones. It's kind of fun to use!"", 'Next_question': ""That sounds like a nice thermometer! Just to clarify, is your daughter's temperature over 100Â°F?"", 'Protocol': ""Is your child's temperature over 100Â°F?""}, {'Question': ""That sounds like a nice thermometer! Just to clarify, is your daughter's temperature over 100Â°F?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. I'll have to check her temperature again to be certain."", 'Next_question': ""I understand. When you check her temperature, please let me know if it's over 100Â°F. That information will help assess her condition better."", 'Protocol': ""Is your child's temperature over 100Â°F?""}, {'Question': ""I understand. When you check her temperature, please let me know if it's over 100Â°F. That information will help assess her condition better."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for the update. Is your daughter having difficulty breathing, or is her face blue?', 'Protocol': 'Is your child having difficulty breathing, or is his or her face blue?'}, {'Question': 'Thank you for the update. Is your daughter having difficulty breathing, or is her face blue?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Does your child have episodes of uncontrollable coughing followed by noisy gasping for air?', 'Protocol': 'Does your child have episodes of uncontrollable coughing followed by noisy gasping for air?'}, {'Question': 'Does your child have episodes of uncontrollable coughing followed by noisy gasping for air?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I don't think so. She coughs a lot, but I haven't noticed anything like that, at least not yet."", 'Next_question': 'I understand. Just to confirm, has your daughter experienced any episodes of uncontrollable coughing followed by noisy gasping for air?', 'Protocol': 'Does your child have episodes of uncontrollable coughing followed by noisy gasping for air?'}, {'Question': 'I understand. Just to confirm, has your daughter experienced any episodes of uncontrollable coughing followed by noisy gasping for air?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I don't think so, at least not that I've noticed. She does cough a lot, but it doesn't seem uncontrollable or followed by gasping."", 'Next_question': 'I understand. Just to clarify, has your daughter had any episodes of uncontrollable coughing followed by noisy gasping for air?', 'Protocol': 'Does your child have episodes of uncontrollable coughing followed by noisy gasping for air?'}, {'Question': 'I understand. Just to clarify, has your daughter had any episodes of uncontrollable coughing followed by noisy gasping for air?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I haven't noticed any obvious gasping after her coughing, but I can't say for certain that it hasn't happened. I'll keep a closer eye on her to see if anything like that occurs."", 'Next_question': 'I understand your uncertainty. Just to confirm, does your child have episodes of uncontrollable coughing followed by noisy gasping for air?', 'Protocol': 'Does your child have episodes of uncontrollable coughing followed by noisy gasping for air?'}, {'Question': 'I understand your uncertainty. Just to confirm, does your child have episodes of uncontrollable coughing followed by noisy gasping for air?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't seen any episodes like that. Her coughing is frequent, but it doesn't seem uncontrollable or followed by gasping for air. I'll keep monitoring her closely to see if anything changes."", 'Next_question': ""Thank you for the information. Is your child's breathing harsh or wheezy?"", 'Protocol': ""Is your child's breathing harsh or wheezy?""}, {'Question': ""Thank you for the information. Is your child's breathing harsh or wheezy?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I'm not entirely sure, but I think I might have noticed some wheezing when she breathes. It's a bit hard to tell, though."", 'Next_question': ""I understand. Just to clarify, have you noticed any harshness or wheezing in your child's breathing?"", 'Protocol': ""Is your child's breathing harsh or wheezy?""}, {'Question': ""I understand. Just to clarify, have you noticed any harshness or wheezing in your child's breathing?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I think there might be some wheezing, but it's hard to be sure. It seems like there could be a bit of harshness when she breathes."", 'Next_question': ""I understand that it can be difficult to tell. Just to confirm, have you noticed any harshness or wheezing in your child's breathing?"", 'Protocol': ""Is your child's breathing harsh or wheezy?""}, {'Question': ""I understand that it can be difficult to tell. Just to confirm, have you noticed any harshness or wheezing in your child's breathing?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. It seems like there might be some wheezing or harshness, but it's hard for me to tell for certain. I'll keep listening closely to see if I notice anything more definitive."", 'Next_question': ""I understand that it can be difficult to assess. Just to confirm, have you noticed any harshness or wheezing in your child's breathing?"", 'Protocol': ""Is your child's breathing harsh or wheezy?""}, {'Question': ""I understand that it can be difficult to assess. Just to confirm, have you noticed any harshness or wheezing in your child's breathing?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Thank you for sharing that. Could your child have inhaled a small object or piece of food within the past few days?', 'Protocol': 'Could your child have inhaled a small object or piece of food within the past few days?'}, {'Question': 'Thank you for sharing that. Could your child have inhaled a small object or piece of food within the past few days?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Has your child been exposed to any new cleaning products, or do you have a new pet?', 'Protocol': 'Has your child been exposed to any new cleaning products, or do you have a new pet?'}, {'Question': 'Has your child been exposed to any new cleaning products, or do you have a new pet?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. We haven't changed any cleaning products recently that I can think of, and we don't have a new pet, but I guess it's possible that something could have changed without me realizing it. I'll have to check around the house to be sure."", 'Next_question': 'I understand. Just to confirm, has your child been exposed to any new cleaning products, or do you have a new pet?', 'Protocol': 'Has your child been exposed to any new cleaning products, or do you have a new pet?'}, {'Question': 'I understand. Just to confirm, has your child been exposed to any new cleaning products, or do you have a new pet?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think so. We haven't introduced any new cleaning products that I know of, and we haven't gotten a new pet. But I'll double-check just to be sure."", 'Next_question': 'Thank you for the information. Does your child have a runny or stuffy nose?', 'Protocol': 'Does your child have a runny or stuffy nose?'}, {'Question': 'Thank you for the information. Does your child have a runny or stuffy nose?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I don't think so. Her nose doesn't seem runny or stuffy, but I'll keep an eye on it in case anything changes."", 'Next_question': 'Thank you for the update. Just to confirm, does your child have a runny or stuffy nose?', 'Protocol': 'Does your child have a runny or stuffy nose?'}, {'Question': 'Thank you for the update. Just to confirm, does your child have a runny or stuffy nose?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think her nose is runny or stuffy, at least not that I've noticed. But I'll keep monitoring her in case anything changes."", 'Next_question': 'Has your child had whooping cough within the past 3 months?', 'Protocol': 'Has your child had whooping cough within the past 3 months?'}, {'Question': 'Has your child had whooping cough within the past 3 months?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, my child hasn't had whooping cough in the past three months. She's up to date on her vaccinations, so I don't think it's likely to be that. I'll keep monitoring her symptoms and see if anything changes."", 'Next_question': 'Does anyone in the house smoke, or could your child be smoking?', 'Protocol': 'Does anyone in the house smoke, or could your child be smoking?'}, {'Question': 'Does anyone in the house smoke, or could your child be smoking?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, no one in our house smokes, and my child definitely isn't smoking either. We're a non-smoking household, and we try to keep the environment as healthy as possible for her. I'll continue to keep an eye on her symptoms and see if anything develops."", 'Next_question': ""It's good to hear that you're monitoring her symptoms closely. If her cough persists for more than 2 weeks or if you have any concerns, please take her to the doctor for further evaluation. Your child's health is important, and it's always best to err on the side of caution."", 'Protocol': ""Take your child to the doctor if you are unable to make a decision from self-triage or if your child's cough persists for more than 2 weeks.""}]"
+6,Chest Pain Flowchart,"['N1', 'N4', 'N5', 'N6', 'A4']","['N1', 'N4', 'N5', 'N6', 'A4']",1,"Patient: I've been experiencing a sharp pain in my chest area for the past few hours. Should I be concerned?
+
+TriageMD: I'm sorry to hear that you're experiencing sharp chest pain. Can you tell me if the pain feels pressing or crushing? Does it radiate to other areas, such as your jaw, neck, arms, or upper abdomen? This information is important for assessing your situation.
+
+Patient: Oh, I see what you're asking. You know, I've been really into baking lately. I tried making a new bread recipe yesterday, and it turned out pretty well. Have you ever tried baking bread?
+
+TriageMD: Iâ€™m glad to hear about your baking! However, I need to focus on your chest pain. Is the pain pressing or crushing, or does it radiate to other areas, such as your jaw, neck, arms, or upper abdomen?
+
+Patient: I'm not really sure how to describe it. The pain is sharp, but I wouldn't say it's crushing. It's kind of hard to tell if it's radiating to other areas, but I do feel a bit uncomfortable all over. It's just hard to pinpoint exactly. Should I be worried?
+
+TriageMD: I understand that it can be difficult to describe pain. Just to clarify, is the pain pressing or crushing at all? Does it radiate from your chest to other areas like your jaw, neck, arms, or upper abdomen? This information can help determine if you should seek medical attention.     
+
+Patient: No.
+
+TriageMD: Thank you for clarifying. Are you experiencing any shortness of breath?
+
+Patient: Yes.
+
+TriageMD: I'm sorry to hear that you're experiencing this. Have you recently had surgery, or has an injury or illness kept you in bed?
+
+Patient: No.
+
+TriageMD: Are you coughing, and is your temperature 100Â°F or higher?
+
+Patient: I haven't checked my temperature, but I did watch a really interesting documentary about space exploration last night. It was fascinating to see how far technology has come!
+
+TriageMD: Iâ€™m glad you enjoyed the documentary! However, I need to focus on your symptoms. Are you coughing, and is your temperature 100Â°F or higher?
+
+Patient: Yes.
+
+TriageMD: Given your symptoms of sharp chest pain, shortness of breath, and fever, it's important that you see a doctor immediately. You may have acute bronchitis or pneumonia. Please seek medical attention right away.","[{'Question': ""I'm sorry to hear that you're experiencing sharp chest pain. Can you tell me if the pain feels pressing or crushing? Does it radiate to other areas, such as your jaw, neck, arms, or upper abdomen? This information is important for assessing your situation."", 'Pattern': 'irrelevant', 'Patient_response': ""Oh, I see what you're asking. You know, I've been really into baking lately. I tried making a new bread recipe yesterday, and it turned out pretty well. Have you ever tried baking bread?"", 'Next_question': 'Iâ€™m glad to hear about your baking! However, I need to focus on your chest pain. Is the pain pressing or crushing, or does it radiate to other areas, such as your jaw, neck, arms, or upper abdomen?', 'Protocol': 'Is the pain pressing or crushing, or does it radiate out from your chest to other parts of your body (such as your breastbone, the upper part of your abdomen, or your jaw, neck, or arms)?'}, {'Question': 'Iâ€™m glad to hear about your baking! However, I need to focus on your chest pain. Is the pain pressing or crushing, or does it radiate to other areas, such as your jaw, neck, arms, or upper abdomen?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure how to describe it. The pain is sharp, but I wouldn't say it's crushing. It's kind of hard to tell if it's radiating to other areas, but I do feel a bit uncomfortable all over. It's just hard to pinpoint exactly. Should I be worried?"", 'Next_question': 'I understand that it can be difficult to describe pain. Just to clarify, is the pain pressing or crushing at all? Does it radiate from your chest to other areas like your jaw, neck, arms, or upper abdomen? This information can help determine if you should seek medical attention.', 'Protocol': 'Is the pain pressing or crushing, or does it radiate out from your chest to other parts of your body (such as your breastbone, the upper part of your abdomen, or your jaw, neck, or arms)?'}, {'Question': 'I understand that it can be difficult to describe pain. Just to clarify, is the pain pressing or crushing at all? Does it radiate from your chest to other areas like your jaw, neck, arms, or upper abdomen? This information can help determine if you should seek medical attention.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for clarifying. Are you experiencing any shortness of breath?', 'Protocol': 'Are you short of breath?'}, {'Question': 'Thank you for clarifying. Are you experiencing any shortness of breath?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""I'm sorry to hear that you're experiencing this. Have you recently had surgery, or has an injury or illness kept you in bed?"", 'Protocol': 'Have you recently had surgery, or has an injury or illness kept you in bed?'}, {'Question': ""I'm sorry to hear that you're experiencing this. Have you recently had surgery, or has an injury or illness kept you in bed?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you coughing, and is your temperature 100Â°F or higher?', 'Protocol': 'Are you coughing, and is your temperature 100Â°F or higher?'}, {'Question': 'Are you coughing, and is your temperature 100Â°F or higher?', 'Pattern': 'irrelevant', 'Patient_response': ""I haven't checked my temperature, but I did watch a really interesting documentary about space exploration last night. It was fascinating to see how far technology has come!"", 'Next_question': 'Iâ€™m glad you enjoyed the documentary! However, I need to focus on your symptoms. Are you coughing, and is your temperature 100Â°F or higher?', 'Protocol': 'Are you coughing, and is your temperature 100Â°F or higher?'}, {'Question': 'Iâ€™m glad you enjoyed the documentary! However, I need to focus on your symptoms. Are you coughing, and is your temperature 100Â°F or higher?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Given your symptoms of sharp chest pain, shortness of breath, and fever, it's important that you see a doctor immediately. You may have acute bronchitis or pneumonia. Please seek medical attention right away."", 'Protocol': 'See a doctor immediately. You may have acute bronchitis or pneumonia.'}]"

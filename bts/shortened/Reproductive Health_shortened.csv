@@ -1,0 +1,448 @@
+Unnamed: 0,Flowchart,Path label,Path,Accuracy,Conversation,Question_and_response_pair,Shortened_Conversation
+0,Painful Or Enlarged Testicles Flowchart,"['N1', 'N3', 'N4', 'A5']","['N1', 'N3', 'N4', 'A5']",1,"Patient: I've noticed some swelling and pain in my testicles over the past few days. Should I be worried?
+
+TriageMD: I'm sorry to hear that you're experiencing swelling and pain in your testicles. Have you suddenly developed a painful swelling in one or both testicles?
+
+Patient: No.
+
+TriageMD: Do you have a painless swelling in your scrotum?
+
+Patient: No, it's not really painless. It's more of a discomfort than anything else, but not exactly what I'd call painless.
+
+TriageMD: Is only one of your testicles enlarged?
+
+Patient: No, both of them seem to be affected. It's not like one is significantly larger than the other, but there's definitely some swelling and discomfort in both.
+
+TriageMD: It's important to see a doctor about your symptoms, especially since you're experiencing swelling and discomfort in both testicles. They can provide a proper evaluation and determine the best course of action. Please consider making an appointment as soon as possible.   ","[{'Question': ""I'm sorry to hear that you're experiencing swelling and pain in your testicles. Have you suddenly developed a painful swelling in one or both testicles?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have a painless swelling in your scrotum?', 'Protocol': 'Do you have a painless swelling in your scrotum?'}, {'Question': 'Do you have a painless swelling in your scrotum?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, it's not really painless. It's more of a discomfort than anything else, but not exactly what I'd call painless."", 'Next_question': 'Is only one of your testicles enlarged?', 'Protocol': 'Is only one of your testicles enlarged?'}, {'Question': 'Is only one of your testicles enlarged?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, both of them seem to be affected. It's not like one is significantly larger than the other, but there's definitely some swelling and discomfort in both."", 'Next_question': ""It's important to see a doctor about your symptoms, especially since you're experiencing swelling and discomfort in both testicles. They can provide a proper evaluation and determine the best course of action. Please consider making an appointment as soon as possible."", 'Protocol': 'See your doctor if you are unable to make a decision from self-triage.'}]","Patient: I've noticed some swelling and pain in my testicles over the past few days. Should I be worried?
+TriageMD: I'm sorry to hear that you're experiencing swelling and pain in your testicles. Have you suddenly developed a painful swelling in one or both testicles?
+Patient: No, it's not really painless. It's more of a discomfort than anything else, but not exactly what I'd call painless.
+TriageMD: Is only one of your testicles enlarged?
+Patient: No, both of them seem to be affected. It's not like one is significantly larger than the other, but there's definitely some swelling and discomfort in both.
+TriageMD: It's important to see a doctor about your symptoms, especially since you're experiencing swelling and discomfort in both testicles. They can provide a proper evaluation and determine the best course of action. Please consider making an appointment as soon as possible."
+1,Painful Intercourse In Men Flowchart,"['N1', 'N2', 'A1']","['N1', 'N2', 'A1']",1,"Patient: I've been experiencing pain during and after intercourse, and I'm worried about what might be causing it. Can you help?
+
+TriageMD: I'm sorry to hear that you're experiencing pain during and after intercourse. To better understand your situation, can you tell me if the pain is brought on by ejaculation?
+
+Patient: Yes, the pain does seem to get worse after ejaculation. It's a kind of sharp, intense pain that lasts for a while afterwards. I've also noticed some discomfort during the act itself, but it really peaks after. I'm not sure if it's related to a specific position or something else, but it's been concerning me.
+
+TriageMD: I'm sorry to hear that you're in pain. Do you also experience a burning sensation when you urinate or any unusual discharge from the penis? This information could help in understanding your symptoms better.
+
+Patient: Yes, I have noticed a bit of a burning sensation when I urinate, though it's not always there. As for discharge, I haven't really seen anything unusual, but I'm not entirely sure. It's been hard to tell if anything's out of the ordinary.
+
+TriageMD: It sounds concerning that you're experiencing a burning sensation when you urinate. Just to clarify, do you have a burning sensation consistently, or is it intermittent? And have you noticed any unusual discharge from the penis at all?
+
+Patient: Yes, the burning sensation is more intermittent. It doesn't happen every time I urinate, but it's frequent enough to be noticeable. As for discharge, I haven't really noticed anything unusual, but I'm not always sure what to look for. I'm definitely concerned about these symptoms and wondering if they could be related to an infection or something else.
+
+TriageMD: It sounds like you're experiencing some concerning symptoms. Just to confirm, do you have a burning sensation when you urinate or any unusual discharge from the penis? This information could help in understanding your situation better.
+
+Patient: Yes.
+
+TriageMD: It sounds like you may have an infection, such as nongonococcal urethritis or prostatitis, which could be causing your symptoms. I strongly recommend that you see your doctor for a proper evaluation and treatment. Your health is important, and they can provide the care you need.","[{'Question': ""I'm sorry to hear that you're experiencing pain during and after intercourse. To better understand your situation, can you tell me if the pain is brought on by ejaculation?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, the pain does seem to get worse after ejaculation. It's a kind of sharp, intense pain that lasts for a while afterwards. I've also noticed some discomfort during the act itself, but it really peaks after. I'm not sure if it's related to a specific position or something else, but it's been concerning me."", 'Next_question': ""I'm sorry to hear that you're in pain. Do you also experience a burning sensation when you urinate or any unusual discharge from the penis? This information could help in understanding your symptoms better."", 'Protocol': 'Do you have a burning sensation when you urinate or any unusual discharge from the penis?'}, {'Question': ""I'm sorry to hear that you're in pain. Do you also experience a burning sensation when you urinate or any unusual discharge from the penis? This information could help in understanding your symptoms better."", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I have noticed a bit of a burning sensation when I urinate, though it's not always there. As for discharge, I haven't really seen anything unusual, but I'm not entirely sure. It's been hard to tell if anything's out of the ordinary."", 'Next_question': ""It sounds concerning that you're experiencing a burning sensation when you urinate. Just to clarify, do you have a burning sensation consistently, or is it intermittent? And have you noticed any unusual discharge from the penis at all?"", 'Protocol': 'Do you have a burning sensation when you urinate or any unusual discharge from the penis?'}, {'Question': ""It sounds concerning that you're experiencing a burning sensation when you urinate. Just to clarify, do you have a burning sensation consistently, or is it intermittent? And have you noticed any unusual discharge from the penis at all?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, the burning sensation is more intermittent. It doesn't happen every time I urinate, but it's frequent enough to be noticeable. As for discharge, I haven't really noticed anything unusual, but I'm not always sure what to look for. I'm definitely concerned about these symptoms and wondering if they could be related to an infection or something else."", 'Next_question': ""It sounds like you're experiencing some concerning symptoms. Just to confirm, do you have a burning sensation when you urinate or any unusual discharge from the penis? This information could help in understanding your situation better."", 'Protocol': 'Do you have a burning sensation when you urinate or any unusual discharge from the penis?'}, {'Question': ""It sounds like you're experiencing some concerning symptoms. Just to confirm, do you have a burning sensation when you urinate or any unusual discharge from the penis? This information could help in understanding your situation better."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like you may have an infection, such as nongonococcal urethritis or prostatitis, which could be causing your symptoms. I strongly recommend that you see your doctor for a proper evaluation and treatment. Your health is important, and they can provide the care you need.', 'Protocol': 'See your doctor. You may have an infection such as nongonococcal urethritis or prostatitis.'}]","Patient: I've been experiencing pain during and after intercourse, and I'm worried about what might be causing it. Can you help?
+TriageMD: I'm sorry to hear that you're experiencing pain during and after intercourse. To better understand your situation, can you tell me if the pain is brought on by ejaculation?
+TriageMD: It sounds concerning that you're experiencing a burning sensation when you urinate. Just to clarify, do you have a burning sensation consistently, or is it intermittent? And have you noticed any unusual discharge from the penis at all?
+Patient: Yes, the burning sensation is more intermittent. It doesn't happen every time I urinate, but it's frequent enough to be noticeable. As for discharge, I haven't really noticed anything unusual, but I'm not always sure what to look for. I'm definitely concerned about these symptoms and wondering if they could be related to an infection or something else.
+Patient: Yes.
+TriageMD: It sounds like you may have an infection, such as nongonococcal urethritis or prostatitis, which could be causing your symptoms. I strongly recommend that you see your doctor for a proper evaluation and treatment. Your health is important, and they can provide the care you need."
+2,Infertility In Men Flowchart,"['N1', 'A1']","['N1', 'A1']",1,"Patient: We've been trying for a baby for over a year without success. Could there be an issue with my fertility?
+
+TriageMD: I understand that trying for a baby can be challenging. Have you noticed any unusual swelling of your testicles? This could be relevant to your fertility concerns.
+
+Patient: I haven't really noticed anything unusual, but I haven't been specifically looking for swelling or anything like that. I guess I'm not really sure what to look for.
+
+TriageMD: It's understandable to be unsure. Just to clarify, have you noticed any unusual swelling or changes in the size or shape of your testicles at all?
+
+Patient: Yes.
+
+TriageMD: It's important to see your doctor. A disorder of the testicles may be affecting your fertility. They can provide a thorough evaluation and discuss your concerns.","[{'Question': 'I understand that trying for a baby can be challenging. Have you noticed any unusual swelling of your testicles? This could be relevant to your fertility concerns.', 'Pattern': 'inconclusive', 'Patient_response': ""I haven't really noticed anything unusual, but I haven't been specifically looking for swelling or anything like that. I guess I'm not really sure what to look for."", 'Next_question': ""It's understandable to be unsure. Just to clarify, have you noticed any unusual swelling or changes in the size or shape of your testicles at all?"", 'Protocol': 'Have you noticed any unusual swelling of your testicles?'}, {'Question': ""It's understandable to be unsure. Just to clarify, have you noticed any unusual swelling or changes in the size or shape of your testicles at all?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important to see your doctor. A disorder of the testicles may be affecting your fertility. They can provide a thorough evaluation and discuss your concerns."", 'Protocol': 'See your doctor. A disorder of the testicles may be affecting your fertility.'}]","Patient: We've been trying for a baby for over a year without success. Could there be an issue with my fertility?
+TriageMD: I understand that trying for a baby can be challenging. Have you noticed any unusual swelling of your testicles? This could be relevant to your fertility concerns.
+TriageMD: It's understandable to be unsure. Just to clarify, have you noticed any unusual swelling or changes in the size or shape of your testicles at all?
+Patient: Yes.
+Patient: Yes.
+TriageMD: It's important to see your doctor. A disorder of the testicles may be affecting your fertility. They can provide a thorough evaluation and discuss your concerns."
+3,Infertility In Women Flowchart,"['N1', 'N2', 'N3', 'N4', 'A4']","['N1', 'N2', 'N3', 'N4', 'A4']",1,"Patient: We've been trying to conceive for over a year without success. Could there be an underlying issue?
+
+TriageMD: I understand how challenging this situation can be. To help assess any underlying issues, could you let me know if your periods are infrequent or irregular?
+
+Patient: No.
+
+TriageMD: Thank you for sharing that. Have you ever had an infection of the uterus or fallopian tubes, or a sexually transmitted disease?
+
+Patient: No.
+
+TriageMD: I understand this is a difficult time for you. Do you have one or more of the following symptoms: painful periods, abnormal vaginal discharge, or recurring lower abdominal pain?
+
+Patient: No.
+
+TriageMD: Are you over age 35?
+
+Patient: Yes, I'm over 35.
+
+TriageMD: Given that you are over 35 and have been trying to conceive for over a year without success, I recommend seeing your doctor. Fertility can decline with age, and a healthcare professional can help assess any underlying issues and discuss your options.","[{'Question': 'I understand how challenging this situation can be. To help assess any underlying issues, could you let me know if your periods are infrequent or irregular?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for sharing that. Have you ever had an infection of the uterus or fallopian tubes, or a sexually transmitted disease?', 'Protocol': 'Have you ever had an infection of the uterus or fallopian tubes or a sexually transmitted disease?'}, {'Question': 'Thank you for sharing that. Have you ever had an infection of the uterus or fallopian tubes, or a sexually transmitted disease?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand this is a difficult time for you. Do you have one or more of the following symptoms: painful periods, abnormal vaginal discharge, or recurring lower abdominal pain?', 'Protocol': 'Do you have one or more of the following symptoms: painful periods; abnormal vaginal discharge; recurring lower abdominal pain?'}, {'Question': 'I understand this is a difficult time for you. Do you have one or more of the following symptoms: painful periods, abnormal vaginal discharge, or recurring lower abdominal pain?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you over age 35?', 'Protocol': 'Are you over age 35?'}, {'Question': 'Are you over age 35?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I'm over 35."", 'Next_question': 'Given that you are over 35 and have been trying to conceive for over a year without success, I recommend seeing your doctor. Fertility can decline with age, and a healthcare professional can help assess any underlying issues and discuss your options.', 'Protocol': 'See your doctor. Fertility declines as you get older.'}]","Patient: We've been trying to conceive for over a year without success. Could there be an underlying issue?
+TriageMD: I understand how challenging this situation can be. To help assess any underlying issues, could you let me know if your periods are infrequent or irregular?
+TriageMD: I understand this is a difficult time for you. Do you have one or more of the following symptoms: painful periods, abnormal vaginal discharge, or recurring lower abdominal pain?
+Patient: No.
+Patient: Yes, I'm over 35.
+TriageMD: Given that you are over 35 and have been trying to conceive for over a year without success, I recommend seeing your doctor. Fertility can decline with age, and a healthcare professional can help assess any underlying issues and discuss your options."
+4,Absent Periods Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9', 'A9']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N9', 'A9']",1,"Patient: I haven't had my period for two months and I'm starting to get worried. What could be causing this?
+
+TriageMD: I understand your concern. Have you ever had a period before?
+
+Patient: Yes.
+
+TriageMD: It's understandable to be worried. One possibility to consider is pregnancy. Have you taken a pregnancy test?
+
+Patient: No.
+
+TriageMD: Have you recently had a baby?
+
+Patient: No.
+
+TriageMD: I understand this can be concerning. Have you recently been ill or under stress?
+
+Patient: No.
+
+TriageMD: Have you recently stopped taking oral contraceptives?
+
+Patient: No, I haven't stopped taking them recently.
+
+TriageMD: Have you been exercising strenuously or lost a lot of weight in a short time?
+
+Patient: No, I haven't been exercising strenuously or lost a lot of weight recently. My routine and weight have been pretty stable.
+
+TriageMD: Are you over age 45?
+
+Patient: I'm not sure if I fall into that age range.
+
+TriageMD: Could you please confirm if you are over age 45?
+
+Patient: I'm not sure if I am over 45 or not.
+
+TriageMD: It's important to know your age for context. Can you confirm if you are over 45?
+
+Patient: No.
+
+TriageMD: Thank you for the information. Do you have two or more of the following symptoms: increased hairiness, deepening of the voice, or unexplained weight gain?
+
+Patient: No.
+
+TriageMD: Are you currently taking any medication?
+
+Patient: Yes, I am currently taking medication. I'm on birth control pills, and I've been taking them consistently. I also take some vitamins and supplements, but nothing else prescribed.
+
+TriageMD: It's important to talk to your doctor about your missed periods. Some medications, including birth control pills, can affect your menstrual cycle. They can help determine the cause and provide guidance.","[{'Question': 'I understand your concern. Have you ever had a period before?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's understandable to be worried. One possibility to consider is pregnancy. Have you taken a pregnancy test?"", 'Protocol': 'Could you be pregnant?'}, {'Question': ""It's understandable to be worried. One possibility to consider is pregnancy. Have you taken a pregnancy test?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you recently had a baby?', 'Protocol': 'Have you recently had a baby?'}, {'Question': 'Have you recently had a baby?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand this can be concerning. Have you recently been ill or under stress?', 'Protocol': 'Have you recently been ill or under stress?'}, {'Question': 'I understand this can be concerning. Have you recently been ill or under stress?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you recently stopped taking oral contraceptives?', 'Protocol': 'Have you recently stopped taking oral contraceptives?'}, {'Question': 'Have you recently stopped taking oral contraceptives?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I haven't stopped taking them recently."", 'Next_question': 'Have you been exercising strenuously or lost a lot of weight in a short time?', 'Protocol': 'Have you been exercising strenuously, or have you lost a lot of weight in a short time?'}, {'Question': 'Have you been exercising strenuously or lost a lot of weight in a short time?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't been exercising strenuously or lost a lot of weight recently. My routine and weight have been pretty stable."", 'Next_question': 'Are you over age 45?', 'Protocol': 'Are you over age 45?'}, {'Question': 'Are you over age 45?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not sure if I fall into that age range."", 'Next_question': 'Could you please confirm if you are over age 45?', 'Protocol': 'Are you over age 45?'}, {'Question': 'Could you please confirm if you are over age 45?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not sure if I am over 45 or not."", 'Next_question': ""It's important to know your age for context. Can you confirm if you are over 45?"", 'Protocol': 'Are you over age 45?'}, {'Question': ""It's important to know your age for context. Can you confirm if you are over 45?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for the information. Do you have two or more of the following symptoms: increased hairiness, deepening of the voice, or unexplained weight gain?', 'Protocol': 'Do you have two or more of the following symptoms: increased hairiness; deepening of the voice; unexplained weight gain?'}, {'Question': 'Thank you for the information. Do you have two or more of the following symptoms: increased hairiness, deepening of the voice, or unexplained weight gain?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you currently taking any medication?', 'Protocol': 'Are you currently taking any medication?'}, {'Question': 'Are you currently taking any medication?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I am currently taking medication. I'm on birth control pills, and I've been taking them consistently. I also take some vitamins and supplements, but nothing else prescribed."", 'Next_question': ""It's important to talk to your doctor about your missed periods. Some medications, including birth control pills, can affect your menstrual cycle. They can help determine the cause and provide guidance."", 'Protocol': 'Talk to your doctor. Some drugs can cause periods to stop.'}]","Patient: I haven't had my period for two months and I'm starting to get worried. What could be causing this?
+TriageMD: I understand your concern. Have you ever had a period before?
+Patient: No, I haven't been exercising strenuously or lost a lot of weight recently. My routine and weight have been pretty stable.
+TriageMD: Are you over age 45?
+Patient: Yes, I am currently taking medication. I'm on birth control pills, and I've been taking them consistently. I also take some vitamins and supplements, but nothing else prescribed.
+TriageMD: It's important to talk to your doctor about your missed periods. Some medications, including birth control pills, can affect your menstrual cycle. They can help determine the cause and provide guidance."
+5,Heavy Periods Flowchart,"['N1', 'N3', 'N4', 'N6', 'A6']","['N1', 'N3', 'N4', 'N6', 'A6']",1,"Patient: I've been experiencing menstrual periods that are much heavier and longer than usual, lasting over a week. Should I be concerned?
+
+TriageMD: I understand that experiencing heavier and longer menstrual periods can be concerning. Have your periods always been heavy, or is this a recent change for you?
+
+Patient: No, this is a recent change for me. My periods have usually been pretty regular and not too heavy, but lately, they've been lasting over a week and are much heavier than what I'm used to. It's been happening for the last couple of cycles, and I'm starting to get a bit worried about it.
+
+TriageMD: I understand your concern. Did your periods become heavier after an intrauterine device (IUD) was inserted?
+
+Patient: No.
+
+TriageMD: Have your periods become more painful as well?
+
+Patient: No, not really more painful than usual. It's mostly just been the heaviness and the length that's changed.
+
+TriageMD: I understand this is concerning for you. Have you experienced only one heavy period that was a week or more late?
+
+Patient: Yes.
+
+TriageMD: It's important to see your doctor about your recent changes in menstrual patterns. A delayed period can sometimes be heavier than usual and is often not a cause for concern. However, if there's a possibility of pregnancy, it could indicate an early miscarriage. Please consult with your healthcare provider for further evaluation.","[{'Question': 'I understand that experiencing heavier and longer menstrual periods can be concerning. Have your periods always been heavy, or is this a recent change for you?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, this is a recent change for me. My periods have usually been pretty regular and not too heavy, but lately, they've been lasting over a week and are much heavier than what I'm used to. It's been happening for the last couple of cycles, and I'm starting to get a bit worried about it."", 'Next_question': 'I understand your concern. Did your periods become heavier after an intrauterine device (IUD) was inserted?', 'Protocol': 'Did your periods become heavier after an intrauterine device (IUD) was inserted?'}, {'Question': 'I understand your concern. Did your periods become heavier after an intrauterine device (IUD) was inserted?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have your periods become more painful as well?', 'Protocol': 'Have your periods become more painful?'}, {'Question': 'Have your periods become more painful as well?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, not really more painful than usual. It's mostly just been the heaviness and the length that's changed."", 'Next_question': 'I understand this is concerning for you. Have you experienced only one heavy period that was a week or more late?', 'Protocol': 'Have you had only one heavy period that was a week or more late?'}, {'Question': 'I understand this is concerning for you. Have you experienced only one heavy period that was a week or more late?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important to see your doctor about your recent changes in menstrual patterns. A delayed period can sometimes be heavier than usual and is often not a cause for concern. However, if there's a possibility of pregnancy, it could indicate an early miscarriage. Please consult with your healthcare provider for further evaluation."", 'Protocol': 'See your doctor. A delayed period can be heavier than usual and is seldom a cause for concern. However, if there is a possibility that you were pregnant, you could have had an early miscarriage.'}]","Patient: I've been experiencing menstrual periods that are much heavier and longer than usual, lasting over a week. Should I be concerned?
+TriageMD: I understand that experiencing heavier and longer menstrual periods can be concerning. Have your periods always been heavy, or is this a recent change for you?
+TriageMD: Have your periods become more painful as well?
+Patient: No, not really more painful than usual. It's mostly just been the heaviness and the length that's changed.
+Patient: Yes.
+TriageMD: It's important to see your doctor about your recent changes in menstrual patterns. A delayed period can sometimes be heavier than usual and is often not a cause for concern. However, if there's a possibility of pregnancy, it could indicate an early miscarriage. Please consult with your healthcare provider for further evaluation."
+6,Painful Periods Flowchart,"['N1', 'N2', 'N3', 'N4', 'A3']","['N1', 'N2', 'N3', 'N4', 'A3']",1,"
+TriageMD: I'm sorry to hear that you're experiencing severe cramps and heavy flow. To better understand your situation, could you let me know if you have any vaginal discharge between periods that is unusually heavy or has an unpleasant odor? Also, do you have a temperature of 100Â°F or higher?
+
+Patient: No.
+
+TriageMD: Thank you for your response. Does the pain get worse as your period continues?
+
+Patient: No, the pain doesn't necessarily get worse as my period goes on. It tends to be quite intense from the start and stays that way for a few days. It's been pretty consistent like this for a while now, and it makes it hard to go about my daily activities.
+
+TriageMD: Have you started menstruating within the past 3 months?
+
+Patient: Well, I've been having periods for a while now, so it's not something that's just started in the last three months. But I'm not sure if anything specific has changed recently that could have triggered this.
+
+TriageMD: I understand. Just to clarify, have you started menstruating within the past 3 months, or have you been experiencing these symptoms for a longer period?
+
+Patient: I've actually been menstruating for much longer than just the past few months, but these symptoms have been bothering me for a while now. It's hard to pinpoint exactly when they started getting worse, though.
+
+TriageMD: Just to confirm, have you started menstruating within the past 3 months, or have you been experiencing these symptoms for a longer period?
+
+Patient: I'm not entirely sure how long exactly these symptoms have been going on, but it feels like it's been a while. I can't say for certain if it's been more than three months or not.
+
+TriageMD: I understand that it can be difficult to track symptoms. Just to clarify, have you started menstruating within the past 3 months?
+
+Patient: No.
+
+TriageMD: Have you had painful periods for most of your adult life, and is the pain the same as usual?
+
+Patient: Yes.
+
+TriageMD: It sounds like you've been dealing with painful periods for a while. While the pain is unlikely to be caused by an underlying disorder, it's important to talk to your doctor about your symptoms. They can help you find ways to manage the pain and heavy flow more effectively. ","[{'Question': ""I'm sorry to hear that you're experiencing severe cramps and heavy flow. To better understand your situation, could you let me know if you have any vaginal discharge between periods that is unusually heavy or has an unpleasant odor? Also, do you have a temperature of 100Â°F or higher?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for your response. Does the pain get worse as your period continues?', 'Protocol': 'Does the pain get worse as your period continues?'}, {'Question': 'Thank you for your response. Does the pain get worse as your period continues?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, the pain doesn't necessarily get worse as my period goes on. It tends to be quite intense from the start and stays that way for a few days. It's been pretty consistent like this for a while now, and it makes it hard to go about my daily activities."", 'Next_question': 'Have you started menstruating within the past 3 months?', 'Protocol': 'Have you started menstruating within the past 3 months?'}, {'Question': 'Have you started menstruating within the past 3 months?', 'Pattern': 'inconclusive', 'Patient_response': ""Well, I've been having periods for a while now, so it's not something that's just started in the last three months. But I'm not sure if anything specific has changed recently that could have triggered this."", 'Next_question': 'I understand. Just to clarify, have you started menstruating within the past 3 months, or have you been experiencing these symptoms for a longer period?', 'Protocol': 'Have you started menstruating within the past 3 months?'}, {'Question': 'I understand. Just to clarify, have you started menstruating within the past 3 months, or have you been experiencing these symptoms for a longer period?', 'Pattern': 'inconclusive', 'Patient_response': ""I've actually been menstruating for much longer than just the past few months, but these symptoms have been bothering me for a while now. It's hard to pinpoint exactly when they started getting worse, though."", 'Next_question': 'Just to confirm, have you started menstruating within the past 3 months, or have you been experiencing these symptoms for a longer period?', 'Protocol': 'Have you started menstruating within the past 3 months?'}, {'Question': 'Just to confirm, have you started menstruating within the past 3 months, or have you been experiencing these symptoms for a longer period?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure how long exactly these symptoms have been going on, but it feels like it's been a while. I can't say for certain if it's been more than three months or not."", 'Next_question': 'I understand that it can be difficult to track symptoms. Just to clarify, have you started menstruating within the past 3 months?', 'Protocol': 'Have you started menstruating within the past 3 months?'}, {'Question': 'I understand that it can be difficult to track symptoms. Just to clarify, have you started menstruating within the past 3 months?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you had painful periods for most of your adult life, and is the pain the same as usual?', 'Protocol': 'Have you had painful periods for most of your adult life, and is the pain the same as usual?'}, {'Question': 'Have you had painful periods for most of your adult life, and is the pain the same as usual?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It sounds like you've been dealing with painful periods for a while. While the pain is unlikely to be caused by an underlying disorder, it's important to talk to your doctor about your symptoms. They can help you find ways to manage the pain and heavy flow more effectively."", 'Protocol': 'Talk to your doctor. The pain is unlikely to be caused by an underlying disorder.'}]","TriageMD: I'm sorry to hear that you're experiencing severe cramps and heavy flow. To better understand your situation, could you let me know if you have any vaginal discharge between periods that is unusually heavy or has an unpleasant odor? Also, do you have a temperature of 100°F or higher?
+Patient: No.
+TriageMD: Just to confirm, have you started menstruating within the past 3 months, or have you been experiencing these symptoms for a longer period?
+Patient: I'm not entirely sure how long exactly these symptoms have been going on, but it feels like it's been a while. I can't say for certain if it's been more than three months or not.
+Patient: Yes.
+TriageMD: It sounds like you've been dealing with painful periods for a while. While the pain is unlikely to be caused by an underlying disorder, it's important to talk to your doctor about your symptoms. They can help you find ways to manage the pain and heavy flow more effectively."
+7,Pelvic Pain In Women Flowchart,"['N1', 'N2', 'N3', 'A2']","['N1', 'N2', 'N3', 'A2']",1,"Patient: I've been experiencing persistent pelvic pain for the past few weeks and I'm getting worried. Can I get some advice on what to do next?
+
+TriageMD: I'm sorry to hear that you're experiencing persistent pelvic pain. To better understand your situation, could you let me know if you have been experiencing any vaginal bleeding between periods?
+
+Patient: No.
+
+TriageMD: Thank you for your response. Do you have any vaginal discharge between periods that is unusually heavy or has an unpleasant odor? Additionally, have you experienced a temperature of 100Â°F or higher?
+
+Patient: No.
+
+TriageMD: I understand your concerns. Are you urinating more often than usual, or is urination painful?
+
+Patient: Yes, I've noticed that I'm urinating more often than usual, and it can be quite painful at times. It's been happening alongside the pelvic pain, which is why I'm getting a bit concerned.
+
+TriageMD: I'm sorry to hear that you're experiencing these symptoms. Itâ€™s important that you see your doctor as soon as possible. Your bladder may be inflamed due to an infection, and a healthcare professional can provide the appropriate evaluation and treatment. Take care.","[{'Question': ""I'm sorry to hear that you're experiencing persistent pelvic pain. To better understand your situation, could you let me know if you have been experiencing any vaginal bleeding between periods?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for your response. Do you have any vaginal discharge between periods that is unusually heavy or has an unpleasant odor? Additionally, have you experienced a temperature of 100Â°F or higher?', 'Protocol': 'Do you have a vaginal discharge between periods that is unusually heavy or that has an unpleasant odor, or is your temperature 100Â°F or higher?'}, {'Question': 'Thank you for your response. Do you have any vaginal discharge between periods that is unusually heavy or has an unpleasant odor? Additionally, have you experienced a temperature of 100Â°F or higher?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concerns. Are you urinating more often than usual, or is urination painful?', 'Protocol': 'Are you urinating more often than usual, or is urination painful?'}, {'Question': 'I understand your concerns. Are you urinating more often than usual, or is urination painful?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I've noticed that I'm urinating more often than usual, and it can be quite painful at times. It's been happening alongside the pelvic pain, which is why I'm getting a bit concerned."", 'Next_question': ""I'm sorry to hear that you're experiencing these symptoms. Itâ€™s important that you see your doctor as soon as possible. Your bladder may be inflamed due to an infection, and a healthcare professional can provide the appropriate evaluation and treatment. Take care."", 'Protocol': 'See your doctor. Your bladder may have become inflamed as a result of infection.'}]","Patient: I've been experiencing persistent pelvic pain for the past few weeks and I'm getting worried. Can I get some advice on what to do next?
+TriageMD: I'm sorry to hear that you're experiencing persistent pelvic pain. To better understand your situation, could you let me know if you have been experiencing any vaginal bleeding between periods?
+Patient: No.
+TriageMD: I understand your concerns. Are you urinating more often than usual, or is urination painful?
+Patient: Yes, I've noticed that I'm urinating more often than usual, and it can be quite painful at times. It's been happening alongside the pelvic pain, which is why I'm getting a bit concerned.
+TriageMD: I'm sorry to hear that you're experiencing these symptoms. It's important that you see your doctor as soon as possible. Your bladder may be inflamed due to an infection, and a healthcare professional can provide the appropriate evaluation and treatment. Take care."
+8,Irregular Vaginal Bleeding Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A5']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'A5']",1,"Patient: I've been experiencing unexpected bleeding between my periods and I'm worried about what might be causing it.
+
+TriageMD: I understand your concern about unexpected bleeding between periods. One possibility to consider is whether you could be pregnant. It might be a good idea to take a pregnancy test or consult with a healthcare provider for further evaluation.
+
+Patient: Yes, there's a possibility I could be pregnant. I've had unprotected sex recently, and my period is usually quite regular, so this unexpected bleeding has me a bit concerned. I think taking a pregnancy test would be a good first step, and I'll definitely reach out to my healthcare provider to discuss this further.
+
+TriageMD: It's important to consider whether you could be more than 3 months pregnant, as this could affect your situation. Please take a pregnancy test and reach out to your healthcare provider for further guidance. Your health and well-being are important.
+
+Patient: No, I don't think I could be more than 3 months pregnant. My last period was about a month ago, and the timing of the unprotected sex was more recent than that. I'll definitely take a pregnancy test soon to make sure, and then I'll reach out to my healthcare provider to discuss the results and any next steps.
+
+TriageMD: It's good that you're planning to take a pregnancy test and consult your healthcare provider. In the meantime, do you have any severe abdominal pain?
+
+Patient: No.
+
+TriageMD: Has your pregnancy been confirmed? It's important to know this before proceeding with any further steps.
+
+Patient: No.
+
+TriageMD: Did you have your last period more than 6 months ago?
+
+Patient: No, it hasn't been that long. My last period was about a month ago, so it's definitely more recent than six months.
+
+TriageMD: Do you have a heavy, watery vaginal discharge, or does the bleeding occur immediately after intercourse?
+
+Patient: Yes.
+
+TriageMD: It's important that you see a doctor immediately. The symptoms you're experiencing could be serious, and there is a possibility of cervical or uterine cancer. Please seek medical attention as soon as possible.","[{'Question': 'I understand your concern about unexpected bleeding between periods. One possibility to consider is whether you could be pregnant. It might be a good idea to take a pregnancy test or consult with a healthcare provider for further evaluation.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, there's a possibility I could be pregnant. I've had unprotected sex recently, and my period is usually quite regular, so this unexpected bleeding has me a bit concerned. I think taking a pregnancy test would be a good first step, and I'll definitely reach out to my healthcare provider to discuss this further."", 'Next_question': ""It's important to consider whether you could be more than 3 months pregnant, as this could affect your situation. Please take a pregnancy test and reach out to your healthcare provider for further guidance. Your health and well-being are important."", 'Protocol': 'Could you be more than 3 months pregnant?'}, {'Question': ""It's important to consider whether you could be more than 3 months pregnant, as this could affect your situation. Please take a pregnancy test and reach out to your healthcare provider for further guidance. Your health and well-being are important."", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't think I could be more than 3 months pregnant. My last period was about a month ago, and the timing of the unprotected sex was more recent than that. I'll definitely take a pregnancy test soon to make sure, and then I'll reach out to my healthcare provider to discuss the results and any next steps."", 'Next_question': ""It's good that you're planning to take a pregnancy test and consult your healthcare provider. In the meantime, do you have any severe abdominal pain?"", 'Protocol': 'Do you have severe abdominal pain?'}, {'Question': ""It's good that you're planning to take a pregnancy test and consult your healthcare provider. In the meantime, do you have any severe abdominal pain?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""Has your pregnancy been confirmed? It's important to know this before proceeding with any further steps."", 'Protocol': 'Has your pregnancy been confirmed?'}, {'Question': ""Has your pregnancy been confirmed? It's important to know this before proceeding with any further steps."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Did you have your last period more than 6 months ago?', 'Protocol': 'Did you have your last period more than 6 months ago?'}, {'Question': 'Did you have your last period more than 6 months ago?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, it hasn't been that long. My last period was about a month ago, so it's definitely more recent than six months."", 'Next_question': 'Do you have a heavy, watery vaginal discharge, or does the bleeding occur immediately after intercourse?', 'Protocol': 'Do you have a heavy, watery vaginal discharge, or does the bleeding occur immediately after intercourse?'}, {'Question': 'Do you have a heavy, watery vaginal discharge, or does the bleeding occur immediately after intercourse?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important that you see a doctor immediately. The symptoms you're experiencing could be serious, and there is a possibility of cervical or uterine cancer. Please seek medical attention as soon as possible."", 'Protocol': 'See a doctor immediately. You may have cancer of the cervix or cancer of the uterus.'}]","Patient: I've been experiencing unexpected bleeding between my periods and I'm worried about what might be causing it.
+TriageMD: I understand your concern about unexpected bleeding between periods. One possibility to consider is whether you could be pregnant. It might be a good idea to take a pregnancy test or consult with a healthcare provider for further evaluation.
+TriageMD: Has your pregnancy been confirmed? It's important to know this before proceeding with any further steps.
+Patient: No.
+Patient: Yes.
+TriageMD: It's important that you see a doctor immediately. The symptoms you're experiencing could be serious, and there is a possibility of cervical or uterine cancer. Please seek medical attention as soon as possible."
+9,Abnormal Vaginal Discharge Flowchart,"['N1', 'N2', 'N4', 'N5', 'N3', 'A3']","['N1', 'N2', 'N4', 'N5', 'N3', 'A3']",1,"Patient: I've noticed my vaginal discharge has changed in color and consistency recently. Should I be worried about this?
+
+TriageMD: If your discharge looks normal in color and consistency but is heavier than usual, it may not be a cause for immediate concern. However, if you notice any unusual colors, strong odors, or accompanying symptoms like itching or discomfort, it would be best to consult a healthcare professional for further evaluation. Your health is important, so don't hesitate to reach out if you're feeling uncertain.
+
+Patient: Yes, I think so, but I'm not entirely sure. It's a bit different than usual, but I can't say if it's a strong odor or not.
+
+TriageMD: I understand your concern. Can you describe the color and consistency of the discharge? Is it heavier than usual but still within the range of what you would consider normal? This information can help determine if you should seek further evaluation.
+
+Patient: Yes.
+
+TriageMD: Do you have any itching or soreness in the vaginal area?
+
+Patient: No, I don't think so. I haven't really noticed any itching or soreness, at least not anything that stands out to me.
+
+TriageMD: Thank you for sharing that. Are you currently taking oral contraceptives, or could you be pregnant? This information can help in understanding your situation better.
+
+Patient: Oh, I just love trying out new recipes in the kitchen! Cooking is such a relaxing hobby for me.
+
+TriageMD: Iâ€™m glad to hear you enjoy cooking! Just to clarify, are you currently taking oral contraceptives, or could you be pregnant?
+
+Patient: No, I'm not taking oral contraceptives, and I don't think I'm pregnant. My menstrual cycle has been regular, and I haven't noticed any other signs that would suggest pregnancy. I'm just trying to figure out if the change in discharge is something to be concerned about.       
+
+TriageMD: Thank you for the information. Is the discharge particularly heavy about halfway between your periods? This can help determine if it's related to your menstrual cycle or something else.
+
+Patient: No, I haven't noticed the discharge being particularly heavy around the middle of my cycle. It seems to be more consistent throughout the month. I just noticed that it's a bit different in color and consistency than what I'm used to.
+
+TriageMD: Is the discharge white and lumpy? This could indicate a yeast infection, which is common and can be treated. If so, it would be a good idea to consult a healthcare professional for further evaluation.
+
+Patient: Yes, the discharge is white and a bit lumpy, which is different from what I'm used to. I haven't experienced any itching or soreness, but the change in discharge has caught my attention. I think it might be a good idea to get it checked out just in case it's a yeast infection or something else that needs treatment.
+
+TriageMD: It sounds like you may have a vaginal yeast infection, especially given the white, lumpy discharge. I recommend seeing your doctor for an evaluation and appropriate treatment. It's always best to get any changes checked out. Take care!","[{'Question': ""If your discharge looks normal in color and consistency but is heavier than usual, it may not be a cause for immediate concern. However, if you notice any unusual colors, strong odors, or accompanying symptoms like itching or discomfort, it would be best to consult a healthcare professional for further evaluation. Your health is important, so don't hesitate to reach out if you're feeling uncertain."", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I think so, but I'm not entirely sure. It's a bit different than usual, but I can't say if it's a strong odor or not."", 'Next_question': 'I understand your concern. Can you describe the color and consistency of the discharge? Is it heavier than usual but still within the range of what you would consider normal? This information can help determine if you should seek further evaluation.', 'Protocol': 'Does the discharge look normal in color and consistency but is heavier than usual??'}, {'Question': 'I understand your concern. Can you describe the color and consistency of the discharge? Is it heavier than usual but still within the range of what you would consider normal? This information can help determine if you should seek further evaluation.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you have any itching or soreness in the vaginal area?', 'Protocol': 'Do you have itching or soreness in the vaginal area?'}, {'Question': 'Do you have any itching or soreness in the vaginal area?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think so. I haven't really noticed any itching or soreness, at least not anything that stands out to me."", 'Next_question': 'Thank you for sharing that. Are you currently taking oral contraceptives, or could you be pregnant? This information can help in understanding your situation better.', 'Protocol': 'Are you taking oral contraceptives, or could you be pregnant?'}, {'Question': 'Thank you for sharing that. Are you currently taking oral contraceptives, or could you be pregnant? This information can help in understanding your situation better.', 'Pattern': 'irrelevant', 'Patient_response': 'Oh, I just love trying out new recipes in the kitchen! Cooking is such a relaxing hobby for me.', 'Next_question': 'Iâ€™m glad to hear you enjoy cooking! Just to clarify, are you currently taking oral contraceptives, or could you be pregnant?', 'Protocol': 'Are you taking oral contraceptives, or could you be pregnant?'}, {'Question': 'Iâ€™m glad to hear you enjoy cooking! Just to clarify, are you currently taking oral contraceptives, or could you be pregnant?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I'm not taking oral contraceptives, and I don't think I'm pregnant. My menstrual cycle has been regular, and I haven't noticed any other signs that would suggest pregnancy. I'm just trying to figure out if the change in discharge is something to be concerned about."", 'Next_question': ""Thank you for the information. Is the discharge particularly heavy about halfway between your periods? This can help determine if it's related to your menstrual cycle or something else."", 'Protocol': 'Is the discharge particularly heavy about halfway between periods?'}, {'Question': ""Thank you for the information. Is the discharge particularly heavy about halfway between your periods? This can help determine if it's related to your menstrual cycle or something else."", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed the discharge being particularly heavy around the middle of my cycle. It seems to be more consistent throughout the month. I just noticed that it's a bit different in color and consistency than what I'm used to."", 'Next_question': 'Is the discharge white and lumpy? This could indicate a yeast infection, which is common and can be treated. If so, it would be a good idea to consult a healthcare professional for further evaluation.', 'Protocol': 'Is the discharge white and lumpy?'}, {'Question': 'Is the discharge white and lumpy? This could indicate a yeast infection, which is common and can be treated. If so, it would be a good idea to consult a healthcare professional for further evaluation.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, the discharge is white and a bit lumpy, which is different from what I'm used to. I haven't experienced any itching or soreness, but the change in discharge has caught my attention. I think it might be a good idea to get it checked out just in case it's a yeast infection or something else that needs treatment."", 'Next_question': ""It sounds like you may have a vaginal yeast infection, especially given the white, lumpy discharge. I recommend seeing your doctor for an evaluation and appropriate treatment. It's always best to get any changes checked out. Take care!"", 'Protocol': 'See your doctor. You may have a vaginal yeast infection.'}]","Patient: I've noticed my vaginal discharge has changed in color and consistency recently. Should I be worried about this?
+TriageMD: If your discharge looks normal in color and consistency but is heavier than usual, it may not be a cause for immediate concern. However, if you notice any unusual colors, strong odors, or accompanying symptoms like itching or discomfort, it would be best to consult a healthcare professional for further evaluation. Your health is important, so don't hesitate to reach out if you're feeling uncertain.
+Patient: Oh, I just love trying out new recipes in the kitchen! Cooking is such a relaxing hobby for me.
+TriageMD: I'm glad to hear you enjoy cooking! Just to clarify, are you currently taking oral contraceptives, or could you be pregnant?
+Patient: Yes, the discharge is white and a bit lumpy, which is different from what I'm used to. I haven't experienced any itching or soreness, but the change in discharge has caught my attention. I think it might be a good idea to get it checked out just in case it's a yeast infection or something else that needs treatment.
+TriageMD: It sounds like you may have a vaginal yeast infection, especially given the white, lumpy discharge. I recommend seeing your doctor for an evaluation and appropriate treatment. It's always best to get any changes checked out. Take care!"
+10,Vaginal Irritation Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'A5']","['N1', 'N2', 'N3', 'N4', 'N5', 'N7', 'A5']",1,"Patient: I've been experiencing some itching and soreness around my vaginal area for a few days. What should I do?
+
+TriageMD: I'm sorry to hear that you're experiencing discomfort. Do you have a vaginal discharge that is different than usual in color or consistency?
+
+Patient: No, I haven't noticed any unusual discharge. It's mostly just the itching and soreness that's been bothering me.
+
+TriageMD: I understand how uncomfortable this must be for you. Do you use any vaginal douches, sprays, or spermicidal creams or jellies?
+
+Patient: No.
+
+TriageMD: Does the skin around your vagina look abnormal in any way?
+
+Patient: No.
+
+TriageMD: I understand this is uncomfortable for you. Does any other part of your body itch as well?
+
+Patient: Not really, it's mostly just in that area. I mean, maybe a little here and there, but nothing like the itching and soreness I'm feeling down there.
+
+TriageMD: I understand. Just to clarify, is there any other part of your body that itches significantly, or is it primarily focused on the vaginal area?
+
+Patient: No, it's mostly just in the vaginal area. I might have a little itch elsewhere sometimes, but nothing major or consistent like what I'm experiencing down there.
+
+TriageMD: I understand. Just to confirm, is the itching and soreness primarily isolated to the vaginal area, with only occasional minor itching elsewhere?
+
+Patient: Well, it's mostly the vaginal area that's really bothering me, but I can't say for sure if it's completely isolated. Sometimes I do get a little itch elsewhere, but it's not as consistent or intense as what I'm feeling down there.
+
+TriageMD: I understand that the vaginal area is your main concern. Just to clarify, do you experience any significant itching in other areas of your body, or is it mostly mild and occasional?
+
+Patient: No.
+
+TriageMD: Thank you for clarifying. Are you experiencing any changes in urination, such as producing more urine than usual or needing to get up at night to urinate?
+
+Patient: No, I haven't really noticed any big changes in how often I'm going or anything like that. It's mostly just the itching and soreness that's been bothering me.
+
+TriageMD: Are you over the age of 45?
+
+Patient: No.
+
+TriageMD: It sounds like you're experiencing discomfort that could be caused by a variety of factors. I recommend seeing your doctor for a proper evaluation and to discuss your symptoms further. They can provide the best guidance and treatment options for you.","[{'Question': ""I'm sorry to hear that you're experiencing discomfort. Do you have a vaginal discharge that is different than usual in color or consistency?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any unusual discharge. It's mostly just the itching and soreness that's been bothering me."", 'Next_question': 'I understand how uncomfortable this must be for you. Do you use any vaginal douches, sprays, or spermicidal creams or jellies?', 'Protocol': 'Do you use a vaginal douche or spray or a spermicidal cream or jelly?'}, {'Question': 'I understand how uncomfortable this must be for you. Do you use any vaginal douches, sprays, or spermicidal creams or jellies?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Does the skin around your vagina look abnormal in any way?', 'Protocol': 'Does the skin around your vagina look abnormal?'}, {'Question': 'Does the skin around your vagina look abnormal in any way?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand this is uncomfortable for you. Does any other part of your body itch as well?', 'Protocol': 'Does any other part of your body itch?'}, {'Question': 'I understand this is uncomfortable for you. Does any other part of your body itch as well?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, it's mostly just in that area. I mean, maybe a little here and there, but nothing like the itching and soreness I'm feeling down there."", 'Next_question': 'I understand. Just to clarify, is there any other part of your body that itches significantly, or is it primarily focused on the vaginal area?', 'Protocol': 'Does any other part of your body itch?'}, {'Question': 'I understand. Just to clarify, is there any other part of your body that itches significantly, or is it primarily focused on the vaginal area?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, it's mostly just in the vaginal area. I might have a little itch elsewhere sometimes, but nothing major or consistent like what I'm experiencing down there."", 'Next_question': 'I understand. Just to confirm, is the itching and soreness primarily isolated to the vaginal area, with only occasional minor itching elsewhere?', 'Protocol': 'Does any other part of your body itch?'}, {'Question': 'I understand. Just to confirm, is the itching and soreness primarily isolated to the vaginal area, with only occasional minor itching elsewhere?', 'Pattern': 'inconclusive', 'Patient_response': ""Well, it's mostly the vaginal area that's really bothering me, but I can't say for sure if it's completely isolated. Sometimes I do get a little itch elsewhere, but it's not as consistent or intense as what I'm feeling down there."", 'Next_question': 'I understand that the vaginal area is your main concern. Just to clarify, do you experience any significant itching in other areas of your body, or is it mostly mild and occasional?', 'Protocol': 'Does any other part of your body itch?'}, {'Question': 'I understand that the vaginal area is your main concern. Just to clarify, do you experience any significant itching in other areas of your body, or is it mostly mild and occasional?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for clarifying. Are you experiencing any changes in urination, such as producing more urine than usual or needing to get up at night to urinate?', 'Protocol': 'Do you seem to be producing more urine than usual, or do you get up at night to urinate?'}, {'Question': 'Thank you for clarifying. Are you experiencing any changes in urination, such as producing more urine than usual or needing to get up at night to urinate?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I haven't really noticed any big changes in how often I'm going or anything like that. It's mostly just the itching and soreness that's been bothering me."", 'Next_question': 'Are you over the age of 45?', 'Protocol': 'Are you over age 45?'}, {'Question': 'Are you over the age of 45?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It sounds like you're experiencing discomfort that could be caused by a variety of factors. I recommend seeing your doctor for a proper evaluation and to discuss your symptoms further. They can provide the best guidance and treatment options for you."", 'Protocol': 'See your doctor if you are unable to make a decision from self-triage.'}]","Patient: I've been experiencing some itching and soreness around my vaginal area for a few days. What should I do?
+TriageMD: I'm sorry to hear that you're experiencing discomfort. Do you have a vaginal discharge that is different than usual in color or consistency?
+Patient: No, it's mostly just in the vaginal area. I might have a little itch elsewhere sometimes, but nothing major or consistent like what I'm experiencing down there.
+TriageMD: I understand. Just to confirm, is the itching and soreness primarily isolated to the vaginal area, with only occasional minor itching elsewhere?
+Patient: No.
+TriageMD: It sounds like you're experiencing discomfort that could be caused by a variety of factors. I recommend seeing your doctor for a proper evaluation and to discuss your symptoms further. They can provide the best guidance and treatment options for you."
+11,Painful Intercourse In Women Flowchart,"['N1', 'N2', 'N4', 'N5', 'N6', 'N7', 'N9', 'N10', 'A7']","['N1', 'N2', 'N4', 'N5', 'N6', 'N7', 'N9', 'N10', 'A7']",1,"Patient: I've been experiencing pain during intercourse and would like to understand what might be causing this discomfort.
+
+TriageMD: I'm sorry to hear that you're experiencing pain during intercourse. Can you tell me if this was your first experience with intercourse, or is this a new sexual relationship?
+
+Patient: No.
+
+TriageMD: Did you recently have a baby?
+
+Patient: No, I haven't recently had a baby. This pain during intercourse has been a recurring issue, and I'm trying to figure out what might be causing it. It's been quite uncomfortable, and I'm not sure if it's something physical or if there could be another underlying issue.        
+
+TriageMD: I understand how uncomfortable this must be for you. Do you have any unusual vaginal discharge? This information could help in understanding the cause of your pain.
+
+Patient: No, I haven't noticed any unusual discharge. Everything seems normal in that regard. The pain is more of a persistent discomfort during intercourse, and I'm not sure if it's related to something physical or if there could be another reason for it.
+
+TriageMD: I understand this can be concerning. Do you have persistent itching around the genital area? This information could help in identifying the cause of your discomfort.
+
+Patient: No, I haven't really noticed any persistent itching. It's more about the pain during intercourse that's been bothering me. I'm not entirely sure if there's something else going on that I might not be aware of.
+
+TriageMD: I understand this is frustrating. Just to confirm, do you have any persistent itching around the genital area? This could help in understanding your discomfort better.
+
+Patient: No, I haven't experienced any persistent itching around the genital area. The main issue is really just the pain during intercourse. It's not accompanied by any other symptoms like itching or unusual discharge, so I'm trying to figure out what might be causing it. It could be something physical, or maybe there's another underlying issue that I'm not aware of.
+
+TriageMD: I understand this is concerning for you. Just to clarify, do you have any persistent itching around the genital area? This could help in understanding your discomfort better.
+
+Patient: No, I haven't really noticed any persistent itching. It's mainly just the pain during intercourse that's been bothering me, and I'm not entirely sure what's causing it.
+
+TriageMD: I understand how concerning this is for you. Are you urinating more often than usual? This information could help in understanding your situation better.
+
+Patient: No, I haven't really noticed any changes in how often I'm urinating. It seems pretty normal to me, but I guess it's possible I might not have paid close attention to it.
+
+TriageMD: I understand. Just to confirm, are you urinating more often than usual? This detail could help in understanding your discomfort better.
+
+Patient: I'm not entirely sure if there's been a change in how often I'm urinating. It seems pretty normal to me, but I guess I haven't really been keeping track closely.
+
+TriageMD: I understand. Just to clarify, are you urinating more often than usual? This detail could help in understanding your discomfort better.
+
+Patient: No.
+
+TriageMD: Thank you for your patience. Does your vagina seem dry, making penetration uncomfortable and difficult? This could be a factor in the pain you're experiencing.
+
+Patient: No, I haven't noticed any dryness. Everything seems to be normal in that regard. The pain doesn't seem to be related to dryness, as there's usually enough lubrication. It's more about the discomfort during intercourse itself, and I'm trying to figure out what might be causing it.
+
+TriageMD: I understand this is difficult for you. Do you experience a sharp pain deep in your pelvis during intercourse? This detail could help in understanding your discomfort better.
+
+Patient: Yes.
+
+TriageMD: Iâ€™m sorry to hear that youâ€™re experiencing this discomfort. Are your periods more painful than they used to be? This information could help in understanding your situation better.
+
+Patient: Yes.
+
+TriageMD: It sounds like you may be experiencing symptoms related to a condition such as endometriosis or fibroids. I recommend seeing your doctor for a thorough evaluation and to discuss your symptoms further. They can provide you with the appropriate care and support.","[{'Question': ""I'm sorry to hear that you're experiencing pain during intercourse. Can you tell me if this was your first experience with intercourse, or is this a new sexual relationship?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Did you recently have a baby?', 'Protocol': 'Did you recently have a baby?'}, {'Question': 'Did you recently have a baby?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't recently had a baby. This pain during intercourse has been a recurring issue, and I'm trying to figure out what might be causing it. It's been quite uncomfortable, and I'm not sure if it's something physical or if there could be another underlying issue."", 'Next_question': 'I understand how uncomfortable this must be for you. Do you have any unusual vaginal discharge? This information could help in understanding the cause of your pain.', 'Protocol': 'Do you have an unusual vaginal discharge?'}, {'Question': 'I understand how uncomfortable this must be for you. Do you have any unusual vaginal discharge? This information could help in understanding the cause of your pain.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any unusual discharge. Everything seems normal in that regard. The pain is more of a persistent discomfort during intercourse, and I'm not sure if it's related to something physical or if there could be another reason for it."", 'Next_question': 'I understand this can be concerning. Do you have persistent itching around the genital area? This information could help in identifying the cause of your discomfort.', 'Protocol': 'Do you have persistent itching around the genital area?'}, {'Question': 'I understand this can be concerning. Do you have persistent itching around the genital area? This information could help in identifying the cause of your discomfort.', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I haven't really noticed any persistent itching. It's more about the pain during intercourse that's been bothering me. I'm not entirely sure if there's something else going on that I might not be aware of."", 'Next_question': 'I understand this is frustrating. Just to confirm, do you have any persistent itching around the genital area? This could help in understanding your discomfort better.', 'Protocol': 'Do you have persistent itching around the genital area?'}, {'Question': 'I understand this is frustrating. Just to confirm, do you have any persistent itching around the genital area? This could help in understanding your discomfort better.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't experienced any persistent itching around the genital area. The main issue is really just the pain during intercourse. It's not accompanied by any other symptoms like itching or unusual discharge, so I'm trying to figure out what might be causing it. It could be something physical, or maybe there's another underlying issue that I'm not aware of."", 'Next_question': 'I understand this is concerning for you. Just to clarify, do you have any persistent itching around the genital area? This could help in understanding your discomfort better.', 'Protocol': 'Do you have persistent itching around the genital area?'}, {'Question': 'I understand this is concerning for you. Just to clarify, do you have any persistent itching around the genital area? This could help in understanding your discomfort better.', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I haven't really noticed any persistent itching. It's mainly just the pain during intercourse that's been bothering me, and I'm not entirely sure what's causing it."", 'Next_question': 'I understand how concerning this is for you. Are you urinating more often than usual? This information could help in understanding your situation better.', 'Protocol': 'Are you urinating more often than usual?'}, {'Question': 'I understand how concerning this is for you. Are you urinating more often than usual? This information could help in understanding your situation better.', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I haven't really noticed any changes in how often I'm urinating. It seems pretty normal to me, but I guess it's possible I might not have paid close attention to it."", 'Next_question': 'I understand. Just to confirm, are you urinating more often than usual? This detail could help in understanding your discomfort better.', 'Protocol': 'Are you urinating more often than usual?'}, {'Question': 'I understand. Just to confirm, are you urinating more often than usual? This detail could help in understanding your discomfort better.', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure if there's been a change in how often I'm urinating. It seems pretty normal to me, but I guess I haven't really been keeping track closely."", 'Next_question': 'I understand. Just to clarify, are you urinating more often than usual? This detail could help in understanding your discomfort better.', 'Protocol': 'Are you urinating more often than usual?'}, {'Question': 'I understand. Just to clarify, are you urinating more often than usual? This detail could help in understanding your discomfort better.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""Thank you for your patience. Does your vagina seem dry, making penetration uncomfortable and difficult? This could be a factor in the pain you're experiencing."", 'Protocol': 'Does your vagina seem dry, making penetration uncomfortable and difficult?'}, {'Question': ""Thank you for your patience. Does your vagina seem dry, making penetration uncomfortable and difficult? This could be a factor in the pain you're experiencing."", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't noticed any dryness. Everything seems to be normal in that regard. The pain doesn't seem to be related to dryness, as there's usually enough lubrication. It's more about the discomfort during intercourse itself, and I'm trying to figure out what might be causing it."", 'Next_question': 'I understand this is difficult for you. Do you experience a sharp pain deep in your pelvis during intercourse? This detail could help in understanding your discomfort better.', 'Protocol': 'Do you have a sharp pain deep in your pelvis during intercourse?'}, {'Question': 'I understand this is difficult for you. Do you experience a sharp pain deep in your pelvis during intercourse? This detail could help in understanding your discomfort better.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Iâ€™m sorry to hear that youâ€™re experiencing this discomfort. Are your periods more painful than they used to be? This information could help in understanding your situation better.', 'Protocol': 'Are your periods more painful than they used to be?'}, {'Question': 'Iâ€™m sorry to hear that youâ€™re experiencing this discomfort. Are your periods more painful than they used to be? This information could help in understanding your situation better.', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like you may be experiencing symptoms related to a condition such as endometriosis or fibroids. I recommend seeing your doctor for a thorough evaluation and to discuss your symptoms further. They can provide you with the appropriate care and support.', 'Protocol': 'See your doctor. You may have a disorder such as endometriosis fibroids.'}]","Patient: I've been experiencing pain during intercourse and would like to understand what might be causing this discomfort.
+TriageMD: I'm sorry to hear that you're experiencing pain during intercourse. Can you tell me if this was your first experience with intercourse, or is this a new sexual relationship?
+TriageMD: I understand how concerning this is for you. Are you urinating more often than usual? This information could help in understanding your situation better.
+Patient: No, I haven't really noticed any changes in how often I'm urinating. It seems pretty normal to me, but I guess it's possible I might not have paid close attention to it.
+Patient: Yes.
+TriageMD: It sounds like you may be experiencing symptoms related to a condition such as endometriosis or fibroids. I recommend seeing your doctor for a thorough evaluation and to discuss your symptoms further. They can provide you with the appropriate care and support."
+12,Pain Or Lumps In The Breast Flowchart,"['N1', 'N2', 'A1']","['N1', 'N2', 'A1']",1,"Patient: I've noticed a tender lump in my right breast and it's been there for a couple of weeks now. Should I be concerned?
+
+TriageMD: I understand your concern about the tender lump in your breast. Have you had a baby within the past 4 months?
+
+Patient: No, I haven't had a baby recently.
+
+TriageMD: I understand this can be concerning. Can you see or feel one or more lumps in your breast?
+
+Patient: Yes.
+
+TriageMD: It's important to see your doctor as soon as possible. While you may have a harmless cyst or tumor, such as a fibroadenoma, there is also a possibility of breast cancer. Getting a professional evaluation is the best way to determine whatâ€™s going on. Take care.","[{'Question': 'I understand your concern about the tender lump in your breast. Have you had a baby within the past 4 months?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I haven't had a baby recently."", 'Next_question': 'I understand this can be concerning. Can you see or feel one or more lumps in your breast?', 'Protocol': 'Can you see or feel one or more lumps in your breast?'}, {'Question': 'I understand this can be concerning. Can you see or feel one or more lumps in your breast?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important to see your doctor as soon as possible. While you may have a harmless cyst or tumor, such as a fibroadenoma, there is also a possibility of breast cancer. Getting a professional evaluation is the best way to determine whatâ€™s going on. Take care."", 'Protocol': 'See your doctor. You probably have a harmless cyst or tumor (such as a fibroadenoma). However, you could have breast cancer.'}]","Patient: I've noticed a tender lump in my right breast and it's been there for a couple of weeks now. Should I be concerned?
+TriageMD: I understand your concern about the tender lump in your breast. Have you had a baby within the past 4 months?
+TriageMD: I understand this can be concerning. Can you see or feel one or more lumps in your breast?
+Patient: Yes.
+Patient: Yes.
+TriageMD: It's important to see your doctor as soon as possible. While you may have a harmless cyst or tumor, such as a fibroadenoma, there is also a possibility of breast cancer. Getting a professional evaluation is the best way to determine what's going on. Take care."
+13,Breast Problems In New Mothers Flowchart,"['N1', 'N2', 'N3', 'N4', 'N6', 'N7', 'A5']","['N1', 'N2', 'N3', 'N4', 'N6', 'N7', 'A5']",1,"Patient: I've noticed some pain and lumps in my breasts since giving birth a few months ago. Should I be concerned?
+
+TriageMD: I understand your concern. Can you describe if you can see or feel one or more lumps in your breast?
+
+Patient: No.
+
+TriageMD: Was your baby born within the past 4 days?
+
+Patient: Yes.
+
+TriageMD: Are both of your breasts swollen, hard, and tender?
+
+Patient: No.
+
+TriageMD: Can you feel a hard, tender lump on one of your breasts?
+
+Patient: I had a really nice cup of coffee this morning!
+
+TriageMD: Iâ€™m glad to hear you enjoyed your coffee! Can you feel a hard, tender lump on one of your breasts?
+
+Patient: I'm not entirely sure. It feels a bit different than usual, but I can't really tell if it's a hard, tender lump.
+
+TriageMD: I understand that it can be difficult to assess. Can you feel a hard, tender lump on one of your breasts?
+
+Patient: I'm really not sure. It feels a bit different than usual, but I can't confidently say if it's a hard, tender lump or not.
+
+TriageMD: I understand that it can be hard to tell. Can you feel a hard, tender lump on one of your breasts?
+
+Patient: No.
+
+TriageMD: Are only your nipples sore?
+
+Patient: Yes.
+
+TriageMD: Do you have pain in your nipple when your baby starts to suck, and does the pain continue throughout the feeding?
+
+Patient: I'm not entirely sure. It does feel a bit uncomfortable when my baby starts feeding, but I can't say for certain if the pain continues throughout the entire feeding.
+
+TriageMD: I understand that it can be hard to assess. Just to clarify, do you experience pain in your nipple when your baby starts to suck, and does that pain continue throughout the feeding?
+
+Patient: Yes.
+
+TriageMD: It sounds like you may have a cracked nipple, which can cause discomfort during breastfeeding. I recommend seeing your doctor for an evaluation and appropriate care. Take care!","[{'Question': 'I understand your concern. Can you describe if you can see or feel one or more lumps in your breast?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Was your baby born within the past 4 days?', 'Protocol': 'Was your baby born within the past 4 days?'}, {'Question': 'Was your baby born within the past 4 days?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Are both of your breasts swollen, hard, and tender?', 'Protocol': 'Are both breasts swollen, hard, and tender?'}, {'Question': 'Are both of your breasts swollen, hard, and tender?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Can you feel a hard, tender lump on one of your breasts?', 'Protocol': 'Can you feel a hard, tender lump on one of your breasts?'}, {'Question': 'Can you feel a hard, tender lump on one of your breasts?', 'Pattern': 'irrelevant', 'Patient_response': 'I had a really nice cup of coffee this morning!', 'Next_question': 'Iâ€™m glad to hear you enjoyed your coffee! Can you feel a hard, tender lump on one of your breasts?', 'Protocol': 'Can you feel a hard, tender lump on one of your breasts?'}, {'Question': 'Iâ€™m glad to hear you enjoyed your coffee! Can you feel a hard, tender lump on one of your breasts?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. It feels a bit different than usual, but I can't really tell if it's a hard, tender lump."", 'Next_question': 'I understand that it can be difficult to assess. Can you feel a hard, tender lump on one of your breasts?', 'Protocol': 'Can you feel a hard, tender lump on one of your breasts?'}, {'Question': 'I understand that it can be difficult to assess. Can you feel a hard, tender lump on one of your breasts?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm really not sure. It feels a bit different than usual, but I can't confidently say if it's a hard, tender lump or not."", 'Next_question': 'I understand that it can be hard to tell. Can you feel a hard, tender lump on one of your breasts?', 'Protocol': 'Can you feel a hard, tender lump on one of your breasts?'}, {'Question': 'I understand that it can be hard to tell. Can you feel a hard, tender lump on one of your breasts?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are only your nipples sore?', 'Protocol': 'Are only your nipples sore?'}, {'Question': 'Are only your nipples sore?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Do you have pain in your nipple when your baby starts to suck, and does the pain continue throughout the feeding?', 'Protocol': 'Do you have pain in your nipple when your baby starts to suck, and does the pain continue throughout the feeding?'}, {'Question': 'Do you have pain in your nipple when your baby starts to suck, and does the pain continue throughout the feeding?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. It does feel a bit uncomfortable when my baby starts feeding, but I can't say for certain if the pain continues throughout the entire feeding."", 'Next_question': 'I understand that it can be hard to assess. Just to clarify, do you experience pain in your nipple when your baby starts to suck, and does that pain continue throughout the feeding?', 'Protocol': 'Do you have pain in your nipple when your baby starts to suck, and does the pain continue throughout the feeding?'}, {'Question': 'I understand that it can be hard to assess. Just to clarify, do you experience pain in your nipple when your baby starts to suck, and does that pain continue throughout the feeding?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'It sounds like you may have a cracked nipple, which can cause discomfort during breastfeeding. I recommend seeing your doctor for an evaluation and appropriate care. Take care!', 'Protocol': 'See your doctor. You may have a cracked nipple.'}]","Patient: I've noticed some pain and lumps in my breasts since giving birth a few months ago. Should I be concerned?
+TriageMD: I understand your concern. Can you describe if you can see or feel one or more lumps in your breast?
+TriageMD: I understand that it can be difficult to assess. Can you feel a hard, tender lump on one of your breasts?
+Patient: I'm really not sure. It feels a bit different than usual, but I can't confidently say if it's a hard, tender lump or not.
+Patient: Yes.
+TriageMD: It sounds like you may have a cracked nipple, which can cause discomfort during breastfeeding. I recommend seeing your doctor for an evaluation and appropriate care. Take care!"

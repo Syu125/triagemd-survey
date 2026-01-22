@@ -1,0 +1,445 @@
+Unnamed: 0,Flowchart,Path label,Path,Accuracy,Conversation,Question_and_response_pair,Shortened_Conversation
+0,Vomiting Flowchart,"['N1', 'N2', 'N3', 'A2']","['N1', 'N2', 'N3', 'A2']",1,"Patient: My daughter has been vomiting for a week now and I'm really worried. What should I do?
+
+TriageMD: I'm sorry to hear that your daughter has been vomiting for a week. Can you confirm if she has been having episodes of vomiting for that entire time?
+
+Patient: No.
+
+TriageMD: I'm sorry to hear that your daughter is unwell. Do you have severe abdominal pain that has lasted at least 1 hour and has not been relieved by vomiting?
+
+Patient: No, she doesn't have severe abdominal pain. She seems to be uncomfortable sometimes, but it's not constant or very intense. I'm more concerned because the vomiting has been going on for several days now, and I'm not sure what could be causing it.
+
+TriageMD: I understand your concern. Just to clarify, does she have any severe abdominal pain that has lasted at least 1 hour and hasn't been relieved by vomiting?
+
+Patient: No, she doesn't have severe abdominal pain that lasts for an hour or more. She has mentioned feeling uncomfortable or having mild pain, but it doesn't seem to be constant or very intense. I'm more concerned about the vomiting itself because it's been going on for several days now, and I'm not sure what could be causing it.
+
+TriageMD: I understand your concern. Has she vomited blood or any black or dark brown matter that looks like coffee grounds?
+
+Patient: Well, I'm not entirely sure. I haven't seen anything that looks exactly like blood or coffee grounds, but some of it did look a bit dark. It's hard to tell, honestly.
+
+TriageMD: It's important to clarify this: has she vomited anything that you would describe as blood, or black or dark brown matter that looks like coffee grounds? If you're uncertain, it would be best to seek medical attention to ensure her safety.
+
+Patient: Yes.
+
+TriageMD: EMERGENCY: Get medical help now! Call 911 or your local emergency number, or have someone take you to the nearest hospital emergency department. The presence of dark vomit could indicate internal bleeding, which requires immediate attention. Please act quickly.","[{'Question': ""I'm sorry to hear that your daughter has been vomiting for a week. Can you confirm if she has been having episodes of vomiting for that entire time?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I'm sorry to hear that your daughter is unwell. Do you have severe abdominal pain that has lasted at least 1 hour and has not been relieved by vomiting?"", 'Protocol': 'Do you have severe abdominal pain that has lasted at least 1 hour and has not been relieved by vomiting?'}, {'Question': ""I'm sorry to hear that your daughter is unwell. Do you have severe abdominal pain that has lasted at least 1 hour and has not been relieved by vomiting?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, she doesn't have severe abdominal pain. She seems to be uncomfortable sometimes, but it's not constant or very intense. I'm more concerned because the vomiting has been going on for several days now, and I'm not sure what could be causing it."", 'Next_question': ""I understand your concern. Just to clarify, does she have any severe abdominal pain that has lasted at least 1 hour and hasn't been relieved by vomiting?"", 'Protocol': 'Do you have severe abdominal pain that has lasted at least 1 hour and has not been relieved by vomiting?'}, {'Question': ""I understand your concern. Just to clarify, does she have any severe abdominal pain that has lasted at least 1 hour and hasn't been relieved by vomiting?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, she doesn't have severe abdominal pain that lasts for an hour or more. She has mentioned feeling uncomfortable or having mild pain, but it doesn't seem to be constant or very intense. I'm more concerned about the vomiting itself because it's been going on for several days now, and I'm not sure what could be causing it."", 'Next_question': 'I understand your concern. Has she vomited blood or any black or dark brown matter that looks like coffee grounds?', 'Protocol': 'Have you vomited blood, or black or dark brown matter that looks like coffee grounds (partially digested blood)?'}, {'Question': 'I understand your concern. Has she vomited blood or any black or dark brown matter that looks like coffee grounds?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Well, I'm not entirely sure. I haven't seen anything that looks exactly like blood or coffee grounds, but some of it did look a bit dark. It's hard to tell, honestly."", 'Next_question': ""It's important to clarify this: has she vomited anything that you would describe as blood, or black or dark brown matter that looks like coffee grounds? If you're uncertain, it would be best to seek medical attention to ensure her safety."", 'Protocol': 'Have you vomited blood, or black or dark brown matter that looks like coffee grounds (partially digested blood)?'}, {'Question': ""It's important to clarify this: has she vomited anything that you would describe as blood, or black or dark brown matter that looks like coffee grounds? If you're uncertain, it would be best to seek medical attention to ensure her safety."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'EMERGENCY: Get medical help now! Call 911 or your local emergency number, or have someone take you to the nearest hospital emergency department. The presence of dark vomit could indicate internal bleeding, which requires immediate attention. Please act quickly.', 'Protocol': 'EMERGENCY: Get medical help now! Call 911 or your local emergency number or have someone take you to the nearest hospital emergency department. You probably have internal bleeding, possibly from a peptic ulcer or another condition in the digestive tract.'}]","Patient: My daughter has been vomiting for a week now and I'm really worried. What should I do?
+TriageMD: I'm sorry to hear that your daughter has been vomiting for a week. Can you confirm if she has been having episodes of vomiting for that entire time?
+Patient: No, she doesn't have severe abdominal pain that lasts for an hour or more. She has mentioned feeling uncomfortable or having mild pain, but it doesn't seem to be constant or very intense. I'm more concerned about the vomiting itself because it's been going on for several days now, and I'm not sure what could be causing it.
+TriageMD: I understand your concern. Has she vomited blood or any black or dark brown matter that looks like coffee grounds?
+Patient: Yes.
+TriageMD: EMERGENCY: Get medical help now! Call 911 or your local emergency number, or have someone take you to the nearest hospital emergency department. The presence of dark vomit could indicate internal bleeding, which requires immediate attention. Please act quickly."
+1,Recurring Vomiting Flowchart,"['N1', 'N2', 'N3', 'N4', 'N6', 'N11', 'N12', 'A11']","['N1', 'N2', 'N3', 'N4', 'N6', 'N11', 'N12', 'A11']",1,"Patient: My daughter has been vomiting several times this week and I'm worried. What should I do next?
+
+TriageMD: I'm sorry to hear that your daughter is unwell. To better understand her situation, could you please let me know if you are a woman of childbearing age and if she tends to vomit at about the same time on most days?
+
+Patient: No, I'm not a woman of childbearing age, and her vomiting doesn't seem to happen at the same time every day. It's been pretty random, I think.
+
+TriageMD: I understand your concern. Just to clarify, are you a woman of childbearing age, and does your daughter vomit at about the same time on most days?
+
+Patient: I'm actually not sure if there's a pattern to her vomiting. It seems kind of random to me, but I haven't been keeping track of the exact times. Also, I'm not a woman of childbearing age, if that helps.
+
+TriageMD: I understand your concern. Just to clarify, are you a woman of childbearing age, and does your daughter vomit at about the same time on most days?
+
+Patient: No.
+
+TriageMD: I understand your concern for your daughter. To help assess her situation, can you tell me if she usually vomits within a few hours after drinking alcohol?
+
+Patient: No, I don't think alcohol is involved. She's quite young, so I doubt that's the case.
+
+TriageMD: I'm sorry to hear that your daughter is feeling this way. Do you notice if she has burning pain in her chest or upper abdomen when she bends over or lies down?
+
+Patient: No, she hasn't mentioned any burning pain in her chest or upper abdomen, even when she's bending over or lying down. She mostly just seems uncomfortable and upset right before she vomits.
+
+TriageMD: I understand how concerning this is for you. Does your daughter experience any abdominal pain or tenderness an hour or two after meals?
+
+Patient: No.
+
+TriageMD: Have you noticed if your daughter has lost her appetite?
+
+Patient: I'm not really sure about her appetite. I haven't been paying close attention to how much she's eating lately, so I can't say for certain if it's changed.
+
+TriageMD: I understand. It can be hard to notice changes sometimes. Has she mentioned anything about feeling less hungry or not wanting to eat as much as usual?
+
+Patient: No, she hasn't mentioned anything specific about her hunger, but I guess she could be eating less. Itâ€™s hard to say for sure.
+
+TriageMD: I understand. It can be difficult to notice changes in appetite. Just to confirm, have you noticed if she has lost her appetite or seems less interested in food lately?
+
+Patient: No.
+
+TriageMD: Thank you for the information. Are you currently taking any medication?
+
+Patient: No.
+
+TriageMD: Do you have frequent headaches?
+
+Patient: No, not really. I mean, I get them once in a while, but nothing frequent.
+
+TriageMD: I'm sorry to hear that your daughter is experiencing vomiting. Given the situation, it's important to consult with a healthcare professional to determine the cause and appropriate treatment. Please see your doctor for further evaluation.","[{'Question': ""I'm sorry to hear that your daughter is unwell. To better understand her situation, could you please let me know if you are a woman of childbearing age and if she tends to vomit at about the same time on most days?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I'm not a woman of childbearing age, and her vomiting doesn't seem to happen at the same time every day. It's been pretty random, I think."", 'Next_question': 'I understand your concern. Just to clarify, are you a woman of childbearing age, and does your daughter vomit at about the same time on most days?', 'Protocol': 'Are you a woman of childbearing age, and do you vomit at about the same time on most days?'}, {'Question': 'I understand your concern. Just to clarify, are you a woman of childbearing age, and does your daughter vomit at about the same time on most days?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm actually not sure if there's a pattern to her vomiting. It seems kind of random to me, but I haven't been keeping track of the exact times. Also, I'm not a woman of childbearing age, if that helps."", 'Next_question': 'I understand your concern. Just to clarify, are you a woman of childbearing age, and does your daughter vomit at about the same time on most days?', 'Protocol': 'Are you a woman of childbearing age, and do you vomit at about the same time on most days?'}, {'Question': 'I understand your concern. Just to clarify, are you a woman of childbearing age, and does your daughter vomit at about the same time on most days?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern for your daughter. To help assess her situation, can you tell me if she usually vomits within a few hours after drinking alcohol?', 'Protocol': 'Do you usually vomit within a few hours after drinking alcohol?'}, {'Question': 'I understand your concern for your daughter. To help assess her situation, can you tell me if she usually vomits within a few hours after drinking alcohol?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think alcohol is involved. She's quite young, so I doubt that's the case."", 'Next_question': ""I'm sorry to hear that your daughter is feeling this way. Do you notice if she has burning pain in her chest or upper abdomen when she bends over or lies down?"", 'Protocol': 'Do you have burning pain in your chest or upper abdomen when you bend over or lie down?'}, {'Question': ""I'm sorry to hear that your daughter is feeling this way. Do you notice if she has burning pain in her chest or upper abdomen when she bends over or lies down?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, she hasn't mentioned any burning pain in her chest or upper abdomen, even when she's bending over or lying down. She mostly just seems uncomfortable and upset right before she vomits."", 'Next_question': 'I understand how concerning this is for you. Does your daughter experience any abdominal pain or tenderness an hour or two after meals?', 'Protocol': 'Do you have abdominal pain or tenderness an hour or two after meals?'}, {'Question': 'I understand how concerning this is for you. Does your daughter experience any abdominal pain or tenderness an hour or two after meals?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you noticed if your daughter has lost her appetite?', 'Protocol': 'Have you lost your appetite?'}, {'Question': 'Have you noticed if your daughter has lost her appetite?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure about her appetite. I haven't been paying close attention to how much she's eating lately, so I can't say for certain if it's changed."", 'Next_question': 'I understand. It can be hard to notice changes sometimes. Has she mentioned anything about feeling less hungry or not wanting to eat as much as usual?', 'Protocol': 'Have you lost your appetite?'}, {'Question': 'I understand. It can be hard to notice changes sometimes. Has she mentioned anything about feeling less hungry or not wanting to eat as much as usual?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, she hasn't mentioned anything specific about her hunger, but I guess she could be eating less. Itâ€™s hard to say for sure."", 'Next_question': 'I understand. It can be difficult to notice changes in appetite. Just to confirm, have you noticed if she has lost her appetite or seems less interested in food lately?', 'Protocol': 'Have you lost your appetite?'}, {'Question': 'I understand. It can be difficult to notice changes in appetite. Just to confirm, have you noticed if she has lost her appetite or seems less interested in food lately?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for the information. Are you currently taking any medication?', 'Protocol': 'Are you currently taking any medication?'}, {'Question': 'Thank you for the information. Are you currently taking any medication?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have frequent headaches?', 'Protocol': 'Do you have frequent headaches?'}, {'Question': 'Do you have frequent headaches?', 'Pattern': 'vague or partially conclusive', 'Patient_response': 'No, not really. I mean, I get them once in a while, but nothing frequent.', 'Next_question': ""I'm sorry to hear that your daughter is experiencing vomiting. Given the situation, it's important to consult with a healthcare professional to determine the cause and appropriate treatment. Please see your doctor for further evaluation."", 'Protocol': 'See your doctor if you are unable to make a decision from self-triage.'}]","Patient: My daughter has been vomiting several times this week and I'm worried. What should I do next?
+TriageMD: I'm sorry to hear that your daughter is unwell. To better understand her situation, could you please let me know if you are a woman of childbearing age and if she tends to vomit at about the same time on most days?
+Patient: No.
+TriageMD: Have you noticed if your daughter has lost her appetite?
+Patient: No, not really. I mean, I get them once in a while, but nothing frequent.
+TriageMD: I'm sorry to hear that your daughter is experiencing vomiting. Given the situation, it's important to consult with a healthcare professional to determine the cause and appropriate treatment. Please see your doctor for further evaluation."
+2,Abdominal Pain Flowchart,"['N1', 'N2', 'N3', 'N4', 'A2']","['N1', 'N2', 'N3', 'N4', 'A2']",1,"Patient: I've been having sharp abdominal pain below my ribs for a few days now. What could be causing this?
+
+TriageMD: I'm sorry to hear that you're experiencing sharp abdominal pain. Have you had similar episodes of pain that come and go?
+
+Patient: I'm not entirely sure. I can't really remember having this kind of pain before, at least not like this. It's been pretty persistent the last few days, though.
+
+TriageMD: I understand that this pain is concerning for you. Just to clarify, have you experienced any similar episodes of pain in the past, even if they were not as intense or persistent?
+
+Patient: No, I don't think I've had anything quite like this before. Maybe some minor discomfort here and there, but nothing that really stands out or has lasted this long.
+
+TriageMD: Iâ€™m sorry to hear youâ€™re in pain. On a scale of 1 to 10, with 10 being the worst pain imaginable, how severe would you say your pain is?
+
+Patient: I'd say it's probably around a 6 or 7, but it's hard to say for sure. It definitely hurts quite a bit, but I'm not sure if Iâ€™d call it the worst pain ever.
+
+TriageMD: It sounds like the pain is quite significant for you, especially if it's around a 6 or 7. Is the pain constant, or does it come and go?
+
+Patient: Yes.
+
+TriageMD: I understand. Just to confirm, would you describe the pain as severe, or is it more moderate?
+
+Patient: Yes, I would describe the pain as severe. It's been persistent and quite sharp, and it's enough to really interfere with my daily activities. It's definitely not something I can easily ignore or brush off.
+
+TriageMD: I'm sorry to hear that you're in such pain. Do you have any of the following symptoms: vomiting, a swollen or tender abdomen, or a temperature over 100Â°F?
+
+Patient: I'm not really sure. I haven't been checking my temperature, and I can't say for certain if my abdomen is swollen. It does feel quite tender, though, and I've felt a bit nauseous, but I haven't actually vomited.
+
+TriageMD: I understand that it can be difficult to assess your symptoms. Just to clarify, do you have any of the following: vomiting, a swollen abdomen, or a temperature over 100Â°F?
+
+Patient: No.
+
+TriageMD: Thank you for clarifying. Do you have diarrhea as well?
+
+Patient: I'm not entirely sure. I haven't really been paying close attention to that, so I can't say for certain if it's been different than usual.
+
+TriageMD: I understand. It can be hard to keep track of everything. Just to confirm, have you noticed any changes in your bowel movements, such as diarrhea?
+
+Patient: I'm not really sure. I haven't been keeping track of that, so I can't really say if there's been any noticeable change.
+
+TriageMD: I understand that it can be difficult to keep track of everything. Just to confirm, have you experienced any diarrhea at all, even if itâ€™s just a little?
+
+Patient: Yes.
+
+TriageMD: Given your symptoms, including the sharp abdominal pain and diarrhea, it's important that you see your doctor as soon as possible. You may have food poisoning, gastroenteritis, or inflammatory bowel disease. Please seek medical attention to get a proper evaluation and treatment. Take care.","[{'Question': ""I'm sorry to hear that you're experiencing sharp abdominal pain. Have you had similar episodes of pain that come and go?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. I can't really remember having this kind of pain before, at least not like this. It's been pretty persistent the last few days, though."", 'Next_question': 'I understand that this pain is concerning for you. Just to clarify, have you experienced any similar episodes of pain in the past, even if they were not as intense or persistent?', 'Protocol': 'Have you had similar episodes of pain that come and go?'}, {'Question': 'I understand that this pain is concerning for you. Just to clarify, have you experienced any similar episodes of pain in the past, even if they were not as intense or persistent?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, I don't think I've had anything quite like this before. Maybe some minor discomfort here and there, but nothing that really stands out or has lasted this long."", 'Next_question': 'Iâ€™m sorry to hear youâ€™re in pain. On a scale of 1 to 10, with 10 being the worst pain imaginable, how severe would you say your pain is?', 'Protocol': 'Is the pain severe?'}, {'Question': 'Iâ€™m sorry to hear youâ€™re in pain. On a scale of 1 to 10, with 10 being the worst pain imaginable, how severe would you say your pain is?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I'd say it's probably around a 6 or 7, but it's hard to say for sure. It definitely hurts quite a bit, but I'm not sure if Iâ€™d call it the worst pain ever."", 'Next_question': ""It sounds like the pain is quite significant for you, especially if it's around a 6 or 7. Is the pain constant, or does it come and go?"", 'Protocol': 'Is the pain severe?'}, {'Question': ""It sounds like the pain is quite significant for you, especially if it's around a 6 or 7. Is the pain constant, or does it come and go?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'I understand. Just to confirm, would you describe the pain as severe, or is it more moderate?', 'Protocol': 'Is the pain severe?'}, {'Question': 'I understand. Just to confirm, would you describe the pain as severe, or is it more moderate?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I would describe the pain as severe. It's been persistent and quite sharp, and it's enough to really interfere with my daily activities. It's definitely not something I can easily ignore or brush off."", 'Next_question': ""I'm sorry to hear that you're in such pain. Do you have any of the following symptoms: vomiting, a swollen or tender abdomen, or a temperature over 100Â°F?"", 'Protocol': 'Do you have one or more of the following symptoms: vomiting; swollen or tender abdomen; temperature over 100Â°F?'}, {'Question': ""I'm sorry to hear that you're in such pain. Do you have any of the following symptoms: vomiting, a swollen or tender abdomen, or a temperature over 100Â°F?"", 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I haven't been checking my temperature, and I can't say for certain if my abdomen is swollen. It does feel quite tender, though, and I've felt a bit nauseous, but I haven't actually vomited."", 'Next_question': 'I understand that it can be difficult to assess your symptoms. Just to clarify, do you have any of the following: vomiting, a swollen abdomen, or a temperature over 100Â°F?', 'Protocol': 'Do you have one or more of the following symptoms: vomiting; swollen or tender abdomen; temperature over 100Â°F?'}, {'Question': 'I understand that it can be difficult to assess your symptoms. Just to clarify, do you have any of the following: vomiting, a swollen abdomen, or a temperature over 100Â°F?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Thank you for clarifying. Do you have diarrhea as well?', 'Protocol': 'Do you have diarrhea?'}, {'Question': 'Thank you for clarifying. Do you have diarrhea as well?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. I haven't really been paying close attention to that, so I can't say for certain if it's been different than usual."", 'Next_question': 'I understand. It can be hard to keep track of everything. Just to confirm, have you noticed any changes in your bowel movements, such as diarrhea?', 'Protocol': 'Do you have diarrhea?'}, {'Question': 'I understand. It can be hard to keep track of everything. Just to confirm, have you noticed any changes in your bowel movements, such as diarrhea?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. I haven't been keeping track of that, so I can't really say if there's been any noticeable change."", 'Next_question': 'I understand that it can be difficult to keep track of everything. Just to confirm, have you experienced any diarrhea at all, even if itâ€™s just a little?', 'Protocol': 'Do you have diarrhea?'}, {'Question': 'I understand that it can be difficult to keep track of everything. Just to confirm, have you experienced any diarrhea at all, even if itâ€™s just a little?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Given your symptoms, including the sharp abdominal pain and diarrhea, it's important that you see your doctor as soon as possible. You may have food poisoning, gastroenteritis, or inflammatory bowel disease. Please seek medical attention to get a proper evaluation and treatment. Take care."", 'Protocol': 'See your doctor. You may have food poisoning, gastroenteritis, or inflammatory bowel disease.'}]","Patient: I've been having sharp abdominal pain below my ribs for a few days now. What could be causing this?
+TriageMD: I'm sorry to hear that you're experiencing sharp abdominal pain. Have you had similar episodes of pain that come and go?
+TriageMD: I'm sorry to hear that you're in such pain. Do you have any of the following symptoms: vomiting, a swollen or tender abdomen, or a temperature over 100°F?
+Patient: I'm not really sure. I haven't been checking my temperature, and I can't say for certain if my abdomen is swollen. It does feel quite tender, though, and I've felt a bit nauseous, but I haven't actually vomited.
+Patient: Yes.
+TriageMD: Given your symptoms, including the sharp abdominal pain and diarrhea, it's important that you see your doctor as soon as possible. You may have food poisoning, gastroenteritis, or inflammatory bowel disease. Please seek medical attention to get a proper evaluation and treatment. Take care."
+3,Recurring Abdominal Pain Flowchart,"['N1', 'N7', 'N8', 'N9', 'A9']","['N1', 'N7', 'N8', 'N9', 'A9']",1,"Patient: I've been experiencing on-and-off abdominal pain for a while now, and it's starting to interfere with my daily activities. What should I do?
+
+TriageMD: I'm sorry to hear that you're experiencing abdominal pain. Can you tell me if the pain is in the upper part of your abdomen?
+
+Patient: No.
+
+TriageMD: Is the pain mainly in the lower part of your abdomen?
+
+Patient: Yes, the pain is mainly in the lower part of my abdomen. It's been bothering me on and off for a while now, and it's starting to interfere with my daily activities. Sometimes it feels like a dull ache, and other times it's more of a sharp pain. It doesn't seem to be linked to any specific activity or food, and I'm not sure what's causing it.
+
+TriageMD: I understand how concerning this can be. Do you have episodes of diarrhea along with your abdominal pain?
+
+Patient: I do love a good cup of coffee in the morning, it really helps me start my day.
+
+TriageMD: I understand that coffee is important to you. However, can you tell me if you have episodes of diarrhea along with your abdominal pain?
+
+Patient: Yes.
+
+TriageMD: I'm sorry to hear that you're experiencing this. Do you feel sick, or is your temperature 100Â°F or higher?
+
+Patient: Not really, I don't think I have a fever, and I haven't been feeling particularly sick. It's mostly just the abdominal pain and the diarrhea that's been bothering me.
+
+TriageMD: It's important that you see a doctor immediately. Your symptoms could indicate diverticular disease, and there is also a slight possibility of colon cancer. Please seek medical attention as soon as possible.","[{'Question': ""I'm sorry to hear that you're experiencing abdominal pain. Can you tell me if the pain is in the upper part of your abdomen?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is the pain mainly in the lower part of your abdomen?', 'Protocol': 'Is the pain mainly in the lower part of your abdomen?'}, {'Question': 'Is the pain mainly in the lower part of your abdomen?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, the pain is mainly in the lower part of my abdomen. It's been bothering me on and off for a while now, and it's starting to interfere with my daily activities. Sometimes it feels like a dull ache, and other times it's more of a sharp pain. It doesn't seem to be linked to any specific activity or food, and I'm not sure what's causing it."", 'Next_question': 'I understand how concerning this can be. Do you have episodes of diarrhea along with your abdominal pain?', 'Protocol': 'Do you have episodes of diarrhea?'}, {'Question': 'I understand how concerning this can be. Do you have episodes of diarrhea along with your abdominal pain?', 'Pattern': 'irrelevant', 'Patient_response': 'I do love a good cup of coffee in the morning, it really helps me start my day.', 'Next_question': 'I understand that coffee is important to you. However, can you tell me if you have episodes of diarrhea along with your abdominal pain?', 'Protocol': 'Do you have episodes of diarrhea?'}, {'Question': 'I understand that coffee is important to you. However, can you tell me if you have episodes of diarrhea along with your abdominal pain?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""I'm sorry to hear that you're experiencing this. Do you feel sick, or is your temperature 100Â°F or higher?"", 'Protocol': 'Do you feel sick, or is your temperature 100Â°F or higher?'}, {'Question': ""I'm sorry to hear that you're experiencing this. Do you feel sick, or is your temperature 100Â°F or higher?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Not really, I don't think I have a fever, and I haven't been feeling particularly sick. It's mostly just the abdominal pain and the diarrhea that's been bothering me."", 'Next_question': ""It's important that you see a doctor immediately. Your symptoms could indicate diverticular disease, and there is also a slight possibility of colon cancer. Please seek medical attention as soon as possible."", 'Protocol': 'See a doctor immediately. You may have diverticular disease. There is also a slight possibility that you have colon cancer.'}]","Patient: I've been experiencing on-and-off abdominal pain for a while now, and it's starting to interfere with my daily activities. What should I do?
+TriageMD: I'm sorry to hear that you're experiencing abdominal pain. Can you tell me if the pain is in the upper part of your abdomen?
+Patient: I do love a good cup of coffee in the morning, it really helps me start my day.
+TriageMD: I understand that coffee is important to you. However, can you tell me if you have episodes of diarrhea along with your abdominal pain?
+Patient: Not really, I don't think I have a fever, and I haven't been feeling particularly sick. It's mostly just the abdominal pain and the diarrhea that's been bothering me.
+TriageMD: It's important that you see a doctor immediately. Your symptoms could indicate diverticular disease, and there is also a slight possibility of colon cancer. Please seek medical attention as soon as possible."
+4,Swollen Abdomen Flowchart,"['N1', 'N4', 'N7', 'N8', 'N9', 'N10', 'N11', 'N12', 'A8']","['N1', 'N4', 'N7', 'N8', 'N9', 'N10', 'N11', 'N12', 'A8']",1,"Patient: I've noticed my entire abdomen is swollen and it's been like this for a few days. Should I be concerned?
+
+TriageMD: I'm sorry to hear that you're experiencing abdominal swelling. Did the swelling develop suddenly within the past 24 hours?
+
+Patient: No.
+
+TriageMD: I understand your concern. Are your ankles puffy, or do you notice any dents forming when you press on them with your fingers?
+
+Patient: No, my ankles aren't puffy and I don't see any dents when I press on them. The swelling is just in my abdomen.
+
+TriageMD: Do the whites of your eyes or your skin look yellow?
+
+Patient: No.
+
+TriageMD: Are you a woman of childbearing age?
+
+Patient: I love hiking in the mountains.
+
+TriageMD: Are you a woman of childbearing age?
+
+Patient: Yes.
+
+TriageMD: Could you be pregnant?
+
+Patient: No.
+
+TriageMD: Did the swelling develop just before or during your period?
+
+Patient: No.
+
+TriageMD: Do you have persistent constipation?
+
+Patient: No.
+
+TriageMD: Are you overweight according to the body mass index?
+
+Patient: Yes.
+
+TriageMD: It's important to talk to your doctor about your abdominal swelling and discuss a plan for weight loss. They can provide guidance tailored to your situation. Take care.","[{'Question': ""I'm sorry to hear that you're experiencing abdominal swelling. Did the swelling develop suddenly within the past 24 hours?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand your concern. Are your ankles puffy, or do you notice any dents forming when you press on them with your fingers?', 'Protocol': 'Are your ankles puffy, or do dents form when you press your ankles with your fingers?'}, {'Question': 'I understand your concern. Are your ankles puffy, or do you notice any dents forming when you press on them with your fingers?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, my ankles aren't puffy and I don't see any dents when I press on them. The swelling is just in my abdomen."", 'Next_question': 'Do the whites of your eyes or your skin look yellow?', 'Protocol': 'Do the whites of your eyes and your skin look yellow?'}, {'Question': 'Do the whites of your eyes or your skin look yellow?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you a woman of childbearing age?', 'Protocol': 'Are you a woman of childbearing age?'}, {'Question': 'Are you a woman of childbearing age?', 'Pattern': 'irrelevant', 'Patient_response': 'I love hiking in the mountains.', 'Next_question': 'Are you a woman of childbearing age?', 'Protocol': 'Are you a woman of childbearing age?'}, {'Question': 'Are you a woman of childbearing age?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Could you be pregnant?', 'Protocol': 'Could you be pregnant?'}, {'Question': 'Could you be pregnant?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Did the swelling develop just before or during your period?', 'Protocol': 'Did the swelling develop just before or during your period?'}, {'Question': 'Did the swelling develop just before or during your period?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Do you have persistent constipation?', 'Protocol': 'Do you have persistent constipation?'}, {'Question': 'Do you have persistent constipation?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you overweight according to the body mass index?', 'Protocol': 'Are you overweight according to the body mass index?'}, {'Question': 'Are you overweight according to the body mass index?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's important to talk to your doctor about your abdominal swelling and discuss a plan for weight loss. They can provide guidance tailored to your situation. Take care."", 'Protocol': 'Talk to your doctor about losing weight.'}]","Patient: I've noticed my entire abdomen is swollen and it's been like this for a few days. Should I be concerned?
+TriageMD: I'm sorry to hear that you're experiencing abdominal swelling. Did the swelling develop suddenly within the past 24 hours?
+Patient: Yes.
+TriageMD: Could you be pregnant?
+Patient: Yes.
+TriageMD: It's important to talk to your doctor about your abdominal swelling and discuss a plan for weight loss. They can provide guidance tailored to your situation. Take care."
+5,Gas And Belching Flowchart,"['N1', 'N2', 'A1']","['N1', 'N2', 'A1']",1,"Patient: I've been experiencing frequent gas and belching lately. It's becoming uncomfortable and a bit embarrassing. What could be causing this?
+
+TriageMD: I understand that experiencing frequent gas and belching can be uncomfortable and embarrassing. To better assist you, could you clarify if the gas is primarily expelled by belching?
+
+Patient: Yes.
+
+TriageMD: I understand how uncomfortable this can be. Can you tell me if you taste a sour or bitter fluid when you belch, especially when bending over or lying down?
+
+Patient: Yes, sometimes I do notice a sour or bitter taste, especially if I bend over or lie down after eating.
+
+TriageMD: It sounds like you may be experiencing symptoms of gastroesophageal reflux disease (GERD), especially with the sour or bitter taste when bending over or lying down after eating. I recommend seeing your doctor for a proper evaluation and management. They can help determine the best course of action for you.","[{'Question': 'I understand that experiencing frequent gas and belching can be uncomfortable and embarrassing. To better assist you, could you clarify if the gas is primarily expelled by belching?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'I understand how uncomfortable this can be. Can you tell me if you taste a sour or bitter fluid when you belch, especially when bending over or lying down?', 'Protocol': 'Can you taste a sour or bitter fluid when you belch, especially if you are bending over or lying down?'}, {'Question': 'I understand how uncomfortable this can be. Can you tell me if you taste a sour or bitter fluid when you belch, especially when bending over or lying down?', 'Pattern': 'vague or partially conclusive', 'Patient_response': 'Yes, sometimes I do notice a sour or bitter taste, especially if I bend over or lie down after eating.', 'Next_question': 'It sounds like you may be experiencing symptoms of gastroesophageal reflux disease (GERD), especially with the sour or bitter taste when bending over or lying down after eating. I recommend seeing your doctor for a proper evaluation and management. They can help determine the best course of action for you.', 'Protocol': 'See your doctor. You may have gastroesophageal reflux disease.'}]","Patient: I've been experiencing frequent gas and belching lately. It's becoming uncomfortable and a bit embarrassing. What could be causing this?
+TriageMD: I understand that experiencing frequent gas and belching can be uncomfortable and embarrassing. To better assist you, could you clarify if the gas is primarily expelled by belching?
+TriageMD: I understand how uncomfortable this can be. Can you tell me if you taste a sour or bitter fluid when you belch, especially when bending over or lying down?
+Patient: Yes, sometimes I do notice a sour or bitter taste, especially if I bend over or lie down after eating.
+Patient: Yes, sometimes I do notice a sour or bitter taste, especially if I bend over or lie down after eating.
+TriageMD: It sounds like you may be experiencing symptoms of gastroesophageal reflux disease (GERD), especially with the sour or bitter taste when bending over or lying down after eating. I recommend seeing your doctor for a proper evaluation and management. They can help determine the best course of action for you."
+6,Diarrhea Flowchart,"['N1', 'N2', 'A1']","['N1', 'N2', 'A1']",1,"Patient: My toddler has had frequent loose stools for a few days. Should I be concerned about her diarrhea?
+
+TriageMD: I'm sorry to hear that your toddler is experiencing frequent loose stools. Have there been any other episodes of diarrhea in the past few weeks?
+
+Patient: Oh, no, we haven't been to the beach in a while! We've mostly been spending time at home and playing in the backyard.
+
+TriageMD: I understand. Have you had other episodes of diarrhea in the past few weeks?
+
+Patient: Yes, my toddler has had a few episodes of diarrhea in the past few weeks, but they seemed to resolve on their own. This time, though, it feels more frequent and has been going on for a few days. We've been trying to keep her hydrated and sticking to a bland diet, but I'm starting to worry if there's something more going on.
+
+TriageMD: I understand your concern, especially since this episode has been more frequent. Do you notice if the diarrhea occurs during times of stress or changes in routine? This information can help in understanding what might be going on.
+
+Patient: Yes, actually, now that you mention it, we've had some changes recently. We just moved to a new house and she started at a new daycare. I wonder if the stress from these changes could be affecting her. She's also been a bit more clingy and fussy than usual, which might be related.    
+
+TriageMD: It sounds like the recent changes in your toddler's environment could be contributing to her diarrhea, as stress can sometimes affect digestion. However, since this episode has been more frequent and concerning, I recommend seeing your doctor for further evaluation. If she experiences cramping abdominal pain along with alternating constipation and diarrhea, it could indicate something like irritable bowel syndrome. It's best to get a professional opinion to ensure her well-being.","[{'Question': ""I'm sorry to hear that your toddler is experiencing frequent loose stools. Have there been any other episodes of diarrhea in the past few weeks?"", 'Pattern': 'irrelevant', 'Patient_response': ""Oh, no, we haven't been to the beach in a while! We've mostly been spending time at home and playing in the backyard."", 'Next_question': 'I understand. Have you had other episodes of diarrhea in the past few weeks?', 'Protocol': 'Have you had other episodes of diarrhea in the past few weeks?'}, {'Question': 'I understand. Have you had other episodes of diarrhea in the past few weeks?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, my toddler has had a few episodes of diarrhea in the past few weeks, but they seemed to resolve on their own. This time, though, it feels more frequent and has been going on for a few days. We've been trying to keep her hydrated and sticking to a bland diet, but I'm starting to worry if there's something more going on."", 'Next_question': 'I understand your concern, especially since this episode has been more frequent. Do you notice if the diarrhea occurs during times of stress or changes in routine? This information can help in understanding what might be going on.', 'Protocol': 'Do the attacks occur when you are under stress?'}, {'Question': 'I understand your concern, especially since this episode has been more frequent. Do you notice if the diarrhea occurs during times of stress or changes in routine? This information can help in understanding what might be going on.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, actually, now that you mention it, we've had some changes recently. We just moved to a new house and she started at a new daycare. I wonder if the stress from these changes could be affecting her. She's also been a bit more clingy and fussy than usual, which might be related."", 'Next_question': ""It sounds like the recent changes in your toddler's environment could be contributing to her diarrhea, as stress can sometimes affect digestion. However, since this episode has been more frequent and concerning, I recommend seeing your doctor for further evaluation. If she experiences cramping abdominal pain along with alternating constipation and diarrhea, it could indicate something like irritable bowel syndrome. It's best to get a professional opinion to ensure her well-being."", 'Protocol': 'See your doctor. Stress can often cause diarrhea. If you have episodes of cramping abdominal pain with alternating episodes of constipation and diarrhea, you may have irritable bowel syndrome.'}]","Patient: My toddler has had frequent loose stools for a few days. Should I be concerned about her diarrhea?
+TriageMD: I'm sorry to hear that your toddler is experiencing frequent loose stools. Have there been any other episodes of diarrhea in the past few weeks?
+Patient: Yes, my toddler has had a few episodes of diarrhea in the past few weeks, but they seemed to resolve on their own. This time, though, it feels more frequent and has been going on for a few days. We've been trying to keep her hydrated and sticking to a bland diet, but I'm starting to worry if there's something more going on.
+TriageMD: I understand your concern, especially since this episode has been more frequent. Do you notice if the diarrhea occurs during times of stress or changes in routine? This information can help in understanding what might be going on.
+Patient: Yes, actually, now that you mention it, we've had some changes recently. We just moved to a new house and she started at a new daycare. I wonder if the stress from these changes could be affecting her. She's also been a bit more clingy and fussy than usual, which might be related.
+TriageMD: It sounds like the recent changes in your toddler's environment could be contributing to her diarrhea, as stress can sometimes affect digestion. However, since this episode has been more frequent and concerning, I recommend seeing your doctor for further evaluation. If she experiences cramping abdominal pain along with alternating constipation and diarrhea, it could indicate something like irritable bowel syndrome. It's best to get a professional opinion to ensure her well-being."
+7,Constipation Flowchart,"['N1', 'N4', 'N5', 'N6', 'N7', 'A7']","['N1', 'N4', 'N5', 'N6', 'N7', 'A7']",1,"Patient: I've been struggling with hard stools and infrequent bowel movements lately. It's becoming really uncomfortable. Can you help me with this?
+
+TriageMD: I'm sorry to hear that you're experiencing discomfort. Do you often have difficulty having a bowel movement?
+
+Patient: No, I don't often have difficulty with bowel movements. This is a more recent issue for me. I've noticed that my stools have become harder and it's taking longer between each bowel movement. It's been quite uncomfortable and I'm not sure what might be causing it.
+
+TriageMD: I'm sorry to hear that you're feeling uncomfortable. Are your bowel movements painful?
+
+Patient: No.
+
+TriageMD: I understand how uncomfortable this can be. Are you currently taking any medication?
+
+Patient: No.
+
+TriageMD: It sounds like your diet might be a factor. Are you consuming enough water and high-fiber foods like fruits, vegetables, whole grains, and legumes?
+
+Patient: No.
+
+TriageMD: Are you pregnant?
+
+Patient: I'm not sure. I haven't taken a test or anything, but I guess it's possible.
+
+TriageMD: It's important to confirm if you might be pregnant, as that can affect your digestive health. I recommend taking a pregnancy test to clarify. Would you like to discuss any other symptoms or concerns?
+
+Patient: Yes, I have been feeling more tired than usual and occasionally nauseous, but I thought it might just be stress or something I ate. Now that you mention it, these could be related symptoms if I'm pregnant. I think taking a pregnancy test would be a good idea to rule that out.
+
+TriageMD: It sounds like taking a pregnancy test is a good next step to clarify your situation. Given your symptoms of tiredness and nausea, itâ€™s important to rule that out. If you have any other concerns or symptoms, feel free to share.
+
+Patient: Yes, I think taking a pregnancy test is the right step to take next. With the symptoms I'm experiencing, like tiredness and nausea, it makes sense to rule out pregnancy as a possibility. If it turns out I'm not pregnant, I can explore other potential causes for my symptoms.
+
+TriageMD: It sounds like taking a pregnancy test is a good idea to confirm whether you might be pregnant. Are you currently experiencing any other symptoms that concern you?
+
+Patient: Yes.
+
+TriageMD: I understand. Just to clarify, are you concerned that you might be pregnant?
+
+Patient: I'm not entirely sure. It could be a possibility, but I really need to take a test to know for certain.
+
+TriageMD: Itâ€™s understandable to feel uncertain. To clarify, do you think thereâ€™s a possibility that you might be pregnant? Taking a test will help you find out for sure.
+
+Patient: Yes, there's definitely a possibility, but I really need to take a test to know for sure.
+
+TriageMD: It sounds like taking a pregnancy test is the best way to confirm if you might be pregnant. Once you have that information, you can better address your symptoms. If you have any other concerns or questions, feel free to share.
+
+Patient: Yes, I'm definitely considering taking a pregnancy test soon to confirm if that's the case. The symptoms I've been experiencing, like tiredness, nausea, and changes in bowel movements, could be related to pregnancy, so I think it's important to find out. Once I know for sure, I can better understand what's going on and take the right steps to address my symptoms.
+
+TriageMD: It sounds like taking a pregnancy test is a good step to confirm if you might be pregnant. Given your symptoms, itâ€™s important to find out. Are you feeling certain that you could be pregnant?
+
+Patient: Yes, I think there's definitely a chance, but I'm not completely sure. I guess I won't know for certain until I take the test.
+
+TriageMD: It sounds like taking the test will help clarify your situation. Just to confirm, do you believe you might be pregnant?
+
+Patient: I'm not sure, but I did notice the leaves are starting to change color outside. It's really beautiful this time of year.
+
+TriageMD: I appreciate your thoughts on the changing leaves; it is a beautiful time of year. However, to clarify, are you pregnant?
+
+Patient: Yes.
+
+TriageMD: Constipation is common during pregnancy, and it can be uncomfortable. It's important to stay hydrated and consider increasing your fiber intake. If you have any concerns or if your symptoms worsen, please reach out to your healthcare provider.","[{'Question': ""I'm sorry to hear that you're experiencing discomfort. Do you often have difficulty having a bowel movement?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I don't often have difficulty with bowel movements. This is a more recent issue for me. I've noticed that my stools have become harder and it's taking longer between each bowel movement. It's been quite uncomfortable and I'm not sure what might be causing it."", 'Next_question': ""I'm sorry to hear that you're feeling uncomfortable. Are your bowel movements painful?"", 'Protocol': 'Are bowel movements painful?'}, {'Question': ""I'm sorry to hear that you're feeling uncomfortable. Are your bowel movements painful?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'I understand how uncomfortable this can be. Are you currently taking any medication?', 'Protocol': 'Are you currently taking medication?'}, {'Question': 'I understand how uncomfortable this can be. Are you currently taking any medication?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'It sounds like your diet might be a factor. Are you consuming enough water and high-fiber foods like fruits, vegetables, whole grains, and legumes?', 'Protocol': 'Are you on a diet, or does your diet lack sufficient amounts of water and high-fiber foods such as fruit, vegetables, whole grains, and legumes?'}, {'Question': 'It sounds like your diet might be a factor. Are you consuming enough water and high-fiber foods like fruits, vegetables, whole grains, and legumes?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Are you pregnant?', 'Protocol': 'Are you pregnant?'}, {'Question': 'Are you pregnant?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not sure. I haven't taken a test or anything, but I guess it's possible."", 'Next_question': ""It's important to confirm if you might be pregnant, as that can affect your digestive health. I recommend taking a pregnancy test to clarify. Would you like to discuss any other symptoms or concerns?"", 'Protocol': 'Are you pregnant?'}, {'Question': ""It's important to confirm if you might be pregnant, as that can affect your digestive health. I recommend taking a pregnancy test to clarify. Would you like to discuss any other symptoms or concerns?"", 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I have been feeling more tired than usual and occasionally nauseous, but I thought it might just be stress or something I ate. Now that you mention it, these could be related symptoms if I'm pregnant. I think taking a pregnancy test would be a good idea to rule that out."", 'Next_question': 'It sounds like taking a pregnancy test is a good next step to clarify your situation. Given your symptoms of tiredness and nausea, itâ€™s important to rule that out. If you have any other concerns or symptoms, feel free to share.', 'Protocol': 'Are you pregnant?'}, {'Question': 'It sounds like taking a pregnancy test is a good next step to clarify your situation. Given your symptoms of tiredness and nausea, itâ€™s important to rule that out. If you have any other concerns or symptoms, feel free to share.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I think taking a pregnancy test is the right step to take next. With the symptoms I'm experiencing, like tiredness and nausea, it makes sense to rule out pregnancy as a possibility. If it turns out I'm not pregnant, I can explore other potential causes for my symptoms."", 'Next_question': 'It sounds like taking a pregnancy test is a good idea to confirm whether you might be pregnant. Are you currently experiencing any other symptoms that concern you?', 'Protocol': 'Are you pregnant?'}, {'Question': 'It sounds like taking a pregnancy test is a good idea to confirm whether you might be pregnant. Are you currently experiencing any other symptoms that concern you?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'I understand. Just to clarify, are you concerned that you might be pregnant?', 'Protocol': 'Are you pregnant?'}, {'Question': 'I understand. Just to clarify, are you concerned that you might be pregnant?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. It could be a possibility, but I really need to take a test to know for certain."", 'Next_question': 'Itâ€™s understandable to feel uncertain. To clarify, do you think thereâ€™s a possibility that you might be pregnant? Taking a test will help you find out for sure.', 'Protocol': 'Are you pregnant?'}, {'Question': 'Itâ€™s understandable to feel uncertain. To clarify, do you think thereâ€™s a possibility that you might be pregnant? Taking a test will help you find out for sure.', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, there's definitely a possibility, but I really need to take a test to know for sure."", 'Next_question': 'It sounds like taking a pregnancy test is the best way to confirm if you might be pregnant. Once you have that information, you can better address your symptoms. If you have any other concerns or questions, feel free to share.', 'Protocol': 'Are you pregnant?'}, {'Question': 'It sounds like taking a pregnancy test is the best way to confirm if you might be pregnant. Once you have that information, you can better address your symptoms. If you have any other concerns or questions, feel free to share.', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""Yes, I'm definitely considering taking a pregnancy test soon to confirm if that's the case. The symptoms I've been experiencing, like tiredness, nausea, and changes in bowel movements, could be related to pregnancy, so I think it's important to find out. Once I know for sure, I can better understand what's going on and take the right steps to address my symptoms."", 'Next_question': 'It sounds like taking a pregnancy test is a good step to confirm if you might be pregnant. Given your symptoms, itâ€™s important to find out. Are you feeling certain that you could be pregnant?', 'Protocol': 'Are you pregnant?'}, {'Question': 'It sounds like taking a pregnancy test is a good step to confirm if you might be pregnant. Given your symptoms, itâ€™s important to find out. Are you feeling certain that you could be pregnant?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""Yes, I think there's definitely a chance, but I'm not completely sure. I guess I won't know for certain until I take the test."", 'Next_question': 'It sounds like taking the test will help clarify your situation. Just to confirm, do you believe you might be pregnant?', 'Protocol': 'Are you pregnant?'}, {'Question': 'It sounds like taking the test will help clarify your situation. Just to confirm, do you believe you might be pregnant?', 'Pattern': 'irrelevant', 'Patient_response': ""I'm not sure, but I did notice the leaves are starting to change color outside. It's really beautiful this time of year."", 'Next_question': 'I appreciate your thoughts on the changing leaves; it is a beautiful time of year. However, to clarify, are you pregnant?', 'Protocol': 'Are you pregnant?'}, {'Question': 'I appreciate your thoughts on the changing leaves; it is a beautiful time of year. However, to clarify, are you pregnant?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Constipation is common during pregnancy, and it can be uncomfortable. It's important to stay hydrated and consider increasing your fiber intake. If you have any concerns or if your symptoms worsen, please reach out to your healthcare provider."", 'Protocol': 'Constipation is common during pregnancy.'}]","Patient: I've been struggling with hard stools and infrequent bowel movements lately. It's becoming really uncomfortable. Can you help me with this?
+TriageMD: I'm sorry to hear that you're experiencing discomfort. Do you often have difficulty having a bowel movement?
+TriageMD: It sounds like taking a pregnancy test is a good idea to confirm whether you might be pregnant. Are you currently experiencing any other symptoms that concern you?
+Patient: Yes.
+Patient: Yes.
+TriageMD: Constipation is common during pregnancy, and it can be uncomfortable. It's important to stay hydrated and consider increasing your fiber intake. If you have any concerns or if your symptoms worsen, please reach out to your healthcare provider."
+8,Abnormal Looking Stools Flowchart,"['N1', 'N2', 'A2']","['N1', 'N2', 'A2']",1,"Patient: I've noticed my stools have changed color and consistency recently. Should I be concerned about this change?
+
+TriageMD: I understand your concern about the changes in your stools. Have you noticed any red blood in them?
+
+Patient: Yes.
+
+TriageMD: I'm sorry to hear that you're experiencing this. Do you feel generally ill, or is your temperature 100Â°F or higher?
+
+Patient: No.
+
+TriageMD: It's important to see your doctor about the changes in your stools, especially since you've noticed blood. You may have hemorrhoids, an anal fissure, or an anal fistula, but it's also important to rule out more serious conditions like colon cancer. Please make an appointment as soon as you can.","[{'Question': 'I understand your concern about the changes in your stools. Have you noticed any red blood in them?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""I'm sorry to hear that you're experiencing this. Do you feel generally ill, or is your temperature 100Â°F or higher?"", 'Protocol': 'Do you feel generally ill, or is your temperature 100Â°F or higher?'}, {'Question': ""I'm sorry to hear that you're experiencing this. Do you feel generally ill, or is your temperature 100Â°F or higher?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It's important to see your doctor about the changes in your stools, especially since you've noticed blood. You may have hemorrhoids, an anal fissure, or an anal fistula, but it's also important to rule out more serious conditions like colon cancer. Please make an appointment as soon as you can."", 'Protocol': 'See your doctor. You may have hemorrhoids, an anal fissure, or an anal fistula, or you could have colon cancer.'}]","Patient: I've noticed my stools have changed color and consistency recently. Should I be concerned about this change?
+TriageMD: I understand your concern about the changes in your stools. Have you noticed any red blood in them?
+TriageMD: I'm sorry to hear that you're experiencing this. Do you feel generally ill, or is your temperature 100°F or higher?
+Patient: No.
+Patient: No.
+TriageMD: It's important to see your doctor about the changes in your stools, especially since you've noticed blood. You may have hemorrhoids, an anal fissure, or an anal fistula, but it's also important to rule out more serious conditions like colon cancer. Please make an appointment as soon as you can."
+9,Vomiting In Infants Flowchart,"['N1', 'N2', 'A1']","['N1', 'N2', 'A1']",1,"Patient: My baby girl keeps throwing up after feedings, and I'm not sure if it's normal or if I should be worried.
+
+TriageMD: I understand your concern. Does your baby seem healthy except for the vomiting?
+
+Patient: Yes.
+
+TriageMD: It's good to hear that your baby seems healthy otherwise. Is your baby gaining weight appropriately?
+
+Patient: No.
+
+TriageMD: I'm sorry to hear that. It's important to take your baby to the doctor immediately. Vomiting that prevents weight gain can indicate a serious issue, such as an intestinal obstruction. Please seek medical attention right away.","[{'Question': 'I understand your concern. Does your baby seem healthy except for the vomiting?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""It's good to hear that your baby seems healthy otherwise. Is your baby gaining weight appropriately?"", 'Protocol': 'Is your baby gaining weight?'}, {'Question': ""It's good to hear that your baby seems healthy otherwise. Is your baby gaining weight appropriately?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""I'm sorry to hear that. It's important to take your baby to the doctor immediately. Vomiting that prevents weight gain can indicate a serious issue, such as an intestinal obstruction. Please seek medical attention right away."", 'Protocol': 'Take your child to the doctor immediately. Vomiting that is severe enough to prevent a baby from gaining weight at the usual rate may indicate an intestinal obstruction.'}]","Patient: My baby girl keeps throwing up after feedings, and I'm not sure if it's normal or if I should be worried.
+TriageMD: I understand your concern. Does your baby seem healthy except for the vomiting?
+TriageMD: It's good to hear that your baby seems healthy otherwise. Is your baby gaining weight appropriately?
+Patient: No.
+Patient: No.
+TriageMD: I'm sorry to hear that. It's important to take your baby to the doctor immediately. Vomiting that prevents weight gain can indicate a serious issue, such as an intestinal obstruction. Please seek medical attention right away."
+10,Diarrhea In Infants Flowchart,"['N1', 'N2', 'N4', 'N5', 'N6', 'N7', 'N8', 'A7']","['N1', 'N2', 'N4', 'N5', 'N6', 'N7', 'N8', 'A7']",1,"Patient: My baby girl has been having three to four watery diapers today. Should I be worried?
+
+TriageMD: It's understandable to be concerned. Is your baby content, alert, and feeding well?
+
+Patient: Yes.
+
+TriageMD: Is your baby bottle-fed?
+
+Patient: No, she's not bottle-fed. I'm breastfeeding her.
+
+TriageMD: Have you just started to add solids to your baby's diet? This could sometimes lead to changes in bowel movements.
+
+Patient: No, we haven't started solids yet. But I'm not sure if anything in my diet could be affecting her.
+
+TriageMD: It sounds like youâ€™re concerned about her symptoms. Have you recently changed anything in your diet that might affect her?
+
+Patient: No, I haven't changed anything significant in my diet recently. I've been eating the same foods as usual.
+
+TriageMD: I understand your concern. Just to confirm, you haven't started introducing any solid foods to her diet, correct?
+
+Patient: No, we haven't started any solids yet. I'm still just breastfeeding her.
+
+TriageMD: Are you giving your baby any fruit juices?
+
+Patient: No.
+
+TriageMD: Have you given your baby any nonprescription medication?
+
+Patient: No.
+
+TriageMD: Is your child taking any medication prescribed for another condition?
+
+Patient: I don't think so, but let me double-check to be sure.
+
+TriageMD: Just to clarify, is your child currently taking any medication that was prescribed for another condition?
+
+Patient: No.
+
+TriageMD: Is your baby's temperature over 100Â°F, and is she vomiting?
+
+Patient: No.
+
+TriageMD: It's good to hear that your baby is otherwise well. However, if the diarrhea persists or if she seems ill, please take her to the doctor immediately. Your concerns are important, and it's best to get a professional evaluation.","[{'Question': ""It's understandable to be concerned. Is your baby content, alert, and feeding well?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Is your baby bottle-fed?', 'Protocol': 'Is your baby bottle-fed?'}, {'Question': 'Is your baby bottle-fed?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, she's not bottle-fed. I'm breastfeeding her."", 'Next_question': ""Have you just started to add solids to your baby's diet? This could sometimes lead to changes in bowel movements."", 'Protocol': ""Have you just started to add solids to your baby's diet?""}, {'Question': ""Have you just started to add solids to your baby's diet? This could sometimes lead to changes in bowel movements."", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, we haven't started solids yet. But I'm not sure if anything in my diet could be affecting her."", 'Next_question': 'It sounds like youâ€™re concerned about her symptoms. Have you recently changed anything in your diet that might affect her?', 'Protocol': ""Have you just started to add solids to your baby's diet?""}, {'Question': 'It sounds like youâ€™re concerned about her symptoms. Have you recently changed anything in your diet that might affect her?', 'Pattern': 'conclusive and descriptive', 'Patient_response': ""No, I haven't changed anything significant in my diet recently. I've been eating the same foods as usual."", 'Next_question': ""I understand your concern. Just to confirm, you haven't started introducing any solid foods to her diet, correct?"", 'Protocol': ""Have you just started to add solids to your baby's diet?""}, {'Question': ""I understand your concern. Just to confirm, you haven't started introducing any solid foods to her diet, correct?"", 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, we haven't started any solids yet. I'm still just breastfeeding her."", 'Next_question': 'Are you giving your baby any fruit juices?', 'Protocol': 'Are you giving your baby fruit juices?'}, {'Question': 'Are you giving your baby any fruit juices?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Have you given your baby any nonprescription medication?', 'Protocol': 'Have you given your baby any nonprescription medication?'}, {'Question': 'Have you given your baby any nonprescription medication?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is your child taking any medication prescribed for another condition?', 'Protocol': 'Is your child taking a medication prescribed for some other disorder?'}, {'Question': 'Is your child taking any medication prescribed for another condition?', 'Pattern': 'inconclusive', 'Patient_response': ""I don't think so, but let me double-check to be sure."", 'Next_question': 'Just to clarify, is your child currently taking any medication that was prescribed for another condition?', 'Protocol': 'Is your child taking a medication prescribed for some other disorder?'}, {'Question': 'Just to clarify, is your child currently taking any medication that was prescribed for another condition?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""Is your baby's temperature over 100Â°F, and is she vomiting?"", 'Protocol': ""Is your baby's temperature over 100Â°F, and is he or she vomiting?""}, {'Question': ""Is your baby's temperature over 100Â°F, and is she vomiting?"", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': ""It's good to hear that your baby is otherwise well. However, if the diarrhea persists or if she seems ill, please take her to the doctor immediately. Your concerns are important, and it's best to get a professional evaluation."", 'Protocol': 'Take your child to the doctor immediately if the diarrhea persists or your baby seems ill and you are unable to make a decision from self-triage.'}]","Patient: My baby girl has been having three to four watery diapers today. Should I be worried?
+TriageMD: It's understandable to be concerned. Is your baby content, alert, and feeding well?
+TriageMD: Are you giving your baby any fruit juices?
+Patient: No.
+Patient: No.
+TriageMD: It's good to hear that your baby is otherwise well. However, if the diarrhea persists or if she seems ill, please take her to the doctor immediately. Your concerns are important, and it's best to get a professional evaluation."
+11,Abdominal Pain In Children Flowchart,"['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'A7']","['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'A7']",1,"Patient: My daughter has been complaining of stomach pain near her belly for a few days. What could be causing this?
+
+TriageMD: I'm sorry to hear that your daughter is in pain. Does even the slightest movement seem to hurt so much that she screams with pain? This information can help determine the urgency of her condition.
+
+Patient: No.
+
+TriageMD: Has your daughter overeaten or eaten anything, like spicy food, that could have upset her stomach?
+
+Patient: I'm not really sure. She hasn't mentioned anything specific, and we haven't noticed her eating anything unusual or spicy, but I guess it's possible she might have eaten something that didn't agree with her.
+
+TriageMD: I understand. It can be hard to pinpoint the cause. Has she possibly overeaten or had any new foods recently that might have upset her stomach?
+
+Patient: No, not that I'm aware of. She usually eats the same things, but I guess it's possible she had something at school that I don't know about.
+
+TriageMD: I understand. It can be difficult to track what she might have eaten at school. Has she mentioned any specific symptoms besides the stomach pain, like nausea, vomiting, or changes in her bowel movements?
+
+Patient: No, she hasn't mentioned anything like that. She just keeps saying her stomach hurts, but I haven't noticed any other symptoms.
+
+TriageMD: I understand. Just to confirm, has she possibly overeaten or eaten anything unusual, like spicy food, that could have upset her stomach?
+
+Patient: No.
+
+TriageMD: Has your daughter had three to four watery bowel movements within the last 24 hours or experienced any vomiting?
+
+Patient: No.
+
+TriageMD: Has your daughter not had a bowel movement in 2 or 3 days, or does she have difficulty passing stools?
+
+Patient: No.
+
+TriageMD: Does your daughter have a runny nose or a sore throat?
+
+Patient: I'm not really sure. She hasn't mentioned anything about having a runny nose or a sore throat, but it's possible she might have some mild symptoms that she hasn't told me about.
+
+TriageMD: I understand. Just to clarify, does your daughter have any signs of a runny nose or a sore throat, even if they seem mild?
+
+Patient: No.
+
+TriageMD: Is your daughter urinating frequently, or does she experience any pain while urinating?
+
+Patient: She really loves playing with her dolls and drawing pictures.
+
+TriageMD: I understand she enjoys her activities. Just to check, is your daughter urinating frequently, or does she experience any pain while urinating?
+
+Patient: No.
+
+TriageMD: Did your child seem healthy before the abdominal pain started?
+
+Patient: I'm not entirely sure. She seemed okay, but it's hard to say for certain if there was anything off before the pain started.
+
+TriageMD: I understand. Just to confirm, did your daughter seem healthy and active before the abdominal pain started?
+
+Patient: Yes.
+
+TriageMD: Does your child often experience this type of abdominal pain?
+
+Patient: Yes.
+
+TriageMD: Given that your daughter has been experiencing abdominal pain regularly, I recommend taking her to a doctor. While many healthy children do have episodes of abdominal pain, there may be an underlying issue that needs to be addressed. It's best to have her evaluated by a healthcare professional.","[{'Question': ""I'm sorry to hear that your daughter is in pain. Does even the slightest movement seem to hurt so much that she screams with pain? This information can help determine the urgency of her condition."", 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Has your daughter overeaten or eaten anything, like spicy food, that could have upset her stomach?', 'Protocol': 'Has your child overeaten or eaten anything (such as a spicy food) that could have upset his or her stomach?'}, {'Question': 'Has your daughter overeaten or eaten anything, like spicy food, that could have upset her stomach?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""I'm not really sure. She hasn't mentioned anything specific, and we haven't noticed her eating anything unusual or spicy, but I guess it's possible she might have eaten something that didn't agree with her."", 'Next_question': 'I understand. It can be hard to pinpoint the cause. Has she possibly overeaten or had any new foods recently that might have upset her stomach?', 'Protocol': 'Has your child overeaten or eaten anything (such as a spicy food) that could have upset his or her stomach?'}, {'Question': 'I understand. It can be hard to pinpoint the cause. Has she possibly overeaten or had any new foods recently that might have upset her stomach?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, not that I'm aware of. She usually eats the same things, but I guess it's possible she had something at school that I don't know about."", 'Next_question': 'I understand. It can be difficult to track what she might have eaten at school. Has she mentioned any specific symptoms besides the stomach pain, like nausea, vomiting, or changes in her bowel movements?', 'Protocol': 'Has your child overeaten or eaten anything (such as a spicy food) that could have upset his or her stomach?'}, {'Question': 'I understand. It can be difficult to track what she might have eaten at school. Has she mentioned any specific symptoms besides the stomach pain, like nausea, vomiting, or changes in her bowel movements?', 'Pattern': 'vague or partially conclusive', 'Patient_response': ""No, she hasn't mentioned anything like that. She just keeps saying her stomach hurts, but I haven't noticed any other symptoms."", 'Next_question': 'I understand. Just to confirm, has she possibly overeaten or eaten anything unusual, like spicy food, that could have upset her stomach?', 'Protocol': 'Has your child overeaten or eaten anything (such as a spicy food) that could have upset his or her stomach?'}, {'Question': 'I understand. Just to confirm, has she possibly overeaten or eaten anything unusual, like spicy food, that could have upset her stomach?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Has your daughter had three to four watery bowel movements within the last 24 hours or experienced any vomiting?', 'Protocol': 'Has your child had three to four watery bowel movements within 24 hours or been vomiting?'}, {'Question': 'Has your daughter had three to four watery bowel movements within the last 24 hours or experienced any vomiting?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Has your daughter not had a bowel movement in 2 or 3 days, or does she have difficulty passing stools?', 'Protocol': 'Has your child not had a bowel movement in 2 or 3 days, or does he or she have difficulty passing stools?'}, {'Question': 'Has your daughter not had a bowel movement in 2 or 3 days, or does she have difficulty passing stools?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Does your daughter have a runny nose or a sore throat?', 'Protocol': 'Does your child have a runny nose or a sore throat?'}, {'Question': 'Does your daughter have a runny nose or a sore throat?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not really sure. She hasn't mentioned anything about having a runny nose or a sore throat, but it's possible she might have some mild symptoms that she hasn't told me about."", 'Next_question': 'I understand. Just to clarify, does your daughter have any signs of a runny nose or a sore throat, even if they seem mild?', 'Protocol': 'Does your child have a runny nose or a sore throat?'}, {'Question': 'I understand. Just to clarify, does your daughter have any signs of a runny nose or a sore throat, even if they seem mild?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Is your daughter urinating frequently, or does she experience any pain while urinating?', 'Protocol': 'Is your child urinating frequently, or is urination painful?'}, {'Question': 'Is your daughter urinating frequently, or does she experience any pain while urinating?', 'Pattern': 'irrelevant', 'Patient_response': 'She really loves playing with her dolls and drawing pictures.', 'Next_question': 'I understand she enjoys her activities. Just to check, is your daughter urinating frequently, or does she experience any pain while urinating?', 'Protocol': 'Is your child urinating frequently, or is urination painful?'}, {'Question': 'I understand she enjoys her activities. Just to check, is your daughter urinating frequently, or does she experience any pain while urinating?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'No.', 'Next_question': 'Did your child seem healthy before the abdominal pain started?', 'Protocol': 'Did your child seem healthy before the abdominal pain started?'}, {'Question': 'Did your child seem healthy before the abdominal pain started?', 'Pattern': 'inconclusive', 'Patient_response': ""I'm not entirely sure. She seemed okay, but it's hard to say for certain if there was anything off before the pain started."", 'Next_question': 'I understand. Just to confirm, did your daughter seem healthy and active before the abdominal pain started?', 'Protocol': 'Did your child seem healthy before the abdominal pain started?'}, {'Question': 'I understand. Just to confirm, did your daughter seem healthy and active before the abdominal pain started?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': 'Does your child often experience this type of abdominal pain?', 'Protocol': 'Does your child often have this type of abdominal pain?'}, {'Question': 'Does your child often experience this type of abdominal pain?', 'Pattern': 'conclusive and minimalistic', 'Patient_response': 'Yes.', 'Next_question': ""Given that your daughter has been experiencing abdominal pain regularly, I recommend taking her to a doctor. While many healthy children do have episodes of abdominal pain, there may be an underlying issue that needs to be addressed. It's best to have her evaluated by a healthcare professional."", 'Protocol': 'Take your child to the doctor. Although many children who are generally healthy get regular attacks of abdominal pain, your child may have an underlying disorder that is causing the pain.'}]","Patient: My daughter has been complaining of stomach pain near her belly for a few days. What could be causing this?
+TriageMD: I'm sorry to hear that your daughter is in pain. Does even the slightest movement seem to hurt so much that she screams with pain? This information can help determine the urgency of her condition.
+TriageMD: Does your daughter have a runny nose or a sore throat?
+Patient: I'm not really sure. She hasn't mentioned anything about having a runny nose or a sore throat, but it's possible she might have some mild symptoms that she hasn't told me about.
+Patient: Yes.
+TriageMD: Given that your daughter has been experiencing abdominal pain regularly, I recommend taking her to a doctor. While many healthy children do have episodes of abdominal pain, there may be an underlying issue that needs to be addressed. It's best to have her evaluated by a healthcare professional."
