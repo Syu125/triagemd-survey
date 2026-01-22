@@ -59,10 +59,8 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                     borderLeft: `4px solid ${"#007bff"}`,
                   }}
                 >
-                  <span style={{ fontWeight: "bold" }}>
-                    {isPatient ? "Patient:" : "TriageMD:"}
-                  </span>
-                  <span>{dialogs[0]}</span>
+                  <span style={{ fontWeight: "bold" }}>{"Patient:"}</span>
+                  <span>{dialogs[0].split("Patient:")[1]}</span>
                 </div>
                 <div
                   style={{
@@ -72,10 +70,8 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                     borderLeft: `4px solid ${"#28a745"}`,
                   }}
                 >
-                  <span style={{ fontWeight: "bold" }}>
-                    {isPatient ? "Patient:" : "TriageMD:"}
-                  </span>
-                  <span>{dialogs[1]}</span>
+                  <span style={{ fontWeight: "bold" }}>{"TriageMD:"}</span>
+                  <span>{dialogs[1].split("TriageMD:")[1]}</span>
                 </div>
 
                 <div className="flex flex-col gap-8 pt-8">
