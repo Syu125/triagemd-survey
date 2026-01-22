@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Component1 from "@/components/Question/Component1";
 import Component2 from "@/components/Question/Component2";
 import { useCode } from "@/context/CodeContext";
-import { CODE_TO_VERSION } from "@/constants";
+import { CODE_TO_VERSION, FLOWCHART_GROUPS } from "@/constants";
 import { loadSurveyData, SurveyItem } from "@/lib/surveyDataLoader";
 
 export default function Survey() {
@@ -15,6 +15,26 @@ export default function Survey() {
   const [responses, setResponses] = useState<{
     [key: number]: { component1?: string; component2?: string };
   }>({});
+  const [patientSymptoms, setPatientSymptoms] = useState<string[]>([]);
+  interface PatientDemographics {
+    id: number;
+    sex: string;
+    age: string;
+    options: string[];
+  }
+  const [patientDemographics, setPatientDemographics] = useState<
+    PatientDemographics[]
+  >([]);
+
+  const getFlowchartOptions = (flowchartName: string): string[] => {
+    // Find the group that contains this flowchart
+    for (const [groupName, flowcharts] of Object.entries(FLOWCHART_GROUPS)) {
+      if (flowcharts.includes(flowchartName)) {
+        return [...flowcharts, "None of the above"];
+      }
+    }
+    return [];
+  };
 
   // Load survey data based on code
   useEffect(() => {
@@ -24,15 +44,32 @@ export default function Survey() {
         setError(null);
 
         const versionIndex = CODE_TO_VERSION[code.toUpperCase()];
-        console.log("Version Index:", versionIndex); // Debugging line
+        // console.log("Version Index:", versionIndex); // Debugging line
         if (!versionIndex) {
           setError("Invalid code");
           return;
         }
 
         const data = await loadSurveyData(versionIndex);
-        console.log("Loaded survey data:", data[0].flowchart); // Debugging line
+        // console.log("Loaded survey data:", data[0].flowchart); // Debugging line
         setSurveyItems(data);
+        const symptomsList: string[] = [];
+        const demographics: PatientDemographics[] = [];
+        for (let i = 0; i < 10; i++) {
+          const entry = data[i * 3];
+          const patientMatch = entry.dialog.match(
+            /Patient:\s*(.+?)(?=\nTriageMD:|$)/,
+          );
+          symptomsList.push(patientMatch ? patientMatch[1].trim() : "");
+          demographics.push({
+            id: entry.id,
+            sex: entry.sex,
+            age: entry.age,
+            options: getFlowchartOptions(entry.flowchart),
+          });
+        }
+        setPatientSymptoms(symptomsList);
+        setPatientDemographics(demographics);
       } catch (err) {
         setError(
           `Failed to load survey data: ${
@@ -108,34 +145,18 @@ export default function Survey() {
   const handlePrev = () => {
     if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
   };
+  const getPatientDialog = (dialog: string): string => {
+    // Extract the patient's first message (before "TriageMD:")
+    const patientMatch = dialog.match(/Patient:\s*(.+?)(?=\nTriageMD:|$)/);
+    return patientMatch ? patientMatch[1].trim() : "";
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen px-8 py-8 gap-8">
+    <div className="flex flex-col items-center  w-full min-h-screen px-8 py-8 gap-8">
       {/* Progress indicator */}
       <p className="text-lg font-semibold">
-        Question {currentIndex + 1} of {surveyItems.length}
+        Question {currentIndex + 1} of {patientSymptoms.length}
       </p>
-
-      {/* Component 1 */}
-      <Component1
-        data={{
-          id: currentItem.id,
-          sex: currentItem.sex,
-          age: currentItem.age,
-        }}
-        onResponse={handleComponent1Response}
-        savedResponse={currentResponse.component1}
-      />
-
-      {/* Component 2 - Only show after Component1 is answered */}
-      {component1Answered && (
-        <Component2
-          data={{ sex: currentItem.sex, age: currentItem.age }}
-          onResponse={handleComponent2Response}
-          savedResponse={currentResponse.component2}
-        />
-      )}
-
       {/* Navigation */}
       <div className="flex gap-4">
         <button
@@ -147,12 +168,32 @@ export default function Survey() {
         </button>
         <button
           onClick={handleNext}
-          disabled={isLast}
+          disabled={currentIndex === 9} // Last component
           className="bg-blue-500 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
         >
           {isLast ? "Complete" : "Next"}
         </button>
       </div>
+      {/* Component 1 */}
+      <Component1
+        data={{
+          id: patientDemographics[currentIndex].id,
+          sex: patientDemographics[currentIndex].sex,
+          age: patientDemographics[currentIndex].age,
+          flowchart_options: patientDemographics[currentIndex].options,
+          patientDialog: patientSymptoms[currentIndex],
+        }}
+        onResponse={handleComponent1Response}
+        savedResponse={currentResponse.component1}
+      />
+      ;{/* Component 2 - Only show after Component1 is answered */}
+      {component1Answered && (
+        <Component2
+          data={{ sex: currentItem.sex, age: currentItem.age }}
+          onResponse={handleComponent2Response}
+          savedResponse={currentResponse.component2}
+        />
+      )}
     </div>
   );
 }

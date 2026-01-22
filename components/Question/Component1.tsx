@@ -5,6 +5,8 @@ interface Component1Props {
     id: number;
     sex: string;
     age: string;
+    flowchart_options: string[];
+    patientDialog: string;
   };
   onResponse: (value: string) => void;
   savedResponse?: string;
@@ -40,49 +42,38 @@ export default function Component1({
   }
 
   return (
-    <div className="grid grid-cols-2 gap-4 w-8/12">
-      <div className="flex flex-col items-center justify-center w-8/12 h-full bg-gray-100 gap-2">
+    <div className="grid grid-cols-2 w-8/12">
+      <div className="flex flex-col place-self-center align-self-center justify-center w-9/12 h-8/12 bg-gray-100 gap-2 p-10">
         <div className="text-2xl font-bold pb-8"> Patient Demographics: </div>
-        <div>{data.age}</div>
-        <div>{data.sex}</div>
+        <div>
+          <span className="font-bold">Sex:</span> {data.sex}
+        </div>
+        <div>
+          <span className="font-bold">Age:</span> {data.age}
+        </div>
+        <div>
+          <span className="font-bold">Chief Complaint:</span>{" "}
+          {data.patientDialog}
+        </div>
       </div>
       <div className="w-full max-w-2xl bg-gray-50 border border-gray-200 rounded-lg p-8">
-        <h2 className="text-2xl font-bold mb-4">Component 1</h2>
-        <p className="text-gray-700 mb-6">{data.id}</p>
+        <h2 className="text-1xl font-bold mb-4">
+          Select the most appropriate flowchart:
+        </h2>
         <div className="space-y-4">
-          <label className="flex items-center gap-3">
-            <input
-              type="radio"
-              name="component1"
-              value="option1"
-              className="w-4 h-4"
-              checked={selected === "option1"}
-              onChange={(e) => setSelected(e.target.value)}
-            />
-            <span>Option 1</span>
-          </label>
-          <label className="flex items-center gap-3">
-            <input
-              type="radio"
-              name="component1"
-              value="option2"
-              className="w-4 h-4"
-              checked={selected === "option2"}
-              onChange={(e) => setSelected(e.target.value)}
-            />
-            <span>Option 2</span>
-          </label>
-          <label className="flex items-center gap-3">
-            <input
-              type="radio"
-              name="component1"
-              value="option3"
-              className="w-4 h-4"
-              checked={selected === "option3"}
-              onChange={(e) => setSelected(e.target.value)}
-            />
-            <span>Option 3</span>
-          </label>
+          {data.flowchart_options.map((option, index) => (
+            <label key={index} className="flex items-center gap-3">
+              <input
+                type="radio"
+                name="component1"
+                value={option}
+                className="w-4 h-4"
+                checked={selected === option}
+                onChange={(e) => setSelected(e.target.value)}
+              />
+              <span>{option}</span>
+            </label>
+          ))}
         </div>
         <button
           onClick={handleSubmit}
