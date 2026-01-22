@@ -1,0 +1,35 @@
+// prisma/schema.prisma
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Survey table
+model Survey {
+  id        Int       @id @default(autoincrement())
+  code      String
+  createdAt DateTime  @default(now())
+  topics    Topic[]   // One-to-many relation to topics
+}
+
+// Each topic of the survey
+model Topic {
+  id          Int             @id @default(autoincrement())
+  survey      Survey          @relation(fields: [surveyId], references: [id])
+  surveyId    Int
+  topicIndex  Int             // 0-9, for the 10 topics
+  component1  String?         // single choice response
+  component2s Component2[]    // one-to-many relation for the 3 multiple-choice responses
+}
+
+// Component 2 multiple-choice responses
+model Component2 {
+  id       Int    @id @default(autoincrement())
+  topic    Topic  @relation(fields: [topicId], references: [id])
+  topicId  Int
+  question String // e.g., "Is TriageMD relevant?"
+  answer   String // yes/no/maybe
+}

@@ -42,3 +42,4 @@ next-env.d.ts
 
 /survey-env
 constants.ts
+/lib/generated/prisma
