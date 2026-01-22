@@ -10,12 +10,14 @@ interface Component1Props {
   };
   onResponse: (value: string) => void;
   savedResponse?: string;
+  onSubmit: () => void;
 }
 
 export default function Component1({
   data,
   onResponse,
   savedResponse,
+  onSubmit,
 }: Component1Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -34,12 +36,9 @@ export default function Component1({
     if (selected) {
       setSubmitted(true);
       onResponse(selected);
+      onSubmit();
     }
   };
-
-  if (submitted) {
-    return <div></div>;
-  }
 
   return (
     <div className="grid grid-cols-2 w-8/12">

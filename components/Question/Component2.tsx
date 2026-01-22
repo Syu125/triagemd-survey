@@ -1,44 +1,97 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
+import ToggleSwitch from "../Toggle/toggle";
 
 interface Component2Props {
-  data: {
-    sex: string;
-    age: string;
-  };
+  snippets: string[];
   onResponse: (value: string) => void;
   savedResponse?: string;
 }
 
-export default function Component2({
-  data,
-  onResponse,
-  savedResponse,
-}: Component2Props) {
-  const [value, setValue] = useState("");
+const formatSnippet = (snippet: string): string[] => {
+  return snippet.split(/(?=Patient:|TriageMD:)/).filter(Boolean);
+};
 
-  useEffect(() => {
-    if (savedResponse) {
-      setValue(savedResponse);
-    } else {
-      setValue("");
-    }
-  }, [data.sex, savedResponse]);
+const questions = [
+  "Is TriageMD’s response relevant to the patient’s preceding message?",
+  "Does TriageMD converge on and clearly communicate a triage recommendation in this snippet?",
+  "Does TriageMD’s response align with the provided AMA triage flowchart?",
+  "Does TriageMD appropriately address uncertainty given the available information?",
+];
 
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-    onResponse(e.target.value);
-  };
+const Component2 = forwardRef<HTMLDivElement, Component2Props>(
+  ({ snippets, onResponse, savedResponse }, ref) => {
+    const [value, setValue] = useState("");
 
-  return (
-    <div className="w-full max-w-2xl bg-gray-50 border border-gray-200 rounded-lg p-8">
-      <h2 className="text-2xl font-bold mb-4">Component 2</h2>
-      <p className="text-gray-700 mb-6">{data.sex}</p>
-      <textarea
-        placeholder="Enter your response here..."
-        className="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-        value={value}
-        onChange={handleChange}
-      />
-    </div>
-  );
-}
+    useEffect(() => {
+      if (savedResponse) {
+        setValue(savedResponse);
+      } else {
+        setValue("");
+      }
+    }, [snippets, savedResponse]);
+
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+      onResponse(e.target.value);
+    };
+
+    return (
+      <div ref={ref} style={{ scrollMarginTop: "100px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "72px",
+          }}
+        >
+          {snippets.map((snippet, index) => {
+            const isPatient = snippet.startsWith("Patient:");
+            const dialogs = formatSnippet(snippet);
+
+            return (
+              <div className="w-8/12 place-self-center" key={index}>
+                <div
+                  key={index}
+                  style={{
+                    padding: "12px",
+                    borderRadius: "8px",
+                    backgroundColor: "#f0f7ff",
+                    borderLeft: `4px solid ${"#007bff"}`,
+                  }}
+                >
+                  <span style={{ fontWeight: "bold" }}>
+                    {isPatient ? "Patient:" : "TriageMD:"}
+                  </span>
+                  <span>{dialogs[0]}</span>
+                </div>
+                <div
+                  style={{
+                    padding: "12px",
+                    borderRadius: "8px",
+                    backgroundColor: "#f9f9f9",
+                    borderLeft: `4px solid ${"#28a745"}`,
+                  }}
+                >
+                  <span style={{ fontWeight: "bold" }}>
+                    {isPatient ? "Patient:" : "TriageMD:"}
+                  </span>
+                  <span>{dialogs[1]}</span>
+                </div>
+
+                <div className="flex flex-col gap-8 pt-8">
+                  {questions.map((question, idx) => (
+                    <div className="flex flex-row items-center gap-8">
+                      <ToggleSwitch key={idx} />
+                      <p>{question}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  },
+);
+export default Component2;
