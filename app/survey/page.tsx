@@ -84,19 +84,6 @@ export default function Survey() {
     return [];
   };
   const handleSubmit = () => {
-    setSurveyState((prev) => {
-      const copy = [...prev.topics];
-      copy[currentTopic].component1 = currentResponse.component1;
-      console.log(
-        "Updating topic ",
-        currentTopic,
-        " with answer: ",
-        currentResponse.component1,
-        " and copy: ",
-        copy,
-      );
-      return { ...prev, topics: copy };
-    });
     setTimeout(() => {
       component2Ref.current?.scrollIntoView({
         behavior: "smooth",
@@ -148,11 +135,26 @@ export default function Survey() {
         setLoading(false);
       }
     };
+    setSurveyState((prev) => {
+      const copy = [...prev.topics];
+      const latestResponse = responses[currentIndex];
+      console.log("Latest response at submit:", latestResponse);
+      copy[currentTopic].component1 = latestResponse?.component1;
+      console.log(
+        "Updating topic ",
+        currentTopic,
+        " with answer: ",
+        latestResponse?.component1,
+        " and copy: ",
+        copy,
+      );
+      return { ...prev, topics: copy };
+    });
 
     if (code) {
       loadData();
     }
-  }, [code]);
+  }, [code, responses, currentIndex, currentTopic]);
 
   if (!code) {
     return (
@@ -193,10 +195,12 @@ export default function Survey() {
   const component1Answered = !!currentResponse.component1;
 
   const handleComponent1Response = (value: string) => {
-    setResponses({
-      ...responses,
-      [currentIndex]: { ...currentResponse, component1: value },
-    });
+    console.log("Component 1 response received:", currentIndex, ", ", value);
+    setResponses((prev) => ({
+      ...prev,
+      [currentIndex]: { ...prev[currentIndex], component1: value },
+    }));
+    // console.log("Updated response: ", responses);
   };
 
   const handleComponent2Response = (value: string) => {

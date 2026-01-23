@@ -51,7 +51,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
             return (
               <div className="w-8/12 place-self-center" key={index}>
                 <div
-                  key={index}
                   style={{
                     padding: "12px",
                     borderRadius: "8px",
@@ -77,7 +76,7 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                 <div className="flex flex-col gap-8 pt-8">
                   {questions.map((question, idx) => (
                     <div className="flex flex-row items-center gap-8">
-                      <ToggleSwitch key={idx} />
+                      <ToggleSwitch />
                       <p>{question}</p>
                     </div>
                   ))}
