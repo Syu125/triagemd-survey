@@ -13,16 +13,22 @@ export default function Survey() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const initialYes = Array(12).fill("Yes").join("\n");
+
   const [responses, setResponses] = useState<{
     [key: number]: { component1?: string; component2?: string };
-  }>({});
+  }>({
+    0: {
+      component2: initialYes,
+    },
+  });
 
   const component2Ref = useRef<HTMLDivElement>(null);
 
   // Survey storage
   type Component2Answer = {
     question: string;
-    answer: metricQuestions | null | undefined;
+    answer: string | null | undefined;
   };
 
   type TopicAnswers = {
@@ -48,12 +54,7 @@ export default function Survey() {
     surveyId: 1,
     topics: Array.from({ length: 10 }, () => ({
       component1: null,
-      component2: [
-        { question: "Q1", answer: null },
-        { question: "Q2", answer: null },
-        { question: "Q3", answer: null },
-        { question: "Q4", answer: null },
-      ],
+      component2: [],
     })),
   });
 
@@ -148,14 +149,23 @@ export default function Survey() {
       const latestResponse = responses[currentIndex];
       // console.log("Latest response at submit:", latestResponse);
       copy[currentTopic].component1 = latestResponse?.component1;
-      // console.log(
-      //   "Updating topic ",
-      //   currentTopic,
-      //   " with answer: ",
-      //   latestResponse?.component1,
-      //   " and copy: ",
-      //   copy,
-      // );
+      console.log(
+        "Updating topic ",
+        currentTopic,
+        " with answer: ",
+        latestResponse?.component1,
+        " and copy: ",
+        copy,
+      );
+      const q2responses = latestResponse?.component2?.split("\n") || [];
+      console.log("q2responses:", latestResponse?.component2, q2responses);
+      copy[currentTopic].component2 = q2responses.map((response, qIdx) => {
+        return {
+          question: qIdx.toString(),
+          answer: response,
+        };
+      });
+      console.log("Updated component2 answers:", copy[currentTopic].component2);
       return { ...prev, topics: copy };
     });
   }, [responses, currentIndex, currentTopic]);

@@ -89,7 +89,7 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
               .map((q, qIdx) => {
                 // Get the answer from state, defaulting to Yes if somehow missing
                 const ans = copy[sIdx]?.[qIdx] || "Yes";
-                return `${q} ${ans}`;
+                return `${ans}`;
               })
               .join("\n");
           })
