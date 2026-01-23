@@ -136,6 +136,13 @@ export default function Survey() {
         setLoading(false);
       }
     };
+
+    if (code) {
+      loadData();
+    }
+  }, [code]);
+
+  useEffect(() => {
     setSurveyState((prev) => {
       const copy = [...prev.topics];
       const latestResponse = responses[currentIndex];
@@ -151,11 +158,7 @@ export default function Survey() {
       // );
       return { ...prev, topics: copy };
     });
-
-    if (code) {
-      loadData();
-    }
-  }, [code, responses, currentIndex, currentTopic]);
+  }, [responses, currentIndex, currentTopic]);
 
   if (!code) {
     return (

@@ -34,9 +34,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
       return initial;
     });
 
-    // ---------------------------------------------------------
-    // FIX #1: Parse savedResponse string back into State Object
-    // ---------------------------------------------------------
     useEffect(() => {
       if (savedResponse) {
         // Split the saved string into lines
@@ -86,10 +83,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
           ...copy[dialogIndex],
           [index]: isYes ? "Yes" : "No",
         };
-
-        // ---------------------------------------------------------
-        // FIX #2: Serialize ALL snippets, not just the current one
-        // ---------------------------------------------------------
         const fullString = snippets
           .map((_, sIdx) => {
             return questions
