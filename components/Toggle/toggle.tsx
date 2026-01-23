@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 
-const ToggleSwitch = () => {
-  const [isEnabled, setIsEnabled] = useState(true);
-
-  const toggleSwitch = () => {
-    setIsEnabled((previousState) => !previousState);
-  };
-
+interface ToggleSwitchProps {
+  dialogIndex: number;
+  index: number;
+  isEnabled: boolean;
+  onToggle: (dialogIndex: number, index: number, isYes: boolean) => void;
+}
+const ToggleSwitch = ({
+  dialogIndex,
+  index,
+  isEnabled,
+  onToggle,
+}: ToggleSwitchProps) => {
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <span
@@ -19,7 +24,9 @@ const ToggleSwitch = () => {
         {isEnabled ? "Yes" : "No"}
       </span>
       <button
-        onClick={toggleSwitch}
+        onClick={() => {
+          onToggle(dialogIndex, index, !isEnabled);
+        }}
         style={{
           width: "50px",
           height: "30px",

@@ -24,7 +24,7 @@ export default function Component1({
 
   useEffect(() => {
     if (savedResponse) {
-      console.log("Saved response:", savedResponse);
+      // console.log("Saved response:", savedResponse);
       setSelected(savedResponse);
       setSubmitted(true);
     } else {
@@ -34,9 +34,9 @@ export default function Component1({
   }, [data.id, savedResponse]);
 
   const handleSubmit = () => {
-    console.log("Handle submit called with selected:", selected);
+    // console.log("Handle submit called with selected:", selected);
     if (selected) {
-      console.log("Submitting response:", selected);
+      // console.log("Submitting response:", selected);
       setSubmitted(true);
       onSubmit();
       onResponse(selected);

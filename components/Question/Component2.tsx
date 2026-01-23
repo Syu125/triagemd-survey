@@ -20,19 +20,96 @@ const questions = [
 
 const Component2 = forwardRef<HTMLDivElement, Component2Props>(
   ({ snippets, onResponse, savedResponse }, ref) => {
-    const [value, setValue] = useState("");
+    // Initialize state with "Yes" defaults
+    const [responses, setResponses] = useState<
+      Record<number, Record<number, string>>
+    >(() => {
+      const initial: Record<number, Record<number, string>> = {};
+      snippets.forEach((_, dialogIndex) => {
+        initial[dialogIndex] = {};
+        questions.forEach((_, qIdx) => {
+          initial[dialogIndex][qIdx] = "Yes";
+        });
+      });
+      return initial;
+    });
 
+    // ---------------------------------------------------------
+    // FIX #1: Parse savedResponse string back into State Object
+    // ---------------------------------------------------------
     useEffect(() => {
       if (savedResponse) {
-        setValue(savedResponse);
-      } else {
-        setValue("");
-      }
-    }, [snippets, savedResponse]);
+        // Split the saved string into lines
+        const lines = savedResponse.split("\n").filter((l) => l.trim() !== "");
 
-    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      setValue(e.target.value);
-      onResponse(e.target.value);
+        // If the string is empty or invalid, don't overwrite defaults
+        if (lines.length === 0) return;
+
+        setResponses((prev) => {
+          const next = { ...prev };
+
+          // Logic: The string stores answers sequentially.
+          // 3 snippets * 4 questions = 12 lines.
+          // Line i corresponds to Snippet [Math.floor(i/4)] Question [i%4]
+          let lineIndex = 0;
+
+          snippets.forEach((_, sIdx) => {
+            // Ensure the snippet object exists
+            if (!next[sIdx]) next[sIdx] = {};
+
+            questions.forEach((_, qIdx) => {
+              const line = lines[lineIndex];
+              if (line) {
+                // Check if the line ends with "No" (case insensitive check usually safer, but strict here matches your save)
+                const isNo = line.trim().endsWith("No");
+                next[sIdx][qIdx] = isNo ? "No" : "Yes";
+              }
+              lineIndex++;
+            });
+          });
+          return next;
+        });
+      }
+    }, [savedResponse, snippets]);
+
+    const saveToggleResponse = (
+      dialogIndex: number,
+      index: number,
+      isYes: boolean,
+    ) => {
+      console.log("Toggle response received:", dialogIndex, index, isYes);
+
+      setResponses((prev) => {
+        const copy = { ...prev };
+        // Update the specific toggle in local state
+        copy[dialogIndex] = {
+          ...copy[dialogIndex],
+          [index]: isYes ? "Yes" : "No",
+        };
+
+        // ---------------------------------------------------------
+        // FIX #2: Serialize ALL snippets, not just the current one
+        // ---------------------------------------------------------
+        const fullString = snippets
+          .map((_, sIdx) => {
+            return questions
+              .map((q, qIdx) => {
+                // Get the answer from state, defaulting to Yes if somehow missing
+                const ans = copy[sIdx]?.[qIdx] || "Yes";
+                return `${q} ${ans}`;
+              })
+              .join("\n");
+          })
+          .join("\n");
+
+        console.log("Updated responses obj:", copy);
+        console.log("Full Combined String:", fullString);
+
+        // Send the complete string to parent
+        onResponse(fullString);
+
+        return copy;
+      });
     };
 
     return (
@@ -45,7 +122,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
           }}
         >
           {snippets.map((snippet, index) => {
-            const isPatient = snippet.startsWith("Patient:");
             const dialogs = formatSnippet(snippet);
 
             return (
@@ -59,7 +135,7 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                   }}
                 >
                   <span style={{ fontWeight: "bold" }}>{"Patient:"}</span>
-                  <span>{dialogs[0].split("Patient:")[1]}</span>
+                  <span>{dialogs[0]?.split("Patient:")[1] || ""}</span>
                 </div>
                 <div
                   style={{
@@ -70,13 +146,19 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                   }}
                 >
                   <span style={{ fontWeight: "bold" }}>{"TriageMD:"}</span>
-                  <span>{dialogs[1].split("TriageMD:")[1]}</span>
+                  <span>{dialogs[1]?.split("TriageMD:")[1] || ""}</span>
                 </div>
 
                 <div className="flex flex-col gap-8 pt-8">
                   {questions.map((question, idx) => (
-                    <div className="flex flex-row items-center gap-8">
-                      <ToggleSwitch />
+                    <div className="flex flex-row items-center gap-8" key={idx}>
+                      <ToggleSwitch
+                        dialogIndex={index}
+                        index={idx}
+                        // Reads from the now-synchronized state
+                        isEnabled={responses[index]?.[idx] === "Yes"}
+                        onToggle={saveToggleResponse}
+                      />
                       <p>{question}</p>
                     </div>
                   ))}
