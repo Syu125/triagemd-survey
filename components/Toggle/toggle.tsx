@@ -17,7 +17,7 @@ const ToggleSwitch = ({
       <span
         style={{
           marginRight: "10px",
-          color: isEnabled ? "#4CAF50" : "#f44336",
+          color: isEnabled ? "var(--color-green1)" : "var(--color-orange1)",
           width: "30px",
         }}
       >
@@ -33,7 +33,7 @@ const ToggleSwitch = ({
           borderRadius: "5px",
           border: "none",
           cursor: "pointer",
-          backgroundColor: isEnabled ? "#4CAF50" : "#ccc",
+          backgroundColor: isEnabled ? "var(--color-green5)" : "#dadada",
           position: "relative",
           transition: "background-color 0.3s",
           outline: "none", // Remove outline for better aesthetic, but consider accessibility

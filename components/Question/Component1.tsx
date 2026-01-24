@@ -45,7 +45,7 @@ export default function Component1({
 
   return (
     <div className="grid grid-cols-2 gap-8 w-full max-w-4xl mx-auto mb-16">
-      <div className="flex flex-col justify-center align-self-center justify-center w-96 h-96 bg-gray-100 gap-2 p-12 rounded-lg">
+      <div className="flex flex-col justify-center align-self-center justify-center w-96 h-96 bg-green3 gap-2 p-12 rounded-lg">
         <div className="text-2xl font-bold pb-8"> Patient Demographics: </div>
         <div>
           <span className="font-bold">Sex:</span> {data.sex}
@@ -69,7 +69,7 @@ export default function Component1({
                 type="radio"
                 name="component1"
                 value={option}
-                className="w-4 h-4"
+                className="w-4 h-4 accent-green1"
                 checked={selected === option}
                 onChange={(e) => setSelected(e.target.value)}
               />
@@ -80,7 +80,7 @@ export default function Component1({
         <button
           onClick={handleSubmit}
           disabled={!selected}
-          className="mt-6 bg-blue-500 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
+          className="mt-6 bg-green1 hover:bg-green2 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
         >
           Submit
         </button>

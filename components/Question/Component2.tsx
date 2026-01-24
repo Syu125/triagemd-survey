@@ -123,8 +123,8 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                   style={{
                     padding: "12px",
                     borderRadius: "8px",
-                    backgroundColor: "#f0f7ff",
-                    borderLeft: `4px solid ${"#007bff"}`,
+                    backgroundColor: "var(--color-green4)",
+                    borderLeft: `4px solid var(--color-green1)`,
                   }}
                 >
                   <span style={{ fontWeight: "bold" }}>{"Patient:"}</span>
@@ -134,8 +134,8 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                   style={{
                     padding: "12px",
                     borderRadius: "8px",
-                    backgroundColor: "#f9f9f9",
-                    borderLeft: `4px solid ${"#28a745"}`,
+                    backgroundColor: "var(--color-teal4)",
+                    borderLeft: `4px solid var(--color-teal1)`,
                   }}
                 >
                   <span style={{ fontWeight: "bold" }}>{"TriageMD:"}</span>

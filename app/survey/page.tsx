@@ -248,10 +248,10 @@ export default function Survey() {
   return (
     <div className="flex flex-col items-center w-full min-h-screen px-8">
       {/* Progress Bar */}
-      <div className="w-full max-w-4xl sticky top-0 bg-white z-50 px-8 py-4 shadow-md">
+      <div className="w-full max-w-4xl sticky top-0 bg-green1 z-50 px-8 py-4 shadow-md rounded-b-xl">
         <div className="w-full h-4 bg-gray-200 rounded-full overflow-hidden">
           <div
-            className="h-4 bg-blue-500 rounded-full transition-all duration-500"
+            className="h-4 bg-green2 rounded-full transition-all duration-500"
             style={{
               width: `${((currentIndex + 1) / patientSymptoms.length) * 100}%`,
             }}
@@ -291,7 +291,7 @@ export default function Survey() {
               <button
                 onClick={handleNext}
                 disabled={currentIndex === 10} // Last component
-                className="bg-blue-500 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
+                className="bg-green1 hover:bg-green2 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
               >
                 {isLast ? "Complete" : "Next"}
               </button>
