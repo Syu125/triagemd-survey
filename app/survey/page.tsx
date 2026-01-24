@@ -6,7 +6,7 @@ import { useCode } from "@/context/CodeContext";
 import { CODE_TO_VERSION, FLOWCHART_GROUPS } from "@/constants";
 import { loadSurveyData, SurveyItem } from "@/lib/surveyDataLoader";
 import { useRef } from "react";
-
+import { saveSurvey } from "./actions";
 export default function Survey() {
   const { code } = useCode();
   const [surveyItems, setSurveyItems] = useState<SurveyItem[]>([]);
@@ -26,21 +26,6 @@ export default function Survey() {
   const component2Ref = useRef<HTMLDivElement>(null);
 
   // Survey storage
-  type Component2Answer = {
-    question: string;
-    answer: string | null | undefined;
-  };
-
-  type TopicAnswers = {
-    component1: string | null | undefined;
-    component2: Component2Answer[];
-  };
-
-  type SurveyState = {
-    code: string;
-    surveyId: number;
-    topics: TopicAnswers[];
-  };
 
   type metricQuestions = {
     relevance: string;
@@ -225,7 +210,7 @@ export default function Survey() {
     }));
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (!isLast) {
       setCurrentIndex(currentIndex + 1);
     } else {
@@ -235,7 +220,8 @@ export default function Survey() {
 
       // Final submission logic here
       console.log("Final survey state:", surveyState);
-      window.location.href = "/complete";
+      await saveSurvey(surveyState);
+      // window.location.href = "/complete";
     }
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     if (currentTopic < 9) setCurrentTopic((t) => t + 1);
