@@ -149,23 +149,23 @@ export default function Survey() {
       const latestResponse = responses[currentIndex];
       // console.log("Latest response at submit:", latestResponse);
       copy[currentTopic].component1 = latestResponse?.component1;
-      console.log(
-        "Updating topic ",
-        currentTopic,
-        " with answer: ",
-        latestResponse?.component1,
-        " and copy: ",
-        copy,
-      );
+      // console.log(
+      //   "Updating topic ",
+      //   currentTopic,
+      //   " with answer: ",
+      //   latestResponse?.component1,
+      //   " and copy: ",
+      //   copy,
+      // );
       const q2responses = latestResponse?.component2?.split("\n") || [];
-      console.log("q2responses:", latestResponse?.component2, q2responses);
+      // console.log("q2responses:", latestResponse?.component2, q2responses);
       copy[currentTopic].component2 = q2responses.map((response, qIdx) => {
         return {
           question: qIdx.toString(),
           answer: response,
         };
       });
-      console.log("Updated component2 answers:", copy[currentTopic].component2);
+      // console.log("Updated component2 answers:", copy[currentTopic].component2);
       return { ...prev, topics: copy };
     });
   }, [responses, currentIndex, currentTopic]);
@@ -204,7 +204,7 @@ export default function Survey() {
 
   const currentItem = surveyItems[currentIndex];
   // console.log("Current Item:", currentItem); // Debugging line
-  const isLast = currentIndex === surveyItems.length - 1;
+  const isLast = currentIndex === surveyItems.length / 3 - 1;
   const currentResponse = responses[currentIndex] || {};
   const component1Answered = !!currentResponse.component1;
 
@@ -218,7 +218,7 @@ export default function Survey() {
   };
 
   const handleComponent2Response = (value: string) => {
-    console.log("Component 2 response received:", currentIndex, ", ", value);
+    // console.log("Component 2 response received:", currentIndex, ", ", value);
     setResponses((prev) => ({
       ...prev,
       [currentIndex]: { ...prev[currentIndex], component2: value },
@@ -226,10 +226,21 @@ export default function Survey() {
   };
 
   const handleNext = () => {
-    if (!isLast) setCurrentIndex(currentIndex + 1);
+    if (!isLast) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      setSurveyState((prev) => {
+        return { ...prev, code: code };
+      });
+
+      // Final submission logic here
+      console.log("Final survey state:", surveyState);
+
+      alert("Survey completed! Thank you for your participation.");
+    }
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     if (currentTopic < 9) setCurrentTopic((t) => t + 1);
-    console.log("Survey state at ", currentTopic, ": ", surveyState);
+    // console.log("Survey state at ", currentTopic, ": ", surveyState);
   };
 
   const handlePrev = () => {
@@ -294,7 +305,7 @@ export default function Survey() {
             <div className="flex gap-4 align-self-center justify-center mt-12 mb-36">
               <button
                 onClick={handleNext}
-                disabled={currentIndex === 9} // Last component
+                disabled={currentIndex === 10} // Last component
                 className="bg-blue-500 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
               >
                 {isLast ? "Complete" : "Next"}
