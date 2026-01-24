@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCode } from "@/context/CodeContext";
-import { VALID_CODES } from "@/constants/constants";
+import { VALID_CODES } from "@/constants";
 
 export default function Home() {
   const { code, setCode } = useCode();
