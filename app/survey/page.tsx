@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Component1 from "@/components/Question/Component1";
 import Component2 from "@/components/Question/Component2";
 import { useCode } from "@/context/CodeContext";
-import { CODE_TO_VERSION, FLOWCHART_GROUPS } from "@/constants";
+import { CODE_TO_VERSION, FLOWCHART_GROUPS } from "@/constants/constants";
 import { loadSurveyData, SurveyItem } from "@/lib/surveyDataLoader";
 import { useRef } from "react";
 import { saveSurvey } from "./actions";
