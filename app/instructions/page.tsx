@@ -24,7 +24,7 @@ export default function Instructions() {
       </p>
 
       <Link href="/survey">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-green1 hover:bg-green2 text-white font-bold py-2 px-4 rounded">
           Start Survey
         </button>
       </Link>

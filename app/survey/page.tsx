@@ -221,7 +221,7 @@ export default function Survey() {
       // Final submission logic here
       console.log("Final survey state:", surveyState);
       await saveSurvey(surveyState);
-      // window.location.href = "/complete";
+      window.location.href = "/complete";
     }
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     if (currentTopic < 9) setCurrentTopic((t) => t + 1);

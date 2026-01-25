@@ -4,13 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCode } from "@/context/CodeContext";
 import { VALID_CODES } from "@/constants";
+import welcomeImage from "@/public/welcome.png";
 
 export default function Home() {
   const { code, setCode } = useCode();
   const isValidCode = VALID_CODES.includes(code.toUpperCase());
 
   return (
-    <div className="grid grid-cols-2 place-items-center place-self-center w-8/12 h-screen px-32">
+    <div className="grid grid-cols-2 place-items-center place-self-center w-10/12 h-screen px-32 gap-8">
       <div className="header">
         <p className="grid grid-rows text-4xl py-8">TriageMD Survey</p>
         <p>
@@ -40,13 +41,15 @@ export default function Home() {
         </div>
         {isValidCode && (
           <Link href="/instructions">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-8">
+            <button className="bg-green1 hover:bg-green2 text-white font-bold py-2 px-4 rounded mt-8">
               Continue
             </button>
           </Link>
         )}
       </div>
-      <div>Image here</div>
+      <div>
+        <Image src={welcomeImage} alt="Welcome Image"></Image>
+      </div>
     </div>
   );
 }
