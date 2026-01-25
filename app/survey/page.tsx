@@ -270,6 +270,22 @@ export default function Survey() {
     ];
   };
 
+  const getNextProtocols = (index: number) => {
+    // console.log(
+    //   "Protocol index: ",
+    //   index,
+    //   surveyItems[index].previousProtocol,
+    //   surveyItems[index + 1].previousProtocol,
+    //   surveyItems[index + 1].previousProtocol,
+    // );
+
+    return [
+      surveyItems[index * 3].nextProtocol,
+      surveyItems[index * 3 + 1].nextProtocol,
+      surveyItems[index * 3 + 2].nextProtocol,
+    ];
+  };
+
   return (
     <div className="flex flex-col items-center w-full min-h-screen px-8">
       {/* Progress Bar */}
@@ -308,6 +324,7 @@ export default function Survey() {
               flowchartName={patientDemographics[currentIndex].flowchart}
               snippets={getConversationSnippets(currentIndex)}
               previousProtocols={getPreviousProtocols(currentIndex)}
+              nextProtocols={getNextProtocols(currentIndex)}
               onResponse={handleComponent2Response}
               savedResponse={currentResponse.component2}
               ref={component2Ref}

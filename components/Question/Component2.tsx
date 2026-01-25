@@ -5,6 +5,7 @@ interface Component2Props {
   flowchartName: string;
   snippets: string[];
   previousProtocols: string[];
+  nextProtocols: string[];
   onResponse: (value: string) => void;
   savedResponse?: string;
 }
@@ -22,7 +23,14 @@ const questions = [
 
 const Component2 = forwardRef<HTMLDivElement, Component2Props>(
   (
-    { flowchartName, snippets, previousProtocols, onResponse, savedResponse },
+    {
+      flowchartName,
+      snippets,
+      previousProtocols,
+      nextProtocols,
+      onResponse,
+      savedResponse,
+    },
     ref,
   ) => {
     // Initialize state with "Yes" defaults
@@ -164,6 +172,8 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                     borderLeft: `4px solid var(--color-teal1)`,
                   }}
                 >
+                  <span>{"[Protocol: " + nextProtocols[index] + "]"}</span>
+                  <div></div>
                   <span style={{ fontWeight: "bold" }}>{"TriageMD:"}</span>
                   <span>{dialogs[1]?.split("TriageMD:")[1] || ""}</span>
                 </div>
