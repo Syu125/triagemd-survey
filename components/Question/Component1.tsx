@@ -82,9 +82,11 @@ export default function Component1({
                 onChange={(e) => setSelected(e.target.value)}
               />
               <span>{option}</span>
-              <span className="absolute opacity-0 left-5/12 invisible w-10/12 rounded-md bg-green5 px-3 py-2 text-sm text-white group-hover:block transition-all duration-400 ease-out group-hover:opacity-100 group-hover:visible group-hover:-translate-x-2">
-                {flowchartDescriptions[index]}
-              </span>
+              {index < flowchartDescriptions.length - 1 && (
+                <span className="absolute opacity-0 left-5/12 invisible w-10/12 rounded-md bg-green5 px-3 py-2 text-sm text-white group-hover:block transition-all duration-400 ease-out group-hover:opacity-100 group-hover:visible group-hover:-translate-x-2">
+                  {flowchartDescriptions[index]}
+                </span>
+              )}
             </label>
           ))}
         </div>

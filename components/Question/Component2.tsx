@@ -2,7 +2,9 @@ import { useState, useEffect, forwardRef } from "react";
 import ToggleSwitch from "../Toggle/toggle";
 
 interface Component2Props {
+  flowchartName: string;
   snippets: string[];
+  previousProtocols: string[];
   onResponse: (value: string) => void;
   savedResponse?: string;
 }
@@ -19,7 +21,10 @@ const questions = [
 ];
 
 const Component2 = forwardRef<HTMLDivElement, Component2Props>(
-  ({ snippets, onResponse, savedResponse }, ref) => {
+  (
+    { flowchartName, snippets, previousProtocols, onResponse, savedResponse },
+    ref,
+  ) => {
     // Initialize state with "Yes" defaults
     const [responses, setResponses] = useState<
       Record<number, Record<number, string>>
@@ -119,6 +124,27 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
 
             return (
               <div className="w-8/12 place-self-center" key={index}>
+                <div
+                  style={{
+                    padding: "12px",
+                    borderRadius: "8px",
+                  }}
+                >
+                  {" "}
+                  <span>
+                    {previousProtocols[index] ? (
+                      "Protocol: "
+                    ) : (
+                      <>
+                        TriageMD's chosen flowchart:{" "}
+                        <span style={{ fontWeight: "bold" }}>
+                          {flowchartName}
+                        </span>
+                      </>
+                    )}
+                  </span>
+                  {previousProtocols[index] ? previousProtocols[index] : ""}
+                </div>
                 <div
                   style={{
                     padding: "12px",

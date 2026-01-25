@@ -52,6 +52,7 @@ export default function Survey() {
     sex: string;
     age: string;
     options: string[];
+    flowchart: string;
   }
   const [patientDemographics, setPatientDemographics] = useState<
     PatientDemographics[]
@@ -108,6 +109,7 @@ export default function Survey() {
             sex: entry.sex,
             age: entry.age,
             options: getFlowchartOptions(entry.flowchart),
+            flowchart: entry.flowchart,
           });
         }
         setPatientSymptoms(symptomsList);
@@ -238,10 +240,33 @@ export default function Survey() {
   };
 
   const getConversationSnippets = (index: number) => {
+    // console.log(
+    //   "Conversation index: ",
+    //   index,
+    //   surveyItems[index].dialog,
+    //   surveyItems[index + 1].dialog,
+    //   surveyItems[index + 1].dialog,
+    // );
     return [
-      surveyItems[index].dialog,
-      surveyItems[index + 1].dialog,
-      surveyItems[index + 2].dialog,
+      surveyItems[index * 3].dialog,
+      surveyItems[index * 3 + 1].dialog,
+      surveyItems[index * 3 + 2].dialog,
+    ];
+  };
+
+  const getPreviousProtocols = (index: number) => {
+    // console.log(
+    //   "Protocol index: ",
+    //   index,
+    //   surveyItems[index].previousProtocol,
+    //   surveyItems[index + 1].previousProtocol,
+    //   surveyItems[index + 1].previousProtocol,
+    // );
+
+    return [
+      surveyItems[index * 3].previousProtocol,
+      surveyItems[index * 3 + 1].previousProtocol,
+      surveyItems[index * 3 + 2].previousProtocol,
     ];
   };
 
@@ -280,7 +305,9 @@ export default function Survey() {
         {component1Answered && (
           <div>
             <Component2
+              flowchartName={patientDemographics[currentIndex].flowchart}
               snippets={getConversationSnippets(currentIndex)}
+              previousProtocols={getPreviousProtocols(currentIndex)}
               onResponse={handleComponent2Response}
               savedResponse={currentResponse.component2}
               ref={component2Ref}
