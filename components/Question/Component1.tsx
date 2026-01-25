@@ -79,6 +79,7 @@ export default function Component1({
                 value={option}
                 className="w-4 h-4 accent-green1"
                 checked={selected === option}
+                disabled={submitted}
                 onChange={(e) => setSelected(e.target.value)}
               />
               <span>{option}</span>
