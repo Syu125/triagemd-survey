@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FLOWCHART_DESCRIPTIONS } from "@/constants";
 
 interface Component1Props {
   data: {
@@ -43,6 +44,10 @@ export default function Component1({
     }
   };
 
+  const flowchartDescriptions: string[] = data.flowchart_options.map(
+    (option) => FLOWCHART_DESCRIPTIONS[option],
+  );
+
   return (
     <div className="grid grid-cols-2 gap-8 w-full max-w-4xl mx-auto mb-16">
       <div className="flex flex-col justify-center align-self-center justify-center w-96 h-96 bg-green3 gap-2 p-12 rounded-lg">
@@ -64,7 +69,10 @@ export default function Component1({
         </h2>
         <div className="space-y-4">
           {data.flowchart_options.map((option, index) => (
-            <label key={index} className="flex items-center gap-3">
+            <label
+              key={index}
+              className=" group flex items-center gap-3 relative"
+            >
               <input
                 type="radio"
                 name="component1"
@@ -74,6 +82,9 @@ export default function Component1({
                 onChange={(e) => setSelected(e.target.value)}
               />
               <span>{option}</span>
+              <span className="absolute opacity-0 left-5/12 invisible w-10/12 rounded-md bg-green5 px-3 py-2 text-sm text-white group-hover:block transition-all duration-400 ease-out group-hover:opacity-100 group-hover:visible group-hover:-translate-x-2">
+                {flowchartDescriptions[index]}
+              </span>
             </label>
           ))}
         </div>
