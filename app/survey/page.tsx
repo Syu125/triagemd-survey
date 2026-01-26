@@ -93,9 +93,12 @@ export default function Survey() {
           return;
         }
 
+        console.log("Version INdex: ", versionIndex);
         const data = await loadSurveyData(versionIndex);
-        // console.log("Loaded survey data:", data[0].flowchart); // Debugging line
+
+        console.log("Loaded survey data:", data[0].flowchart); // Debugging line
         setSurveyItems(data);
+
         const symptomsList: string[] = [];
         const demographics: PatientDemographics[] = [];
         for (let i = 0; i < 10; i++) {
@@ -112,6 +115,8 @@ export default function Survey() {
             flowchart: entry.flowchart,
           });
         }
+
+        console.log("Demographics: ", demographics);
         setPatientSymptoms(symptomsList);
         setPatientDemographics(demographics);
       } catch (err) {

@@ -8,7 +8,7 @@ import random
 
 from flowcharts.flowcharts import get_flowchart_list
 
-def randomly_select_topics(topics, num_sets=30, topics_per_set=10):
+def randomly_select_topics(topics, num_sets=31, topics_per_set=10):
     selected_sets = []
     for _ in range(num_sets):
         selected = random.sample(topics, topics_per_set)
