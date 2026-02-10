@@ -124,9 +124,22 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "72px",
+            gap: "48px",
           }}
         >
+          <span
+            className="w-4/12 place-self-center text-center"
+            style={{
+              marginTop: "24px",
+              color: "var(--color-green5)",
+              padding: "12px",
+              borderRadius: "8px",
+              fontSize: "20px",
+            }}
+          >
+            TriageMD's chosen flowchart: <div></div>
+            <span style={{ fontWeight: "bold" }}>{flowchartName}</span>
+          </span>
           {snippets.map((snippet, index) => {
             const dialogs = formatSnippet(snippet);
 
@@ -139,19 +152,7 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                   }}
                 >
                   {" "}
-                  <span>
-                    {previousProtocols[index] ? (
-                      "Protocol: "
-                    ) : (
-                      <>
-                        TriageMD's chosen flowchart:{" "}
-                        <span style={{ fontWeight: "bold" }}>
-                          {flowchartName}
-                        </span>
-                      </>
-                    )}
-                  </span>
-                  {previousProtocols[index] ? previousProtocols[index] : ""}
+                  <span>Protocol: {previousProtocols[index]}</span>
                 </div>
                 <div
                   style={{
