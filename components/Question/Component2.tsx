@@ -15,10 +15,10 @@ const formatSnippet = (snippet: string): string[] => {
 };
 
 const questions = [
-  "Is TriageMD’s response relevant to the patient’s preceding message?",
-  "Does TriageMD converge on and clearly communicate a triage recommendation in this snippet?",
-  "Does TriageMD’s response align with the provided AMA triage flowchart?",
-  "Does TriageMD appropriately address uncertainty given the available information?",
+  "Is the patient's response relevant to the patient’s preceding message?",
+  "Does the patient provide some kind of yes or no answer?",
+  "Does the patient answer affirmatively ('Yes') or negatively ('No')?",
+  "Does the patient express uncertainty (e.g., with 'maybe', 'not sure', 'probably')?",
 ];
 
 const Component2 = forwardRef<HTMLDivElement, Component2Props>(
@@ -164,7 +164,21 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                   <span style={{ fontWeight: "bold" }}>{"Patient:"}</span>
                   <span>{dialogs[0]?.split("Patient:")[1] || ""}</span>
                 </div>
-                <div
+                <div className="flex flex-col gap-8 pt-8">
+                  {questions.map((question, idx) => (
+                    <div className="flex flex-row items-center gap-8" key={idx}>
+                      <ToggleSwitch
+                        dialogIndex={index}
+                        index={idx}
+                        // Reads from the now-synchronized state
+                        isEnabled={responses[index]?.[idx] === "Yes"}
+                        onToggle={saveToggleResponse}
+                      />
+                      <p>{question}</p>
+                    </div>
+                  ))}
+                </div>
+                {/* <div
                   style={{
                     padding: "12px",
                     borderRadius: "8px",
@@ -191,7 +205,7 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                       <p>{question}</p>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             );
           })}
