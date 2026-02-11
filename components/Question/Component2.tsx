@@ -15,7 +15,7 @@ const formatSnippet = (snippet: string): string[] => {
 };
 
 const questions = [
-  "Is the patient's response relevant to the patient’s preceding message?",
+  "Is the patient's response relevant to the question?",
   "Does the patient provide some kind of yes or no answer?",
   "Does the patient answer affirmatively ('Yes') or negatively ('No')?",
   "Does the patient express uncertainty (e.g., with 'maybe', 'not sure', 'probably')?",
