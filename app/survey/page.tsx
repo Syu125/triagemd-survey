@@ -7,14 +7,24 @@ import { CODE_TO_VERSION, FLOWCHART_GROUPS } from "@/constants";
 import { loadSurveyData, SurveyItem } from "@/lib/surveyDataLoader";
 import { useRef } from "react";
 import { saveSurvey } from "./actions";
+
+const getSaved = (key: string, fallback: any) => {
+  if (typeof window !== "undefined") {
+    const saved = localStorage.getItem(key);
+    return saved ? JSON.parse(saved) : fallback;
+  }
+  return fallback;
+};
+
 export default function Survey() {
   const { code } = useCode();
   const [surveyItems, setSurveyItems] = useState<SurveyItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(() =>
+    getSaved("currentIndex", 0),
+  );
   const initialYes = Array(12).fill("Yes").join("\n");
-
   const [responses, setResponses] = useState<{
     [key: number]: { component1?: string; component2?: string };
   }>({
@@ -26,24 +36,20 @@ export default function Survey() {
   const component2Ref = useRef<HTMLDivElement>(null);
 
   // Survey storage
+  const [surveyState, setSurveyState] = useState<SurveyState>(() =>
+    getSaved("surveyState", {
+      code: code || "",
+      surveyId: 1,
+      topics: Array.from({ length: 10 }, () => ({
+        component1: null,
+        component2: [],
+      })),
+    }),
+  );
 
-  type metricQuestions = {
-    relevance: string;
-    decisiveness: string;
-    clinicalAccuracy: string;
-    uncertaintyCalibration: string;
-  };
-
-  const [surveyState, setSurveyState] = useState<SurveyState>({
-    code: code || "",
-    surveyId: 1,
-    topics: Array.from({ length: 10 }, () => ({
-      component1: null,
-      component2: [],
-    })),
-  });
-
-  const [currentTopic, setCurrentTopic] = useState(0); // 0–9
+  const [currentTopic, setCurrentTopic] = useState(() =>
+    getSaved("currentTopic", 0),
+  );
 
   // For Component 1
   const [patientSymptoms, setPatientSymptoms] = useState<string[]>([]);
@@ -79,6 +85,14 @@ export default function Survey() {
       });
     }, 0);
   };
+
+  useEffect(() => {
+    console.log("loading survey state from localStorage");
+    const savedState = localStorage.getItem("surveyState");
+    if (savedState) {
+      setSurveyState(JSON.parse(savedState));
+    }
+  }, []);
 
   useEffect(() => {
     const loadData = async () => {
@@ -136,28 +150,25 @@ export default function Survey() {
   }, [code]);
 
   useEffect(() => {
+    console.log(
+      "Saving survey state to localStorage:",
+      JSON.stringify(surveyState),
+    );
+    localStorage.setItem("surveyState", JSON.stringify(surveyState));
+  }, [surveyState]);
+
+  useEffect(() => {
     setSurveyState((prev) => {
       const copy = [...prev.topics];
       const latestResponse = responses[currentIndex];
-      // console.log("Latest response at submit:", latestResponse);
       copy[currentTopic].component1 = latestResponse?.component1;
-      // console.log(
-      //   "Updating topic ",
-      //   currentTopic,
-      //   " with answer: ",
-      //   latestResponse?.component1,
-      //   " and copy: ",
-      //   copy,
-      // );
       const q2responses = latestResponse?.component2?.split("\n") || [];
-      // console.log("q2responses:", latestResponse?.component2, q2responses);
       copy[currentTopic].component2 = q2responses.map((response, qIdx) => {
         return {
           question: qIdx.toString(),
           answer: response,
         };
       });
-      // console.log("Updated component2 answers:", copy[currentTopic].component2);
       return { ...prev, topics: copy };
     });
   }, [responses, currentIndex, currentTopic]);
@@ -195,22 +206,18 @@ export default function Survey() {
   }
 
   const currentItem = surveyItems[currentIndex];
-  // console.log("Current Item:", currentItem); // Debugging line
   const isLast = currentIndex === surveyItems.length / 3 - 1;
   const currentResponse = responses[currentIndex] || {};
   const component1Answered = !!currentResponse.component1;
 
   const handleComponent1Response = (value: string) => {
-    // console.log("Component 1 response received:", currentIndex, ", ", value);
     setResponses((prev) => ({
       ...prev,
       [currentIndex]: { ...prev[currentIndex], component1: value },
     }));
-    // console.log("Updated response: ", responses);
   };
 
   const handleComponent2Response = (value: string) => {
-    // console.log("Component 2 response received:", currentIndex, ", ", value);
     setResponses((prev) => ({
       ...prev,
       [currentIndex]: { ...prev[currentIndex], component2: value },
@@ -231,27 +238,10 @@ export default function Survey() {
       window.location.href = "/complete";
     }
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    if (currentTopic < 9) setCurrentTopic((t) => t + 1);
-    // console.log("Survey state at ", currentTopic, ": ", surveyState);
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
-  };
-  const getPatientDialog = (dialog: string): string => {
-    // Extract the patient's first message (before "TriageMD:")
-    const patientMatch = dialog.match(/Patient:\s*(.+?)(?=\nTriageMD:|$)/);
-    return patientMatch ? patientMatch[1].trim() : "";
+    if (currentTopic < 9) setCurrentTopic((t: number) => t + 1);
   };
 
   const getConversationSnippets = (index: number) => {
-    // console.log(
-    //   "Conversation index: ",
-    //   index,
-    //   surveyItems[index].dialog,
-    //   surveyItems[index + 1].dialog,
-    //   surveyItems[index + 1].dialog,
-    // );
     return [
       surveyItems[index * 3].dialog,
       surveyItems[index * 3 + 1].dialog,
@@ -260,14 +250,6 @@ export default function Survey() {
   };
 
   const getPreviousProtocols = (index: number) => {
-    // console.log(
-    //   "Protocol index: ",
-    //   index,
-    //   surveyItems[index].previousProtocol,
-    //   surveyItems[index + 1].previousProtocol,
-    //   surveyItems[index + 1].previousProtocol,
-    // );
-
     return [
       surveyItems[index * 3].previousProtocol,
       surveyItems[index * 3 + 1].previousProtocol,
@@ -276,14 +258,6 @@ export default function Survey() {
   };
 
   const getNextProtocols = (index: number) => {
-    // console.log(
-    //   "Protocol index: ",
-    //   index,
-    //   surveyItems[index].previousProtocol,
-    //   surveyItems[index + 1].previousProtocol,
-    //   surveyItems[index + 1].previousProtocol,
-    // );
-
     return [
       surveyItems[index * 3].nextProtocol,
       surveyItems[index * 3 + 1].nextProtocol,
