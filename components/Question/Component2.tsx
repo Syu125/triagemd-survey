@@ -35,13 +35,11 @@ const questionSets = [
   ],
 ];
 
-// Define your different labels here
 const snippetLabels = [
-  "First question from the flowchart (used to determine the first question TriageMD asks the patient)",
-  "Randomly selected question from the conversation",
-  "Randomly selected question from the conversation",
+  "First flowchart question",
+  "Later follow-up question",
+  "Later follow-up question",
 ];
-
 const speakerLabels = [
   "Patient's Chief Complaint",
   "Patient's Response",
@@ -164,6 +162,21 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
             <div style={{ fontWeight: "bold" }}>{flowchartName}</div>
           </span>
 
+          <div className="w-8/12 place-self-center">
+            In the following examples, you will see a triage question and the
+            patient’s statement.
+            <div style={{ marginBottom: "10px" }}></div>In the{" "}
+            <span style={{ fontWeight: "bold" }}>first example</span>, the
+            question shown is the first question in the flowchart, which
+            determines how the triage process begins, along with the patient's
+            chief complaint.
+            <div style={{ marginBottom: "10px" }}></div>In the{" "}
+            <span style={{ fontWeight: "bold" }}>other examples</span>, the
+            question and patient’s statement come from later in the triage
+            conversation. These are follow-up questions selected from different
+            points in the interaction.
+          </div>
+
           {snippets.map((snippet, index) => {
             const dialogs = formatSnippet(snippet);
             const currentQuestions = questionSets[index] || [questionSets[0]];
@@ -175,16 +188,22 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                   style={{
                     padding: "8px 12px",
                     marginBottom: "8px",
-                    fontSize: "0.9rem",
                     borderBottom: "1px solid #eee",
                   }}
                 >
-                  <span style={{ fontWeight: "600", color: "#666" }}>
-                    {snippetLabels[index] || `Section ${index + 1}`}:
-                  </span>
-                  <div></div>
                   <span
                     style={{
+                      fontSize: "1em",
+                      fontWeight: "600",
+                      color: "#000000",
+                    }}
+                  >
+                    {snippetLabels[index] || `Section ${index + 1}`}:
+                  </span>
+                  <span
+                    style={{
+                      marginLeft: "4px",
+                      fontSize: "1em",
                       color: "#666",
                     }}
                   >
