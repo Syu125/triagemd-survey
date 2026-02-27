@@ -307,7 +307,6 @@ export default function Survey() {
           <div>
             <Component2
               key={`topic-${currentIndex}`}
-              isRevisited={component2Visited}
               flowchartName={patientDemographics[currentIndex].flowchart}
               snippets={getConversationSnippets(currentIndex)}
               previousProtocols={getPreviousProtocols(currentIndex)}

@@ -2,7 +2,6 @@ import { useState, useEffect, forwardRef } from "react";
 import ToggleSwitch from "../Toggle/toggle";
 
 interface Component2Props {
-  isRevisited?: boolean;
   flowchartName: string;
   snippets: string[];
   previousProtocols: string[];
@@ -15,17 +14,42 @@ const formatSnippet = (snippet: string): string[] => {
   return snippet.split(/(?=Patient:|TriageMD:)/).filter(Boolean);
 };
 
-const questions = [
-  "Is the patient's response relevant to the question?",
-  "Does the patient provide some kind of yes or no answer?",
-  "Does the patient answer affirmatively ('Yes') or negatively ('No')?",
-  "Does the patient express uncertainty (e.g., with 'maybe', 'not sure', 'probably')?",
+const questionSets = [
+  [
+    "Does the patient’s chief complaint mention or describe the symptom asked about in the question?",
+    "Based on the patient’s chief complaint, is there enough information to determine whether the answer to the question is yes or no?",
+    "If there is enough information, what is the answer to the question? (Select 'No' if there is not enough information)",
+    "Does the patient express doubt or uncertainty about this symptom?",
+  ],
+  [
+    "Does the patient’s response directly address the specific symptom or condition asked about by TriageMD?",
+    "Does the patient’s response provide enough information to establish a clear 'Yes' or 'No' intent?",
+    "Based on the patient's response, what is the answer to the question?",
+    "Is the patient's answer ambiguous or uncertain (i.e., they do not provide a definitive 'Yes' or 'No')?",
+  ],
+  [
+    "Does the patient’s response directly address the specific symptom or condition asked about by TriageMD?",
+    "Does the patient’s response provide enough information to establish a clear 'Yes' or 'No' intent?",
+    "Based on the patient's response, what is the answer to the question?",
+    "Is the patient's answer ambiguous or uncertain (i.e., they do not provide a definitive 'Yes' or 'No')?",
+  ],
 ];
 
+// Define your different labels here
+const snippetLabels = [
+  "First question from the flowchart (used to determine the first question TriageMD asks the patient)",
+  "Randomly selected question from the conversation",
+  "Randomly selected question from the conversation",
+];
+
+const speakerLabels = [
+  "Patient's Chief Complaint",
+  "Patient's Response",
+  "Patient's Response",
+];
 const Component2 = forwardRef<HTMLDivElement, Component2Props>(
   (
     {
-      isRevisited,
       flowchartName,
       snippets,
       previousProtocols,
@@ -35,7 +59,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
     },
     ref,
   ) => {
-    // Initialize state with "Yes" defaults
     const [responses, setResponses] = useState<
       Record<number, Record<number, string>>
     >(() => {
@@ -46,7 +69,8 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
         let lineIndex = 0;
         snippets.forEach((_, sIdx) => {
           initial[sIdx] = {};
-          questions.forEach((_, qIdx) => {
+          const currentQuestions = questionSets[sIdx] || [questionSets[0]];
+          currentQuestions.forEach((_, qIdx) => {
             initial[sIdx][qIdx] = lines[lineIndex] === "No" ? "No" : "Yes";
             lineIndex++;
           });
@@ -56,27 +80,26 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
 
       snippets.forEach((_, dialogIndex) => {
         initial[dialogIndex] = {};
-        questions.forEach((_, qIdx) => {
+        const currentQuestions = questionSets[dialogIndex] || [questionSets[0]];
+        currentQuestions.forEach((_, qIdx) => {
           initial[dialogIndex][qIdx] = "Yes";
         });
       });
       return initial;
     });
+
     useEffect(() => {
       if (savedResponse) {
         const lines = savedResponse.split("\n").filter((l) => l.trim() !== "");
-
         if (lines.length === 0) return;
 
         setResponses((prev) => {
           const next = { ...prev };
-
           let lineIndex = 0;
-
           snippets.forEach((_, sIdx) => {
             if (!next[sIdx]) next[sIdx] = {};
-
-            questions.forEach((_, qIdx) => {
+            const currentQuestions = questionSets[sIdx] || [questionSets[0]];
+            currentQuestions.forEach((_, qIdx) => {
               const line = lines[lineIndex];
               if (line) {
                 const isNo = line.trim().endsWith("No");
@@ -95,8 +118,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
       index: number,
       isYes: boolean,
     ) => {
-      console.log("Toggle response received:", dialogIndex, index, isYes);
-
       setResponses((prev) => {
         const copy = { ...prev };
         copy[dialogIndex] = {
@@ -105,7 +126,8 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
         };
         const fullString = snippets
           .map((_, sIdx) => {
-            return questions
+            const currentQuestions = questionSets[sIdx] || [questionSets[0]];
+            return currentQuestions
               .map((q, qIdx) => {
                 const ans = copy[sIdx]?.[qIdx] || "Yes";
                 return `${ans}`;
@@ -114,11 +136,7 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
           })
           .join("\n");
 
-        console.log("Updated responses obj:", copy);
-        console.log("Full Combined String:", fullString);
-
         onResponse(fullString);
-
         return copy;
       });
     };
@@ -142,23 +160,38 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
               fontSize: "20px",
             }}
           >
-            TriageMD's chosen flowchart: <div></div>
-            <span style={{ fontWeight: "bold" }}>{flowchartName}</span>
+            TriageMD's chosen flowchart:
+            <div style={{ fontWeight: "bold" }}>{flowchartName}</div>
           </span>
+
           {snippets.map((snippet, index) => {
             const dialogs = formatSnippet(snippet);
+            const currentQuestions = questionSets[index] || [questionSets[0]];
 
             return (
               <div className="w-8/12 place-self-center" key={index}>
+                {/* Updated Label Section */}
                 <div
                   style={{
-                    padding: "12px",
-                    borderRadius: "8px",
+                    padding: "8px 12px",
+                    marginBottom: "8px",
+                    fontSize: "0.9rem",
+                    borderBottom: "1px solid #eee",
                   }}
                 >
-                  {" "}
-                  <span>Protocol: {previousProtocols[index]}</span>
+                  <span style={{ fontWeight: "600", color: "#666" }}>
+                    {snippetLabels[index] || `Section ${index + 1}`}:
+                  </span>
+                  <div></div>
+                  <span
+                    style={{
+                      color: "#666",
+                    }}
+                  >
+                    {previousProtocols[index]}
+                  </span>
                 </div>
+
                 <div
                   style={{
                     padding: "12px",
@@ -167,17 +200,22 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                     borderLeft: `4px solid var(--color-green1)`,
                   }}
                 >
-                  <span style={{ fontWeight: "bold" }}>{"Patient:"}</span>
+                  <span style={{ fontWeight: "bold" }}>
+                    {speakerLabels[index] || "Patient"}:
+                  </span>
                   <span>{dialogs[0]?.split("Patient:")[1] || ""}</span>
                 </div>
+
                 <div className="flex flex-col gap-8 pt-8">
-                  {questions.map((question, idx) => (
-                    <div className="flex flex-row items-center gap-8" key={idx}>
+                  {currentQuestions.map((question, qIdx) => (
+                    <div
+                      className="flex flex-row items-center gap-8"
+                      key={qIdx}
+                    >
                       <ToggleSwitch
                         dialogIndex={index}
-                        index={idx}
-                        // Reads from the now-synchronized state
-                        isEnabled={responses[index]?.[idx] === "Yes"}
+                        index={qIdx}
+                        isEnabled={responses[index]?.[qIdx] === "Yes"}
                         onToggle={saveToggleResponse}
                       />
                       <p>{question}</p>
@@ -192,4 +230,5 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
     );
   },
 );
+
 export default Component2;
