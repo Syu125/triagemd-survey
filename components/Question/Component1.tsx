@@ -31,9 +31,7 @@ export default function Component1({
   }, [data.id, savedResponse]);
 
   const handleSubmit = () => {
-    // console.log("Handle submit called with selected:", selected);
     if (selected) {
-      // console.log("Submitting response:", selected);
       setSubmitted(true);
       onSubmit();
       onResponse(selected);

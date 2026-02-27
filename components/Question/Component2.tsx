@@ -2,6 +2,7 @@ import { useState, useEffect, forwardRef } from "react";
 import ToggleSwitch from "../Toggle/toggle";
 
 interface Component2Props {
+  isRevisited?: boolean;
   flowchartName: string;
   snippets: string[];
   previousProtocols: string[];
@@ -24,6 +25,7 @@ const questions = [
 const Component2 = forwardRef<HTMLDivElement, Component2Props>(
   (
     {
+      isRevisited,
       flowchartName,
       snippets,
       previousProtocols,
@@ -38,6 +40,20 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
       Record<number, Record<number, string>>
     >(() => {
       const initial: Record<number, Record<number, string>> = {};
+
+      if (savedResponse) {
+        const lines = savedResponse.split("\n").filter((l) => l.trim() !== "");
+        let lineIndex = 0;
+        snippets.forEach((_, sIdx) => {
+          initial[sIdx] = {};
+          questions.forEach((_, qIdx) => {
+            initial[sIdx][qIdx] = lines[lineIndex] === "No" ? "No" : "Yes";
+            lineIndex++;
+          });
+        });
+        return initial;
+      }
+
       snippets.forEach((_, dialogIndex) => {
         initial[dialogIndex] = {};
         questions.forEach((_, qIdx) => {
@@ -46,31 +62,23 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
       });
       return initial;
     });
-
     useEffect(() => {
       if (savedResponse) {
-        // Split the saved string into lines
         const lines = savedResponse.split("\n").filter((l) => l.trim() !== "");
 
-        // If the string is empty or invalid, don't overwrite defaults
         if (lines.length === 0) return;
 
         setResponses((prev) => {
           const next = { ...prev };
 
-          // Logic: The string stores answers sequentially.
-          // 3 snippets * 4 questions = 12 lines.
-          // Line i corresponds to Snippet [Math.floor(i/4)] Question [i%4]
           let lineIndex = 0;
 
           snippets.forEach((_, sIdx) => {
-            // Ensure the snippet object exists
             if (!next[sIdx]) next[sIdx] = {};
 
             questions.forEach((_, qIdx) => {
               const line = lines[lineIndex];
               if (line) {
-                // Check if the line ends with "No" (case insensitive check usually safer, but strict here matches your save)
                 const isNo = line.trim().endsWith("No");
                 next[sIdx][qIdx] = isNo ? "No" : "Yes";
               }
@@ -91,7 +99,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
 
       setResponses((prev) => {
         const copy = { ...prev };
-        // Update the specific toggle in local state
         copy[dialogIndex] = {
           ...copy[dialogIndex],
           [index]: isYes ? "Yes" : "No",
@@ -100,7 +107,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
           .map((_, sIdx) => {
             return questions
               .map((q, qIdx) => {
-                // Get the answer from state, defaulting to Yes if somehow missing
                 const ans = copy[sIdx]?.[qIdx] || "Yes";
                 return `${ans}`;
               })
@@ -111,7 +117,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
         console.log("Updated responses obj:", copy);
         console.log("Full Combined String:", fullString);
 
-        // Send the complete string to parent
         onResponse(fullString);
 
         return copy;
@@ -179,34 +184,6 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
                     </div>
                   ))}
                 </div>
-                {/* <div
-                  style={{
-                    padding: "12px",
-                    borderRadius: "8px",
-                    backgroundColor: "var(--color-teal4)",
-                    borderLeft: `4px solid var(--color-teal1)`,
-                  }}
-                >
-                  <span>{"[Protocol: " + nextProtocols[index] + "]"}</span>
-                  <div></div>
-                  <span style={{ fontWeight: "bold" }}>{"TriageMD:"}</span>
-                  <span>{dialogs[1]?.split("TriageMD:")[1] || ""}</span>
-                </div>
-
-                <div className="flex flex-col gap-8 pt-8">
-                  {questions.map((question, idx) => (
-                    <div className="flex flex-row items-center gap-8" key={idx}>
-                      <ToggleSwitch
-                        dialogIndex={index}
-                        index={idx}
-                        // Reads from the now-synchronized state
-                        isEnabled={responses[index]?.[idx] === "Yes"}
-                        onToggle={saveToggleResponse}
-                      />
-                      <p>{question}</p>
-                    </div>
-                  ))}
-                </div> */}
               </div>
             );
           })}

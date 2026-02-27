@@ -62,7 +62,6 @@ export default function Survey() {
   // For Component 2
 
   const getFlowchartOptions = (flowchartName: string): string[] => {
-    // Find the group that contains this flowchart
     for (const [groupName, flowcharts] of Object.entries(FLOWCHART_GROUPS)) {
       if (flowcharts.includes(flowchartName)) {
         return [...flowcharts, "None of the above"];
@@ -203,10 +202,10 @@ export default function Survey() {
     );
   }
 
-  const currentItem = surveyItems[currentIndex];
   const isLast = currentIndex === surveyItems.length / 3 - 1;
   const currentResponse = responses[currentIndex] || {};
   const component1Answered = !!currentResponse.component1;
+  const component2Visited = !!responses[currentIndex]?.component2;
 
   const handleComponent1Response = (value: string) => {
     setResponses((prev) => ({
@@ -224,27 +223,26 @@ export default function Survey() {
 
   const handleNext = async () => {
     if (!isLast) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      setSurveyState((prev) => {
-        return { ...prev, code: code };
-      });
+      const nextIndex = currentIndex + 1;
+      const isBrandNew = !responses[nextIndex]?.component1;
 
-      // Final submission logic here
-      console.log("Final survey state:", surveyState);
+      setCurrentIndex(nextIndex);
+      setCurrentTopic(nextIndex);
+
+      if (isBrandNew) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } else {
       await saveSurvey(surveyState);
       window.location.href = "/complete";
     }
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    if (currentTopic < 9) setCurrentTopic((t: number) => t + 1);
   };
+
   const handleBack = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      setCurrentTopic((t: number) => t - 1);
-
-      // Smooth scroll back to top so they see the start of the previous question
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const prevIndex = currentIndex - 1;
+      setCurrentIndex(prevIndex);
+      setCurrentTopic(prevIndex);
     }
   };
 
@@ -308,6 +306,8 @@ export default function Survey() {
         {component1Answered && (
           <div>
             <Component2
+              key={`topic-${currentIndex}`}
+              isRevisited={component2Visited}
               flowchartName={patientDemographics[currentIndex].flowchart}
               snippets={getConversationSnippets(currentIndex)}
               previousProtocols={getPreviousProtocols(currentIndex)}
