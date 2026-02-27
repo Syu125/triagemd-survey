@@ -156,6 +156,7 @@ export default function Survey() {
 
   useEffect(() => {
     setSurveyState((prev) => {
+      if (!prev.topics || !prev.topics[currentTopic]) return prev;
       const copy = [...prev.topics];
       const latestResponse = responses[currentIndex];
       copy[currentTopic].component1 = latestResponse?.component1;
@@ -237,6 +238,15 @@ export default function Survey() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     if (currentTopic < 9) setCurrentTopic((t: number) => t + 1);
   };
+  const handleBack = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setCurrentTopic((t: number) => t - 1);
+
+      // Smooth scroll back to top so they see the start of the previous question
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const getConversationSnippets = (index: number) => {
     return [
@@ -308,7 +318,16 @@ export default function Survey() {
             />
 
             {/* Navigation */}
+
             <div className="flex gap-4 align-self-center justify-center mt-12 mb-36">
+              {currentIndex > 0 && (
+                <button
+                  onClick={handleBack}
+                  className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded transition-colors"
+                >
+                  Back
+                </button>
+              )}
               <button
                 onClick={handleNext}
                 disabled={currentIndex === 10} // Last component
