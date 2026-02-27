@@ -27,12 +27,7 @@ export default function Survey() {
   const initialYes = Array(12).fill("Yes").join("\n");
   const [responses, setResponses] = useState<{
     [key: number]: { component1?: string; component2?: string };
-  }>({
-    0: {
-      component2: initialYes,
-    },
-  });
-
+  }>(() => getSaved("responses", { 0: { component2: initialYes } }));
   const component2Ref = useRef<HTMLDivElement>(null);
 
   // Survey storage
@@ -63,8 +58,6 @@ export default function Survey() {
   const [patientDemographics, setPatientDemographics] = useState<
     PatientDemographics[]
   >([]);
-
-  const progress = ((currentIndex + 1) / patientSymptoms.length) * 100;
 
   // For Component 2
 
@@ -156,6 +149,10 @@ export default function Survey() {
     );
     localStorage.setItem("surveyState", JSON.stringify(surveyState));
   }, [surveyState]);
+
+  useEffect(() => {
+    localStorage.setItem("responses", JSON.stringify(responses));
+  }, [responses]);
 
   useEffect(() => {
     setSurveyState((prev) => {
@@ -285,6 +282,7 @@ export default function Survey() {
       <div className="mt-10">
         {/* Component 1 */}
         <Component1
+          key={`q-${currentIndex}-${responses[currentIndex]?.component1 || "empty"}`}
           data={{
             id: patientDemographics[currentIndex].id,
             sex: patientDemographics[currentIndex].sex,

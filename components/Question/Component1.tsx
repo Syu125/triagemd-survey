@@ -20,18 +20,14 @@ export default function Component1({
   savedResponse,
   onSubmit,
 }: Component1Props) {
-  const [selected, setSelected] = useState<string | null>(null);
-  const [submitted, setSubmitted] = useState(false);
+  const [selected, setSelected] = useState<string | null>(
+    savedResponse || null,
+  );
+  const [submitted, setSubmitted] = useState(!!savedResponse);
 
   useEffect(() => {
-    if (savedResponse) {
-      // console.log("Saved response:", savedResponse);
-      setSelected(savedResponse);
-      setSubmitted(true);
-    } else {
-      setSelected(null);
-      setSubmitted(false);
-    }
+    setSelected(savedResponse || null);
+    setSubmitted(!!savedResponse);
   }, [data.id, savedResponse]);
 
   const handleSubmit = () => {
