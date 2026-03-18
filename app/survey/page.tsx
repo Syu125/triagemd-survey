@@ -109,10 +109,12 @@ export default function Survey() {
         const demographics: PatientDemographics[] = [];
         for (let i = 0; i < 10; i++) {
           const entry = data[i * 3];
-          const patientMatch = entry.dialog.match(
-            /Patient:\s*(.+?)(?=\nTriageMD:|$)/,
-          );
-          symptomsList.push(patientMatch ? patientMatch[1].trim() : "");
+          // console.log("Processing entry:", entry); // Debugging line
+          // const patientMatch = entry.dialog.match(
+          //   /Patient:\s*(.+?)(?=\nTriageMD:|$)/,
+          // );
+          // symptomsList.push(patientMatch ? patientMatch[1].trim() : "");
+          symptomsList.push(entry.dialog.split("\n")[0].replace("Patient:", "").trim());
           demographics.push({
             id: entry.id,
             sex: entry.sex,
@@ -123,6 +125,7 @@ export default function Survey() {
         }
 
         console.log("Demographics: ", demographics);
+        console.log("Symptoms: ", symptomsList);
         setPatientSymptoms(symptomsList);
         setPatientDemographics(demographics);
       } catch (err) {
