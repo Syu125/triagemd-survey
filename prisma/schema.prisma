@@ -33,3 +33,15 @@ model Component2 {
   question String // e.g., "Is TriageMD relevant?"
   answer   String // yes/no/maybe
 }
+
+// Consent form signatures
+model ConsentForm {
+  id               Int       @id @default(autoincrement())
+  accessCode       String?
+  participantName  String?
+  participantEmail String?
+  signatureData    String?   // Legacy signature image data
+  agreed           Boolean   @default(false)
+  signedAt         DateTime  @default(now())
+  createdAt        DateTime  @default(now())
+}

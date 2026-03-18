@@ -76,7 +76,7 @@ export default function Home() {
           )}
         </div>
         {isValidCode && (
-          <Link href="/instructions">
+          <Link href="/irb">
             <button className="bg-green1 hover:bg-green2 text-white font-bold py-2 px-4 rounded mt-8">
               Continue
             </button>
