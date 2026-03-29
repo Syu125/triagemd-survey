@@ -25,7 +25,7 @@ export default function Complete() {
           </a>
         </div>
         <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li><span className="font-bold">Time commitment:</span> 30 minutes</li>
+          <li><span className="font-bold">Time commitment:</span> 1 hour</li>
           <li>
             <span className="font-bold">Compensation:</span> As a thank you for this additional time, participants who complete
             the interview will receive a $5 gift card.
