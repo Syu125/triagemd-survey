@@ -86,6 +86,22 @@ const Component2 = forwardRef<HTMLDivElement, Component2Props>(
       return initial;
     });
 
+    // On mount, immediately report the initial state to the parent so that
+    // responses[currentIndex].component2 is always populated even when the
+    // user never changes a toggle from its default "Yes" value.
+    useEffect(() => {
+      const fullString = snippets
+        .map((_, sIdx) => {
+          const currentQuestions = questionSets[sIdx] || [questionSets[0]];
+          return currentQuestions
+            .map((_, qIdx) => responses[sIdx]?.[qIdx] || "Yes")
+            .join("\n");
+        })
+        .join("\n");
+      onResponse(fullString);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     useEffect(() => {
       if (savedResponse) {
         const lines = savedResponse.split("\n").filter((l) => l.trim() !== "");
