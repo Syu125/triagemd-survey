@@ -35,7 +35,7 @@ export default function Complete() {
                 : "bg-white text-gray-800 border-gray-300 hover:bg-gray-50"
             }`}
           >
-            Yes
+            I'm interested!
           </button>
           <button
             type="button"
@@ -46,7 +46,7 @@ export default function Complete() {
                 : "bg-white text-gray-800 border-gray-300 hover:bg-gray-50"
             }`}
           >
-            No
+            I'm not interested.
           </button>
         </div>
 
@@ -69,7 +69,7 @@ export default function Complete() {
             <h3 className="text-xl font-semibold">No problem, thank you!</h3>
             <p className="mt-2 text-gray-700">
               You have completed the survey and are still entered in the gift card
-              lottery from your initial sign-up.
+              lottery from your initial sign-up. You may safely close this page.
             </p>
           </div>
         )}
