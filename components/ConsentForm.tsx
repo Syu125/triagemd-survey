@@ -75,26 +75,11 @@ export default function ConsentFormComponent() {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h1 className="text-3xl font-bold mb-6">Consent Form</h1>
+    <div className="flex items-center justify-center min-h-screen py-8 px-4">
+      <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6">
+        <h1 className="text-3xl font-bold mb-6 text-center">Consent Form</h1>
 
-    <div className="grid grid-cols-[3fr_2fr] gap-8">
-        <div className="mb-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
-            <p className="text-sm text-gray-600 mb-4">
-            Please review the consent form below. This survey is anonymous.
-            </p>    
-
-            {/* PDF Embedded */}
-            <iframe
-            src="/consent-form.pdf"
-            width="100%"
-            height="600"
-            className="border border-gray-300 rounded mb-4"
-            title="Consent Form PDF"
-            />
-      </div>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
         <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
           <label className="flex items-start gap-3 text-sm text-gray-800">
             <input
@@ -104,7 +89,7 @@ export default function ConsentFormComponent() {
               className="mt-1 h-4 w-4"
             />
             <span>
-              I have read the consent information and I agree to participate in this anonymous study.
+              This study is approved by UCSD IRB (#200201). By checking the box and proceeding, you consent to participating in this study.
             </span>
           </label>
         </div>
@@ -123,16 +108,17 @@ export default function ConsentFormComponent() {
         )}
 
         {/* Submit Button */}
-        <button
-          type="submit"
-          disabled={isLoading}
-          className="w-8/12 py-3 px-4 bg-green1 text-white font-medium rounded-lg hover:bg-green2 disabled:bg-gray-400 transition"
-        >
-          {isLoading ? "Saving..." : "I Agree and Continue"}
-        </button>
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="py-3 px-6 bg-green1 text-white font-medium rounded-lg hover:bg-green2 disabled:bg-gray-400 transition"
+          >
+            {isLoading ? "Saving..." : "I Agree and Continue"}
+          </button>
+        </div>
       </form>
-    </div>
-      
+      </div>
     </div>
   );
 }

@@ -16,6 +16,12 @@ const getSaved = (key: string, fallback: any) => {
   return fallback;
 };
 
+const clampIndex = (index: number, length: number) => {
+  if (!Number.isFinite(index)) return 0;
+  if (length <= 0) return 0;
+  return Math.max(0, Math.min(index, length - 1));
+};
+
 export default function Survey() {
   const { code } = useCode();
   const [surveyItems, setSurveyItems] = useState<SurveyItem[]>([]);
@@ -155,6 +161,24 @@ export default function Survey() {
   useEffect(() => {
     localStorage.setItem("responses", JSON.stringify(responses));
   }, [responses]);
+
+  useEffect(() => {
+    localStorage.setItem("currentIndex", JSON.stringify(currentIndex));
+  }, [currentIndex]);
+
+  useEffect(() => {
+    localStorage.setItem("currentTopic", JSON.stringify(currentTopic));
+  }, [currentTopic]);
+
+  useEffect(() => {
+    if (patientSymptoms.length === 0) return;
+
+    const boundedIndex = clampIndex(currentIndex, patientSymptoms.length);
+    if (boundedIndex !== currentIndex) {
+      setCurrentIndex(boundedIndex);
+      setCurrentTopic(boundedIndex);
+    }
+  }, [patientSymptoms.length, currentIndex]);
 
   useEffect(() => {
     setSurveyState((prev) => {
