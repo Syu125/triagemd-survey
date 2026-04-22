@@ -31,6 +31,7 @@ export const VALID_CODES = [
   "M9WQX7",
   "TEST",
   "TEST2",
+  "TEST3",
 ];
 
 export const CODE_TO_VERSION: { [key: string]: number } = {
@@ -66,6 +67,7 @@ export const CODE_TO_VERSION: { [key: string]: number } = {
   M9WQX7: 30,
   TEST: 31,
   TEST2: 32,
+  TEST3: 33,
 };
 
 export const FLOWCHART_GROUPS: { [key: string]: string[] } = {
