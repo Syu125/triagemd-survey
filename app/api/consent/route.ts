@@ -2,6 +2,46 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { Prisma } from "@prisma/client";
 
+export async function GET(request: NextRequest) {
+  try {
+    const accessCode = request.nextUrl.searchParams.get("accessCode")?.trim();
+
+    if (!accessCode) {
+      return NextResponse.json(
+        {
+          error: "Missing required query parameter: accessCode",
+        },
+        { status: 400 },
+      );
+    }
+
+    const records = await prisma.$queryRaw<{ id: number }[]>`
+      SELECT "id"
+      FROM "ConsentForm"
+      WHERE "accessCode" = ${accessCode}
+        AND "agreed" = ${true}
+      ORDER BY "signedAt" DESC
+      LIMIT 1
+    `;
+
+    return NextResponse.json({
+      accessCode,
+      hasConsented: records.length > 0,
+    });
+  } catch (error) {
+    console.error("Error checking consent form status:", error);
+
+    const isDev = process.env.NODE_ENV !== "production";
+    return NextResponse.json(
+      {
+        error: "Failed to check consent form status",
+        ...(isDev && error instanceof Error ? { details: error.message } : {}),
+      },
+      { status: 500 },
+    );
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();

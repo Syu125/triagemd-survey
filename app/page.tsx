@@ -1,14 +1,101 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useCode } from "@/context/CodeContext";
 import { VALID_CODES } from "@/constants";
 import welcomeImage from "@/public/welcome.png";
 
 export default function Home() {
-  const { code, setCode } = useCode();
-  const isValidCode = VALID_CODES.includes(code.toUpperCase());
+  const router = useRouter();
+  const { code, setCode, isLoaded } = useCode();
+  const [hasConsented, setHasConsented] = useState<boolean | null>(null);
+  const [isCheckingConsent, setIsCheckingConsent] = useState(false);
+  const [consentError, setConsentError] = useState<string | null>(null);
+  const normalizedCode = code.trim().toUpperCase();
+  const isValidCode = VALID_CODES.includes(normalizedCode);
+
+  const fetchConsentStatus = async (accessCode: string, signal?: AbortSignal) => {
+    const response = await fetch(
+      `/api/consent?accessCode=${encodeURIComponent(accessCode)}`,
+      { signal },
+    );
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || "Failed to check consent status");
+    }
+
+    return Boolean(result.hasConsented);
+  };
+
+  useEffect(() => {
+    if (!isLoaded || !isValidCode) {
+      setHasConsented(null);
+      setConsentError(null);
+      setIsCheckingConsent(false);
+      return;
+    }
+
+    const controller = new AbortController();
+    let isActive = true;
+
+    const checkConsent = async () => {
+      setIsCheckingConsent(true);
+      setConsentError(null);
+
+      try {
+        const consented = await fetchConsentStatus(normalizedCode, controller.signal);
+        if (isActive) {
+          setHasConsented(consented);
+        }
+      } catch (error) {
+        if (controller.signal.aborted || !isActive) {
+          return;
+        }
+
+        setHasConsented(null);
+        setConsentError(
+          error instanceof Error
+            ? error.message
+            : "Failed to check consent status",
+        );
+      } finally {
+        if (isActive && !controller.signal.aborted) {
+          setIsCheckingConsent(false);
+        }
+      }
+    };
+
+    void checkConsent();
+
+    return () => {
+      isActive = false;
+      controller.abort();
+    };
+  }, [isLoaded, isValidCode, normalizedCode]);
+
+  const handleContinue = async () => {
+    if (!isValidCode || isCheckingConsent) {
+      return;
+    }
+
+    try {
+      const consented =
+        hasConsented === null || consentError
+          ? await fetchConsentStatus(normalizedCode)
+          : hasConsented;
+
+      router.push(consented ? "/survey" : "/irb");
+    } catch (error) {
+      setConsentError(
+        error instanceof Error
+          ? error.message
+          : "Failed to check consent status",
+      );
+    }
+  };
 
   return (
     <div className="grid grid-cols-[3fr_2fr] place-items-center place-self-center w-11/12 h-screen px-32 gap-8">
@@ -75,12 +162,22 @@ export default function Home() {
             <p className="text-red-500 text-sm mt-2">Invalid code</p>
           )}
         </div>
+        {consentError && isValidCode && (
+          <p className="text-red-500 text-sm mt-2">{consentError}</p>
+        )}
         {isValidCode && (
-          <Link href="/irb">
-            <button className="bg-green1 hover:bg-green2 text-white font-bold py-2 px-4 rounded mt-8">
-              Continue
-            </button>
-          </Link>
+          <button
+            type="button"
+            onClick={handleContinue}
+            disabled={isCheckingConsent}
+            className="bg-green1 hover:bg-green2 disabled:opacity-50 text-white font-bold py-2 px-4 rounded mt-8"
+          >
+            {isCheckingConsent
+              ? "Checking..."
+              : hasConsented
+                ? "Resume Survey"
+                : "Continue"}
+          </button>
         )}
       </div>
       <div>

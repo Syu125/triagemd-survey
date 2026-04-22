@@ -1,18 +1,68 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useCode } from "@/context/CodeContext";
 import { useRouter } from "next/navigation";
 
 export default function ConsentFormComponent() {
   const router = useRouter();
-  const { code } = useCode();
+  const { code, isLoaded } = useCode();
   const [agreed, setAgreed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isCheckingConsent, setIsCheckingConsent] = useState(true);
   const [message, setMessage] = useState<{
     type: "success" | "error";
     text: string;
   } | null>(null);
+  const normalizedCode = code.trim().toUpperCase();
+
+  useEffect(() => {
+    if (!isLoaded) {
+      return;
+    }
+
+    if (!normalizedCode) {
+      setIsCheckingConsent(false);
+      return;
+    }
+
+    const controller = new AbortController();
+    let isActive = true;
+
+    const checkConsent = async () => {
+      try {
+        const response = await fetch(
+          `/api/consent?accessCode=${encodeURIComponent(normalizedCode)}`,
+          { signal: controller.signal },
+        );
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || "Failed to check consent status");
+        }
+
+        if (isActive && result.hasConsented) {
+          router.replace("/survey");
+          return;
+        }
+      } catch (error) {
+        if (!controller.signal.aborted) {
+          console.error("Failed to check consent status", error);
+        }
+      } finally {
+        if (isActive && !controller.signal.aborted) {
+          setIsCheckingConsent(false);
+        }
+      }
+    };
+
+    void checkConsent();
+
+    return () => {
+      isActive = false;
+      controller.abort();
+    };
+  }, [isLoaded, normalizedCode, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,7 +70,7 @@ export default function ConsentFormComponent() {
     setMessage(null);
 
     try {
-      if (!code) {
+      if (!normalizedCode) {
         setMessage({
           type: "error",
           text: "Missing access code. Please return to the start and re-enter your code.",
@@ -45,7 +95,7 @@ export default function ConsentFormComponent() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          accessCode: code,
+          accessCode: normalizedCode,
           agreed,
         }),
       });
@@ -73,6 +123,16 @@ export default function ConsentFormComponent() {
       setIsLoading(false);
     }
   };
+
+  if (isCheckingConsent) {
+    return (
+      <div className="flex items-center justify-center min-h-screen py-8 px-4">
+        <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6 text-center">
+          <p className="text-lg font-semibold">Checking consent status...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen py-8 px-4">

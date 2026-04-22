@@ -30,6 +30,7 @@ export const VALID_CODES = [
   "T4FZ1C",
   "M9WQX7",
   "TEST",
+  "TEST2",
 ];
 
 export const CODE_TO_VERSION: { [key: string]: number } = {
@@ -64,6 +65,7 @@ export const CODE_TO_VERSION: { [key: string]: number } = {
   T4FZ1C: 29,
   M9WQX7: 30,
   TEST: 31,
+  TEST2: 32,
 };
 
 export const FLOWCHART_GROUPS: { [key: string]: string[] } = {

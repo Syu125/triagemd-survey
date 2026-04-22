@@ -8,12 +8,36 @@ import { loadSurveyData, SurveyItem } from "@/lib/surveyDataLoader";
 import { useRef } from "react";
 import { saveSurvey } from "./actions";
 
-const getSaved = (key: string, fallback: any) => {
-  if (typeof window !== "undefined") {
-    const saved = localStorage.getItem(key);
-    return saved ? JSON.parse(saved) : fallback;
+const createDefaultSurveyState = (accessCode: string): SurveyState => ({
+  code: accessCode,
+  surveyId: 1,
+  topics: Array.from({ length: 10 }, () => ({
+    component1: null,
+    component2: [],
+  })),
+});
+
+const createDefaultResponses = () => ({});
+
+const getStorageKey = (accessCode: string, key: string) =>
+  `survey:${accessCode}:${key}`;
+
+const readStoredValue = <T,>(
+  accessCode: string,
+  key: string,
+  fallback: T,
+): T => {
+  if (typeof window === "undefined" || !accessCode) {
+    return fallback;
   }
-  return fallback;
+
+  const namespacedValue = localStorage.getItem(getStorageKey(accessCode, key));
+  if (namespacedValue) {
+    return JSON.parse(namespacedValue) as T;
+  }
+
+  const legacyValue = localStorage.getItem(key);
+  return legacyValue ? (JSON.parse(legacyValue) as T) : fallback;
 };
 
 const clampIndex = (index: number, length: number) => {
@@ -22,35 +46,60 @@ const clampIndex = (index: number, length: number) => {
   return Math.max(0, Math.min(index, length - 1));
 };
 
+const buildResponsesFromSurveyState = (surveyState: SurveyState) => {
+  const restoredResponses: {
+    [key: number]: { component1?: string; component2?: string };
+  } = {};
+
+  surveyState.topics.forEach((topic, index) => {
+    const restoredTopic: { component1?: string; component2?: string } = {};
+
+    if (topic.component1) {
+      restoredTopic.component1 = topic.component1;
+    }
+
+    if (topic.component2.length > 0) {
+      restoredTopic.component2 = topic.component2
+        .map((component2) => component2.answer ?? "")
+        .join("\n");
+    }
+
+    if (restoredTopic.component1 || restoredTopic.component2) {
+      restoredResponses[index] = restoredTopic;
+    }
+  });
+
+  return restoredResponses;
+};
+
+const hasMeaningfulProgress = (surveyState: SurveyState) => {
+  return surveyState.topics.some(
+    (topic) => Boolean(topic.component1) || topic.component2.length > 0,
+  );
+};
+
 export default function Survey() {
-  const { code } = useCode();
+  const { code, isLoaded } = useCode();
   const [surveyItems, setSurveyItems] = useState<SurveyItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(() =>
-    getSaved("currentIndex", 0),
-  );
-  const initialYes = Array(12).fill("Yes").join("\n");
+  const normalizedCode = code.trim().toUpperCase();
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [responses, setResponses] = useState<{
     [key: number]: { component1?: string; component2?: string };
-  }>(() => getSaved("responses", { 0: { component2: initialYes } }));
+  }>(createDefaultResponses);
   const component2Ref = useRef<HTMLDivElement>(null);
+  const [storageReady, setStorageReady] = useState(false);
+  const hydratedCodeRef = useRef<string | null>(null);
+  const lastSavedSignatureRef = useRef("");
+  const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
 
   // Survey storage
   const [surveyState, setSurveyState] = useState<SurveyState>(() =>
-    getSaved("surveyState", {
-      code: code || "",
-      surveyId: 1,
-      topics: Array.from({ length: 10 }, () => ({
-        component1: null,
-        component2: [],
-      })),
-    }),
+    createDefaultSurveyState(""),
   );
 
-  const [currentTopic, setCurrentTopic] = useState(() =>
-    getSaved("currentTopic", 0),
-  );
+  const [currentTopic, setCurrentTopic] = useState(0);
 
   // For Component 1
   const [patientSymptoms, setPatientSymptoms] = useState<string[]>([]);
@@ -85,12 +134,50 @@ export default function Survey() {
   };
 
   useEffect(() => {
-    console.log("loading survey state from localStorage");
-    const savedState = localStorage.getItem("surveyState");
-    if (savedState) {
-      setSurveyState(JSON.parse(savedState));
+    if (!isLoaded) {
+      return;
     }
-  }, []);
+
+    if (!normalizedCode) {
+      hydratedCodeRef.current = null;
+      setSurveyState(createDefaultSurveyState(""));
+      setResponses(createDefaultResponses());
+      setCurrentIndex(0);
+      setCurrentTopic(0);
+      setStorageReady(true);
+      return;
+    }
+
+    if (hydratedCodeRef.current === normalizedCode) {
+      setStorageReady(true);
+      return;
+    }
+
+    setStorageReady(false);
+
+    const savedCurrentIndex = readStoredValue(normalizedCode, "currentIndex", 0);
+    const savedCurrentTopic = readStoredValue(normalizedCode, "currentTopic", 0);
+    const savedResponses = readStoredValue(
+      normalizedCode,
+      "responses",
+      createDefaultResponses(),
+    );
+    const savedSurveyState = readStoredValue(
+      normalizedCode,
+      "surveyState",
+      createDefaultSurveyState(normalizedCode),
+    );
+
+    setCurrentIndex(savedCurrentIndex);
+    setCurrentTopic(savedCurrentTopic);
+    setResponses(savedResponses);
+    setSurveyState({
+      ...savedSurveyState,
+      code: normalizedCode,
+    });
+    hydratedCodeRef.current = normalizedCode;
+    setStorageReady(true);
+  }, [isLoaded, normalizedCode]);
 
   useEffect(() => {
     const loadData = async () => {
@@ -98,7 +185,7 @@ export default function Survey() {
         setLoading(true);
         setError(null);
 
-        const versionIndex = CODE_TO_VERSION[code.toUpperCase()];
+        const versionIndex = CODE_TO_VERSION[normalizedCode];
         // console.log("Version Index:", versionIndex); // Debugging line
         if (!versionIndex) {
           setError("Invalid code");
@@ -145,30 +232,174 @@ export default function Survey() {
       }
     };
 
-    if (code) {
+    if (normalizedCode) {
       loadData();
     }
-  }, [code]);
+  }, [normalizedCode]);
 
   useEffect(() => {
-    console.log(
-      "Saving survey state to localStorage:",
+    if (!storageReady || !normalizedCode) {
+      return;
+    }
+
+    localStorage.setItem(
+      getStorageKey(normalizedCode, "surveyState"),
       JSON.stringify(surveyState),
     );
-    localStorage.setItem("surveyState", JSON.stringify(surveyState));
-  }, [surveyState]);
+  }, [normalizedCode, storageReady, surveyState]);
 
   useEffect(() => {
-    localStorage.setItem("responses", JSON.stringify(responses));
-  }, [responses]);
+    if (!storageReady || !normalizedCode) {
+      return;
+    }
+
+    localStorage.setItem(
+      getStorageKey(normalizedCode, "responses"),
+      JSON.stringify(responses),
+    );
+  }, [normalizedCode, responses, storageReady]);
 
   useEffect(() => {
-    localStorage.setItem("currentIndex", JSON.stringify(currentIndex));
-  }, [currentIndex]);
+    if (!storageReady || !normalizedCode) {
+      return;
+    }
+
+    localStorage.setItem(
+      getStorageKey(normalizedCode, "currentIndex"),
+      JSON.stringify(currentIndex),
+    );
+  }, [currentIndex, normalizedCode, storageReady]);
 
   useEffect(() => {
-    localStorage.setItem("currentTopic", JSON.stringify(currentTopic));
-  }, [currentTopic]);
+    if (!storageReady || !normalizedCode) {
+      return;
+    }
+
+    localStorage.setItem(
+      getStorageKey(normalizedCode, "currentTopic"),
+      JSON.stringify(currentTopic),
+    );
+  }, [currentTopic, normalizedCode, storageReady]);
+
+  useEffect(() => {
+    if (!normalizedCode) {
+      return;
+    }
+
+    setSurveyState((prev) =>
+      prev.code === normalizedCode ? prev : { ...prev, code: normalizedCode },
+    );
+  }, [normalizedCode]);
+
+  useEffect(() => {
+    if (!normalizedCode || !storageReady) {
+      return;
+    }
+
+    const controller = new AbortController();
+    let isActive = true;
+
+    const loadSavedProgress = async () => {
+      try {
+        const response = await fetch(
+          `/api/survey-progress?accessCode=${encodeURIComponent(normalizedCode)}`,
+          { signal: controller.signal },
+        );
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || "Failed to load survey progress");
+        }
+
+        if (!isActive || !result.hasProgress) {
+          return;
+        }
+
+        const restoredSurveyState = {
+          ...result.surveyState,
+          code: normalizedCode,
+        } as SurveyState;
+        const restoredResponses = buildResponsesFromSurveyState(restoredSurveyState);
+
+        setSurveyState(restoredSurveyState);
+        setResponses(restoredResponses);
+        setCurrentIndex(result.currentIndex);
+        setCurrentTopic(result.currentTopic);
+
+        lastSavedSignatureRef.current = JSON.stringify({
+          surveyState: restoredSurveyState,
+          currentIndex: result.currentIndex,
+          currentTopic: result.currentTopic,
+        });
+        setSaveStatus("saved");
+      } catch (loadError) {
+        if (!controller.signal.aborted) {
+          console.error("Failed to load survey progress", loadError);
+        }
+      }
+    };
+
+    void loadSavedProgress();
+
+    return () => {
+      isActive = false;
+      controller.abort();
+    };
+  }, [normalizedCode, storageReady]);
+
+  useEffect(() => {
+    if (!normalizedCode || !storageReady || loading || error) {
+      return;
+    }
+
+    if (!hasMeaningfulProgress(surveyState)) {
+      return;
+    }
+
+    const signature = JSON.stringify({
+      surveyState,
+      currentIndex,
+      currentTopic,
+    });
+
+    if (signature === lastSavedSignatureRef.current) {
+      return;
+    }
+
+    setSaveStatus("saving");
+
+    const timeoutId = window.setTimeout(async () => {
+      try {
+        const response = await fetch("/api/survey-progress", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            surveyState: {
+              ...surveyState,
+              code: normalizedCode,
+            },
+          }),
+        });
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || "Failed to save survey progress");
+        }
+
+        lastSavedSignatureRef.current = signature;
+        setSaveStatus("saved");
+      } catch (saveError) {
+        console.error("Failed to save survey progress", saveError);
+        setSaveStatus("error");
+      }
+    }, 2000);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [currentIndex, currentTopic, error, loading, normalizedCode, storageReady, surveyState]);
 
   useEffect(() => {
     if (patientSymptoms.length === 0) return;
@@ -197,7 +428,15 @@ export default function Survey() {
     });
   }, [responses, currentIndex, currentTopic]);
 
-  if (!code) {
+  if (!isLoaded || (normalizedCode && !storageReady)) {
+    return (
+      <div className="flex flex-col items-center justify-center w-full min-h-screen">
+        <p className="text-lg font-semibold">Loading survey...</p>
+      </div>
+    );
+  }
+
+  if (!normalizedCode) {
     return (
       <div className="flex flex-col items-center justify-center w-full min-h-screen">
         <p className="text-lg font-semibold">No access code provided.</p>
@@ -311,6 +550,15 @@ export default function Survey() {
         </div>
         <p className="text-sm font-semibold mt-1 text-right">
           Question {currentIndex + 1} of {patientSymptoms.length}
+        </p>
+        <p className="text-sm mt-1 text-right text-white/90">
+          {saveStatus === "saving"
+            ? "Saving progress..."
+            : saveStatus === "saved"
+              ? "Progress saved"
+              : saveStatus === "error"
+                ? "Unable to save progress"
+                : ""}
         </p>
       </div>
 
