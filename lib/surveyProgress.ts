@@ -1,6 +1,17 @@
 import prisma from "@/lib/prisma";
+import { Prisma } from "@prisma/client";
 
 const TOPIC_COUNT = 10;
+
+type SurveyWithTopics = Prisma.SurveyGetPayload<{
+  include: {
+    topics: {
+      include: {
+        component2s: true;
+      };
+    };
+  };
+}>;
 
 type SurveyProgress = {
   hasProgress: boolean;
@@ -42,7 +53,7 @@ const inferCurrentIndex = (topics: SurveyState["topics"]) => {
   return Math.max(0, topics.length - 1);
 };
 
-const normalizeTopics = (survey: Awaited<ReturnType<typeof prisma.survey.findFirst>>) => {
+const normalizeTopics = (survey: SurveyWithTopics | null) => {
   return Array.from({ length: TOPIC_COUNT }, (_, index) => {
     const topic = survey?.topics.find((item) => item.topicIndex === index);
     return {
